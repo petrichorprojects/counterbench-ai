@@ -500,3 +500,17 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
   color: var(--muted-2);
 }
 .text-center{ text-align:center; }
+
+/* Centered blocks should actually be centered (not just centered text). */
+.text-center :is(.max-w-600, .max-w-700, .max-w-800, .max-w-900){
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Avoid awkward orphan lines in centered hero copy (supported browsers only). */
+.text-center :is(h1, h2, h3){
+  text-wrap: balance;
+}
+.text-center :is(p, .lead){
+  text-wrap: pretty;
+}
