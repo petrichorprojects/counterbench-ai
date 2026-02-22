@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PreviewBanner } from "@/components/PreviewBanner";
+import { siteUrl } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
     template: "%s | Counterbench.AI"
   },
   description: "A curated directory of legal AI tools, prompts, and skills for legal professionals.",
-  metadataBase: new URL(process.env.SITE_URL ?? "https://counterbench.ai")
+  // Use SITE_URL if set; otherwise fall back to Vercel preview URL (VERCEL_URL) to avoid incorrect canonicals.
+  metadataBase: new URL(siteUrl())
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

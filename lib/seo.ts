@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import type { Tool } from "./schemas";
 
 export function siteUrl(): string {
-  return process.env.SITE_URL ?? "https://counterbench.ai";
+  const explicit = process.env.SITE_URL;
+  if (explicit) return explicit;
+
+  // Vercel provides this for Preview/Production deploys (hostname only, no protocol).
+  const vercelUrl = process.env.VERCEL_URL;
+  if (vercelUrl) return `https://${vercelUrl}`;
+
+  return "https://counterbench.ai";
 }
 
 export function absoluteUrl(pathname: string): string {
