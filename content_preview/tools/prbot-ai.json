@@ -1,0 +1,33 @@
+{
+  "slug": "prbot-ai",
+  "name": "PRBot.ai",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "3mo ago",
+    "From $249.75/mo",
+    "1",
+    "01374.8",
+    "013",
+    "74.8"
+  ],
+  "pricing": "paid",
+  "platform": [
+    "web"
+  ],
+  "url": "https://prbot.ai/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

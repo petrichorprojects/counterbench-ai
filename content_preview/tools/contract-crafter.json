@@ -1,0 +1,25 @@
+{
+  "slug": "contract-crafter",
+  "name": "Contract Crafter",
+  "description": "Description pending verification.",
+  "categories": [
+    "Contracts"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://chat.openai.com/g/g-4FSi6kty8-contract-crafter?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "stackify",
+  "name": "Stackify",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "4mo ago",
+    "Free + from $336.20/yr",
+    "6",
+    "4599",
+    "459"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://stackify.lovable.app/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "wordsmith-ai",
+  "name": "Wordsmith AI",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal advice"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.wordsmith.ai/?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

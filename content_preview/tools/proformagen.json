@@ -1,0 +1,31 @@
+{
+  "slug": "proformagen",
+  "name": "ProFormaGen",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "26d ago",
+    "Free + from $39.99/mo",
+    "285",
+    "93.6"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://proformagen.io/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

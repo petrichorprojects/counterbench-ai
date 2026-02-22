@@ -1,0 +1,27 @@
+{
+  "slug": "ai-lawyer",
+  "name": ".AI Lawyer",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal advice"
+  ],
+  "tags": [
+    "AI Lawyer"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://chat.openai.com/g/g-ncHOn3H6d-ai-lawyer?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

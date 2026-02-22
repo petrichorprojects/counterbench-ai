@@ -1,0 +1,52 @@
+/* App-level additions layered on top of /public/css/style.css */
+
+:root {
+  --focus: rgba(255, 255, 255, 0.75);
+  --shadow-1: 0 1px 0 rgba(255,255,255,0.06), 0 18px 40px rgba(0,0,0,0.55);
+  --radius-1: 12px;
+  --radius-2: 999px;
+}
+
+/* Ensure keyboard focus is always visible */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Header search responsive behavior */
+.cb-search-desktop {
+  display: none;
+}
+.cb-search-mobile {
+  display: block;
+}
+@media (min-width: 980px) {
+  .cb-search-desktop {
+    display: block !important;
+  }
+  .cb-search-mobile {
+    display: none !important;
+  }
+}

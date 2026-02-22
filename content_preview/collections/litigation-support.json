@@ -1,0 +1,20 @@
+{
+  "slug": "litigation-support",
+  "title": "Litigation support toolkit",
+  "description": "Deposition prep, chronology building, issue spotting, and motion drafting support.",
+  "tool_slugs": [
+    "judiktor",
+    "legora-56",
+    "litigation-advisor-146",
+    "trial-preparation",
+    "vlex-698",
+    "ai-legal-aid",
+    "aicosts-ai",
+    "airstrip-ai-1-126"
+  ],
+  "order": 60,
+  "seo": {
+    "title": "Litigation support toolkit | Counterbench.AI",
+    "description": "Deposition prep, chronology building, issue spotting, and motion drafting support."
+  }
+}

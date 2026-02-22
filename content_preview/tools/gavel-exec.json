@@ -1,0 +1,31 @@
+{
+  "slug": "gavel-exec",
+  "name": "Gavel Exec",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United States",
+    "Released",
+    "2mo ago",
+    "Free + from $160/mo",
+    "530"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.gavel.io/exec?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

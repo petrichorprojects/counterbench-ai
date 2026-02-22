@@ -1,0 +1,31 @@
+{
+  "slug": "pixalytica",
+  "name": "Pixalytica",
+  "description": "Description pending verification.",
+  "categories": [
+    "Compliance"
+  ],
+  "tags": [
+    "Released",
+    "1mo ago",
+    "From $79.99/mo",
+    "876",
+    "45.0"
+  ],
+  "pricing": "paid",
+  "platform": [
+    "web"
+  ],
+  "url": "https://pixalytica.com/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

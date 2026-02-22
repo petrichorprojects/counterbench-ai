@@ -1,0 +1,114 @@
+import Link from "next/link";
+import { getAllPrompts } from "@/lib/content";
+
+export const metadata = { title: "Prompts" };
+
+type SearchParams = Record<string, string | string[] | undefined>;
+
+export default async function PromptsIndexPage({
+  searchParams
+}: {
+  searchParams?: Promise<SearchParams>;
+}) {
+  const sp = (await searchParams) ?? {};
+  const tag = typeof sp.tag === "string" ? sp.tag : "";
+  const q = typeof sp.q === "string" ? sp.q : "";
+
+  let prompts = getAllPrompts();
+  if (tag) prompts = prompts.filter((p) => p.frontmatter.tags.some((t) => t.toLowerCase() === tag.toLowerCase()));
+  if (q) {
+    const needle = q.toLowerCase();
+    prompts = prompts.filter((p) => `${p.frontmatter.title} ${p.frontmatter.description}`.toLowerCase().includes(needle));
+  }
+
+  const allTags = [...new Set(getAllPrompts().flatMap((p) => p.frontmatter.tags))].sort((a, b) => a.localeCompare(b));
+
+  return (
+    <main>
+      <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
+        <div className="container">
+          <div className="label">Prompts</div>
+          <h1 className="max-w-900">Prompt library</h1>
+          <p className="max-w-700 mt-4" style={{ fontSize: "1.125rem" }}>
+            Git-backed MDX prompts with a strict frontmatter schema.
+          </p>
+
+          <form method="get" className="mt-5">
+            <div className="grid grid--3 grid--gap-2" style={{ gap: "1rem" }}>
+              <div>
+                <label className="label" htmlFor="q">
+                  Search
+                </label>
+                <input
+                  id="q"
+                  name="q"
+                  defaultValue={q}
+                  placeholder="e.g. intake, research, contracts"
+                  style={{
+                    width: "100%",
+                    padding: "12px 14px",
+                    borderRadius: 999,
+                    border: "1px solid var(--border)",
+                    background: "rgba(255,255,255,0.04)",
+                    color: "var(--fg)"
+                  }}
+                />
+              </div>
+              <div>
+                <label className="label" htmlFor="tag">
+                  Tag
+                </label>
+                <select
+                  id="tag"
+                  name="tag"
+                  defaultValue={tag}
+                  style={{
+                    width: "100%",
+                    padding: "12px 14px",
+                    borderRadius: 999,
+                    border: "1px solid var(--border)",
+                    background: "rgba(255,255,255,0.04)",
+                    color: "var(--fg)"
+                  }}
+                >
+                  <option value="">All</option>
+                  {allTags.map((t) => (
+                    <option key={t} value={t}>
+                      {t}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex--gap-2 flex--center" style={{ alignItems: "flex-end" }}>
+                <button className="btn btn--primary btn--sm" type="submit">
+                  Apply
+                </button>
+                <a className="btn btn--secondary btn--sm" href="/prompts">
+                  Reset
+                </a>
+              </div>
+            </div>
+          </form>
+
+          <div className="grid grid--3 grid--gap-2 mt-6" style={{ gap: "1rem" }}>
+            {prompts.map((p) => (
+              <div key={p.slug} className="card" style={{ padding: "1.5rem", borderRadius: 12 }}>
+                <Link className="text-white" style={{ fontSize: "1.05rem", fontWeight: 700 }} href={`/prompts/${p.slug}`}>
+                  {p.frontmatter.title}
+                </Link>
+                <div className="text-muted" style={{ fontSize: "0.875rem", marginTop: 10 }}>
+                  {p.frontmatter.description}
+                </div>
+                <div className="mt-4">
+                  <Link className="btn btn--secondary btn--sm" href={`/prompts/${p.slug}`}>
+                    Open
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

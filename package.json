@@ -1,0 +1,38 @@
+{
+  "name": "counterbench-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:preview": "CB_CONTENT_ROOT=content_preview next dev",
+    "prebuild": "npm run build-search-index",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "import-tools": "node --import tsx scripts/import-tools.ts",
+    "import-tools:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/import-tools.ts",
+    "qa:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/qa-tools.ts",
+    "build-search-index": "node --import tsx scripts/build-search-index.ts",
+    "build-search-index:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/build-search-index.ts"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "minisearch": "^7.1.2",
+    "next": "^15.0.0",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remark-gfm": "^4.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "eslint": "^9.20.1",
+    "eslint-config-next": "^15.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counterbench.AI Labs | 3D</title>
+    <meta name="description" content="A cyber-minimal 3D hero exploration for Counterbench.AI." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        background: radial-gradient(1100px 700px at 18% 12%, #0a1620 0%, rgba(10, 22, 32, 0) 55%),
+          radial-gradient(1000px 600px at 82% 22%, rgba(38, 0, 86, 0.35) 0%, rgba(38, 0, 86, 0) 55%),
+          linear-gradient(180deg, #05070a 0%, #07090c 35%, #0a0b0f 100%);
+        color: #e8eef6;
+        overflow-x: hidden;
+      }
+
+      #cb-canvas {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 0;
+      }
+
+      .vignette {
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background: radial-gradient(90% 70% at 50% 40%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.65) 100%);
+        mix-blend-mode: multiply;
+      }
+
+      .grain {
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        opacity: 0.06;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+        background-size: 220px 220px;
+      }
+
+      .overlay {
+        position: relative;
+        z-index: 10;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <canvas id="cb-canvas" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <div class="overlay">
+      <header class="fixed top-0 left-0 right-0 z-20">
+        <div class="mx-auto max-w-6xl px-6 py-5">
+          <div class="flex items-center justify-between">
+            <a href="/" class="tracking-[0.2em] text-xs font-semibold uppercase text-white/80 hover:text-white">
+              Counterbench.AI
+            </a>
+            <div class="flex items-center gap-3">
+              <a
+                href="/advisory"
+                class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur hover:bg-white/10"
+              >
+                AI Advisory
+              </a>
+              <a
+                href="/newsletter"
+                class="rounded-full border border-white/15 bg-white/0 px-4 py-2 text-sm font-medium text-white/70 backdrop-blur hover:bg-white/5 hover:text-white/90"
+              >
+                Newsletter
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="min-h-[110vh]">
+          <div class="mx-auto max-w-6xl px-6 pt-32 pb-16">
+            <div class="max-w-3xl">
+              <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
+                <span class="inline-block h-1.5 w-1.5 rounded-full bg-cyan-400/80"></span>
+                Dark Mode Cyber-Minimalism (Labs)
+              </div>
+
+              <h1 class="mt-6 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
+                WE BUILD
+                <span class="block text-white/70">DIGITAL REALITIES</span>
+              </h1>
+
+              <p class="mt-5 text-base sm:text-lg text-white/65 leading-relaxed">
+                A 3D hero exploration: glass-and-metal geometry, neon lighting, and scroll-driven camera motion.
+              </p>
+
+              <div class="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="#services"
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur hover:bg-white/15"
+                >
+                  Explore services
+                </a>
+                <a
+                  href="/tools"
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/0 px-6 py-3 text-sm font-semibold text-white/80 backdrop-blur hover:bg-white/5 hover:text-white"
+                >
+                  View the library
+                </a>
+              </div>
+
+              <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                  <div class="text-xs tracking-widest uppercase text-white/60">Material</div>
+                  <div class="mt-1 text-sm font-semibold text-white/85">Frosted Glass</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                  <div class="text-xs tracking-widest uppercase text-white/60">Lighting</div>
+                  <div class="mt-1 text-sm font-semibold text-white/85">Neon 3-Point</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
+                  <div class="text-xs tracking-widest uppercase text-white/60">Motion</div>
+                  <div class="mt-1 text-sm font-semibold text-white/85">Scroll + Float</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="py-24">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="text-xs tracking-[0.22em] uppercase text-white/60">Strategy</div>
+                <h2 class="mt-3 text-xl font-semibold text-white/90">Signal over noise</h2>
+                <p class="mt-3 text-sm leading-relaxed text-white/65">
+                  Positioning, IA, and workflows designed for scanning, trust, and conversion.
+                </p>
+              </article>
+
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="text-xs tracking-[0.22em] uppercase text-white/60">3D Web</div>
+                <h2 class="mt-3 text-xl font-semibold text-white/90">High-end motion</h2>
+                <p class="mt-3 text-sm leading-relaxed text-white/65">
+                  Lightweight 3D accents where they add meaning, not friction.
+                </p>
+              </article>
+
+              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
+                <div class="text-xs tracking-[0.22em] uppercase text-white/60">AI Integration</div>
+                <h2 class="mt-3 text-xl font-semibold text-white/90">Practical automation</h2>
+                <p class="mt-3 text-sm leading-relaxed text-white/65">
+                  Search, curation, and workflow helpers that reduce time-to-answer.
+                </p>
+              </article>
+            </div>
+
+            <div class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <div class="text-xs tracking-[0.22em] uppercase text-white/60">Scroll behavior</div>
+                  <div class="mt-2 text-base font-semibold text-white/90">Scroll to push the camera through the geometry</div>
+                  <div class="mt-1 text-sm text-white/65">This is intentionally bold. For the core Counterbench library UI, we keep motion restrained.</div>
+                </div>
+                <a
+                  href="#top"
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white/90 backdrop-blur hover:bg-white/15"
+                >
+                  Back to top
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="py-28">
+          <div class="mx-auto max-w-6xl px-6">
+            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
+              <div class="text-xs tracking-[0.22em] uppercase text-white/60">Note</div>
+              <div class="mt-2 text-sm leading-relaxed text-white/70">
+                This is a Labs exploration. If we ship 3D on Counterbench marketing pages, best practice is: keep it subtle, respect reduced motion, and never let it compete with reading/scanning.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="pb-14">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
+            <div>Counterbench.AI Labs</div>
+            <div class="flex items-center gap-4">
+              <a class="hover:text-white/80" href="/privacy">Privacy</a>
+              <a class="hover:text-white/80" href="/terms">Terms</a>
+              <a class="hover:text-white/80" href="/eula">EULA</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        const canvas = document.getElementById("cb-canvas");
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          antialias: true,
+          alpha: true,
+          powerPreference: "high-performance"
+        });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
+
+        const scene = new THREE.Scene();
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.set(0.2, 0.05, 6.3);
+
+        const geom = new THREE.TorusKnotGeometry(1.15, 0.38, 300, 18, 2, 3);
+
+        const glass = new THREE.MeshPhysicalMaterial({
+          color: new THREE.Color("#0b1622"),
+          roughness: 0.55,
+          metalness: 0.05,
+          transmission: 0.82,
+          thickness: 1.15,
+          ior: 1.45,
+          clearcoat: 0.6,
+          clearcoatRoughness: 0.35,
+          reflectivity: 0.25,
+          specularIntensity: 0.9,
+          specularColor: new THREE.Color("#cfe7ff")
+        });
+
+        const metal = new THREE.MeshPhysicalMaterial({
+          color: new THREE.Color("#070a0f"),
+          roughness: 0.25,
+          metalness: 1.0,
+          clearcoat: 0.35,
+          clearcoatRoughness: 0.2,
+          reflectivity: 0.45,
+          specularIntensity: 0.8,
+          specularColor: new THREE.Color("#8fb8ff")
+        });
+
+        const knotGlass = new THREE.Mesh(geom, glass);
+        const knotMetal = new THREE.Mesh(geom, metal);
+        knotMetal.scale.setScalar(1.02);
+
+        scene.add(knotMetal);
+        scene.add(knotGlass);
+
+        const key = new THREE.DirectionalLight(new THREE.Color("#24b8ff"), 2.25);
+        key.position.set(4.5, 2.6, 3.5);
+        scene.add(key);
+
+        const fill = new THREE.PointLight(new THREE.Color("#6b2cff"), 1.6, 30, 2);
+        fill.position.set(-3.8, 1.2, 2.8);
+        scene.add(fill);
+
+        const rim = new THREE.DirectionalLight(new THREE.Color("#ffffff"), 1.05);
+        rim.position.set(-2.6, 2.2, -4.4);
+        scene.add(rim);
+
+        scene.add(new THREE.AmbientLight(new THREE.Color("#0c1422"), 0.35));
+
+        let scrollTarget = 0;
+        let scrollCurrent = 0;
+
+        function updateScrollTarget() {
+          const doc = document.documentElement;
+          const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+          scrollTarget = Math.min(1, Math.max(0, window.scrollY / max));
+        }
+
+        updateScrollTarget();
+        window.addEventListener(
+          "scroll",
+          () => {
+            updateScrollTarget();
+          },
+          { passive: true }
+        );
+
+        let pointerX = 0;
+        let pointerY = 0;
+        window.addEventListener(
+          "pointermove",
+          (e) => {
+            const nx = (e.clientX / window.innerWidth) * 2 - 1;
+            const ny = (e.clientY / window.innerHeight) * 2 - 1;
+            pointerX = nx;
+            pointerY = ny;
+          },
+          { passive: true }
+        );
+
+        const clock = new THREE.Clock();
+
+        function animate() {
+          const t = clock.getElapsedTime();
+          scrollCurrent += (scrollTarget - scrollCurrent) * 0.08;
+
+          const baseRot = t * 0.12;
+          knotGlass.rotation.y = baseRot;
+          knotGlass.rotation.x = baseRot * 0.7;
+          knotMetal.rotation.copy(knotGlass.rotation);
+
+          const z = THREE.MathUtils.lerp(6.3, 3.25, reduceMotion ? 0 : scrollCurrent);
+          const orbit = reduceMotion ? 0 : scrollCurrent * Math.PI * 0.75;
+
+          const floatY = reduceMotion ? 0 : Math.sin(t * 0.7) * 0.08;
+          const floatX = reduceMotion ? 0 : Math.cos(t * 0.55) * 0.06;
+
+          const px = reduceMotion ? 0 : pointerX * 0.08;
+          const py = reduceMotion ? 0 : -pointerY * 0.06;
+
+          camera.position.x = Math.sin(orbit) * 0.55 + floatX + px + 0.2;
+          camera.position.y = 0.08 + floatY + py;
+          camera.position.z = z;
+          camera.lookAt(0, 0, 0);
+
+          renderer.render(scene, camera);
+          requestAnimationFrame(animate);
+        }
+
+        window.addEventListener("resize", () => {
+          const w = window.innerWidth;
+          const h = window.innerHeight;
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+          renderer.setSize(w, h);
+          camera.aspect = w / h;
+          camera.updateProjectionMatrix();
+        });
+
+        animate();
+      })();
+    </script>
+  </body>
+</html>

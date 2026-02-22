@@ -100,10 +100,16 @@ counterbench/
 
 ## Tech Stack
 - **Frontend:** Pure HTML/CSS/JS (no framework, no build step)
-- **Fonts:** Google Fonts (Playfair Display + DM Sans)
+- **Fonts:** Google Fonts (Lora + Inter)
 - **Hosting:** Netlify or Vercel (free tier sufficient)
 - **Email:** Kit (ConvertKit) or Beehiiv
 - **Booking:** Calendly
 - **Payments:** Stripe
 - **Analytics:** GA4 via GTM
 - **Tracking:** Meta Pixel, LinkedIn Insight Tag, Google Ads via GTM
+
+
+## Design System
+
+- Figma spec: `design-system/FIGMA_SPEC.md`
+- Tokens: `design-system/TOKENS.md`

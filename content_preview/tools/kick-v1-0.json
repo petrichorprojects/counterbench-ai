@@ -1,0 +1,43 @@
+{
+  "slug": "kick-v1-0",
+  "name": "Kick v1.0",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United States",
+    "Released 1y ago",
+    "Free + from $35/mo",
+    "117",
+    "1104364.4",
+    "110",
+    "1124364.4",
+    "112",
+    "1144364.4",
+    "114",
+    "1174364.4",
+    "1204364.4",
+    "120",
+    "1214364.4",
+    "121",
+    "Kick",
+    "v1.0"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://kick.co/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

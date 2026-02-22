@@ -1,0 +1,31 @@
+{
+  "slug": "whybounce",
+  "name": "WhyBounce",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "21d ago",
+    "42 in Trending",
+    "321",
+    "65.0"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.whybounce.io/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

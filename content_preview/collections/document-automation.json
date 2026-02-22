@@ -1,0 +1,20 @@
+{
+  "slug": "document-automation",
+  "title": "Document automation and templates",
+  "description": "Generate, fill, and manage document templates with consistent outputs.",
+  "tool_slugs": [
+    "contractable",
+    "dedicated-privacy-policy-composer",
+    "draftlex-ai",
+    "everlaw-464",
+    "formation-doc-tailored-for-carta-llc-and-fund-429",
+    "homebuyersmath",
+    "jurisprudence-u-s-a-335",
+    "lawgpt-392"
+  ],
+  "order": 80,
+  "seo": {
+    "title": "Document automation and templates | Counterbench.AI",
+    "description": "Generate, fill, and manage document templates with consistent outputs."
+  }
+}

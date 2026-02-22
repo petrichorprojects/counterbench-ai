@@ -1,0 +1,20 @@
+{
+  "slug": "firm-ops-efficiency",
+  "title": "Firm ops and efficiency stack",
+  "description": "Scheduling, billing support, client comms, and internal ops helpers.",
+  "tool_slugs": [
+    "skymel-create-your-own-personal-agents",
+    "tendemfeatured",
+    "ticketify",
+    "avataars-genai-creator-3-967",
+    "base44-2-0",
+    "baseqore-ai-contract-generator",
+    "biela-dev-v1-0-3",
+    "bigteam-2-505"
+  ],
+  "order": 100,
+  "seo": {
+    "title": "Firm ops and efficiency stack | Counterbench.AI",
+    "description": "Scheduling, billing support, client comms, and internal ops helpers."
+  }
+}

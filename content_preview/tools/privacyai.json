@@ -1,0 +1,25 @@
+{
+  "slug": "privacyai",
+  "name": "PrivacyAI",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal documents drafting"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://privacy-ai.framer.website/?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

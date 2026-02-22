@@ -1,0 +1,20 @@
+{
+  "slug": "legal-research-briefs",
+  "title": "Legal research and brief building",
+  "description": "Research assistants and drafting helpers for memos, briefs, and citations.",
+  "tool_slugs": [
+    "aijudge-2-969",
+    "case-aide-245",
+    "caseodds-ai",
+    "chambers-243",
+    "lawyergpt",
+    "legal-data-tech-1-288",
+    "legal-research-by-midpage-380",
+    "legal-research-companion-423"
+  ],
+  "order": 30,
+  "seo": {
+    "title": "Legal research and brief building | Counterbench.AI",
+    "description": "Research assistants and drafting helpers for memos, briefs, and citations."
+  }
+}

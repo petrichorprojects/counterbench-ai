@@ -1,0 +1,12 @@
+{
+  "slug": "getting-started",
+  "title": "Getting Started",
+  "description": "A small starter list for teams evaluating legal AI.",
+  "tool_slugs": ["example-tool"],
+  "order": 10,
+  "seo": {
+    "title": "Getting Started Collection",
+    "description": "A starter collection of legal AI tools."
+  }
+}
+

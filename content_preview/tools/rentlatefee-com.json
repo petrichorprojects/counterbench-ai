@@ -1,0 +1,30 @@
+{
+  "slug": "rentlatefee-com",
+  "name": "RentLateFee.com",
+  "description": "Description pending verification.",
+  "categories": [
+    "Parking ticket appeals"
+  ],
+  "tags": [
+    "Released",
+    "3mo ago",
+    "Free + from $5",
+    "351"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.rentlatefee.com/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

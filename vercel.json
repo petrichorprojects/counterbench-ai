@@ -1,13 +1,4 @@
 {
-  "rewrites": [
-    { "source": "/advisory", "destination": "/pages/advisory.html" },
-    { "source": "/the-counterbench", "destination": "/pages/newsletter.html" },
-    { "source": "/newsletter", "destination": "/pages/newsletter.html" },
-    { "source": "/diagnostic", "destination": "/pages/diagnostic.html" },
-    { "source": "/insights", "destination": "/pages/insights.html" },
-    { "source": "/about", "destination": "/pages/about.html" },
-    { "source": "/contact", "destination": "/pages/contact.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",

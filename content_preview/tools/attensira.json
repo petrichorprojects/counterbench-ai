@@ -1,0 +1,35 @@
+{
+  "slug": "attensira",
+  "name": "Attensira",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "1mo ago",
+    "Free + from $79/mo",
+    "1",
+    "08444.6",
+    "084",
+    "44.6",
+    "08644.6",
+    "086"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://attensira.com/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

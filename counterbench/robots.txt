@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://counterbench.com/sitemap.xml
-
-# Block admin/draft content
-Disallow: /drafts/
-Disallow: /admin/

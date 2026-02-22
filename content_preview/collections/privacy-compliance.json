@@ -1,0 +1,20 @@
+{
+  "slug": "privacy-compliance",
+  "title": "Privacy and compliance monitoring",
+  "description": "Support compliance checks, policy drafts, and risk monitoring workflows.",
+  "tool_slugs": [
+    "comp-ai-v1-2",
+    "easyaudit-596",
+    "business-cooperation-agreement-draft-expert-300",
+    "ca-revocable-trust-wizard-145",
+    "contract-creator-pro-308",
+    "create-my-living-will-280",
+    "createdraft-13-135",
+    "dataist-ai-gdpr-paralegal"
+  ],
+  "order": 50,
+  "seo": {
+    "title": "Privacy and compliance monitoring | Counterbench.AI",
+    "description": "Support compliance checks, policy drafts, and risk monitoring workflows."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "learn-place-verified-experience",
+  "name": "Learn Place Verified Experience",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United Kingdom",
+    "Released",
+    "27d ago",
+    "Free + from $10/mo",
+    "268"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://learnplace.ai/ai-internships?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

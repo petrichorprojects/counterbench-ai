@@ -1,0 +1,13 @@
+{
+  "slug": "intake-and-triage",
+  "title": "Intake and Triage Pack",
+  "description": "Prompts for intake notes, issue spotting, and follow-up questions.",
+  "prompt_slugs": ["intake-summary"],
+  "audience": "paralegals",
+  "workflow_stage": "intake",
+  "seo": {
+    "title": "Intake Prompt Pack",
+    "description": "A pack of prompts for intake and triage workflows."
+  }
+}
+

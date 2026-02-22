@@ -1,0 +1,25 @@
+{
+  "slug": "lexcheck",
+  "name": "LexCheck",
+  "description": "Description pending verification.",
+  "categories": [
+    "Contract reviews34"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.lexcheck.com/?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}
