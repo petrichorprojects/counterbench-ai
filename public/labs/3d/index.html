@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
     <title>Counterbench.AI Labs | 3D</title>
     <meta name="description" content="A cyber-minimal 3D hero exploration for Counterbench.AI." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <style>
+      :root {
+        --bg0: #05070a;
+        --bg1: #07090c;
+        --bg2: #0a0b0f;
+        --fg: rgba(232, 238, 246, 0.92);
+        --muted: rgba(232, 238, 246, 0.62);
+        --border: rgba(255, 255, 255, 0.12);
+        --glass: rgba(255, 255, 255, 0.06);
+        --glass2: rgba(255, 255, 255, 0.10);
+        --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        --radius: 24px;
+        --radius2: 999px;
+        --max: 1120px;
+        --pad: 24px;
+      }
+
       html,
       body {
         height: 100%;
@@ -16,13 +30,28 @@
 
       body {
         margin: 0;
-        background: radial-gradient(1100px 700px at 18% 12%, #0a1620 0%, rgba(10, 22, 32, 0) 55%),
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        background:
+          radial-gradient(1100px 700px at 18% 12%, #0a1620 0%, rgba(10, 22, 32, 0) 55%),
           radial-gradient(1000px 600px at 82% 22%, rgba(38, 0, 86, 0.35) 0%, rgba(38, 0, 86, 0) 55%),
-          linear-gradient(180deg, #05070a 0%, #07090c 35%, #0a0b0f 100%);
-        color: #e8eef6;
+          linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 35%, var(--bg2) 100%);
+        color: var(--fg);
         overflow-x: hidden;
       }
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid rgba(255, 255, 255, 0.75);
+        outline-offset: 3px;
+        border-radius: 12px;
+      }
+
+      /* Fullscreen 3D layer */
       #cb-canvas {
         position: fixed;
         inset: 0;
@@ -32,6 +61,7 @@
         z-index: 0;
       }
 
+      /* Soft vignette + grain (subtle) */
       .vignette {
         pointer-events: none;
         position: fixed;
@@ -51,9 +81,329 @@
         background-size: 220px 220px;
       }
 
+      /* Overlay */
       .overlay {
         position: relative;
         z-index: 10;
+      }
+
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 20;
+      }
+
+      .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px var(--pad);
+      }
+
+      .brand {
+        letter-spacing: 0.2em;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.82);
+      }
+
+      .brand:hover {
+        color: rgba(255, 255, 255, 0.96);
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        border-radius: var(--radius2);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.02);
+        color: rgba(255, 255, 255, 0.75);
+        font-weight: 650;
+        font-size: 13px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+      }
+
+      .btn:hover {
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.9);
+        border-color: rgba(255, 255, 255, 0.18);
+      }
+
+      .btn--primary {
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .btn--primary:hover {
+        background: rgba(255, 255, 255, 0.10);
+      }
+
+      .hero {
+        min-height: 110vh;
+        padding-top: 116px;
+        padding-bottom: 56px;
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: var(--radius2);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: rgba(255, 255, 255, 0.70);
+        font-size: 12px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: rgba(36, 184, 255, 0.85);
+        box-shadow: 0 0 0 6px rgba(36, 184, 255, 0.12);
+      }
+
+      h1 {
+        margin: 18px 0 0;
+        font-size: clamp(44px, 6.2vw, 84px);
+        letter-spacing: -0.03em;
+        line-height: 0.95;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.96);
+      }
+
+      h1 span {
+        display: block;
+        color: rgba(255, 255, 255, 0.70);
+      }
+
+      .lead {
+        margin-top: 14px;
+        max-width: 58ch;
+        color: var(--muted);
+        line-height: 1.65;
+        font-size: 16px;
+      }
+
+      .hero__cta {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .cards {
+        margin-top: 26px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 780px;
+      }
+
+      .card {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 14px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .card__k {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: rgba(255, 255, 255, 0.60);
+      }
+
+      .card__v {
+        margin-top: 6px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.86);
+        font-size: 13px;
+      }
+
+      .section {
+        padding: 88px 0;
+      }
+
+      .grid3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .feature {
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 18px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .feature__k {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: rgba(255, 255, 255, 0.60);
+      }
+
+      .feature h2 {
+        margin: 10px 0 0;
+        font-size: 18px;
+        font-weight: 850;
+        color: rgba(255, 255, 255, 0.90);
+        letter-spacing: -0.01em;
+      }
+
+      .feature p {
+        margin: 10px 0 0;
+        font-size: 13px;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.66);
+      }
+
+      .note {
+        margin-top: 36px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        padding: 18px;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .note__k {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        color: rgba(255, 255, 255, 0.60);
+      }
+
+      .note__t {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.70);
+      }
+
+      .footer {
+        padding: 0 0 54px;
+      }
+
+      .footer__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.52);
+      }
+
+      .footer__links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .footer__links a:hover {
+        color: rgba(255, 255, 255, 0.78);
+      }
+
+      /* Fallback UI */
+      .fallback {
+        display: none;
+        position: fixed;
+        inset: auto 0 18px 0;
+        z-index: 30;
+      }
+
+      .fallback__inner {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 var(--pad);
+      }
+
+      .fallback__card {
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        padding: 14px;
+        box-shadow: var(--shadow);
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .fallback__title {
+        font-weight: 850;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 13px;
+      }
+
+      .fallback__text {
+        margin-top: 4px;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 12px;
+        line-height: 1.55;
+        max-width: 72ch;
+      }
+
+      .fallback__cta {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      @media (min-width: 640px) {
+        .cards {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 12px;
+        }
+
+        .footer__inner {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      @media (min-width: 960px) {
+        :root {
+          --pad: 48px;
+        }
+
+        .grid3 {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -69,293 +419,309 @@
     <div class="grain" aria-hidden="true"></div>
 
     <div class="overlay">
-      <header class="fixed top-0 left-0 right-0 z-20">
-        <div class="mx-auto max-w-6xl px-6 py-5">
-          <div class="flex items-center justify-between">
-            <a href="/" class="tracking-[0.2em] text-xs font-semibold uppercase text-white/80 hover:text-white">
-              Counterbench.AI
-            </a>
-            <div class="flex items-center gap-3">
-              <a
-                href="/advisory"
-                class="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur hover:bg-white/10"
-              >
-                AI Advisory
-              </a>
-              <a
-                href="/newsletter"
-                class="rounded-full border border-white/15 bg-white/0 px-4 py-2 text-sm font-medium text-white/70 backdrop-blur hover:bg-white/5 hover:text-white/90"
-              >
-                Newsletter
-              </a>
-            </div>
+      <header class="header" role="banner">
+        <div class="wrap header__inner">
+          <a href="/" class="brand">Counterbench.AI</a>
+          <div class="actions">
+            <a class="btn btn--primary" href="/advisory">AI Advisory</a>
+            <a class="btn" href="/newsletter">Newsletter</a>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="min-h-[110vh]">
-          <div class="mx-auto max-w-6xl px-6 pt-32 pb-16">
-            <div class="max-w-3xl">
-              <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur">
-                <span class="inline-block h-1.5 w-1.5 rounded-full bg-cyan-400/80"></span>
-                Dark Mode Cyber-Minimalism (Labs)
+        <section class="hero" aria-label="Labs 3D hero">
+          <div class="wrap">
+            <div class="pill"><span class="dot" aria-hidden="true"></span>Dark Mode Cyber-Minimalism (Labs)</div>
+            <h1>WE BUILD <span>DIGITAL REALITIES</span></h1>
+            <p class="lead">
+              A 3D hero exploration: frosted glass, dark metal, neon lighting, and scroll-driven camera motion. This is
+              isolated from the main library UI.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#services">Explore services</a>
+              <a class="btn" href="/tools">View the library</a>
+            </div>
+
+            <div class="cards" role="list">
+              <div class="card" role="listitem">
+                <div class="card__k">Material</div>
+                <div class="card__v">Frosted Glass</div>
               </div>
-
-              <h1 class="mt-6 text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight">
-                WE BUILD
-                <span class="block text-white/70">DIGITAL REALITIES</span>
-              </h1>
-
-              <p class="mt-5 text-base sm:text-lg text-white/65 leading-relaxed">
-                A 3D hero exploration: glass-and-metal geometry, neon lighting, and scroll-driven camera motion.
-              </p>
-
-              <div class="mt-8 flex flex-col sm:flex-row gap-3">
-                <a
-                  href="#services"
-                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur hover:bg-white/15"
-                >
-                  Explore services
-                </a>
-                <a
-                  href="/tools"
-                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/0 px-6 py-3 text-sm font-semibold text-white/80 backdrop-blur hover:bg-white/5 hover:text-white"
-                >
-                  View the library
-                </a>
+              <div class="card" role="listitem">
+                <div class="card__k">Lighting</div>
+                <div class="card__v">Neon 3-Point</div>
               </div>
-
-              <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <div class="text-xs tracking-widest uppercase text-white/60">Material</div>
-                  <div class="mt-1 text-sm font-semibold text-white/85">Frosted Glass</div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <div class="text-xs tracking-widest uppercase text-white/60">Lighting</div>
-                  <div class="mt-1 text-sm font-semibold text-white/85">Neon 3-Point</div>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <div class="text-xs tracking-widest uppercase text-white/60">Motion</div>
-                  <div class="mt-1 text-sm font-semibold text-white/85">Scroll + Float</div>
-                </div>
+              <div class="card" role="listitem">
+                <div class="card__k">Motion</div>
+                <div class="card__v">Scroll + Float</div>
               </div>
             </div>
           </div>
         </section>
 
-        <section id="services" class="py-24">
-          <div class="mx-auto max-w-6xl px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <div class="text-xs tracking-[0.22em] uppercase text-white/60">Strategy</div>
-                <h2 class="mt-3 text-xl font-semibold text-white/90">Signal over noise</h2>
-                <p class="mt-3 text-sm leading-relaxed text-white/65">
-                  Positioning, IA, and workflows designed for scanning, trust, and conversion.
-                </p>
+        <section id="services" class="section" aria-label="Services">
+          <div class="wrap">
+            <div class="grid3">
+              <article class="feature">
+                <div class="feature__k">Strategy</div>
+                <h2>Signal over noise</h2>
+                <p>Positioning, IA, and workflows designed for scanning, trust, and conversion.</p>
               </article>
-
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <div class="text-xs tracking-[0.22em] uppercase text-white/60">3D Web</div>
-                <h2 class="mt-3 text-xl font-semibold text-white/90">High-end motion</h2>
-                <p class="mt-3 text-sm leading-relaxed text-white/65">
-                  Lightweight 3D accents where they add meaning, not friction.
-                </p>
+              <article class="feature">
+                <div class="feature__k">3D Web</div>
+                <h2>High-end motion</h2>
+                <p>Lightweight 3D accents where they add meaning, not friction. Reduced motion respected.</p>
               </article>
-
-              <article class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                <div class="text-xs tracking-[0.22em] uppercase text-white/60">AI Integration</div>
-                <h2 class="mt-3 text-xl font-semibold text-white/90">Practical automation</h2>
-                <p class="mt-3 text-sm leading-relaxed text-white/65">
-                  Search, curation, and workflow helpers that reduce time-to-answer.
-                </p>
+              <article class="feature">
+                <div class="feature__k">AI Integration</div>
+                <h2>Practical automation</h2>
+                <p>Search, curation, and workflow helpers that reduce time-to-answer.</p>
               </article>
             </div>
 
-            <div class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur">
-              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                <div>
-                  <div class="text-xs tracking-[0.22em] uppercase text-white/60">Scroll behavior</div>
-                  <div class="mt-2 text-base font-semibold text-white/90">Scroll to push the camera through the geometry</div>
-                  <div class="mt-1 text-sm text-white/65">This is intentionally bold. For the core Counterbench library UI, we keep motion restrained.</div>
-                </div>
-                <a
-                  href="#top"
-                  class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white/90 backdrop-blur hover:bg-white/15"
-                >
-                  Back to top
-                </a>
+            <div class="note">
+              <div class="note__k">Reliability</div>
+              <div class="note__t">
+                This page vendors Three.js locally and includes WebGL fallbacks. If WebGL is blocked (policy/device), the
+                page remains usable.
               </div>
             </div>
           </div>
         </section>
 
-        <section class="py-28">
-          <div class="mx-auto max-w-6xl px-6">
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-              <div class="text-xs tracking-[0.22em] uppercase text-white/60">Note</div>
-              <div class="mt-2 text-sm leading-relaxed text-white/70">
-                This is a Labs exploration. If we ship 3D on Counterbench marketing pages, best practice is: keep it subtle, respect reduced motion, and never let it compete with reading/scanning.
+        <section class="section" aria-label="Labs note">
+          <div class="wrap">
+            <div class="note">
+              <div class="note__k">Note</div>
+              <div class="note__t">
+                Labs can be bold. Counterbench core pages should keep motion restrained and prioritize reading/scanning.
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="pb-14">
-        <div class="mx-auto max-w-6xl px-6">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/50">
-            <div>Counterbench.AI Labs</div>
-            <div class="flex items-center gap-4">
-              <a class="hover:text-white/80" href="/privacy">Privacy</a>
-              <a class="hover:text-white/80" href="/terms">Terms</a>
-              <a class="hover:text-white/80" href="/eula">EULA</a>
-            </div>
+      <footer class="footer" role="contentinfo">
+        <div class="wrap footer__inner">
+          <div>Counterbench.AI Labs</div>
+          <div class="footer__links">
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/eula">EULA</a>
           </div>
         </div>
       </footer>
     </div>
 
-    <script>
-      (function () {
-        const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    <div class="fallback" id="cb-fallback" aria-live="polite">
+      <div class="fallback__inner">
+        <div class="fallback__card">
+          <div>
+            <div class="fallback__title" id="cb-fallback-title">3D preview unavailable</div>
+            <div class="fallback__text" id="cb-fallback-text">
+              Your browser/device blocked WebGL or the 3D engine failed to initialize. The rest of the page still works.
+            </div>
+          </div>
+          <div class="fallback__cta">
+            <a class="btn btn--primary" href="/tools">Library</a>
+            <a class="btn" href="/advisory">Advisory</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <noscript>
+      <style>
+        #cb-canvas {
+          display: none;
+        }
+        #cb-fallback {
+          display: block;
+        }
+      </style>
+    </noscript>
+
+    <script type="module">
+      import * as THREE from "./vendor/three.module.js";
+
+      const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const fallbackEl = document.getElementById("cb-fallback");
+      const fallbackTitle = document.getElementById("cb-fallback-title");
+      const fallbackText = document.getElementById("cb-fallback-text");
+
+      function showFallback(title, text) {
+        if (fallbackTitle) fallbackTitle.textContent = title;
+        if (fallbackText) fallbackText.textContent = text;
+        if (fallbackEl) fallbackEl.style.display = "block";
+      }
+
+      function hasWebGL() {
+        try {
+          const c = document.createElement("canvas");
+          return !!(c.getContext("webgl2") || c.getContext("webgl"));
+        } catch {
+          return false;
+        }
+      }
+
+      if (!hasWebGL()) {
         const canvas = document.getElementById("cb-canvas");
-        const renderer = new THREE.WebGLRenderer({
-          canvas,
-          antialias: true,
-          alpha: true,
-          powerPreference: "high-performance"
-        });
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1.15;
-
-        const scene = new THREE.Scene();
-
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
-        camera.position.set(0.2, 0.05, 6.3);
-
-        const geom = new THREE.TorusKnotGeometry(1.15, 0.38, 300, 18, 2, 3);
-
-        const glass = new THREE.MeshPhysicalMaterial({
-          color: new THREE.Color("#0b1622"),
-          roughness: 0.55,
-          metalness: 0.05,
-          transmission: 0.82,
-          thickness: 1.15,
-          ior: 1.45,
-          clearcoat: 0.6,
-          clearcoatRoughness: 0.35,
-          reflectivity: 0.25,
-          specularIntensity: 0.9,
-          specularColor: new THREE.Color("#cfe7ff")
-        });
-
-        const metal = new THREE.MeshPhysicalMaterial({
-          color: new THREE.Color("#070a0f"),
-          roughness: 0.25,
-          metalness: 1.0,
-          clearcoat: 0.35,
-          clearcoatRoughness: 0.2,
-          reflectivity: 0.45,
-          specularIntensity: 0.8,
-          specularColor: new THREE.Color("#8fb8ff")
-        });
-
-        const knotGlass = new THREE.Mesh(geom, glass);
-        const knotMetal = new THREE.Mesh(geom, metal);
-        knotMetal.scale.setScalar(1.02);
-
-        scene.add(knotMetal);
-        scene.add(knotGlass);
-
-        const key = new THREE.DirectionalLight(new THREE.Color("#24b8ff"), 2.25);
-        key.position.set(4.5, 2.6, 3.5);
-        scene.add(key);
-
-        const fill = new THREE.PointLight(new THREE.Color("#6b2cff"), 1.6, 30, 2);
-        fill.position.set(-3.8, 1.2, 2.8);
-        scene.add(fill);
-
-        const rim = new THREE.DirectionalLight(new THREE.Color("#ffffff"), 1.05);
-        rim.position.set(-2.6, 2.2, -4.4);
-        scene.add(rim);
-
-        scene.add(new THREE.AmbientLight(new THREE.Color("#0c1422"), 0.35));
-
-        let scrollTarget = 0;
-        let scrollCurrent = 0;
-
-        function updateScrollTarget() {
-          const doc = document.documentElement;
-          const max = Math.max(1, doc.scrollHeight - window.innerHeight);
-          scrollTarget = Math.min(1, Math.max(0, window.scrollY / max));
-        }
-
-        updateScrollTarget();
-        window.addEventListener(
-          "scroll",
-          () => {
-            updateScrollTarget();
-          },
-          { passive: true }
+        if (canvas) canvas.style.display = "none";
+        showFallback(
+          "3D preview unavailable",
+          "WebGL is disabled or unsupported on this device/browser. You can still explore the library and advisory."
         );
+      } else {
+        try {
+          const canvas = document.getElementById("cb-canvas");
+          if (!(canvas instanceof HTMLCanvasElement)) throw new Error("Canvas missing");
 
-        let pointerX = 0;
-        let pointerY = 0;
-        window.addEventListener(
-          "pointermove",
-          (e) => {
-            const nx = (e.clientX / window.innerWidth) * 2 - 1;
-            const ny = (e.clientY / window.innerHeight) * 2 - 1;
-            pointerX = nx;
-            pointerY = ny;
-          },
-          { passive: true }
-        );
-
-        const clock = new THREE.Clock();
-
-        function animate() {
-          const t = clock.getElapsedTime();
-          scrollCurrent += (scrollTarget - scrollCurrent) * 0.08;
-
-          const baseRot = t * 0.12;
-          knotGlass.rotation.y = baseRot;
-          knotGlass.rotation.x = baseRot * 0.7;
-          knotMetal.rotation.copy(knotGlass.rotation);
-
-          const z = THREE.MathUtils.lerp(6.3, 3.25, reduceMotion ? 0 : scrollCurrent);
-          const orbit = reduceMotion ? 0 : scrollCurrent * Math.PI * 0.75;
-
-          const floatY = reduceMotion ? 0 : Math.sin(t * 0.7) * 0.08;
-          const floatX = reduceMotion ? 0 : Math.cos(t * 0.55) * 0.06;
-
-          const px = reduceMotion ? 0 : pointerX * 0.08;
-          const py = reduceMotion ? 0 : -pointerY * 0.06;
-
-          camera.position.x = Math.sin(orbit) * 0.55 + floatX + px + 0.2;
-          camera.position.y = 0.08 + floatY + py;
-          camera.position.z = z;
-          camera.lookAt(0, 0, 0);
-
-          renderer.render(scene, camera);
-          requestAnimationFrame(animate);
-        }
-
-        window.addEventListener("resize", () => {
-          const w = window.innerWidth;
-          const h = window.innerHeight;
+          const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: "high-performance" });
           renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-          renderer.setSize(w, h);
-          camera.aspect = w / h;
-          camera.updateProjectionMatrix();
-        });
+          renderer.setSize(window.innerWidth, window.innerHeight);
+          renderer.toneMapping = THREE.ACESFilmicToneMapping;
+          renderer.toneMappingExposure = 1.15;
+          renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-        animate();
-      })();
+          const scene = new THREE.Scene();
+
+          const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+          camera.position.set(0.2, 0.05, 6.3);
+
+          const geom = new THREE.TorusKnotGeometry(1.15, 0.38, 300, 18, 2, 3);
+
+          const glass = new THREE.MeshPhysicalMaterial({
+            color: new THREE.Color("#0b1622"),
+            roughness: 0.55,
+            metalness: 0.05,
+            transmission: 0.82,
+            thickness: 1.15,
+            ior: 1.45,
+            clearcoat: 0.6,
+            clearcoatRoughness: 0.35,
+            reflectivity: 0.25,
+            specularIntensity: 0.9,
+            specularColor: new THREE.Color("#cfe7ff")
+          });
+
+          const metal = new THREE.MeshPhysicalMaterial({
+            color: new THREE.Color("#070a0f"),
+            roughness: 0.25,
+            metalness: 1.0,
+            clearcoat: 0.35,
+            clearcoatRoughness: 0.2,
+            reflectivity: 0.45,
+            specularIntensity: 0.8,
+            specularColor: new THREE.Color("#8fb8ff")
+          });
+
+          const knotGlass = new THREE.Mesh(geom, glass);
+          const knotMetal = new THREE.Mesh(geom, metal);
+          knotMetal.scale.setScalar(1.02);
+
+          scene.add(knotMetal);
+          scene.add(knotGlass);
+
+          // 3-point lighting
+          const key = new THREE.DirectionalLight(new THREE.Color("#24b8ff"), 2.25);
+          key.position.set(4.5, 2.6, 3.5);
+          scene.add(key);
+
+          const fill = new THREE.PointLight(new THREE.Color("#6b2cff"), 1.6, 30, 2);
+          fill.position.set(-3.8, 1.2, 2.8);
+          scene.add(fill);
+
+          const rim = new THREE.DirectionalLight(new THREE.Color("#ffffff"), 1.05);
+          rim.position.set(-2.6, 2.2, -4.4);
+          scene.add(rim);
+
+          scene.add(new THREE.AmbientLight(new THREE.Color("#0c1422"), 0.35));
+
+          let scrollTarget = 0;
+          let scrollCurrent = 0;
+
+          function updateScrollTarget() {
+            const doc = document.documentElement;
+            const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+            scrollTarget = Math.min(1, Math.max(0, window.scrollY / max));
+          }
+
+          updateScrollTarget();
+          window.addEventListener(
+            "scroll",
+            () => {
+              updateScrollTarget();
+            },
+            { passive: true }
+          );
+
+          let pointerX = 0;
+          let pointerY = 0;
+          window.addEventListener(
+            "pointermove",
+            (e) => {
+              const nx = (e.clientX / window.innerWidth) * 2 - 1;
+              const ny = (e.clientY / window.innerHeight) * 2 - 1;
+              pointerX = nx;
+              pointerY = ny;
+            },
+            { passive: true }
+          );
+
+          const clock = new THREE.Clock();
+
+          function animate() {
+            const t = clock.getElapsedTime();
+
+            // Smooth scroll interpolation
+            scrollCurrent += (scrollTarget - scrollCurrent) * 0.08;
+
+            const baseRot = t * 0.12;
+            knotGlass.rotation.y = baseRot;
+            knotGlass.rotation.x = baseRot * 0.7;
+            knotMetal.rotation.copy(knotGlass.rotation);
+
+            const z = THREE.MathUtils.lerp(6.3, 3.25, reduceMotion ? 0 : scrollCurrent);
+            const orbit = reduceMotion ? 0 : scrollCurrent * Math.PI * 0.75;
+
+            const floatY = reduceMotion ? 0 : Math.sin(t * 0.7) * 0.08;
+            const floatX = reduceMotion ? 0 : Math.cos(t * 0.55) * 0.06;
+
+            const px = reduceMotion ? 0 : pointerX * 0.08;
+            const py = reduceMotion ? 0 : -pointerY * 0.06;
+
+            camera.position.x = Math.sin(orbit) * 0.55 + floatX + px + 0.2;
+            camera.position.y = 0.08 + floatY + py;
+            camera.position.z = z;
+            camera.lookAt(0, 0, 0);
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+          }
+
+          window.addEventListener("resize", () => {
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+          });
+
+          animate();
+        } catch (err) {
+          const canvas = document.getElementById("cb-canvas");
+          if (canvas) canvas.style.display = "none";
+          showFallback(
+            "3D preview unavailable",
+            "The 3D renderer failed to initialize (device policy, GPU issue, or WebGL error). You can still use the site."
+          );
+          console.error(err);
+        }
+      }
     </script>
   </body>
 </html>
