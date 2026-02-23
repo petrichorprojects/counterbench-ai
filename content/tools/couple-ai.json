@@ -1,0 +1,34 @@
+{
+  "slug": "couple-ai",
+  "name": "Couple AI",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "8d ago",
+    "From $29.90/mo",
+    "5",
+    "3642",
+    "364",
+    "3672",
+    "367"
+  ],
+  "pricing": "paid",
+  "platform": [
+    "web"
+  ],
+  "url": "https://couple-ai.com/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

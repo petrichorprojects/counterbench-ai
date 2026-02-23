@@ -1,0 +1,41 @@
+{
+  "slug": "lightfield",
+  "name": "Lightfield",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United States",
+    "Released",
+    "1d ago",
+    "Free + from $36/mo",
+    "2",
+    "826805.0",
+    "826",
+    "828805.0",
+    "828",
+    "829805.0",
+    "829",
+    "834805.0",
+    "834",
+    "860815.0",
+    "860"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://lightfield.app/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

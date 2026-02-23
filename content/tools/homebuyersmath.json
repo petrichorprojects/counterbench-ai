@@ -1,0 +1,31 @@
+{
+  "slug": "homebuyersmath",
+  "name": "Homebuyersmath",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal documents review"
+  ],
+  "tags": [
+    "United States",
+    "Released",
+    "20d ago",
+    "Free + from $249",
+    "297"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://homebuyersmath.com/",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "slug": "lawyergpt",
+  "name": "LawyerGPT",
+  "description": "LawyerGPT is a supporting tool built on ChatGPT. It functions as a specialized consultant in the area of contract law, with capabilities to reference necessary case laws for clearer explanations and in-depth analysis. It is designed to help users understand the nuanced complexities of contractual ag...",
+  "categories": [
+    "Contracts"
+  ],
+  "tags": [
+    "LawyerGPT 342",
+    "USA Contract Law Master 204",
+    "USA Contract Law Master",
+    "Contract Law Advisor 154",
+    "Contract Law Advisor",
+    "46",
+    "218 AI tools for",
+    "AI tools",
+    "11",
+    "365 tasks",
+    "tasks",
+    "and 5",
+    "192 jobs",
+    "jobs",
+    "Sponsor",
+    "Base44 💻 Vibe coding",
+    "Vibe coding",
+    "649",
+    "906",
+    "K",
+    "K",
+    "Search⌘ + K",
+    "Search"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://chat.openai.com/g/g-GlrRA3mHA-lawyergpt?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

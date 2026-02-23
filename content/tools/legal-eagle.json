@@ -1,0 +1,27 @@
+{
+  "slug": "legal-eagle",
+  "name": "@Legal Eagle",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Legal Eagle"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://chat.openai.com/g/g-k1ao0owYu-legal-eagle-fa-lu-zhi-ying?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "knowledge-management",
+  "title": "Knowledge management and internal search",
+  "description": "Search, summarize, and organize internal knowledge and matter notes.",
+  "tool_slugs": [
+    "notis-2-4-2",
+    "california-property-guide-120",
+    "cloudtalk-ai-voice-agents",
+    "codecommercegpt-maroc-121",
+    "contract-law-advisor",
+    "corporate-law-advisor-143",
+    "files-magic-ai-file-organizer-for-mac",
+    "find-a-lawyer-249"
+  ],
+  "order": 90,
+  "seo": {
+    "title": "Knowledge management and internal search | Counterbench.AI",
+    "description": "Search, summarize, and organize internal knowledge and matter notes."
+  }
+}

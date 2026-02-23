@@ -1,0 +1,25 @@
+{
+  "slug": "leya-law",
+  "name": "Leya Law",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal advice"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.leya.law/?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

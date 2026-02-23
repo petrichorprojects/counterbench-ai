@@ -1,0 +1,35 @@
+{
+  "slug": "chambers-243",
+  "name": "Chambers 243",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal research"
+  ],
+  "tags": [
+    "Legal Data Tech 1",
+    "288",
+    "Legal Data Tech",
+    "vLex 698",
+    "vLex",
+    "Legal Research Companion 423",
+    "Legal Research Companion",
+    "Trial Preparation 393",
+    "Trial Preparation"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://theresanaiforthat.com/gpt/chambers",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

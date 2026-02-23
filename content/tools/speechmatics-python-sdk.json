@@ -1,0 +1,47 @@
+{
+  "slug": "speechmatics-python-sdk",
+  "name": "Speechmatics | Python SDK",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "6d ago",
+    "No pricing",
+    "11",
+    "99665.0",
+    "996",
+    "65.0",
+    "99765.0",
+    "997",
+    "12",
+    "00165.0",
+    "001",
+    "00365.0",
+    "003",
+    "00465.0",
+    "004",
+    "00865.0",
+    "008",
+    "01265.0",
+    "Speechmatics",
+    "Python SDK"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://github.com/speechmatics/speechmatics-python-sdk?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

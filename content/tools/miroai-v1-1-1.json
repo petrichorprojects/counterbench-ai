@@ -1,0 +1,44 @@
+{
+  "slug": "miroai-v1-1-1",
+  "name": "MiroAI v1.1.1",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United States",
+    "Released 1mo ago",
+    "From $8",
+    "26",
+    "214535.0",
+    "214",
+    "215535.0",
+    "215",
+    "218535.0",
+    "218",
+    "221535.0",
+    "221",
+    "224535.0",
+    "224",
+    "225535.0",
+    "225",
+    "MiroAI",
+    "v1.1.1"
+  ],
+  "pricing": "paid",
+  "platform": [
+    "web"
+  ],
+  "url": "https://miro.com/?red=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

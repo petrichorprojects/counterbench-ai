@@ -85,6 +85,11 @@ async function main() {
   const dupUrls = [...byUrl.entries()].filter(([, v]) => v.length > 1).map(([k]) => k);
   const dupNames = [...byName.entries()].filter(([, v]) => v.length > 1).map(([k]) => k);
 
+  const quality = {
+    name_without_letters: parsed.filter((t) => !/[A-Za-z]/.test(t.name)).length,
+    description_placeholder: parsed.filter((t) => (t.description || "").toLowerCase().includes("pending verification")).length
+  };
+
   const missing = {
     description: parsed.filter((t) => !t.description || t.description.includes("pending verification")).length,
     categories: parsed.filter((t) => !t.categories.length).length,
@@ -121,6 +126,7 @@ async function main() {
       urls: dupUrls.length,
       names: dupNames.length
     },
+    quality,
     missing,
     invalid,
     pricingCounts,
@@ -138,6 +144,10 @@ async function main() {
     `- schema_errors: ${schemaErrors.length}`,
     ``,
     `## Duplicates`,
+    `## Quality`,
+    `- name_without_letters: ${quality.name_without_letters}`,
+    `- description_placeholder: ${quality.description_placeholder}`,
+    ``,
     `- slugs: ${dupSlugs.length}`,
     `- urls: ${dupUrls.length}`,
     `- names: ${dupNames.length}`,

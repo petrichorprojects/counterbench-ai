@@ -1,0 +1,20 @@
+{
+  "slug": "solo-intake-starter",
+  "title": "Solo intake starter stack",
+  "description": "A lightweight setup for client intake, summarization, and follow-ups.",
+  "tool_slugs": [
+    "accordio-ai",
+    "contractcrab",
+    "creative-arena-by-contra",
+    "fortellar-cybersecurity-compliance-assessment",
+    "a-i-legal-guru-usa",
+    "abogado-lawyer",
+    "abstra-2-148",
+    "activepieces-3-503"
+  ],
+  "order": 10,
+  "seo": {
+    "title": "Solo intake starter stack | Counterbench.AI",
+    "description": "A lightweight setup for client intake, summarization, and follow-ups."
+  }
+}

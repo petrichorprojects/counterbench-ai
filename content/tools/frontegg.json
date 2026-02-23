@@ -1,0 +1,25 @@
+{
+  "slug": "frontegg",
+  "name": "Frontegg",
+  "description": "Description pending verification.",
+  "categories": [
+    "Compliance"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://theresanaiforthat.com/ai/frontegg",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

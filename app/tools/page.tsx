@@ -70,7 +70,8 @@ export default async function ToolsIndexPage({
   const category = normalize(sp.category);
   const pricing = normalize(sp.pricing);
   const platform = normalize(sp.platform);
-  const sort = normalize(sp.sort) || "relevance";
+  const sortParam = normalize(sp.sort);
+  const sort = sortParam || (q ? "relevance" : "name");
   const page = toInt(sp.page, 1);
   const tags = uniq(
     normalize(sp.tags)
@@ -82,7 +83,7 @@ export default async function ToolsIndexPage({
   const featured = all.filter((t) => t.featured);
   let filtered = filterTools(all, { q, category, pricing, platform, tags });
 
-  if (sort === "name") filtered = [...filtered].sort((a, b) => a.name.localeCompare(b.name));
+  if (sort === "name") filtered = [...filtered].sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
   if (sort === "verified") filtered = [...filtered].sort((a, b) => Number(Boolean(b.last_verified)) - Number(Boolean(a.last_verified)));
 
   const perPage = 24;

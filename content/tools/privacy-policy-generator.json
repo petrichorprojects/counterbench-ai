@@ -1,0 +1,25 @@
+{
+  "slug": "privacy-policy-generator",
+  "name": "Privacy Policy Generator",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal documents drafting"
+  ],
+  "tags": [],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://chat.openai.com/g/g-9ZSbVMFep-privacy-policy-generator?ref=taaft",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

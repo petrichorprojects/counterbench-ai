@@ -1,0 +1,20 @@
+{
+  "slug": "ediscovery-doc-review",
+  "title": "eDiscovery and document review",
+  "description": "Tools for doc review, extraction, summarization, and review workflows.",
+  "tool_slugs": [
+    "docuease",
+    "lawbotica",
+    "added-matter-159",
+    "advogadogpt",
+    "aerial-761",
+    "ai-agents",
+    "ai-juris-consultant",
+    "ai-lawyer"
+  ],
+  "order": 40,
+  "seo": {
+    "title": "eDiscovery and document review | Counterbench.AI",
+    "description": "Tools for doc review, extraction, summarization, and review workflows."
+  }
+}

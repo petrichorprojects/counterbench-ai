@@ -1,0 +1,20 @@
+{
+  "slug": "contract-review-drafting",
+  "title": "Contract review and drafting stack",
+  "description": "Tools to review clauses, draft redlines, and generate first-pass agreements.",
+  "tool_slugs": [
+    "athennian-ai",
+    "design-service-agreement-review-expert",
+    "general-service-agreement-review-master",
+    "robot-lawyer-v2-0",
+    "spellbook",
+    "ai-lawyer-1eb02b",
+    "ai-lawyer-472",
+    "aligna-334"
+  ],
+  "order": 20,
+  "seo": {
+    "title": "Contract review and drafting stack | Counterbench.AI",
+    "description": "Tools to review clauses, draft redlines, and generate first-pass agreements."
+  }
+}

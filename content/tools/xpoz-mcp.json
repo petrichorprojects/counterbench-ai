@@ -1,0 +1,33 @@
+{
+  "slug": "xpoz-mcp",
+  "name": "Xpoz MCP",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "Released",
+    "1mo ago",
+    "Free + from $20/mo",
+    "19",
+    "736144.8",
+    "736",
+    "144.8"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://www.xpoz.ai/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

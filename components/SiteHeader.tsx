@@ -102,7 +102,7 @@ export function SiteHeader() {
           <div className="nav__menuWrap" ref={menuWrapRef}>
             <button
               type="button"
-              className={`nav__link nav__exploreBtn ${libraryActive ? "active" : ""}`}
+              className={`btn btn--secondary btn--sm nav__exploreBtn ${libraryActive ? "is-active" : ""}`}
               aria-haspopup="menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
@@ -113,26 +113,30 @@ export function SiteHeader() {
 
             {menuOpen && (
               <div className="nav__dropdown" role="menu" aria-label="AI Law Library">
-                {libraryLinks.map((l) => (
-                  <Link
-                    key={l.href}
-                    role="menuitem"
-                    className={`nav__dropdownItem ${isActive(pathname, l.href) ? "active" : ""}`}
-                    href={l.href}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
+                {/* Use a list so items don't concatenate even if CSS is stale/missing. */}
+                <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {libraryLinks.map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        role="menuitem"
+                        className={`nav__dropdownItem ${isActive(pathname, l.href) ? "active" : ""}`}
+                        href={l.href}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
 
-          <Link className="btn btn--primary btn--sm" href="/advisory">
+          <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/advisory") ? "is-active" : ""}`} href="/advisory">
             AI Advisory
           </Link>
 
-          <Link className="btn btn--secondary btn--sm" href="/newsletter">
+          <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/newsletter") ? "is-active" : ""}`} href="/newsletter">
             Newsletter
           </Link>
         </div>

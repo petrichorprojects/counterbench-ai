@@ -1,0 +1,35 @@
+{
+  "slug": "taskfire",
+  "name": "TaskFire",
+  "description": "Description pending verification.",
+  "categories": [
+    "Legal"
+  ],
+  "tags": [
+    "United States",
+    "Released",
+    "9d ago",
+    "From $1.99",
+    "166",
+    "1673",
+    "167",
+    "1693",
+    "169"
+  ],
+  "pricing": "paid",
+  "platform": [
+    "web"
+  ],
+  "url": "https://taskfire.ai/?ref=taaft_feat",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": "2026-02-20",
+  "status": "unknown",
+  "change_log": [
+    {
+      "date": "2026-02-21",
+      "note": "Imported into Counterbench.AI catalog"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "ip-and-patents",
+  "title": "IP and patents workflow",
+  "description": "Tools for IP research, patent drafting support, and prior art organization.",
+  "tool_slugs": [
+    "dorothyai",
+    "edge-3-376",
+    "ip-author",
+    "patent-gpt",
+    "sgepatentreader",
+    "solve-intelligence",
+    "analytify-a-genbi-platform",
+    "attensira"
+  ],
+  "order": 70,
+  "seo": {
+    "title": "IP and patents workflow | Counterbench.AI",
+    "description": "Tools for IP research, patent drafting support, and prior art organization."
+  }
+}

@@ -31,11 +31,13 @@ const nextConfig = {
       },
       {
         source: "/css/(.*)",
-        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }]
+        // Non-hashed assets must not be immutable; stale CSS breaks navigation UI.
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }]
       },
       {
         source: "/js/(.*)",
-        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }]
+        // Non-hashed assets must not be immutable; stale JS can break interactions.
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }]
       },
       {
         source: "/assets/(.*)",
