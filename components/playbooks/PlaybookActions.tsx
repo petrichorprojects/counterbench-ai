@@ -1,10 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function PlaybookActions({ shareUrl, markdown }: { shareUrl: string; markdown: string }) {
   const [copied, setCopied] = useState<string | null>(null);
-  const canCopy = useMemo(() => typeof navigator !== "undefined" && Boolean(navigator.clipboard), []);
+  const [canCopy, setCanCopy] = useState(false);
+
+  useEffect(() => {
+    setCanCopy(typeof navigator !== "undefined" && Boolean(navigator.clipboard));
+  }, []);
 
   async function copy(label: string, text: string) {
     if (!canCopy) return;
@@ -31,4 +35,3 @@ export function PlaybookActions({ shareUrl, markdown }: { shareUrl: string; mark
     </div>
   );
 }
-
