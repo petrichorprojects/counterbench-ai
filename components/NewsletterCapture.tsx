@@ -1,16 +1,24 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
+
+function normalizeProvider(p: string): "formspree" | "beehiiv" | "generic" {
+  const v = (p || "").trim().toLowerCase();
+  if (v === "formspree") return "formspree";
+  if (v === "beehiiv") return "beehiiv";
+  return "generic";
+}
 
 export function NewsletterCapture({ source }: { source: string }) {
   const action = useMemo(() => process.env.NEXT_PUBLIC_NEWSLETTER_FORM_ACTION_URL ?? "", []);
-  const provider = useMemo(() => process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER ?? "generic", []);
+  const provider = useMemo(() => normalizeProvider(process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER ?? "generic"), []);
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [message, setMessage] = useState<string>("");
 
   // Provider-agnostic: simple POST form to an external URL.
   // For Formspree, we POST via fetch to keep users on-page.
-  // When not configured, keep the UI but don't submit anywhere.
+  // For Beehiiv, we POST to an internal API route (keeps keys server-side).
   return (
     <form
       className="newsletter-form"
@@ -18,43 +26,78 @@ export function NewsletterCapture({ source }: { source: string }) {
       action={action || undefined}
       method={action ? "post" : undefined}
       onSubmit={async (e) => {
-        if (!action) {
-          e.preventDefault();
-          setStatus("error");
-          setMessage("Newsletter form is not configured yet.");
-          return;
-        }
+        const form = e.currentTarget;
 
-        if (provider.toLowerCase() !== "formspree") {
-          // Let the browser submit normally for other providers.
-          return;
-        }
-
+        // Always keep users on-page for the common providers.
         e.preventDefault();
         setStatus("loading");
         setMessage("");
 
+        const fd = new FormData(form);
+        fd.set("source", source);
+
+        // Bot honeypot.
+        const hp = String(fd.get("company") || "");
+        if (hp.trim()) {
+          setStatus("ok");
+          setMessage("Subscribed.");
+          form.reset();
+          return;
+        }
+
         try {
-          const form = e.currentTarget;
-          const fd = new FormData(form);
-          // Helpful metadata for Formspree inbox filtering.
-          fd.set("source", source);
+          if (provider === "beehiiv") {
+            const email = String(fd.get("email") || "").trim();
+            const res = await fetch("/api/newsletter/subscribe", {
+              method: "POST",
+              headers: { "Content-Type": "application/json", Accept: "application/json" },
+              body: JSON.stringify({ email, source, hp })
+            });
 
-          const res = await fetch(action, {
-            method: "POST",
-            headers: { Accept: "application/json" },
-            body: fd
-          });
+            if (!res.ok) {
+              setStatus("error");
+              setMessage("Subscription failed. Try again in a moment.");
+              return;
+            }
 
-          if (!res.ok) {
-            setStatus("error");
-            setMessage("Something went wrong. Try again in a moment.");
+            setStatus("ok");
+            setMessage("Subscribed. Check your inbox if confirmation is required.");
+            form.reset();
             return;
           }
 
-          setStatus("ok");
-          setMessage("Subscribed. Check your inbox if confirmation is required.");
-          form.reset();
+          if (provider === "formspree") {
+            if (!action) {
+              setStatus("error");
+              setMessage("Newsletter signup is temporarily unavailable.");
+              return;
+            }
+
+            const res = await fetch(action, {
+              method: "POST",
+              headers: { Accept: "application/json" },
+              body: fd
+            });
+
+            if (!res.ok) {
+              setStatus("error");
+              setMessage("Subscription failed. Try again in a moment.");
+              return;
+            }
+
+            setStatus("ok");
+            setMessage("Subscribed. Check your inbox if confirmation is required.");
+            form.reset();
+            return;
+          }
+
+          // Generic provider: fall back to a normal POST if configured.
+          if (!action) {
+            setStatus("error");
+            setMessage("Newsletter signup is temporarily unavailable.");
+            return;
+          }
+          form.submit();
         } catch {
           setStatus("error");
           setMessage("Network error. Please try again.");
@@ -64,12 +107,28 @@ export function NewsletterCapture({ source }: { source: string }) {
       <label className="sr-only" htmlFor={`email-${source}`}>
         Email
       </label>
+      <input
+        tabIndex={-1}
+        autoComplete="off"
+        name="company"
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: -10000,
+          top: "auto",
+          width: 1,
+          height: 1,
+          overflow: "hidden"
+        }}
+      />
       <div className="flex flex--gap-2 flex--resp-col">
         <input
           id={`email-${source}`}
           name="email"
           type="email"
           required
+          autoComplete="email"
+          inputMode="email"
           placeholder="you@firm.com"
           aria-invalid={status === "error" ? true : undefined}
           style={{
@@ -90,7 +149,17 @@ export function NewsletterCapture({ source }: { source: string }) {
         style={{ fontSize: "0.8125rem", marginTop: "0.75rem" }}
         aria-live="polite"
       >
-        {message ? message : `Provider: ${provider}. ${action ? "Configured." : "Not configured."}`}
+        {message ? (
+          message
+        ) : (
+          <>
+            Weekly updates. Unsubscribe anytime.{" "}
+            <Link href="/privacy" className="text-muted" style={{ textDecoration: "underline" }}>
+              Privacy
+            </Link>
+            .
+          </>
+        )}
       </div>
     </form>
   );
