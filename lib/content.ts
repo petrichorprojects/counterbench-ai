@@ -13,6 +13,7 @@ import {
   type SkillFrontmatter,
   type Tool
 } from "./schemas";
+import { normalizeTool } from "./normalize";
 
 const ROOT = process.cwd();
 const CONTENT_ROOT = process.env.CB_CONTENT_ROOT?.trim() ? process.env.CB_CONTENT_ROOT.trim() : "content";
@@ -49,7 +50,8 @@ export function getAllTools(): Tool[] {
     .filter((f) => f.endsWith(".json"))
     .map((filename) => {
       const filePath = path.join(dir, filename);
-      return readJsonFile(filePath, (v) => ToolSchema.parse(v));
+      const parsed = readJsonFile(filePath, (v) => ToolSchema.parse(v));
+      return normalizeTool(parsed);
     });
 }
 
@@ -57,7 +59,8 @@ export function getToolBySlug(slug: string): Tool | null {
   const dir = overlayDir("tools");
   const filePath = path.join(dir, `${slug}.json`);
   if (!fs.existsSync(filePath)) return null;
-  return readJsonFile(filePath, (v) => ToolSchema.parse(v));
+  const parsed = readJsonFile(filePath, (v) => ToolSchema.parse(v));
+  return normalizeTool(parsed);
 }
 
 export function getAllCollections(): Collection[] {

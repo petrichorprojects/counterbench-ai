@@ -20,6 +20,8 @@ export const ToolSchema = z.object({
   affiliate_url: z.string().url().nullable(),
   logo: z.string().nullable(),
   featured: z.boolean(),
+  // Manual curation flag. Distinct from last_verified, which is an automated "last checked" date.
+  verified: z.boolean().default(false),
   last_verified: z.string().nullable(),
   status: ToolStatusEnum,
   change_log: z.array(ToolChangeLogEntrySchema).default([])
@@ -84,4 +86,3 @@ export const SkillFrontmatterSchema = z.object({
 });
 
 export type SkillFrontmatter = z.infer<typeof SkillFrontmatterSchema>;
-

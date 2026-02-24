@@ -4,7 +4,7 @@ import type { Tool } from "@/lib/schemas";
 import { CompareQuickAdd } from "@/components/compare/CompareQuickAdd";
 
 export function ToolCard({ tool }: { tool: Tool }) {
-  const verified = Boolean(tool.last_verified);
+  const verified = Boolean(tool.verified);
   return (
     <div className="card" style={{ padding: "1.5rem", borderRadius: 12 }}>
       <div className="flex flex--between flex--center flex--gap-2" style={{ alignItems: "flex-start" }}>

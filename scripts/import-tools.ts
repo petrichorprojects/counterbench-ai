@@ -256,6 +256,8 @@ function mergeDraft(existing: ToolDraft, incoming: ToolDraft): ToolDraft {
 
   if (!merged.affiliate_url && incoming.affiliate_url) merged.affiliate_url = incoming.affiliate_url;
 
+  merged.verified = Boolean(existing.verified || incoming.verified);
+
   return merged;
 }
 
@@ -335,6 +337,7 @@ async function main() {
       affiliate_url: affiliate,
       logo: null,
       featured: false,
+      verified: false,
       last_verified: scrapedAt ? scrapedAt.slice(0, 10) : null,
       status: "unknown",
       change_log: [
@@ -384,6 +387,7 @@ async function main() {
       affiliate_url: d.affiliate_url,
       logo: d.logo,
       featured: d.featured,
+      verified: false,
       last_verified: d.last_verified,
       status: d.status,
       change_log: d.change_log

@@ -52,7 +52,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
           </p>
 
           <div className="flex flex--gap-1 mt-4" style={{ flexWrap: "wrap" }}>
-            {tool.last_verified && <Badge tone="success">Verified</Badge>}
+            {tool.verified && <Badge tone="success">Verified</Badge>}
             <Badge tone="neutral">Pricing: {tool.pricing}</Badge>
             <Badge tone="neutral">Status: {tool.status}</Badge>
             {tool.platform.map((p) => (
@@ -102,7 +102,9 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
             <div className="text-white" style={{ fontSize: "1rem", fontWeight: 600 }}>
               {verifiedDate ? `Last checked: ${verifiedDate}` : "Not checked yet"}
             </div>
-            <p className="mt-3">Verified entries indicate the listing was reviewed and the primary URL was reachable at that time.</p>
+            <p className="mt-3">
+              “Last checked” indicates the listing URL was reachable at that time. The “Verified” badge is reserved for entries that have been manually reviewed.
+            </p>
           </div>
 
           {tool.change_log.length > 0 && (
