@@ -1,0 +1,23 @@
+{
+  "slug": "privacy-and-compliance",
+  "title": "Privacy and Compliance Pack",
+  "description": "Prompts for DPAs, privacy policy reviews, DSAR operations, and vendor risk.",
+  "prompt_slugs": [
+    "dpa-review-checklist",
+    "privacy-policy-gap-check",
+    "cookie-banner-audit",
+    "gdpr-ropa-starter",
+    "data-retention-policy-draft",
+    "dsar-playbook",
+    "vendor-security-questionnaire-draft",
+    "incident-response-initial-brief",
+    "security-exhibit-summary"
+  ],
+  "audience": "legal",
+  "workflow_stage": "compliance",
+  "seo": {
+    "title": "Privacy + Compliance Prompt Pack",
+    "description": "A workflow pack for privacy, compliance, and vendor risk review."
+  }
+}
+

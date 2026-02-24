@@ -1,0 +1,34 @@
+---
+title: "Contract Clause Risk Matrix"
+description: "Extract key clauses and produce a quick risk matrix with negotiation notes."
+use_case: "Contracts / Review"
+inputs:
+  - "Contract text (full or relevant sections)"
+  - "Party position (customer/vendor)"
+  - "Jurisdiction (optional)"
+steps:
+  - "Locate key clause topics"
+  - "Summarize each clause"
+  - "Assign risk and negotiation note"
+output_format: "Matrix rows: Liability, Indemnity, Termination, Confidentiality, IP, Security, Privacy, Audit, Subprocessors"
+tags:
+  - "Contracts"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You are a contract review assistant (not legal advice).
+
+Party position: {{party_position}}
+Jurisdiction (if relevant): {{jurisdiction}}
+
+Contract text:
+{{contract_text}}
+
+Task:
+- For each topic, indicate if it exists.
+- Summarize what it says (quote short snippets where possible).
+- Assign risk (Low/Med/High) and give a negotiation note.
+

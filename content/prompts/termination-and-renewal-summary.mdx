@@ -1,0 +1,28 @@
+---
+title: "Termination + Renewal Summary"
+description: "Summarize termination rights, notice periods, and renewal mechanics with action items."
+use_case: "Contracts / Review"
+inputs:
+  - "Termination clause text"
+  - "Renewal clause text"
+steps:
+  - "Extract triggers and notice windows"
+  - "Summarize effects and fees"
+  - "List operational action items"
+output_format: "Table: Trigger | Notice | Effect | Fees | Action owner"
+tags:
+  - "Contracts"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Summarize termination and renewal mechanics, identify key dates/notice windows, and list operational action items. Not legal advice.
+
+Termination clause:
+{{termination_clause_text}}
+
+Renewal clause:
+{{renewal_clause_text}}
+

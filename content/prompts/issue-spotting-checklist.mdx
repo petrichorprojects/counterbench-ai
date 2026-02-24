@@ -1,0 +1,31 @@
+---
+title: "Issue Spotting Checklist"
+description: "Generate an issue-spotting checklist for a workflow/matter type to reduce misses."
+use_case: "General / QA"
+inputs:
+  - "Matter type"
+  - "Jurisdiction (optional)"
+  - "Context"
+steps:
+  - "Generate checklist categories"
+  - "Add stop-the-line questions"
+output_format: "Checklist grouped by: facts, documents, deadlines, stakeholders, privacy/security, privilege, approvals"
+tags:
+  - "General"
+  - "QA"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Create a practical issue-spotting checklist and a short set of "stop the line" questions. Not legal advice.
+
+Matter type:
+{{matter_type}}
+
+Jurisdiction:
+{{jurisdiction}}
+
+Context:
+{{context}}
+

@@ -1,0 +1,33 @@
+---
+title: "Vendor Security Questionnaire Draft"
+description: "Draft a vendor security questionnaire tailored to data type and risk tolerance."
+use_case: "Security / Vendor Review"
+inputs:
+  - "Vendor type"
+  - "Data types"
+  - "Risk tolerance"
+  - "Required standards (optional)"
+steps:
+  - "Tailor domains to vendor and data type"
+  - "Generate questions + evidence requests"
+output_format: "Domains with numbered questions + evidence artifacts"
+tags:
+  - "Security"
+  - "Compliance"
+  - "Vendor"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft a vendor security questionnaire (not legal advice).
+
+Vendor type: {{vendor_type}}
+Data types: {{data_types}}
+Risk tolerance: {{risk_tolerance}}
+Required standards: {{required_standards}}
+
+Output:
+- 25-40 questions grouped by domain (access control, encryption, logging, SDLC, incident response, subcontractors).
+- For each domain, list evidence artifacts to request.
+

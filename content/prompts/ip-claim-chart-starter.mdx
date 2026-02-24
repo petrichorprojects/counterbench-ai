@@ -1,0 +1,27 @@
+---
+title: "IP Claim Chart Starter"
+description: "Create a starter claim chart structure from a patent claim (for internal analysis)."
+use_case: "IP / Patents"
+inputs:
+  - "Claim text"
+  - "Accused product description"
+steps:
+  - "Break claim into limitations"
+  - "Generate a chart scaffold with questions"
+output_format: "Table: Claim limitation | Evidence (TBD) | Notes | Questions"
+tags:
+  - "IP"
+  - "Research"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Break the claim into limitations and propose a claim chart scaffold. Do not make definitive infringement conclusions. Not legal advice.
+
+Claim text:
+{{claim_text}}
+
+Accused product description:
+{{accused_product_description}}
+

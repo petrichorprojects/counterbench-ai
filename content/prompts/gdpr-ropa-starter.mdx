@@ -1,0 +1,41 @@
+---
+title: "GDPR ROPA Starter (Processing Inventory)"
+description: "Generate a starter Record of Processing Activities entry from a workflow description."
+use_case: "Privacy / Compliance"
+inputs:
+  - "Processing description"
+  - "Data categories"
+  - "Purpose"
+  - "Processors"
+  - "Retention"
+steps:
+  - "Structure the activity description"
+  - "List recipients and transfers"
+  - "Flag unknowns"
+output_format: "ROPA-style fields: activity, purposes, categories, recipients, transfers, retention, security measures (high level)"
+tags:
+  - "Privacy"
+  - "Compliance"
+  - "GDPR"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Create a structured ROPA-style entry. Highlight unknowns and request missing details. Not legal advice.
+
+Processing description:
+{{processing_description}}
+
+Data categories:
+{{data_categories}}
+
+Purpose:
+{{purpose}}
+
+Processors:
+{{processors}}
+
+Retention:
+{{retention}}
+

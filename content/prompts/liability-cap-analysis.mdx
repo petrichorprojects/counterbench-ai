@@ -1,0 +1,34 @@
+---
+title: "Limitation of Liability Analysis"
+description: "Extract liability caps/exclusions and explain exposure in plain terms."
+use_case: "Contracts / Review"
+inputs:
+  - "Liability clause text"
+  - "Party position (customer/vendor)"
+  - "Deal value (optional)"
+steps:
+  - "Identify caps and exclusions"
+  - "Map to scenarios"
+  - "Flag uncapped exposure"
+output_format: "Bullets + table: scenario | capped? | cap amount | notes"
+tags:
+  - "Contracts"
+  - "Risk"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Explain what is capped vs excluded, how the cap is calculated, and what scenarios could create uncapped exposure. Not legal advice.
+
+Party position: {{party_position}}
+Deal value (if relevant): {{deal_value}}
+
+Liability clause:
+{{liability_clause_text}}
+
+Rules:
+- Focus on interpreting the text; do not invent missing definitions.
+- If the clause refers to defined terms, ask for the definitions.
+

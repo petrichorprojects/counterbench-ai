@@ -1,0 +1,24 @@
+{
+  "slug": "litigation-and-discovery",
+  "title": "Litigation and Discovery Pack",
+  "description": "Prompts for case theory, chronologies, discovery requests, depositions, and eDiscovery protocols.",
+  "prompt_slugs": [
+    "litigation-case-theory-outline",
+    "litigation-chronology-builder",
+    "discovery-requests-draft",
+    "deposition-outline-builder",
+    "witness-prep-question-bank",
+    "motion-outline-starter",
+    "privilege-log-skeleton",
+    "ediscovery-collection-plan",
+    "keyword-search-protocol",
+    "doc-review-coding-guide"
+  ],
+  "audience": "legal",
+  "workflow_stage": "discovery",
+  "seo": {
+    "title": "Litigation + Discovery Prompt Pack",
+    "description": "A workflow pack for litigation support, discovery, and eDiscovery execution."
+  }
+}
+

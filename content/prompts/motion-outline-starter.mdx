@@ -1,0 +1,32 @@
+---
+title: "Motion Outline Starter"
+description: "Generate a motion/brief outline with headings tailored to issues and record facts."
+use_case: "Litigation / Drafting"
+inputs:
+  - "Motion type"
+  - "Issues"
+  - "Facts record (with cite placeholders)"
+steps:
+  - "Propose argument structure"
+  - "Map facts to headings"
+  - "Insert placeholders for authorities"
+output_format: "Outline with headings + bullet arguments + record cite placeholders"
+tags:
+  - "Litigation"
+  - "Drafting"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft a persuasive outline (not the full brief) with argument headings and where evidence/citations should go. Do not invent citations.
+
+Motion type:
+{{motion_type}}
+
+Issues:
+{{issues}}
+
+Facts record:
+{{facts_record}}
+

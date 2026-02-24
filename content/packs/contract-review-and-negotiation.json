@@ -1,0 +1,24 @@
+{
+  "slug": "contract-review-and-negotiation",
+  "title": "Contract Review and Negotiation Pack",
+  "description": "Prompts for redlines, risk matrices, and negotiation fallback positions.",
+  "prompt_slugs": [
+    "contract-clause-risk-matrix",
+    "contract-redline-summary",
+    "liability-cap-analysis",
+    "termination-and-renewal-summary",
+    "assignment-change-of-control",
+    "negotiation-fallback-positions",
+    "contract-business-summary",
+    "contract-definition-extractor",
+    "nda-summary-and-redflags",
+    "msa-sow-consistency-check"
+  ],
+  "audience": "legal",
+  "workflow_stage": "review",
+  "seo": {
+    "title": "Contract Review Prompt Pack",
+    "description": "A workflow pack for reviewing and negotiating contracts."
+  }
+}
+

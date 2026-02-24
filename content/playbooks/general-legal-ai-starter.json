@@ -12,7 +12,7 @@
   "tool_rules": [
     { "include_categories": ["Legal", "Legal advice", "Legal research"], "include_tags": ["legal", "research", "draft", "review"], "limit": 8 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["plain-english-rewrite", "issue-spotting-checklist", "intake-summary"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Define goal and constraints (jurisdiction, deadlines, scope)",
@@ -29,4 +29,3 @@
     "description": "A default legal AI workflow with checklist and risk notes."
   }
 }
-

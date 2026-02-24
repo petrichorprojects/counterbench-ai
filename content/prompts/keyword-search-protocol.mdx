@@ -1,0 +1,32 @@
+---
+title: "Keyword Search Protocol (Starter)"
+description: "Generate a keyword search protocol with query strings, iterations, and validation steps."
+use_case: "eDiscovery / Search"
+inputs:
+  - "Case themes"
+  - "Seed key terms"
+  - "Custodian context"
+steps:
+  - "Generate query strings and exclusions"
+  - "Propose an iteration plan"
+  - "Define sampling/validation checks"
+output_format: "Protocol: seed terms, queries, exclusions, iteration plan, sampling/validation checklist"
+tags:
+  - "eDiscovery"
+  - "Search"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft a keyword search protocol with an iteration plan and validation checklist. Include cautions about over/under-inclusiveness. Not legal advice.
+
+Case themes:
+{{case_themes}}
+
+Seed key terms:
+{{key_terms}}
+
+Custodian context:
+{{custodian_context}}
+

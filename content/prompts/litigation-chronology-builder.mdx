@@ -1,0 +1,28 @@
+---
+title: "Litigation Chronology Builder"
+description: "Turn an event/document summary into a dated chronology with evidence references."
+use_case: "Litigation"
+inputs:
+  - "Events and sources"
+  - "Time zone (optional)"
+steps:
+  - "Normalize dates"
+  - "Build a chronology table"
+  - "Call out gaps and follow-ups"
+output_format: "Table: Date/time | Event | Source | Reliability | Follow-ups"
+tags:
+  - "Litigation"
+  - "Timeline"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Build a chronology. For each event, cite the source snippet/name and mark confidence. Call out missing gaps. Not legal advice.
+
+Time zone:
+{{time_zone}}
+
+Events and sources:
+{{events_and_sources}}
+

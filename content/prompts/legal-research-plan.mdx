@@ -1,0 +1,36 @@
+---
+title: "Legal Research Plan"
+description: "Generate a research plan with queries, sources, and a short memo outline."
+use_case: "Legal Research"
+inputs:
+  - "Research question"
+  - "Jurisdiction"
+  - "Constraints (time/databases)"
+  - "Facts (high level)"
+steps:
+  - "Break into issues"
+  - "Generate search queries"
+  - "Propose memo outline + validation steps"
+output_format: "Plan: issues; queries; sources; memo outline; unknowns; next steps"
+tags:
+  - "Research"
+  - "Memo"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Output a research plan + a memo outline. Include suggested search queries and how you'd validate authority. Do not provide legal advice.
+
+Jurisdiction:
+{{jurisdiction}}
+
+Research question:
+{{research_question}}
+
+Facts:
+{{facts}}
+
+Constraints:
+{{constraints}}
+

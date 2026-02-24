@@ -17,7 +17,7 @@
   "tool_rules": [
     { "include_categories": ["Legal documents review", "Legal"], "include_tags": ["review", "documents", "ediscovery", "litigation"], "limit": 7 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["ediscovery-collection-plan", "keyword-search-protocol", "doc-review-coding-guide", "privilege-log-skeleton"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Define relevance, privilege, and confidentiality criteria",
@@ -34,4 +34,3 @@
     "description": "A defensible eDiscovery workflow with tools and a structured review checklist."
   }
 }
-

@@ -1,0 +1,28 @@
+---
+title: "Lease Abstract (Key Terms)"
+description: "Create a lease abstract with key commercial terms and critical clauses."
+use_case: "Real Estate"
+inputs:
+  - "Lease text"
+  - "Jurisdiction (optional)"
+steps:
+  - "Extract key terms"
+  - "Flag non-standard clauses"
+  - "List questions"
+output_format: "Abstract table + red flags list + questions"
+tags:
+  - "Real Estate"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Produce a lease abstract and flag non-standard or risky clauses. Ask clarifying questions where needed. Not legal advice.
+
+Jurisdiction:
+{{jurisdiction}}
+
+Lease text:
+{{lease_text}}
+

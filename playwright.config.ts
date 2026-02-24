@@ -5,12 +5,15 @@ const isRemote = Boolean(process.env.E2E_SKIP_WEBSERVER) || Boolean(process.env.
 
 export default defineConfig({
   testDir: "tests/e2e",
+  // In constrained environments (like sandboxes), writing into the repo can be blocked.
+  // Use a temp output directory by default.
+  outputDir: process.env.PLAYWRIGHT_OUTPUT_DIR || "/tmp/counterbench-playwright",
   timeout: 45_000,
   expect: { timeout: 10_000 },
   retries: 1,
   reporter: [
     ["list"],
-    ["html", { outputFolder: "out/playwright-report", open: "never" }]
+    ["html", { outputFolder: process.env.PLAYWRIGHT_REPORT_DIR || "/tmp/counterbench-playwright-report", open: "never" }]
   ],
   use: {
     baseURL,
@@ -30,4 +33,3 @@ export default defineConfig({
         timeout: 180_000
       }
 });
-

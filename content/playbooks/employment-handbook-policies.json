@@ -12,7 +12,7 @@
   "tool_rules": [
     { "include_categories": ["Employment law advice", "Compliance"], "include_tags": ["employment", "policy", "handbook"], "limit": 7 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["employment-policy-draft", "plain-english-rewrite"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "List policies to update (harassment, leave, remote work, confidentiality)",
@@ -29,4 +29,3 @@
     "description": "A workflow for employment policy updates and handbook maintenance."
   }
 }
-

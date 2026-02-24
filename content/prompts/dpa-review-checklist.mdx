@@ -1,0 +1,36 @@
+---
+title: "DPA Review Checklist"
+description: "Generate a checklist for reviewing a Data Processing Addendum with gaps and questions."
+use_case: "Privacy / Compliance"
+inputs:
+  - "DPA text"
+  - "Role (controller/processor)"
+  - "Jurisdictions"
+  - "Data types"
+steps:
+  - "Map DPA sections to standard requirements"
+  - "Identify gaps and questions"
+output_format: "Checklist grouped by: roles, subprocessors, SCCs, security, breach notice, audits, deletion, DSARs"
+tags:
+  - "Privacy"
+  - "Compliance"
+  - "Contracts"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You are assisting with DPA review (not legal advice).
+
+Role (controller/processor): {{controller_or_processor}}
+Jurisdictions: {{jurisdictions}}
+Data types: {{data_types}}
+
+DPA text:
+{{dpa_text}}
+
+Task:
+- Produce a review checklist.
+- Identify gaps and missing sections.
+- Draft 10 targeted questions to send to the vendor.
+

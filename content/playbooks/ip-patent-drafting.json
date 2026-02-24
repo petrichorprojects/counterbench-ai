@@ -12,7 +12,7 @@
   "tool_rules": [
     { "include_categories": ["Patents"], "include_tags": ["patent", "claims", "prior art", "ip"], "limit": 8 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["ip-claim-chart-starter"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Define invention summary and distinguishing features",
@@ -29,4 +29,3 @@
     "description": "A practical IP and patent drafting workflow with checklist and tool recommendations."
   }
 }
-
