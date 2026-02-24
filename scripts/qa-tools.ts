@@ -105,7 +105,10 @@ async function main() {
   const normalizedQuality = {
     description_placeholder: normalized.filter((t) => (t.description || "").toLowerCase().includes("pending verification")).length,
     categories_with_trailing_digits: normalized.filter((t) => t.categories.some((c) => /\d+$/.test(c))).length,
-    categories_too_short: normalized.filter((t) => t.categories.some((c) => c.trim().length <= 2)).length
+    categories_too_short: normalized.filter((t) => t.categories.some((c) => c.trim().length <= 2)).length,
+    // Beginner-friendly names: no pure numeric/punctuation titles, no stray handles/versions.
+    name_without_letters: normalized.filter((t) => !/[A-Za-z]/.test(t.name)).length,
+    name_with_handle_prefix: normalized.filter((t) => /^@/.test(t.name.trim())).length
   };
 
   const invalid = {
@@ -163,6 +166,8 @@ async function main() {
     `- description_placeholder: ${normalizedQuality.description_placeholder}`,
     `- categories_with_trailing_digits: ${normalizedQuality.categories_with_trailing_digits}`,
     `- categories_too_short: ${normalizedQuality.categories_too_short}`,
+    `- name_without_letters: ${normalizedQuality.name_without_letters}`,
+    `- name_with_handle_prefix: ${normalizedQuality.name_with_handle_prefix}`,
     ``,
     `- slugs: ${dupSlugs.length}`,
     `- urls: ${dupUrls.length}`,
