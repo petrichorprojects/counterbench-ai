@@ -1,0 +1,32 @@
+{
+  "slug": "litigation-trial-prep",
+  "title": "Litigation Support + Trial Prep",
+  "description": "A workflow for building a clean case file: issues, evidence map, witness prep, and trial outline.",
+  "order": 50,
+  "conditions": {
+    "matter_types": ["litigation"],
+    "stages": ["trial_prep", "manage", "research"],
+    "sensitivity": ["medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Legal verdicts", "Legal research", "Legal documents review"], "include_tags": ["litigation", "trial", "evidence", "deposition"], "limit": 8 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Create issue list and element-by-element proof chart",
+    "Build an evidence map (doc IDs, witnesses, dates, citations)",
+    "Prepare deposition and witness outlines",
+    "Draft trial themes and opening/closing outline"
+  ],
+  "risk_notes": [
+    "Be conservative with confidentiality: sanitize exhibits before using third-party tools.",
+    "Verify every quote and timeline fact against original evidence."
+  ],
+  "seo": {
+    "title": "Litigation + Trial Prep Playbook",
+    "description": "A litigation workflow from evidence mapping to trial outline."
+  }
+}
+

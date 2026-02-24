@@ -1,0 +1,32 @@
+{
+  "slug": "employment-handbook-policies",
+  "title": "Employment Policies + Handbook Updates",
+  "description": "A workflow for drafting and updating employment policies with a change log and review checklist.",
+  "order": 70,
+  "conditions": {
+    "matter_types": ["employment"],
+    "stages": ["draft", "review", "compliance"],
+    "sensitivity": ["low", "medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Employment law advice", "Compliance"], "include_tags": ["employment", "policy", "handbook"], "limit": 7 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "List policies to update (harassment, leave, remote work, confidentiality)",
+    "Collect current policy text and annotate required changes",
+    "Draft updates and run internal review + stakeholder signoff",
+    "Record changes in a dated change log"
+  ],
+  "risk_notes": [
+    "Verify jurisdiction-specific requirements before finalizing policies.",
+    "Keep an audit trail for approvals and published versions."
+  ],
+  "seo": {
+    "title": "Employment Policies Playbook",
+    "description": "A workflow for employment policy updates and handbook maintenance."
+  }
+}
+

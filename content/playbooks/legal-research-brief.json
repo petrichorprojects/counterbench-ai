@@ -1,0 +1,32 @@
+{
+  "slug": "legal-research-brief",
+  "title": "Legal Research → Brief Workflow",
+  "description": "A research workflow optimized for speed: build a plan, extract authorities, and produce a cite-checkable draft.",
+  "order": 30,
+  "conditions": {
+    "matter_types": ["research"],
+    "stages": ["research"],
+    "sensitivity": ["low", "medium"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Legal research"], "include_tags": ["research", "citation", "case law", "brief"], "limit": 8 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Clarify question presented, jurisdiction, and standard of review",
+    "Build an issue tree and a search plan (queries + sources)",
+    "Extract holdings and key quotes (with citations)",
+    "Draft outline, then draft sections, then run cite-check"
+  ],
+  "risk_notes": [
+    "Do not trust citations from AI without verifying the underlying source.",
+    "Separate factual assumptions from legal conclusions in your draft."
+  ],
+  "seo": {
+    "title": "Legal Research Playbook",
+    "description": "A research-to-brief workflow with recommended tools and a cite-check checklist."
+  }
+}
+

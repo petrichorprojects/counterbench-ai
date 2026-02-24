@@ -45,6 +45,45 @@ export const CollectionSchema = z.object({
 
 export type Collection = z.infer<typeof CollectionSchema>;
 
+export const PlaybookToolRuleSchema = z.object({
+  include_categories: z.array(z.string()).default([]),
+  include_tags: z.array(z.string()).default([]),
+  limit: z.number().int().min(1).max(24).default(6)
+});
+
+export const PlaybookRecommendedToolSchema = z.object({
+  tool_slug: z.string().min(1),
+  why: z.array(z.string()).default([])
+});
+
+export const PlaybookSchema = z.object({
+  slug: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  order: z.number().int().default(0),
+  conditions: z
+    .object({
+      matter_types: z.array(z.string()).default([]),
+      stages: z.array(z.string()).default([]),
+      sensitivity: z.array(z.string()).default([])
+    })
+    .default({ matter_types: [], stages: [], sensitivity: [] }),
+  recommended_tools: z.array(PlaybookRecommendedToolSchema).default([]),
+  tool_rules: z.array(PlaybookToolRuleSchema).default([]),
+  prompt_slugs: z.array(z.string()).default([]),
+  skill_slugs: z.array(z.string()).default([]),
+  checklist: z.array(z.string()).default([]),
+  risk_notes: z.array(z.string()).default([]),
+  seo: z
+    .object({
+      title: z.string().optional(),
+      description: z.string().optional()
+    })
+    .optional()
+});
+
+export type Playbook = z.infer<typeof PlaybookSchema>;
+
 export const PackSchema = z.object({
   slug: z.string().min(1),
   title: z.string().min(1),

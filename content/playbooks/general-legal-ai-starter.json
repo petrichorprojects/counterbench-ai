@@ -1,0 +1,32 @@
+{
+  "slug": "general-legal-ai-starter",
+  "title": "General Legal AI Starter",
+  "description": "A safe default playbook: pick a small stack, keep an audit trail, and ship usable drafts quickly.",
+  "order": 100,
+  "conditions": {
+    "matter_types": ["general"],
+    "stages": [],
+    "sensitivity": ["low", "medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Legal", "Legal advice", "Legal research"], "include_tags": ["legal", "research", "draft", "review"], "limit": 8 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Define goal and constraints (jurisdiction, deadlines, scope)",
+    "Draft a first pass, then force source-check and revision",
+    "Log decisions: what was used, when, and what changed",
+    "Escalate to human review for high-risk sections"
+  ],
+  "risk_notes": [
+    "AI helps draft and organize, but it does not replace legal review.",
+    "For high sensitivity matters, use approved tools only."
+  ],
+  "seo": {
+    "title": "Legal AI Starter Playbook",
+    "description": "A default legal AI workflow with checklist and risk notes."
+  }
+}
+

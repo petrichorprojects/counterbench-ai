@@ -1,0 +1,38 @@
+{
+  "slug": "contract-review-quickstart",
+  "title": "Contract Review Quickstart",
+  "description": "A practical workflow for reviewing vendor contracts quickly without missing the usual red flags.",
+  "order": 10,
+  "conditions": {
+    "matter_types": ["contracts"],
+    "stages": ["review", "negotiation"],
+    "sensitivity": ["low", "medium", "high"]
+  },
+  "recommended_tools": [
+    {
+      "tool_slug": "spellbook",
+      "why": ["Contract drafting support", "Clause suggestions and rewrite help"]
+    }
+  ],
+  "tool_rules": [
+    { "include_categories": ["Contracts", "Contract reviews"], "include_tags": ["contract", "clause", "redline", "review"], "limit": 6 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Confirm parties, term, renewal, and governing law",
+    "Extract payment terms, termination, and assignment",
+    "Flag indemnity, limitation of liability, and warranty scope",
+    "Check security, privacy, and data-processing obligations",
+    "List fallback positions and propose redlines"
+  ],
+  "risk_notes": [
+    "Do not paste privileged or confidential content into third-party tools without approval.",
+    "Treat AI output as a draft; verify clauses against the source document."
+  ],
+  "seo": {
+    "title": "Contract Review Playbook",
+    "description": "A contract review workflow with recommended tools, prompts, and a checklist."
+  }
+}
+

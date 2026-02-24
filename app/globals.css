@@ -23,6 +23,33 @@
   }
 }
 
+/* Print-friendly playbooks */
+@media print {
+  .nav,
+  .footer,
+  .cb-search-desktop,
+  .cb-search-mobile,
+  button,
+  a.btn {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .card {
+    border-color: rgba(0, 0, 0, 0.12) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .text-muted {
+    color: #333 !important;
+  }
+  .text-white {
+    color: #000 !important;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

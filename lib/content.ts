@@ -3,11 +3,13 @@ import path from "node:path";
 import matter from "gray-matter";
 import {
   CollectionSchema,
+  PlaybookSchema,
   PackSchema,
   PromptFrontmatterSchema,
   SkillFrontmatterSchema,
   ToolSchema,
   type Collection,
+  type Playbook,
   type Pack,
   type PromptFrontmatter,
   type SkillFrontmatter,
@@ -78,6 +80,24 @@ export function getCollectionBySlug(slug: string): Collection | null {
   const filePath = path.join(dir, `${slug}.json`);
   if (!fs.existsSync(filePath)) return null;
   return readJsonFile(filePath, (v) => CollectionSchema.parse(v));
+}
+
+export function getAllPlaybooks(): Playbook[] {
+  const dir = overlayDir("playbooks");
+  return readDirSafe(dir)
+    .filter((f) => f.endsWith(".json"))
+    .map((filename) => {
+      const filePath = path.join(dir, filename);
+      return readJsonFile(filePath, (v) => PlaybookSchema.parse(v));
+    })
+    .sort((a, b) => (a.order ?? 0) - (b.order ?? 0) || a.title.localeCompare(b.title));
+}
+
+export function getPlaybookBySlug(slug: string): Playbook | null {
+  const dir = overlayDir("playbooks");
+  const filePath = path.join(dir, `${slug}.json`);
+  if (!fs.existsSync(filePath)) return null;
+  return readJsonFile(filePath, (v) => PlaybookSchema.parse(v));
 }
 
 export function getAllPacks(): Pack[] {

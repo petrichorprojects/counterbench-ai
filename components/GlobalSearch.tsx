@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-type DocType = "tool" | "prompt" | "skill";
+type DocType = "tool" | "prompt" | "skill" | "playbook";
 
 interface SearchIndexFile {
   index: unknown;
@@ -23,7 +23,7 @@ export function GlobalSearch() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const indexRef = useRef<{ mini: MiniSearchType; docsById: Map<string, SearchIndexFile["docs"][number]> } | null>(null);
 
-  const placeholder = useMemo(() => "Search tools, prompts, skills…", []);
+  const placeholder = useMemo(() => "Search tools, playbooks, prompts, skills…", []);
 
   useEffect(() => {
     const onDoc = (e: MouseEvent) => {
@@ -63,6 +63,7 @@ export function GlobalSearch() {
 
   function routeFor(doc: SearchIndexFile["docs"][number]) {
     if (doc.type === "tool") return `/tools/${doc.slug}`;
+    if (doc.type === "playbook") return `/playbooks/${doc.slug}`;
     if (doc.type === "prompt") return `/prompts/${doc.slug}`;
     return `/skills/${doc.slug}`;
   }

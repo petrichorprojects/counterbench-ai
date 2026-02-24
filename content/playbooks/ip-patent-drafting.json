@@ -1,0 +1,32 @@
+{
+  "slug": "ip-patent-drafting",
+  "title": "IP + Patent Drafting",
+  "description": "A workflow for prior-art review, claim drafting support, and internal review notes.",
+  "order": 60,
+  "conditions": {
+    "matter_types": ["ip"],
+    "stages": ["draft", "review", "research"],
+    "sensitivity": ["medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Patents"], "include_tags": ["patent", "claims", "prior art", "ip"], "limit": 8 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Define invention summary and distinguishing features",
+    "Perform prior-art scan and record key similarities/differences",
+    "Draft claim outline and supporting specification sections",
+    "Create an internal review memo with risks and open questions"
+  ],
+  "risk_notes": [
+    "Treat invention details as sensitive; avoid consumer tools for confidential disclosures.",
+    "Keep a record of sources and dates for prior-art references."
+  ],
+  "seo": {
+    "title": "IP + Patents Playbook",
+    "description": "A practical IP and patent drafting workflow with checklist and tool recommendations."
+  }
+}
+

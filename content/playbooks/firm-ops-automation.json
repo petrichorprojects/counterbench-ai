@@ -1,0 +1,32 @@
+{
+  "slug": "firm-ops-automation",
+  "title": "Firm Ops + Automation",
+  "description": "A workflow for reducing busywork: intake, routing, document assembly, and repeatable internal playbooks.",
+  "order": 80,
+  "conditions": {
+    "matter_types": ["general", "corporate"],
+    "stages": ["manage", "intake"],
+    "sensitivity": ["low", "medium"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Legal documents drafting", "Legal documents review"], "include_tags": ["workflow", "automation", "forms", "templates"], "limit": 8 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Pick one workflow to automate (intake, forms, document assembly)",
+    "Define inputs/outputs and approval checkpoints",
+    "Create a template library and a change log",
+    "Roll out with a short SOP and ownership model"
+  ],
+  "risk_notes": [
+    "Automation should reduce risk, not create it; add review gates for high-impact steps.",
+    "Start with low-sensitivity data and expand after validation."
+  ],
+  "seo": {
+    "title": "Legal Ops Automation Playbook",
+    "description": "A workflow for automating repeatable legal work with review gates."
+  }
+}
+

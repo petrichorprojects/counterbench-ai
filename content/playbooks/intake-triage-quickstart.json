@@ -1,0 +1,32 @@
+{
+  "slug": "intake-triage-quickstart",
+  "title": "Client Intake + Matter Triage",
+  "description": "A lightweight intake workflow: clarify facts, risks, and next steps with a clean summary you can share internally.",
+  "order": 5,
+  "conditions": {
+    "matter_types": ["general", "contracts", "litigation", "employment", "ip", "privacy", "corporate", "real_estate", "research"],
+    "stages": ["intake"],
+    "sensitivity": ["low", "medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Legal advice", "Legal"], "include_tags": ["intake", "summary", "triage"], "limit": 6 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Capture facts, parties, dates, and objectives",
+    "Identify jurisdiction, deadlines, and document list",
+    "Spot immediate risk areas (privacy, privilege, conflicts)",
+    "Produce a 1-page internal matter summary and next-step plan"
+  ],
+  "risk_notes": [
+    "Do not treat AI output as legal advice; it’s a drafting and organization tool.",
+    "Never paste confidential client details into tools without approval."
+  ],
+  "seo": {
+    "title": "Intake + Triage Playbook",
+    "description": "A client intake workflow with a clean summary format and checklist."
+  }
+}
+

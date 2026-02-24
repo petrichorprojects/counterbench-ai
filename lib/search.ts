@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import MiniSearch from "minisearch";
 
-type DocType = "tool" | "prompt" | "skill";
+type DocType = "tool" | "prompt" | "skill" | "playbook";
 
 interface SearchIndexFile {
   version: number;
@@ -56,4 +56,3 @@ export function searchTools(q: string, limit = 1000): string[] {
   }
   return slugs;
 }
-

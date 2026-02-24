@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllCollections, getAllPacks, getAllPrompts, getAllSkills, getAllTools } from "@/lib/content";
+import { getAllCollections, getAllPacks, getAllPlaybooks, getAllPrompts, getAllSkills, getAllTools } from "@/lib/content";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/"), lastModified: now, changeFrequency: "weekly", priority: 1.0 },
     { url: absoluteUrl("/tools"), lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: absoluteUrl("/tools/collections"), lastModified: now, changeFrequency: "weekly", priority: 0.65 },
+    { url: absoluteUrl("/playbooks"), lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: absoluteUrl("/prompts"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/skills"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/tools/compare"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
@@ -59,9 +60,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6
   }));
 
+  const playbooks = getAllPlaybooks().map((p) => ({
+    url: absoluteUrl(`/playbooks/${p.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.75
+  }));
+
   const packIndex: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/prompts/packs"), lastModified: now, changeFrequency: "weekly", priority: 0.65 }
   ];
 
-  return [...base, ...packIndex, ...tools, ...collections, ...prompts, ...packs, ...skills];
+  return [...base, ...packIndex, ...tools, ...collections, ...playbooks, ...prompts, ...packs, ...skills];
 }

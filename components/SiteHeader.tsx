@@ -62,6 +62,7 @@ export function SiteHeader() {
       { href: "/tools", label: "Tools" },
       { href: "/tools/collections", label: "Collections" },
       { href: "/tools/compare", label: "Compare" },
+      { href: "/playbooks", label: "Playbooks" },
       { href: "/prompts", label: "Prompts" },
       { href: "/prompts/packs", label: "Prompt packs" },
       { href: "/skills", label: "Skills" },

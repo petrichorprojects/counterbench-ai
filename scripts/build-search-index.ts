@@ -1,9 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import MiniSearch from "minisearch";
-import { getAllPrompts, getAllSkills, getAllTools } from "../lib/content";
+import { getAllPlaybooks, getAllPrompts, getAllSkills, getAllTools } from "../lib/content";
 
-type DocType = "tool" | "prompt" | "skill";
+type DocType = "tool" | "prompt" | "skill" | "playbook";
 
 interface SearchDoc {
   id: string;
@@ -26,6 +26,7 @@ function writeJson(filePath: string, value: unknown) {
 
 async function main() {
   const tools = getAllTools();
+  const playbooks = getAllPlaybooks();
   const prompts = getAllPrompts();
   const skills = getAllSkills();
 
@@ -40,6 +41,16 @@ async function main() {
       description: t.description,
       tags: [...t.tags, ...t.platform],
       categories: t.categories
+    });
+  }
+  for (const p of playbooks) {
+    docs.push({
+      id: `playbook:${p.slug}`,
+      type: "playbook",
+      slug: p.slug,
+      title: p.title,
+      description: p.description,
+      tags: [...(p.conditions?.matter_types ?? []), ...(p.conditions?.stages ?? [])]
     });
   }
   for (const p of prompts) {
@@ -91,4 +102,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-

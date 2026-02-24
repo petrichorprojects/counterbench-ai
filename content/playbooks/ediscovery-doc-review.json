@@ -1,0 +1,37 @@
+{
+  "slug": "ediscovery-doc-review",
+  "title": "eDiscovery + Document Review",
+  "description": "A workflow for fast triage, prioritization, and defensible review notes.",
+  "order": 40,
+  "conditions": {
+    "matter_types": ["ediscovery", "litigation"],
+    "stages": ["review", "manage", "trial_prep"],
+    "sensitivity": ["medium", "high"]
+  },
+  "recommended_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": ["Review + production workflow support", "Team collaboration for litigation matters"]
+    }
+  ],
+  "tool_rules": [
+    { "include_categories": ["Legal documents review", "Legal"], "include_tags": ["review", "documents", "ediscovery", "litigation"], "limit": 7 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "Define relevance, privilege, and confidentiality criteria",
+    "Triage and prioritize documents (time, parties, topics)",
+    "Extract key facts and create defensible review notes",
+    "Compile exhibit candidates and gaps for follow-up discovery"
+  ],
+  "risk_notes": [
+    "Treat privilege as a first-class requirement; keep review boundaries explicit.",
+    "Do not use consumer tools for sensitive data without approval."
+  ],
+  "seo": {
+    "title": "eDiscovery Playbook",
+    "description": "A defensible eDiscovery workflow with tools and a structured review checklist."
+  }
+}
+

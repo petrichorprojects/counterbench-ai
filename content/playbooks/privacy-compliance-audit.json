@@ -1,0 +1,32 @@
+{
+  "slug": "privacy-compliance-audit",
+  "title": "Privacy + Compliance Audit",
+  "description": "A workflow for mapping obligations, identifying gaps, and producing defensible remediation notes.",
+  "order": 20,
+  "conditions": {
+    "matter_types": ["privacy"],
+    "stages": ["compliance", "review", "manage"],
+    "sensitivity": ["low", "medium", "high"]
+  },
+  "recommended_tools": [],
+  "tool_rules": [
+    { "include_categories": ["Compliance", "Privacy"], "include_tags": ["gdpr", "privacy", "compliance", "policy", "audit"], "limit": 7 }
+  ],
+  "prompt_slugs": ["intake-summary"],
+  "skill_slugs": ["source-check-template"],
+  "checklist": [
+    "List systems, vendors, data types, and processing purposes",
+    "Map obligations (GDPR/CCPA/sector-specific) to controls and evidence",
+    "Identify gaps and create remediation plan with owners and due dates",
+    "Draft policy updates and internal guidance notes"
+  ],
+  "risk_notes": [
+    "Avoid uploading sensitive customer data; use sanitized samples where possible.",
+    "Keep an audit trail: sources, dates, and assumptions."
+  ],
+  "seo": {
+    "title": "Privacy & Compliance Playbook",
+    "description": "A compliance audit workflow for legal and legal ops teams."
+  }
+}
+
