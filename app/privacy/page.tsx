@@ -22,8 +22,10 @@ export default function PrivacyPage() {
               <li>We use service providers (for example, Formspree for form submissions and Vercel for hosting).</li>
             </ul>
 
-            <h2 className="mt-6">Scope</h2>
-            <p className="mt-3">This Privacy Policy applies to the Counterbench.AI website and related pages we operate (the "Site").</p>
+	            <h2 className="mt-6">Scope</h2>
+	            <p className="mt-3">
+	              This Privacy Policy applies to the Counterbench.AI website and related pages we operate (the &quot;Site&quot;).
+	            </p>
 
             <h2 className="mt-6">Information we collect</h2>
 
@@ -105,8 +107,10 @@ export default function PrivacyPage() {
             <h2 className="mt-6">Children</h2>
             <p className="mt-3">The Site is not intended for children under 13 and we do not knowingly collect their information.</p>
 
-            <h2 className="mt-6">Changes</h2>
-            <p className="mt-3">We may update this policy from time to time. We will revise the "Last updated" date above.</p>
+	            <h2 className="mt-6">Changes</h2>
+	            <p className="mt-3">
+	              We may update this policy from time to time. We will revise the &quot;Last updated&quot; date above.
+	            </p>
           </div>
         </div>
       </section>

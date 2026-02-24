@@ -7,11 +7,10 @@ function uniq(arr: string[]): string[] {
 function stripTrailingCounts(input: string): string {
   let s = input.trim();
   // e.g. "Patent analysis (7)" -> "Patent analysis"
-  s = s.replace(/\s*\(\d+\)\s*$/, "");
+  s = s.replace(/\s*\([\p{N}]+\)\s*$/u, "");
   // e.g. "Contract reviews34" -> "Contract reviews"
-  s = s.replace(/(\D)\d+$/, "$1");
   // e.g. "Commercial law advice1 0" -> "Commercial law advice"
-  s = s.replace(/\s+\d+(?:\s+\d+)*\s*$/, "");
+  s = s.replace(/[\p{N}]+(?:\s+[\p{N}]+)*\s*$/u, "");
   return s.trim();
 }
 
@@ -40,7 +39,8 @@ function normalizeTag(tag: string): string | null {
 
 function isPendingDescription(desc: string): boolean {
   const d = desc.trim().toLowerCase();
-  return d === "description pending verification." || d === "description pending verification";
+  // Scraped sources vary; treat any "pending verification" variant as missing.
+  return d.includes("pending verification");
 }
 
 function titleize(input: string): string {

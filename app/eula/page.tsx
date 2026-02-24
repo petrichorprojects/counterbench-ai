@@ -15,10 +15,10 @@ export default function EulaPage() {
 
           <div className="mt-6" style={{ maxWidth: 920 }}>
             <h2>Scope</h2>
-            <p className="mt-3">
-              This EULA applies to Counterbench.AI-owned content made available through the Site, including prompt packs,
-              prompt templates, skill templates, and any downloadable or copyable text we provide (the "Licensed Content").
-            </p>
+	            <p className="mt-3">
+	              This EULA applies to Counterbench.AI-owned content made available through the Site, including prompt packs,
+	              prompt templates, skill templates, and any downloadable or copyable text we provide (the &quot;Licensed Content&quot;).
+	            </p>
 
             <h2 className="mt-6">1. License grant</h2>
             <p className="mt-3">
@@ -46,10 +46,10 @@ export default function EulaPage() {
             </p>
 
             <h2 className="mt-6">5. Disclaimers</h2>
-            <p className="mt-3">
-              THE LICENSED CONTENT IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. YOU ARE RESPONSIBLE FOR REVIEWING
-              OUTPUTS FOR ACCURACY, COMPLIANCE, AND FITNESS FOR YOUR USE CASE AND JURISDICTION.
-            </p>
+	            <p className="mt-3">
+	              THE LICENSED CONTENT IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTIES OF ANY KIND. YOU ARE RESPONSIBLE FOR REVIEWING
+	              OUTPUTS FOR ACCURACY, COMPLIANCE, AND FITNESS FOR YOUR USE CASE AND JURISDICTION.
+	            </p>
 
             <h2 className="mt-6">6. Termination</h2>
             <p className="mt-3">

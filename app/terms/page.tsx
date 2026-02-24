@@ -26,32 +26,32 @@ export default function TermsPage() {
               By accessing or using the Site, you agree to these Terms. If you do not agree, do not use the Site.
             </p>
 
-            <h2 className="mt-6">2. Changes</h2>
-            <p className="mt-3">
-              We may update these Terms. The "Last updated" date indicates when changes were last made.
-            </p>
+	            <h2 className="mt-6">2. Changes</h2>
+	            <p className="mt-3">
+	              We may update these Terms. The &quot;Last updated&quot; date indicates when changes were last made.
+	            </p>
 
             <h2 className="mt-6">3. The directory and third-party tools</h2>
             <ul className="list mt-3">
               <li>Tool listings may change without notice, and availability is not guaranteed.</li>
               <li>We do not control third-party websites, products, or services linked from the Site.</li>
-              <li>
-                Your use of third-party tools is governed by those providers' terms and privacy policies.
-              </li>
-            </ul>
+	              <li>
+	                Your use of third-party tools is governed by those providers&apos; terms and privacy policies.
+	              </li>
+	            </ul>
 
-            <h2 className="mt-6">4. Verified and last checked</h2>
-            <p className="mt-3">
-              "Verified" and "Last checked" indicators reflect a best-effort review at a point in time. They are not a
-              guarantee of accuracy, security, suitability, or continued availability.
-            </p>
+	            <h2 className="mt-6">4. Verified and last checked</h2>
+	            <p className="mt-3">
+	              &quot;Verified&quot; and &quot;Last checked&quot; indicators reflect a best-effort review at a point in time. They are not a
+	              guarantee of accuracy, security, suitability, or continued availability.
+	            </p>
 
             <h2 className="mt-6">5. Your responsibilities</h2>
-            <ul className="list mt-3">
-              <li>You are responsible for evaluating tools for your use case, jurisdiction, and risk profile.</li>
-              <li>You should not input confidential or privileged information into third-party tools without appropriate safeguards.</li>
-              <li>You agree not to misuse the Site (for example, to scrape excessively, disrupt service, or attempt unauthorized access).</li>
-            </ul>
+	            <ul className="list mt-3">
+	              <li>You are responsible for evaluating tools for your use case, jurisdiction, and risk profile.</li>
+	              <li>You should not input confidential or privileged information into third-party tools without appropriate safeguards.</li>
+	              <li>You agree not to misuse the Site (for example, to scrape excessively, disrupt service, or attempt unauthorized access).</li>
+	            </ul>
 
             <h2 className="mt-6">6. Intellectual property</h2>
             <p className="mt-3">
@@ -70,11 +70,11 @@ export default function TermsPage() {
               guidance provided is informational and operational in nature and should be reviewed for your specific situation.
             </p>
 
-            <h2 className="mt-6">8. Disclaimers</h2>
-            <p className="mt-3">
-              THE SITE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED,
-              INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
-            </p>
+	            <h2 className="mt-6">8. Disclaimers</h2>
+	            <p className="mt-3">
+	              THE SITE IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED,
+	              INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+	            </p>
 
             <h2 className="mt-6">9. Limitation of liability</h2>
             <p className="mt-3">

@@ -1,9 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ToolSchema, type Tool } from "../lib/schemas";
+import { normalizeTool } from "../lib/normalize";
 
 const ROOT = process.cwd();
-const CONTENT_ROOT = process.env.CB_CONTENT_ROOT?.trim() ? process.env.CB_CONTENT_ROOT.trim() : "content_preview";
+// Default to production content (Git-backed). Use CB_CONTENT_ROOT=content_preview for QA against preview content.
+const CONTENT_ROOT = process.env.CB_CONTENT_ROOT?.trim() ? process.env.CB_CONTENT_ROOT.trim() : "content";
 const TOOLS_DIR = path.join(ROOT, CONTENT_ROOT, "tools");
 const OUT_DIR = path.join(ROOT, "out");
 
@@ -85,6 +87,8 @@ async function main() {
   const dupUrls = [...byUrl.entries()].filter(([, v]) => v.length > 1).map(([k]) => k);
   const dupNames = [...byName.entries()].filter(([, v]) => v.length > 1).map(([k]) => k);
 
+  const normalized = parsed.map(normalizeTool);
+
   const quality = {
     name_without_letters: parsed.filter((t) => !/[A-Za-z]/.test(t.name)).length,
     description_placeholder: parsed.filter((t) => (t.description || "").toLowerCase().includes("pending verification")).length
@@ -96,6 +100,12 @@ async function main() {
     tags: parsed.filter((t) => !t.tags.length).length,
     platform: parsed.filter((t) => !t.platform.length).length,
     last_verified: parsed.filter((t) => !t.last_verified).length
+  };
+
+  const normalizedQuality = {
+    description_placeholder: normalized.filter((t) => (t.description || "").toLowerCase().includes("pending verification")).length,
+    categories_with_trailing_digits: normalized.filter((t) => t.categories.some((c) => /\d+$/.test(c))).length,
+    categories_too_short: normalized.filter((t) => t.categories.some((c) => c.trim().length <= 2)).length
   };
 
   const invalid = {
@@ -127,6 +137,7 @@ async function main() {
       names: dupNames.length
     },
     quality,
+    normalizedQuality,
     missing,
     invalid,
     pricingCounts,
@@ -147,6 +158,11 @@ async function main() {
     `## Quality`,
     `- name_without_letters: ${quality.name_without_letters}`,
     `- description_placeholder: ${quality.description_placeholder}`,
+    ``,
+    `## Normalized (User-Facing)`,
+    `- description_placeholder: ${normalizedQuality.description_placeholder}`,
+    `- categories_with_trailing_digits: ${normalizedQuality.categories_with_trailing_digits}`,
+    `- categories_too_short: ${normalizedQuality.categories_too_short}`,
     ``,
     `- slugs: ${dupSlugs.length}`,
     `- urls: ${dupUrls.length}`,
@@ -183,8 +199,9 @@ async function main() {
   ].join("\n");
 
   ensureDir(OUT_DIR);
-  writeJson(path.join(OUT_DIR, "qa-tools-preview.json"), summary);
-  writeText(path.join(OUT_DIR, "qa-tools-preview.md"), reportMd);
+  const suffix = CONTENT_ROOT === "content_preview" ? "-preview" : "";
+  writeJson(path.join(OUT_DIR, `qa-tools${suffix}.json`), summary);
+  writeText(path.join(OUT_DIR, `qa-tools${suffix}.md`), reportMd);
   console.log(JSON.stringify(summary, null, 2));
 }
 
@@ -192,4 +209,3 @@ main().catch((e) => {
   console.error(e);
   process.exit(1);
 });
-

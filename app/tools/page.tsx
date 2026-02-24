@@ -4,6 +4,7 @@ import { ToolCard } from "@/components/ToolCard";
 import { getAllTools } from "@/lib/content";
 import { searchTools } from "@/lib/search";
 import type { Tool } from "@/lib/schemas";
+import Link from "next/link";
 
 export const metadata = { title: "Tools" };
 
@@ -228,9 +229,9 @@ export default async function ToolsIndexPage({
                 <button className="btn btn--primary btn--sm" type="submit">
                   Apply
                 </button>
-                <a className="btn btn--secondary btn--sm" href="/tools">
+                <Link className="btn btn--secondary btn--sm" href="/tools">
                   Reset
-                </a>
+                </Link>
               </div>
             </div>
           </form>
@@ -250,13 +251,13 @@ export default async function ToolsIndexPage({
             <div className="text-muted" style={{ fontSize: "0.875rem" }}>
               {total} tools
             </div>
-            <a className="btn btn--ghost btn--sm" href="/tools/compare">
+            <Link className="btn btn--ghost btn--sm" href="/tools/compare">
               Compare
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid--3 grid--gap-2 mt-4" style={{ gap: "1rem" }}>
-            {items.map((t, idx) => (
+            {items.map((t) => (
               <ToolCard key={t.slug} tool={t} />
             ))}
           </div>

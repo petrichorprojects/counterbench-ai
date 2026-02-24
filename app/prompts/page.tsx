@@ -83,9 +83,9 @@ export default async function PromptsIndexPage({
                 <button className="btn btn--primary btn--sm" type="submit">
                   Apply
                 </button>
-                <a className="btn btn--secondary btn--sm" href="/prompts">
+                <Link className="btn btn--secondary btn--sm" href="/prompts">
                   Reset
-                </a>
+                </Link>
               </div>
             </div>
           </form>
