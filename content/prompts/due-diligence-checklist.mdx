@@ -1,0 +1,32 @@
+---
+title: "Due Diligence Checklist (Starter)"
+description: "Generate a due diligence checklist tailored to deal type and target profile."
+use_case: "Corporate / M&A"
+inputs:
+  - "Deal type"
+  - "Target profile"
+  - "Risk areas"
+steps:
+  - "Select standard diligence areas"
+  - "Add tailored document requests"
+  - "Flag red flags to watch for"
+output_format: "Checklist by area: corporate, contracts, IP, privacy, employment, litigation, finance, regulatory"
+tags:
+  - "Corporate"
+  - "Diligence"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Generate a diligence checklist with document requests and red flag callouts. Not legal advice.
+
+Deal type:
+{{deal_type}}
+
+Target profile:
+{{target_profile}}
+
+Risk areas:
+{{risk_areas}}
+

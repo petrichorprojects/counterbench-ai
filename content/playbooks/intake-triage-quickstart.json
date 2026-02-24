@@ -12,7 +12,7 @@
   "tool_rules": [
     { "include_categories": ["Legal advice", "Legal"], "include_tags": ["intake", "summary", "triage"], "limit": 6 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["intake-summary", "client-followup-questions", "issue-spotting-checklist", "intake-client-email-draft"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Capture facts, parties, dates, and objectives",
@@ -29,4 +29,3 @@
     "description": "A client intake workflow with a clean summary format and checklist."
   }
 }
-

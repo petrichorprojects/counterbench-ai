@@ -1,0 +1,34 @@
+---
+title: "Contract Summary for Business Stakeholders"
+description: "Rewrite contract terms into a short, non-legal summary for internal stakeholders."
+use_case: "Contracts / Comms"
+inputs:
+  - "Contract text"
+  - "Audience role (sales, procurement, eng, exec)"
+  - "Deal context"
+steps:
+  - "Summarize the deal in one paragraph"
+  - "List obligations and risks"
+  - "Call out decisions needed"
+output_format: "Sections: What this means; Key obligations; Key risks; Decisions needed; Next steps"
+tags:
+  - "Contracts"
+  - "Comms"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Rewrite the contract excerpt into a business-friendly summary. This is not legal advice.
+
+Audience role: {{audience_role}}
+Deal context:
+{{deal_context}}
+
+Contract text:
+{{contract_text}}
+
+Requirements:
+- Keep the meaning accurate; do not add new obligations.
+- Flag items requiring counsel review.
+

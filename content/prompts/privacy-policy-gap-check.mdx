@@ -1,0 +1,36 @@
+---
+title: "Privacy Policy Gap Check"
+description: "Compare a privacy policy draft to a product data flow and list missing disclosures."
+use_case: "Privacy / Compliance"
+inputs:
+  - "Product data flow"
+  - "Privacy policy draft"
+  - "Jurisdictions"
+steps:
+  - "Map data flows to policy disclosures"
+  - "Identify missing or unclear items"
+output_format: "Table: Data flow item | Required disclosure | Present? | Suggested addition"
+tags:
+  - "Privacy"
+  - "Compliance"
+  - "Drafting"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Identify missing or unclear disclosures and propose concise additions. Not legal advice.
+
+Jurisdictions:
+{{jurisdictions}}
+
+Product data flow:
+{{product_data_flow}}
+
+Policy draft:
+{{privacy_policy_draft}}
+
+Rules:
+- Keep additions short and clear.
+- Mark anything that requires counsel review.
+

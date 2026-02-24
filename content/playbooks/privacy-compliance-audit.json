@@ -12,7 +12,16 @@
   "tool_rules": [
     { "include_categories": ["Compliance", "Privacy"], "include_tags": ["gdpr", "privacy", "compliance", "policy", "audit"], "limit": 7 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": [
+    "dpa-review-checklist",
+    "privacy-policy-gap-check",
+    "cookie-banner-audit",
+    "gdpr-ropa-starter",
+    "data-retention-policy-draft",
+    "dsar-playbook",
+    "vendor-security-questionnaire-draft",
+    "incident-response-initial-brief"
+  ],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "List systems, vendors, data types, and processing purposes",
@@ -29,4 +38,3 @@
     "description": "A compliance audit workflow for legal and legal ops teams."
   }
 }
-

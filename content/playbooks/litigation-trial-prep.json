@@ -12,7 +12,14 @@
   "tool_rules": [
     { "include_categories": ["Legal verdicts", "Legal research", "Legal documents review"], "include_tags": ["litigation", "trial", "evidence", "deposition"], "limit": 8 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": [
+    "litigation-case-theory-outline",
+    "litigation-chronology-builder",
+    "deposition-outline-builder",
+    "discovery-requests-draft",
+    "motion-outline-starter",
+    "witness-prep-question-bank"
+  ],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Create issue list and element-by-element proof chart",
@@ -29,4 +36,3 @@
     "description": "A litigation workflow from evidence mapping to trial outline."
   }
 }
-

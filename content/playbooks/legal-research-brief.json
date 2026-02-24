@@ -12,7 +12,7 @@
   "tool_rules": [
     { "include_categories": ["Legal research"], "include_tags": ["research", "citation", "case law", "brief"], "limit": 8 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": ["legal-research-plan", "citation-checklist"],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Clarify question presented, jurisdiction, and standard of review",
@@ -29,4 +29,3 @@
     "description": "A research-to-brief workflow with recommended tools and a cite-check checklist."
   }
 }
-

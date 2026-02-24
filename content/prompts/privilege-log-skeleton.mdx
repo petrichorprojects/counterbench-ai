@@ -1,0 +1,27 @@
+---
+title: "Privilege Log Skeleton"
+description: "Generate a privilege log skeleton and QC rules for review teams."
+use_case: "Litigation / Discovery"
+inputs:
+  - "Jurisdiction (optional)"
+  - "Matter context"
+steps:
+  - "Define columns"
+  - "Define QC rules"
+output_format: "Columns + instructions + QC checklist"
+tags:
+  - "Litigation"
+  - "Discovery"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Provide a privilege log column set and QC rules. Include guidance on consistent descriptions and avoiding waiver. Not legal advice.
+
+Jurisdiction (if relevant):
+{{jurisdiction}}
+
+Matter context:
+{{matter_context}}
+

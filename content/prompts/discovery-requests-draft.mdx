@@ -1,0 +1,41 @@
+---
+title: "Discovery Requests Draft (RFPs / Interrogatories)"
+description: "Draft discovery requests tailored to a fact pattern and issues list (for counsel review)."
+use_case: "Litigation / Discovery"
+inputs:
+  - "Issues list"
+  - "Facts"
+  - "Party role (plaintiff/defendant)"
+  - "Jurisdiction / rules constraints (optional)"
+steps:
+  - "Draft definitions and instructions"
+  - "Draft interrogatories and RFPs aligned to issues"
+output_format: "Definitions; Instructions; Interrogatories; RFPs; RFAs (optional)"
+tags:
+  - "Litigation"
+  - "Drafting"
+  - "Discovery"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft discovery request language for review by counsel (not legal advice).
+
+Party role:
+{{party_role}}
+
+Jurisdiction/rules constraints:
+{{jurisdiction_rules}}
+
+Issues list:
+{{issues_list}}
+
+Facts:
+{{facts}}
+
+Draft:
+- Generic definitions and instructions.
+- 10-15 interrogatories and 15-25 RFPs aligned to issues.
+- Optional: 8-12 requests for admission.
+

@@ -1,0 +1,32 @@
+---
+title: "Plain-English Rewrite"
+description: "Rewrite a legal paragraph for clarity while preserving meaning and adding a short summary."
+use_case: "General / Drafting"
+inputs:
+  - "Text"
+  - "Audience"
+  - "Constraints (do/don't change)"
+steps:
+  - "Summarize in one sentence"
+  - "Rewrite for clarity"
+  - "Flag ambiguity"
+output_format: "1) One-sentence summary 2) Rewritten version 3) Ambiguities/questions"
+tags:
+  - "General"
+  - "Drafting"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Rewrite for clarity without changing meaning. Do not add new obligations. Flag ambiguity instead of guessing.
+
+Audience:
+{{audience}}
+
+Constraints:
+{{constraints}}
+
+Text:
+{{text}}
+

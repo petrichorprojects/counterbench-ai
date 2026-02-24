@@ -1,0 +1,36 @@
+---
+title: "Case Theory Outline"
+description: "Turn facts into a structured case theory outline with issues, elements, and evidence buckets."
+use_case: "Litigation"
+inputs:
+  - "Facts"
+  - "Claims/issues"
+  - "Jurisdiction (optional)"
+  - "Key evidence"
+steps:
+  - "Outline issues and elements (high level)"
+  - "Map facts to issues"
+  - "List missing evidence and next discovery steps"
+output_format: "Outline: issues; elements; supporting facts; missing evidence; risks; next steps"
+tags:
+  - "Litigation"
+  - "Strategy"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Create a case theory outline with evidence buckets and missing items to request. Not legal advice.
+
+Jurisdiction:
+{{jurisdiction}}
+
+Claims/issues:
+{{claims_or_issues}}
+
+Key facts:
+{{facts}}
+
+Key evidence available:
+{{key_evidence}}
+

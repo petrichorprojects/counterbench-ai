@@ -1,0 +1,41 @@
+---
+title: "Contract Redline Summary"
+description: "Summarize a redline and flag the most material changes with suggested responses."
+use_case: "Contracts / Review"
+inputs:
+  - "Redline text (or changed clauses)"
+  - "Party position (customer/vendor)"
+  - "Jurisdiction (optional)"
+  - "Risk tolerance (low/medium/high)"
+steps:
+  - "Identify material changes"
+  - "Explain why they matter"
+  - "Propose responses and fallback language"
+output_format: "Table: Change | Risk level | Why it matters | Suggested response | Fallback language"
+tags:
+  - "Contracts"
+  - "Review"
+  - "Negotiation"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You are a contract review assistant for a legal team. Not legal advice.
+
+Party position (customer/vendor): {{party_position}}
+Jurisdiction (if relevant): {{jurisdiction}}
+Risk tolerance (low/med/high): {{risk_tolerance}}
+
+Redline or clause text:
+{{contract_section_or_redline}}
+
+Produce:
+1) A table summarizing each material change.
+2) A short "Top 5 concerns" list in priority order.
+3) Fallback language (plain English + clause-style) for the top 3 concerns.
+
+Rules:
+- Quote the exact changed text where possible.
+- If you need context from other sections, ask for it.
+

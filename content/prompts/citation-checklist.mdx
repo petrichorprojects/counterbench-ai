@@ -1,0 +1,28 @@
+---
+title: "Citation & Quote Check Checklist"
+description: "Create a cite-check checklist and flag statements that likely need authority or verification."
+use_case: "Legal Research / QA"
+inputs:
+  - "Draft text (with citations if present)"
+  - "Citation style (optional)"
+steps:
+  - "List claims that need authority"
+  - "Flag likely quote/pin-cite issues"
+  - "Provide a cite-check checklist"
+output_format: "Checklist + flagged statements list (no invented citations)"
+tags:
+  - "Research"
+  - "QA"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Create a cite-check checklist and flag statements that likely need authority or verification. Do not invent citations.
+
+Citation style:
+{{citation_style}}
+
+Draft text:
+{{draft_text}}
+

@@ -1,0 +1,39 @@
+---
+title: "Negotiation Fallback Positions"
+description: "Generate an ideal/target/fallback negotiation plan for key contract clauses."
+use_case: "Contracts / Negotiation"
+inputs:
+  - "Deal context"
+  - "Counterparty type"
+  - "Must-haves"
+  - "Nice-to-haves"
+  - "Jurisdiction (optional)"
+steps:
+  - "Identify clause topics that matter"
+  - "Generate ideal/target/fallback positions"
+  - "List trade-offs"
+output_format: "Table: Topic | Ideal | Target | Fallback | Trade-offs | Rationale"
+tags:
+  - "Contracts"
+  - "Negotiation"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You support contract negotiation planning (not legal advice).
+
+Counterparty type: {{counterparty_type}}
+Jurisdiction (if relevant): {{jurisdiction}}
+
+Deal context:
+{{deal_context}}
+
+Must-haves:
+{{must_haves}}
+
+Nice-to-haves:
+{{nice_to_haves}}
+
+Create an "ideal/target/fallback" plan for the top 8-12 clause topics relevant to this deal.
+

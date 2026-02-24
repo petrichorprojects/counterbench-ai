@@ -1,0 +1,35 @@
+---
+title: "MSA vs SOW Consistency Check"
+description: "Identify conflicts between an MSA and a SOW (order of precedence, scope, pricing, SLAs)."
+use_case: "Contracts / Review"
+inputs:
+  - "MSA text (relevant sections)"
+  - "SOW text"
+  - "Order of precedence clause (optional)"
+steps:
+  - "Compare scope, pricing, term, SLAs"
+  - "Flag conflicts and missing sections"
+output_format: "Table: Topic | MSA | SOW | Conflict? | Recommended resolution"
+tags:
+  - "Contracts"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Compare the MSA and SOW below and identify inconsistencies. Not legal advice.
+
+Order of precedence clause (if any):
+{{order_of_precedence_clause}}
+
+MSA text:
+{{msa_text}}
+
+SOW text:
+{{sow_text}}
+
+Rules:
+- Quote relevant snippets in the table.
+- Propose fixes aligned to the order of precedence.
+

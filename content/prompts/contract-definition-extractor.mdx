@@ -1,0 +1,28 @@
+---
+title: "Contract Definition Extractor"
+description: "Extract defined terms and build a quick glossary for reviewers."
+use_case: "Contracts / Review"
+inputs:
+  - "Contract text (section with definitions)"
+steps:
+  - "Extract defined terms"
+  - "Quote the definition verbatim"
+output_format: "Table: Defined term | Definition | Where defined | Notes"
+tags:
+  - "Contracts"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Extract all defined terms and their definitions from the text below.
+
+Contract text:
+{{contract_text}}
+
+Rules:
+- Quote the exact definition.
+- If section numbers/headings are present, include them.
+- If the definition references other terms, link them in the Notes column.
+

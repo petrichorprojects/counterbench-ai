@@ -1,0 +1,43 @@
+---
+title: "Client Email Draft (Intake Acknowledgement)"
+description: "Draft a concise intake acknowledgement email that requests documents and sets expectations."
+use_case: "Intake / Client Comms"
+inputs:
+  - "Client name"
+  - "Matter summary (internal)"
+  - "Requested documents"
+  - "Next steps"
+  - "Tone"
+steps:
+  - "Summarize the matter in one sentence"
+  - "Request the needed documents"
+  - "Confirm deadlines and next step"
+output_format: "Email with subject line + short paragraphs + bulleted document list"
+tags:
+  - "Intake"
+  - "Comms"
+  - "Paralegal"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft an intake acknowledgement email. This is not legal advice.
+
+Client: {{client_name}}
+Tone: {{tone}}
+
+Matter summary (internal, 2-4 sentences):
+{{matter_summary}}
+
+Requested documents:
+{{requested_documents}}
+
+Next steps:
+{{next_steps}}
+
+Requirements:
+- Clear, concise, professional.
+- Ask for documents and confirm preferred deadline.
+- Include a confidentiality reminder (do not email sensitive items unless a secure channel is used).
+

@@ -1,0 +1,38 @@
+---
+title: "DSAR Response Playbook (Starter)"
+description: "Generate an operational playbook for handling DSARs from intake to fulfillment."
+use_case: "Privacy / Operations"
+inputs:
+  - "Jurisdictions"
+  - "Systems list"
+  - "Verification steps"
+steps:
+  - "Define intake + logging"
+  - "Define identity verification"
+  - "Define data collection + review + response workflow"
+output_format: "Workflow steps + roles + checklist + template comms snippets"
+tags:
+  - "Privacy"
+  - "Operations"
+  - "Compliance"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Create a DSAR handling workflow: intake, identity verification, scoping, collection, review/redaction, response, and logging. Not legal advice.
+
+Jurisdictions:
+{{jurisdictions}}
+
+Systems list:
+{{systems_list}}
+
+Verification steps:
+{{verification_steps}}
+
+Include:
+- A step-by-step workflow with owners.
+- A checklist per step.
+- 3 short email templates (acknowledgement, request for clarification, final response cover email).
+

@@ -1,0 +1,35 @@
+---
+title: "NDA Summary + Red Flags"
+description: "Summarize an NDA and flag unusual terms (term length, residuals, exclusions, remedies)."
+use_case: "Contracts / Review"
+inputs:
+  - "NDA text"
+  - "Role (disclosing/receiving)"
+  - "Jurisdiction (optional)"
+steps:
+  - "Summarize obligations and term"
+  - "Flag unusual or risky language"
+  - "Suggest edits"
+output_format: "Sections: Summary; Unusual terms; Questions; Suggested edits"
+tags:
+  - "Contracts"
+  - "NDA"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You are reviewing an NDA (not legal advice).
+
+Role (disclosing/receiving): {{disclosing_or_receiving}}
+Jurisdiction (if relevant): {{jurisdiction}}
+
+NDA text:
+{{nda_text}}
+
+Provide:
+1) Plain-English summary.
+2) Red flags and unusual terms.
+3) Suggested edits (short clause rewrites).
+

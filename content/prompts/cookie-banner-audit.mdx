@@ -1,0 +1,32 @@
+---
+title: "Cookie Banner + Consent Flow Audit"
+description: "Audit a consent/cookie banner against a described tracking setup and list fixes."
+use_case: "Privacy / Compliance"
+inputs:
+  - "Tracking tools"
+  - "Banner behavior"
+  - "Jurisdictions"
+steps:
+  - "Map tracking to consent requirements"
+  - "Identify gaps"
+  - "Propose concrete UI/behavior changes"
+output_format: "Table: Requirement | Current behavior | Risk | Recommended change"
+tags:
+  - "Privacy"
+  - "Compliance"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Identify likely gaps (granularity, opt-in vs opt-out, default settings, recordkeeping) and propose concrete UI/behavior changes. Not legal advice.
+
+Jurisdictions:
+{{jurisdictions}}
+
+Tracking tools:
+{{tracking_tools}}
+
+Banner behavior:
+{{banner_behavior}}
+

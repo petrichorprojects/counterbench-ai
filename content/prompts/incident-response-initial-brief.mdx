@@ -1,0 +1,37 @@
+---
+title: "Incident Response Initial Brief (Draft)"
+description: "Turn incident notes into an initial internal brief and action checklist."
+use_case: "Privacy / Security"
+inputs:
+  - "Incident notes"
+  - "Systems affected"
+  - "Jurisdictions"
+steps:
+  - "Summarize the incident and timeline"
+  - "List impacted systems and data types (unknowns allowed)"
+  - "Draft immediate actions + open questions"
+output_format: "Sections: What happened; Systems; Data; Timeline; Actions; Open questions; Communications plan (draft)"
+tags:
+  - "Security"
+  - "Privacy"
+  - "Compliance"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft an initial internal incident brief and a checklist of immediate actions. Avoid legal advice; focus on operational steps and questions.
+
+Jurisdictions:
+{{jurisdictions}}
+
+Systems affected:
+{{systems_affected}}
+
+Incident notes:
+{{incident_notes}}
+
+Rules:
+- If facts are unknown, label "Unknown" and list questions.
+- Include a "Do not share externally" note.
+

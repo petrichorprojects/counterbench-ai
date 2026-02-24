@@ -17,7 +17,15 @@
   "tool_rules": [
     { "include_categories": ["Contracts", "Contract reviews"], "include_tags": ["contract", "clause", "redline", "review"], "limit": 6 }
   ],
-  "prompt_slugs": ["intake-summary"],
+  "prompt_slugs": [
+    "contract-clause-risk-matrix",
+    "contract-redline-summary",
+    "liability-cap-analysis",
+    "termination-and-renewal-summary",
+    "assignment-change-of-control",
+    "negotiation-fallback-positions",
+    "contract-business-summary"
+  ],
   "skill_slugs": ["source-check-template"],
   "checklist": [
     "Confirm parties, term, renewal, and governing law",
@@ -35,4 +43,3 @@
     "description": "A contract review workflow with recommended tools, prompts, and a checklist."
   }
 }
-

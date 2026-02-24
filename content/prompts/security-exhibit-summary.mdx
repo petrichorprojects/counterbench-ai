@@ -1,0 +1,29 @@
+---
+title: "Security Exhibit Summary"
+description: "Summarize a security exhibit (controls, commitments, audit rights) and flag gaps."
+use_case: "Security / Contracts"
+inputs:
+  - "Security exhibit text"
+  - "Required controls (optional)"
+steps:
+  - "Extract commitments"
+  - "Map to required controls"
+  - "Flag gaps and unclear wording"
+output_format: "Table: Control | Present? | Evidence needed | Notes"
+tags:
+  - "Security"
+  - "Contracts"
+  - "Review"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Summarize commitments and map to required controls. Flag missing commitments and unclear wording. Not legal advice.
+
+Required controls:
+{{required_controls}}
+
+Security exhibit text:
+{{security_exhibit_text}}
+

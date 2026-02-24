@@ -1,0 +1,36 @@
+---
+title: "eDiscovery Collection Plan"
+description: "Draft a collection plan with custodians, sources, scope limits, and chain-of-custody notes."
+use_case: "eDiscovery"
+inputs:
+  - "Matter context"
+  - "Custodians"
+  - "Data sources"
+  - "Date range"
+steps:
+  - "Define scope and sources"
+  - "Define collection steps"
+  - "Define logging fields and open questions"
+output_format: "Plan: scope, sources, custodian table, collection steps, logging fields, open questions"
+tags:
+  - "eDiscovery"
+  - "Litigation"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Draft an eDiscovery collection plan. Keep it operational and defensible; do not provide legal advice.
+
+Matter context:
+{{matter_context}}
+
+Custodians:
+{{custodians}}
+
+Data sources:
+{{data_sources}}
+
+Date range:
+{{date_range}}
+

@@ -1,0 +1,39 @@
+---
+title: "Client Follow-up Questions"
+description: "Generate a focused set of follow-up questions to de-risk an intake before work begins."
+use_case: "Intake / Triage"
+inputs:
+  - "Intake notes"
+  - "Jurisdiction (optional)"
+  - "Work type (contract, litigation, privacy, etc.)"
+steps:
+  - "Extract unknowns and assumptions"
+  - "Generate prioritized questions grouped by theme"
+output_format: "Grouped bullets under: Facts, Documents, Deadlines, Stakeholders, Systems/Data, Desired outcome"
+tags:
+  - "Intake"
+  - "Triage"
+  - "Paralegal"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+You are assisting with legal intake. Do not provide legal advice.
+
+Work type: {{work_type}}
+Jurisdiction (if relevant): {{jurisdiction}}
+
+Intake notes:
+{{intake_notes}}
+
+Task:
+1) Generate 15-25 follow-up questions a paralegal or attorney should ask next.
+2) Group questions by theme.
+3) Prioritize the top 5 questions at the top as "Most critical".
+4) Keep wording client-friendly and concrete (no vague questions).
+
+Rules:
+- Do not invent facts. If the notes are unclear, ask clarifying questions.
+- If a question depends on jurisdictional nuance, label it "Counsel review".
+

@@ -1,0 +1,36 @@
+---
+title: "Deposition Outline Builder"
+description: "Generate a deposition outline with themes, exhibits, and sequencing."
+use_case: "Litigation / Discovery"
+inputs:
+  - "Witness role"
+  - "Case facts"
+  - "Goals (admissions/knowledge)"
+  - "Exhibits list (optional)"
+steps:
+  - "Identify themes"
+  - "Draft question stems"
+  - "Tie questions to exhibits"
+output_format: "Sections with question stems; exhibit tie-ins; admissions sought; follow-ups"
+tags:
+  - "Litigation"
+  - "Discovery"
+last_updated: "2026-02-24"
+---
+
+## Prompt
+
+Produce a practical deposition outline with sequencing and question stems. Not legal advice.
+
+Witness role:
+{{witness_role}}
+
+Goals:
+{{goals}}
+
+Case facts:
+{{case_facts}}
+
+Exhibits:
+{{exhibits_list}}
+
