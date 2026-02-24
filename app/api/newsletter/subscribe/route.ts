@@ -31,6 +31,33 @@ async function readBody(req: Request): Promise<{ email: string; source: string; 
   };
 }
 
+function getProvider(): string {
+  return (process.env.NEWSLETTER_PROVIDER || process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "beehiiv").toLowerCase();
+}
+
+function getConfigStatus() {
+  const provider = getProvider();
+  const publicationIdRaw = (process.env.BEEHIIV_PUBLICATION_ID || "").trim();
+  const apiKey = (process.env.BEEHIIV_API_KEY || "").trim();
+  const sendWelcome = (process.env.BEEHIIV_SEND_WELCOME_EMAIL || "true").toLowerCase() !== "false";
+
+  return {
+    provider,
+    beehiiv: {
+      configured: provider === "beehiiv" && Boolean(publicationIdRaw) && Boolean(apiKey),
+      hasPublicationId: Boolean(publicationIdRaw),
+      publicationIdLooksV2: publicationIdRaw.startsWith("pub_") || publicationIdRaw.length === 36,
+      hasApiKey: Boolean(apiKey),
+      sendWelcome
+    }
+  };
+}
+
+export async function GET() {
+  // Safe status endpoint (no secrets) to debug env wiring without creating a subscription.
+  return NextResponse.json({ ok: true, ...getConfigStatus() });
+}
+
 export async function POST(req: Request) {
   const { email, source, hp } = await readBody(req);
 
@@ -43,25 +70,24 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Enter a valid email." }, { status: 400 });
   }
 
-  const provider = (process.env.NEWSLETTER_PROVIDER || process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "beehiiv").toLowerCase();
+  const provider = getProvider();
 
   if (provider !== "beehiiv") {
     return NextResponse.json({ ok: false, message: "Newsletter provider is not configured for server signup." }, { status: 400 });
   }
 
-  const apiKey = process.env.BEEHIIV_API_KEY || "";
-  const publicationIdRaw = process.env.BEEHIIV_PUBLICATION_ID || "";
+  const apiKey = (process.env.BEEHIIV_API_KEY || "").trim();
+  const publicationIdRaw = (process.env.BEEHIIV_PUBLICATION_ID || "").trim();
   const sendWelcome = (process.env.BEEHIIV_SEND_WELCOME_EMAIL || "true").toLowerCase() !== "false";
 
-  if (!apiKey || !publicationIdRaw.trim()) {
+  if (!apiKey || !publicationIdRaw) {
     return NextResponse.json({ ok: false, message: "Beehiiv is not configured on the server." }, { status: 500 });
   }
 
   // Beehiiv v2 uses publication IDs like `pub_...`. Accept either `pub_...` or the raw UUID.
-  const publicationId = publicationIdRaw.trim();
-  const normalizedPublicationId = publicationId.startsWith("pub_")
-    ? publicationId.replace(/^pub_pub_/, "pub_")
-    : `pub_${publicationId}`;
+  const normalizedPublicationId = publicationIdRaw.startsWith("pub_")
+    ? publicationIdRaw.replace(/^pub_pub_/, "pub_")
+    : `pub_${publicationIdRaw}`;
 
   const endpoint = `https://api.beehiiv.com/v2/publications/${encodeURIComponent(normalizedPublicationId)}/subscriptions`;
 
