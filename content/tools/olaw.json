@@ -1,0 +1,34 @@
+{
+  "slug": "olaw",
+  "name": "Open Legal AI Workbench (OLAW)",
+  "description": "Tool-based retrieval augmented generation (RAG) workbench for legal AI UX research that integrates with legal APIs.",
+  "categories": [
+    "Legal",
+    "Legal research"
+  ],
+  "tags": [
+    "Open source",
+    "RAG",
+    "Legal APIs",
+    "Workbench",
+    "UX research"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://github.com/harvard-lil/olaw",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "verified": true,
+  "last_verified": "2026-02-24",
+  "status": "active",
+  "change_log": [
+    {
+      "date": "2026-02-24",
+      "note": "Added to Counterbench.AI catalog"
+    }
+  ]
+}
+
