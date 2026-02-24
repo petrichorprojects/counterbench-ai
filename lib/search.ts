@@ -21,7 +21,8 @@ export function loadSearchIndex(): { mini: MiniSearch; docsById: Map<string, Sea
   const raw = fs.readFileSync(filePath, "utf8");
   const parsed = JSON.parse(raw) as SearchIndexFile;
 
-  const mini = MiniSearch.loadJSON(parsed.index as never, {
+  // MiniSearch.loadJSON expects a JSON string; our file stores the parsed object under `index`.
+  const mini = MiniSearch.loadJSON(JSON.stringify(parsed.index) as never, {
     fields: ["title", "description", "tags", "categories"],
     storeFields: ["id", "type", "slug", "title", "description"]
   });

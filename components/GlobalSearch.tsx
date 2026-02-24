@@ -49,7 +49,8 @@ export function GlobalSearch() {
       const docsById = new Map(data.docs.map((d) => [d.id, d]));
       const { default: MiniSearch } = await import("minisearch");
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-    const mini = MiniSearch.loadJSON(data.index as never, {
+    // MiniSearch.loadJSON expects a JSON string; our search-index.json stores the parsed object.
+    const mini = MiniSearch.loadJSON(JSON.stringify(data.index) as never, {
       fields: ["title", "description", "tags", "categories"],
       storeFields: ["id", "type", "slug", "title", "description"]
     }) as unknown as MiniSearchType;

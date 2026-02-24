@@ -15,6 +15,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 *.log
+test-results/
+playwright-report/
+out/playwright-report/
 
 # misc
 .DS_Store

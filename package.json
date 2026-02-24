@@ -15,7 +15,9 @@
     "qa": "node --import tsx scripts/qa-tools.ts",
     "qa:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/qa-tools.ts",
     "build-search-index": "node --import tsx scripts/build-search-index.ts",
-    "build-search-index:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/build-search-index.ts"
+    "build-search-index:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/build-search-index.ts",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -31,6 +33,7 @@
     "@types/node": "^22.13.5",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@playwright/test": "^1.55.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.0.0",
     "tsx": "^4.19.3",
