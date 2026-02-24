@@ -50,15 +50,18 @@ export async function POST(req: Request) {
   }
 
   const apiKey = process.env.BEEHIIV_API_KEY || "";
-  const publicationId = process.env.BEEHIIV_PUBLICATION_ID || "";
+  const publicationIdRaw = process.env.BEEHIIV_PUBLICATION_ID || "";
   const sendWelcome = (process.env.BEEHIIV_SEND_WELCOME_EMAIL || "true").toLowerCase() !== "false";
 
-  if (!apiKey || !publicationId) {
+  if (!apiKey || !publicationIdRaw.trim()) {
     return NextResponse.json({ ok: false, message: "Beehiiv is not configured on the server." }, { status: 500 });
   }
 
-  // Beehiiv v2 uses publication IDs like `pub_...`. Accept either `pub_...` or the raw UUID to reduce setup friction.
-  const normalizedPublicationId = publicationId.startsWith("pub_") ? publicationId : `pub_${publicationId}`;
+  // Beehiiv v2 uses publication IDs like `pub_...`. Accept either `pub_...` or the raw UUID.
+  const publicationId = publicationIdRaw.trim();
+  const normalizedPublicationId = publicationId.startsWith("pub_")
+    ? publicationId.replace(/^pub_pub_/, "pub_")
+    : `pub_${publicationId}`;
 
   const endpoint = `https://api.beehiiv.com/v2/publications/${encodeURIComponent(normalizedPublicationId)}/subscriptions`;
 
@@ -79,18 +82,25 @@ export async function POST(req: Request) {
     })
   }).catch(() => null);
 
-  if (!res || !res.ok) {
-    const details = res ? await res.text().catch(() => "") : "";
-    // Avoid echoing provider errors directly (may contain internal info).
-    return NextResponse.json(
-      {
-        ok: false,
-        message: "Subscription failed. Try again in a moment.",
-        // Useful for debugging in logs; not intended for UI display.
-        _debug: details ? details.slice(0, 500) : undefined
-      },
-      { status: 502 }
-    );
+  if (!res) {
+    console.warn("[newsletter] Beehiiv request failed: no response");
+    return NextResponse.json({ ok: false, message: "Subscription failed. Try again in a moment." }, { status: 502 });
+  }
+
+  if (!res.ok) {
+    const bodyText = await res.text().catch(() => "");
+
+    // Treat common "already subscribed" responses as success to avoid user confusion.
+    if (res.status === 409 || /already\s+(subscribed|exists)/i.test(bodyText)) {
+      return NextResponse.json({ ok: true });
+    }
+
+    console.warn("[newsletter] Beehiiv subscribe failed", {
+      status: res.status,
+      body: bodyText.slice(0, 500)
+    });
+
+    return NextResponse.json({ ok: false, message: "Subscription failed. Try again in a moment." }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

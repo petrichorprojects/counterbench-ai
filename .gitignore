@@ -24,3 +24,9 @@ out/playwright-report/
 tsconfig.tsbuildinfo
 
 .vercel
+
+# generated
+public/search-index.json
+
+# local tooling
+.claude/
