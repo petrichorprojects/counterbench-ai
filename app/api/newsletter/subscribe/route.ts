@@ -57,7 +57,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Beehiiv is not configured on the server." }, { status: 500 });
   }
 
-  const endpoint = `https://api.beehiiv.com/v2/publications/${encodeURIComponent(publicationId)}/subscriptions`;
+  // Beehiiv v2 uses publication IDs like `pub_...`. Accept either `pub_...` or the raw UUID to reduce setup friction.
+  const normalizedPublicationId = publicationId.startsWith("pub_") ? publicationId : `pub_${publicationId}`;
+
+  const endpoint = `https://api.beehiiv.com/v2/publications/${encodeURIComponent(normalizedPublicationId)}/subscriptions`;
 
   const res = await fetch(endpoint, {
     method: "POST",
@@ -92,4 +95,3 @@ export async function POST(req: Request) {
 
   return NextResponse.json({ ok: true });
 }
-
