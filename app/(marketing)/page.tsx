@@ -6,7 +6,8 @@ export default function HomePage() {
       <section
         className="section"
         id="hero"
-        style={{ minHeight: "85vh", display: "flex", alignItems: "center", paddingTop: 120, paddingBottom: "6rem" }}
+        // Avoid vertical-centering the entire hero block; it causes below-the-fold clipping on common laptop viewports.
+        style={{ paddingTop: 120, paddingBottom: "5rem" }}
       >
         <div className="container">
           <div className="label">Counterbench.AI</div>
@@ -22,7 +23,7 @@ export default function HomePage() {
               Explore prompts
             </Link>
           </div>
-          <div className="grid grid--3 grid--gap-2 mt-6" style={{ borderTop: "1px solid var(--border)", paddingTop: "2.5rem" }}>
+          <div className="grid grid--3 grid--gap-2 mt-5" style={{ borderTop: "1px solid var(--border)", paddingTop: "2.25rem" }}>
             <div>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
                 Verified listings
@@ -70,4 +71,3 @@ export default function HomePage() {
     </main>
   );
 }
-
