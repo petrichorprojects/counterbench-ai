@@ -66,7 +66,8 @@ export function SiteHeader() {
       { href: "/prompts", label: "Prompts" },
       { href: "/prompts/packs", label: "Prompt packs" },
       { href: "/skills", label: "Skills" },
-      { href: "/insights", label: "Insights" }
+      { href: "/insights", label: "Insights" },
+      { href: "/resources", label: "Resources" }
     ],
     []
   );

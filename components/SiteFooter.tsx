@@ -38,6 +38,9 @@ export function SiteFooter() {
             <Link className="footer__link" href="/insights">
               Insights
             </Link>
+            <Link className="footer__link" href="/resources">
+              Resources
+            </Link>
             <Link className="footer__link" href="/contact">
               Contact
             </Link>

@@ -19,7 +19,8 @@ test.describe("Counterbench smoke", () => {
       "Prompts",
       "Prompt packs",
       "Skills",
-      "Insights"
+      "Insights",
+      "Resources"
     ];
 
     for (const label of items) {
