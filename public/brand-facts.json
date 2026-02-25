@@ -1,0 +1,39 @@
+{
+  "name": "Counterbench.AI",
+  "website": "https://counterbench.ai",
+  "summary": "A curated directory of legal AI tools plus prompt templates and playbooks for legal teams.",
+  "audience": ["Paralegals", "Law firms", "Solo lawyers", "Legal researchers", "Legal ops"],
+  "content_types": [
+    { "type": "tools_directory", "url": "https://counterbench.ai/tools" },
+    { "type": "tool", "pattern": "https://counterbench.ai/tools/{tool-slug}" },
+    { "type": "collections", "pattern": "https://counterbench.ai/tools/collections/{collection-slug}" },
+    { "type": "compare", "url": "https://counterbench.ai/tools/compare" },
+    { "type": "prompts", "url": "https://counterbench.ai/prompts" },
+    { "type": "prompt", "pattern": "https://counterbench.ai/prompts/{prompt-slug}" },
+    { "type": "prompt_packs", "pattern": "https://counterbench.ai/prompts/packs/{pack-slug}" },
+    { "type": "playbooks", "url": "https://counterbench.ai/playbooks" },
+    { "type": "playbook", "pattern": "https://counterbench.ai/playbooks/{playbook-slug}" },
+    { "type": "resources", "url": "https://counterbench.ai/resources" }
+  ],
+  "monetization": [
+    { "type": "advisory", "url": "https://counterbench.ai/advisory" },
+    { "type": "newsletter", "url": "https://counterbench.ai/newsletter" }
+  ],
+  "discovery": {
+    "sitemap": "https://counterbench.ai/sitemap.xml",
+    "search_index": "https://counterbench.ai/search-index.json",
+    "llms_txt": "https://counterbench.ai/llms.txt",
+    "llms_full_txt": "https://counterbench.ai/llms-full.txt"
+  },
+  "policies": {
+    "privacy": "https://counterbench.ai/privacy",
+    "terms": "https://counterbench.ai/terms",
+    "eula": "https://counterbench.ai/eula"
+  },
+  "notes": [
+    "Counterbench.AI provides educational information and a directory of third-party tools; it does not provide legal advice.",
+    "Listings may include a 'Verified' badge and a 'Last checked' date where available."
+  ],
+  "last_updated": "2026-02-25"
+}
+

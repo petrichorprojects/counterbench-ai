@@ -36,6 +36,7 @@ export function toolMetadata(tool: Tool): Metadata {
 }
 
 export function toolJsonLd(tool: Tool) {
+  const canonical = absoluteUrl(`/tools/${tool.slug}`);
   const offers =
     tool.pricing === "free"
       ? { "@type": "Offer", price: "0", priceCurrency: "USD" }
@@ -47,7 +48,9 @@ export function toolJsonLd(tool: Tool) {
     description: tool.description,
     applicationCategory: "BusinessApplication",
     operatingSystem: tool.platform.join(", ") || "Web",
-    url: tool.url,
+    url: canonical,
+    sameAs: tool.url,
+    publisher: { "@type": "Organization", name: "Counterbench.AI", url: siteUrl() },
     ...(offers ? { offers } : {})
   };
 }

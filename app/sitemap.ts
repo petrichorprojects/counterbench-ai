@@ -26,6 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/the-counterbench"), lastModified: now, changeFrequency: "weekly", priority: 0.6 }
   ];
 
+  const discovery: MetadataRoute.Sitemap = [
+    { url: absoluteUrl("/llms.txt"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
+    { url: absoluteUrl("/llms-full.txt"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
+    { url: absoluteUrl("/brand-facts.json"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
+    { url: absoluteUrl("/search-index.json"), lastModified: now, changeFrequency: "daily", priority: 0.25 }
+  ];
+
   const tools = getAllTools().map((t) => ({
     url: absoluteUrl(`/tools/${t.slug}`),
     lastModified: t.last_verified ? new Date(t.last_verified) : now,
@@ -72,5 +79,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/prompts/packs"), lastModified: now, changeFrequency: "weekly", priority: 0.65 }
   ];
 
-  return [...base, ...packIndex, ...tools, ...collections, ...playbooks, ...prompts, ...packs, ...skills];
+  return [...base, ...discovery, ...packIndex, ...tools, ...collections, ...playbooks, ...prompts, ...packs, ...skills];
 }
