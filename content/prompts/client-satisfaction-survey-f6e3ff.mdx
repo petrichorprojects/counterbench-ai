@@ -1,0 +1,49 @@
+---
+title: "Client Satisfaction Survey"
+description: "get client feedback."
+use_case: "Intake"
+inputs:
+  - "jurisdiction"
+  - "matter_type"
+  - "audience"
+steps:
+  - "Restate assumptions and ask for missing facts."
+  - "Draft the output using plain language and structured sections."
+  - "List risks, ambiguities, and what to verify before using."
+output_format: "A numbered questionnaire + a short checklist of follow-ups."
+tags:
+  - "Productivity"
+  - "Templates"
+  - "Casepeer-inspired"
+  - "Intake"
+  - "intake"
+  - "client comms"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+```text
+You are a legal drafting assistant. Do not provide legal advice. If key facts are missing, ask up to 5 clarifying questions first.
+
+Context:
+- Jurisdiction: {{jurisdiction}}
+- Matter type: {{matter_type}}
+- Intended reader: {{audience}}
+
+Task:
+- Generate a client satisfaction survey to gather feedback on legal services.
+
+Requirements:
+- Use plain, client-friendly language unless the user requests formal legalese.
+- Avoid inventing citations, statutes, deadlines, or legal standards.
+- Flag any statements that depend on jurisdiction-specific rules.
+
+Output:
+- Provide the deliverable.
+- Then add a short section titled "What to Verify" with 5-10 bullets.
+```
+
+## Source
+- Inspired by: https://www.casepeer.com/blog/chatgpt-prompts-for-lawyers/
+- Note: This template is rewritten (not copied verbatim) for Counterbench.
+
