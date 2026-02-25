@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getAllPrompts } from "@/lib/content";
 
-export const metadata = { title: "Prompts" };
+export const metadata = { title: "AI Prompts" };
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
@@ -27,11 +27,24 @@ export default async function PromptsIndexPage({
     <main>
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
-          <div className="label">Prompts</div>
-          <h1 className="max-w-900">Prompt library</h1>
-          <p className="max-w-700 mt-4" style={{ fontSize: "1.125rem" }}>
-            Git-backed MDX prompts with a strict frontmatter schema.
+          <div className="label">COUNTERBENCH FOR LEGAL TEAMS</div>
+          <h1 className="max-w-900">AI Prompts Built for How Lawyers Actually Work</h1>
+          <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>
+            Search 200+ vetted prompts, tools, and skills across litigation, contracts, research, and compliance — each one
+            version-controlled and structured for reliable output.
           </p>
+
+          <div className="mt-5 flex flex--gap-2" style={{ flexWrap: "wrap" }}>
+            <Link className="btn btn--secondary btn--sm" href="/tools">
+              Browse tools
+            </Link>
+            <Link className="btn btn--secondary btn--sm" href="/skills">
+              Browse skills
+            </Link>
+            <Link className="btn btn--ghost btn--sm" href="/prompts/packs">
+              Explore prompt packs
+            </Link>
+          </div>
 
           <form method="get" className="mt-5">
             <div className="grid grid--3 grid--gap-2" style={{ gap: "1rem" }}>
