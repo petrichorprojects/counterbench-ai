@@ -1,3 +1,5 @@
+> **Workspace Label:** Canonical Counterbench repo. Do not edit/deploy from any nested duplicate like `VerdictOps/counterbench-ai`.
+
 # Counterbench Advisory — Website
 
 ## Deployment
