@@ -18,6 +18,7 @@ Primary domain: https://counterbench.ai
 
 - Tools directory: https://counterbench.ai/tools
 - Tool detail pages: https://counterbench.ai/tools/{tool-slug}
+- Guides (answer hubs): https://counterbench.ai/guides
 - Collections: https://counterbench.ai/tools/collections
 - Compare: https://counterbench.ai/tools/compare
 - Prompts library: https://counterbench.ai/prompts
@@ -36,4 +37,3 @@ Primary domain: https://counterbench.ai
 - Privacy: https://counterbench.ai/privacy
 - Terms: https://counterbench.ai/terms
 - EULA: https://counterbench.ai/eula
-

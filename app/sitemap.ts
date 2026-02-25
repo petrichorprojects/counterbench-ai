@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllCollections, getAllPacks, getAllPlaybooks, getAllPrompts, getAllSkills, getAllTools } from "@/lib/content";
+import { getAllGuides } from "@/lib/guides";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/prompts"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/skills"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/tools/compare"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: absoluteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: absoluteUrl("/insights"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
@@ -75,9 +77,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75
   }));
 
+  const guides = getAllGuides().map((g) => ({
+    url: absoluteUrl(`/guides/${g.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.75
+  }));
+
   const packIndex: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/prompts/packs"), lastModified: now, changeFrequency: "weekly", priority: 0.65 }
   ];
 
-  return [...base, ...discovery, ...packIndex, ...tools, ...collections, ...playbooks, ...prompts, ...packs, ...skills];
+  return [...base, ...discovery, ...packIndex, ...tools, ...collections, ...playbooks, ...guides, ...prompts, ...packs, ...skills];
 }

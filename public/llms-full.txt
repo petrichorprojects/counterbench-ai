@@ -33,6 +33,9 @@ Counterbench.AI helps legal teams quickly find, compare, and operationalize lega
 - Collections (curated groupings): https://counterbench.ai/tools/collections/{collection-slug}
 - Compare view: https://counterbench.ai/tools/compare
 
+- Guides index: https://counterbench.ai/guides
+- Guide pages (answer hubs): https://counterbench.ai/guides/{guide-slug}
+
 - Prompts index: https://counterbench.ai/prompts
 - Prompt pages: https://counterbench.ai/prompts/{prompt-slug}
 - Prompt packs: https://counterbench.ai/prompts/packs/{pack-slug}
@@ -62,4 +65,3 @@ Counterbench.AI helps legal teams quickly find, compare, and operationalize lega
 
 - "Verified" indicates a manual review (where present).
 - "Last checked" indicates the listing URL was reachable at that time.
-

@@ -6,6 +6,8 @@
   "content_types": [
     { "type": "tools_directory", "url": "https://counterbench.ai/tools" },
     { "type": "tool", "pattern": "https://counterbench.ai/tools/{tool-slug}" },
+    { "type": "guides", "url": "https://counterbench.ai/guides" },
+    { "type": "guide", "pattern": "https://counterbench.ai/guides/{guide-slug}" },
     { "type": "collections", "pattern": "https://counterbench.ai/tools/collections/{collection-slug}" },
     { "type": "compare", "url": "https://counterbench.ai/tools/compare" },
     { "type": "prompts", "url": "https://counterbench.ai/prompts" },
@@ -36,4 +38,3 @@
   ],
   "last_updated": "2026-02-25"
 }
-

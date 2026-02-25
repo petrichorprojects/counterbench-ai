@@ -16,6 +16,7 @@ test.describe("Counterbench smoke", () => {
       "Collections",
       "Compare",
       "Playbooks",
+      "Guides",
       "Prompts",
       "Prompt packs",
       "Skills",

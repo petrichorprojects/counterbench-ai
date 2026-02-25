@@ -1,0 +1,65 @@
+{
+  "slug": "best-ediscovery-and-doc-review-ai-tools-2026",
+  "title": "Best eDiscovery and Document Review AI Tools (2026)",
+  "description": "Document review answer hub: a practical shortlist plus risks and verification steps for eDiscovery and large-scale review workflows.",
+  "year": 2026,
+  "tldr": "In eDiscovery and document review, AI is valuable when it helps you triage faster without losing defensibility. In 2026, choose tools that support repeatable workflows: collections, search, batching, audit trails, and reviewer quality checks. Use AI for prioritization and summaries, but keep your review protocol, sampling strategy, and privilege controls explicit. If you can’t explain how results were produced, you can’t defend them.",
+  "answer_intents": [
+    "What are the best AI tools for eDiscovery?",
+    "What is the best AI for document review?",
+    "How do I use AI in doc review without creating risk?",
+    "How do I compare eDiscovery platforms?"
+  ],
+  "how_to_choose": [
+    "Define the review goal: privilege review, responsiveness, issue tagging, or chronology building.",
+    "Require auditability: search terms, models used, reviewer decisions, and sampling results.",
+    "Insist on privilege controls and defensible workflows (protocols, logs, QA sampling).",
+    "Pilot with a limited dataset and measure recall/precision with human QA."
+  ],
+  "implementation_risks": [
+    "Privilege leakage and inadvertent production of sensitive materials.",
+    "Over-trusting AI classification without sampling and reviewer QA.",
+    "Poor chain-of-custody or incomplete audit logs.",
+    "Bias in prioritization that hides key documents from reviewers."
+  ],
+  "ranked_tools": [
+    { "tool_slug": "everlaw-464", "why": "Platform-style option for structured review workflows; prioritize auditability and QA sampling in your configuration." },
+    { "tool_slug": "luminance-1-545", "why": "Legal-first document analysis positioning that can support review and extraction tasks in a structured workflow." },
+    { "tool_slug": "aerial-761", "why": "Useful for review-style workflows where you need consistent summaries and document-level insight for triage." },
+    { "tool_slug": "paralegal-pal-377", "why": "Helpful for paralegal-facing review assistance and fast document understanding (still require protocol + QA)." },
+    { "tool_slug": "legal-doc-assistant-296", "why": "Lightweight doc review assistant for structured outputs when you need speed and consistency." },
+    { "tool_slug": "legal-eagle-808", "why": "General doc review assistant option for quick analysis, summaries, and triage support." }
+  ],
+  "faq": [
+    {
+      "q": "Is AI-assisted review defensible?",
+      "a": "It can be, if you have a written protocol, audit logs, and a sampling/QA plan. Treat AI as workflow acceleration, not as the decision-maker."
+    },
+    {
+      "q": "What should an AI review protocol include?",
+      "a": "Data sources, collection method, access controls, review stages, privilege handling, sampling plan, escalation rules, and who signs off."
+    },
+    {
+      "q": "How do I avoid privilege mistakes?",
+      "a": "Use explicit privilege filters, train reviewers on escalation, and run targeted QA sampling for privileged indicators. Don’t rely on AI alone."
+    },
+    {
+      "q": "What metrics matter?",
+      "a": "Time-to-first-relevant doc, reviewer throughput, sampling pass rates, and how often privilege issues are caught before production."
+    },
+    {
+      "q": "Where does AI help most?",
+      "a": "Prioritization, summarization, clustering, and chronology building. You still need human judgment for privilege, responsiveness, and strategy."
+    }
+  ],
+  "citations": [
+    { "title": "Sedona Conference (eDiscovery best practices and commentary)", "url": "https://thesedonaconference.org/" },
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" },
+    { "title": "ABA Model Rules of Professional Conduct (competence and technology)", "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/" },
+    { "title": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework" },
+    { "title": "AEO playbook thread (Answer hubs, schema, citations)", "url": "https://x.com/Nate_Google_/status/2026338035458056265" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "lawyer-productivity-pack", "prompt-frameworks"],
+  "last_updated": "2026-02-25"
+}
+

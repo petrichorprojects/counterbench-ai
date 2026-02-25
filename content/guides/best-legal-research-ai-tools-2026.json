@@ -1,0 +1,65 @@
+{
+  "slug": "best-legal-research-ai-tools-2026",
+  "title": "Best Legal Research AI Tools (2026)",
+  "description": "A research-first answer hub: tools, workflow, and verification steps for faster legal research without getting burned by hallucinations.",
+  "year": 2026,
+  "tldr": "For legal research in 2026, the winning pattern is retrieval plus verification: use a research tool to find sources, then use a drafting assistant to structure the memo while quoting primary text. Your goal is not a “correct sounding answer,” but a trail you can audit: citations, case excerpts, and jurisdiction-specific caveats. If a tool can’t show where a claim came from, treat it as brainstorming only.",
+  "answer_intents": [
+    "What are the best AI tools for legal research?",
+    "What legal research AI cites sources reliably?",
+    "How do I reduce hallucinations in legal research?",
+    "How can I turn research into a memo quickly?"
+  ],
+  "how_to_choose": [
+    "Decide what you need: discovery of sources, summarization, issue spotting, or memo drafting.",
+    "Require quotable evidence: case excerpts, statute text, or links to primary sources.",
+    "Separate steps: research (find/verify) then drafting (organize/argue).",
+    "Prefer tools that expose their retrieval trail (links, citations, excerpts)."
+  ],
+  "implementation_risks": [
+    "Fabricated citations or incorrect holdings presented confidently.",
+    "Jurisdiction mismatch (answers based on the wrong state/country or outdated law).",
+    "Over-trusting summaries without reading key primary excerpts.",
+    "Confidential fact patterns being pasted into tools outside policy."
+  ],
+  "ranked_tools": [
+    { "tool_slug": "vlex-698", "why": "Strong candidate when you need research-oriented workflows and access to a broad legal corpus (verify coverage for your jurisdictions)." },
+    { "tool_slug": "olaw", "why": "Useful for tool-based RAG experimentation and building a research workflow that emphasizes sources and auditability." },
+    { "tool_slug": "legal-chatbot-starter", "why": "Best when you want an internal, policy-aligned legal chatbot for firm knowledge, intake, or curated research corpora." },
+    { "tool_slug": "legal-research-companion-423", "why": "Lightweight option to support research planning and summarization, especially when paired with a verification checklist." },
+    { "tool_slug": "chambers-243", "why": "Good for structured research assistance where the output needs to be organized and easy to review." },
+    { "tool_slug": "case-aide-245", "why": "Useful for fast case framing and early-stage research triage when you need to map issues and next steps." }
+  ],
+  "faq": [
+    {
+      "q": "Can I trust AI legal citations?",
+      "a": "Only if you can click through to primary sources. Make “show excerpt + link” a required output, and verify key quotes manually."
+    },
+    {
+      "q": "What’s the best workflow for a legal memo?",
+      "a": "1) Gather sources. 2) Extract excerpts. 3) Draft an outline. 4) Write the memo with pinpoint citations. 5) Validate every assertion that matters."
+    },
+    {
+      "q": "How do I handle jurisdiction differences?",
+      "a": "Require the model to restate the jurisdiction up front and flag any rules that vary by venue. If uncertain, it should list what to confirm."
+    },
+    {
+      "q": "What should I store internally vs. in SaaS tools?",
+      "a": "Internal: privileged fact patterns, client names, strategy. SaaS: public law, sanitized examples, non-sensitive templates, depending on policy."
+    },
+    {
+      "q": "How do I measure success?",
+      "a": "Track time-to-first-relevant source, number of hallucinations caught, and how often the output produces a usable memo outline on first pass."
+    }
+  ],
+  "citations": [
+    { "title": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework" },
+    { "title": "ABA Model Rules of Professional Conduct (competence and technology)", "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/" },
+    { "title": "MIT Law, AI & the Future of Justice", "url": "https://law.mit.edu/ai" },
+    { "title": "LLMS.txt (Vercel example thread)", "url": "https://x.com/fba/status/2025926581546352900" },
+    { "title": "AEO playbook thread (Answer hubs, schema, citations)", "url": "https://x.com/Nate_Google_/status/2026338035458056265" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "prompt-frameworks", "lawyer-productivity-pack"],
+  "last_updated": "2026-02-25"
+}
+
