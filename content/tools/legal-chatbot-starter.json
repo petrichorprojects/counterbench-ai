@@ -1,0 +1,33 @@
+{
+  "slug": "legal-chatbot-starter",
+  "name": "Open-Source Legal Chatbot (Starter Project)",
+  "description": "Starter codebase for a legal chatbot you can adapt for internal Q&A, intake workflows, and policy-aware responses (review required).",
+  "categories": [
+    "Legal",
+    "Legal research"
+  ],
+  "tags": [
+    "Open source",
+    "Chatbot",
+    "Intake",
+    "Knowledge base"
+  ],
+  "pricing": "free",
+  "platform": [
+    "web"
+  ],
+  "url": "https://github.com/reethuthota/Legal_Chatbot",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "verified": true,
+  "last_verified": "2026-02-25",
+  "status": "active",
+  "change_log": [
+    {
+      "date": "2026-02-25",
+      "note": "Added to Counterbench.AI catalog"
+    }
+  ]
+}
+

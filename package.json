@@ -16,6 +16,8 @@
     "qa:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/qa-tools.ts",
     "seed-prompts": "node --import tsx scripts/seed-prompts.ts",
     "seed-prompts:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/seed-prompts.ts",
+    "import-prompts:sheet1": "node --import tsx scripts/import-prompts-sheet1.ts",
+    "import-prompts:sheet1:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/import-prompts-sheet1.ts",
     "build-search-index": "node --import tsx scripts/build-search-index.ts",
     "build-search-index:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/build-search-index.ts",
     "e2e": "playwright test",
