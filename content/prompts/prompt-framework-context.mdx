@@ -1,0 +1,55 @@
+---
+title: "Prompt Framework: CONTEXT"
+description: "Turn a vague request into a high-quality prompt using the CONTEXT checklist."
+use_case: "Prompt engineering"
+inputs:
+  - "task"
+  - "audience"
+  - "constraints"
+  - "tone"
+  - "output_format"
+steps:
+  - "Fill in the fields"
+  - "Paste the generated prompt into your model"
+  - "Iterate by tightening constraints and output format"
+output_format: "A single copy/paste-ready mega prompt."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+You are an expert prompt engineer. Convert the user’s rough request into a single best-in-class prompt using the CONTEXT framework.
+
+User’s rough request:
+{{task}}
+
+CONTEXT framework requirements:
+C — Create persona simulation: assign the AI a specific role that fits the task and the target audience.
+O — Outline task steps: include a short numbered workflow the AI should follow.
+N — Provide context and constraints: include assumptions, scope boundaries, and constraints (time, jurisdiction, sources, tone).
+T — Specify the goal: define what “good” looks like (success criteria).
+E — Format the output: define headings/bullets/tables and strict formatting rules.
+X — Extras: add guardrails (ask clarifying questions if inputs are missing; don’t fabricate; call out assumptions).
+
+Target audience:
+{{audience}}
+
+Constraints (include any: budget, time, jurisdiction, policy, confidentiality):
+{{constraints}}
+
+Tone/style:
+{{tone}}
+
+Output format requirements:
+{{output_format}}
+
+Return only:
+1) The final prompt (copy/paste-ready)
+2) A short list of the fields the user should fill in (placeholders) if any are missing
+```
+

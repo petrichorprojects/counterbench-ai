@@ -1,0 +1,46 @@
+---
+title: "Prompt Framework: CLEAR"
+description: "Rewrite instructions using CLEAR (Concise, Logical, Engaging, Actionable, Responsible)."
+use_case: "Prompt engineering"
+inputs:
+  - "draft_prompt"
+  - "audience"
+  - "risk_constraints"
+steps:
+  - "Paste your draft"
+  - "Apply CLEAR rewrite rules"
+  - "Add safety and responsibility guardrails"
+output_format: "A rewritten prompt plus a short checklist of what changed."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+Rewrite my draft prompt using the CLEAR framework so it produces higher-quality outputs.
+
+Draft prompt:
+{{draft_prompt}}
+
+Audience:
+{{audience}}
+
+Risk constraints (privacy, compliance, safety, non-advice, etc.):
+{{risk_constraints}}
+
+CLEAR requirements:
+- Concise: remove fluff; keep only requirements that change output quality.
+- Logical: ordered steps; no contradictions; define success criteria.
+- Engaging: readable, human; short sentences; clear headings.
+- Actionable: specify exactly what to do and what to return.
+- Responsible: add guardrails (ask questions if inputs are missing; do not fabricate; note assumptions).
+
+Return:
+1) The rewritten prompt
+2) A 5-bullet checklist of improvements made
+```
+

@@ -1,0 +1,47 @@
+---
+title: "Prompt Framework: CRISPE"
+description: "Generate a structured prompt using CRISPE (Capacity/Role, Insight, Statement, Personality, Experiment)."
+use_case: "Prompt engineering"
+inputs:
+  - "task"
+  - "role"
+  - "background"
+  - "style"
+  - "variants"
+steps:
+  - "Provide the task and desired role"
+  - "Add relevant background and constraints"
+  - "Request 2-3 variants to compare"
+output_format: "A copy/paste-ready prompt plus 2-3 experimental variants."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+You are an expert prompt engineer. Write a single, high-quality mega prompt using the CRISPE framework.
+
+Task:
+{{task}}
+
+CRISPE fields:
+1) Capacity and Role: {{role}}
+2) Insight (background the model needs): {{background}}
+3) Statement (what the model must do): write a clear instruction set + success criteria
+4) Personality (tone/style): {{style}}
+5) Experiment: generate {{variants}} alternative prompt variants with different constraints or styles
+
+Rules:
+- Ask 3-8 clarifying questions first if the inputs are ambiguous or missing.
+- Do not invent facts; label assumptions explicitly.
+- Output must be copy/paste-ready.
+
+Return:
+1) Primary CRISPE prompt
+2) {{variants}} variants labeled Variant A/B/C
+```
+

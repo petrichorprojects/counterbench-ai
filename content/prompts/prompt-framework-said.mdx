@@ -1,0 +1,46 @@
+---
+title: "Prompt Framework: SAID"
+description: "Create a focused prompt using SAID (Situation, Action, Impact, Detail)."
+use_case: "Prompt engineering"
+inputs:
+  - "situation"
+  - "action"
+  - "impact"
+  - "detail_requirements"
+steps:
+  - "Describe the situation"
+  - "Specify the action you want the model to take"
+  - "Explain the impact and why it matters"
+  - "Define detail level and formatting"
+output_format: "One short prompt optimized for clarity."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+Rewrite my prompt using the SAID framework so it is unambiguous and produces a usable result.
+
+S (Situation):
+{{situation}}
+
+A (Action):
+{{action}}
+
+I (Impact):
+{{impact}}
+
+D (Detail):
+{{detail_requirements}}
+
+Rules:
+- If any SAID field is missing, ask up to 5 clarifying questions first.
+- Do not add requirements that conflict with the provided details.
+
+Return only the final rewritten prompt.
+```
+

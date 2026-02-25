@@ -1,0 +1,58 @@
+---
+title: "Prompt Framework: APPROACH"
+description: "Plan and structure communication using APPROACH (Audience, Purpose, Priorities, Results, Openness, Assumptions, Concerns, Help)."
+use_case: "Prompt engineering"
+inputs:
+  - "audience"
+  - "purpose"
+  - "priorities"
+  - "results"
+  - "assumptions"
+  - "concerns"
+steps:
+  - "Fill in APPROACH fields"
+  - "Generate a structured message plan"
+  - "Output a draft plus questions"
+output_format: "A message plan + draft + clarification questions."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+Use the APPROACH framework to create a communication plan and a draft message.
+
+A — Audience:
+{{audience}}
+
+P — Purpose:
+{{purpose}}
+
+P — Priorities (top 3):
+{{priorities}}
+
+R — Results (what success looks like):
+{{results}}
+
+O — Openness (where you want feedback / what you’re uncertain about):
+(Fill in if relevant.)
+
+A — Assumptions:
+{{assumptions}}
+
+C — Concerns (risks, objections, sensitivities):
+{{concerns}}
+
+H — Help needed (what you want the recipient to do next):
+(Fill in if relevant.)
+
+Return:
+1) A one-page plan (bullets) following APPROACH order
+2) A draft message (email or memo, as appropriate)
+3) 3-7 clarifying questions to improve accuracy
+```
+

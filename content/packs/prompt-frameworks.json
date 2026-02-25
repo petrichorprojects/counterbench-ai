@@ -1,0 +1,21 @@
+{
+  "slug": "prompt-frameworks",
+  "title": "Prompt Frameworks Pack",
+  "description": "Reusable frameworks for writing clearer prompts and getting better outputs.",
+  "prompt_slugs": [
+    "prompt-framework-context",
+    "prompt-framework-crispe",
+    "prompt-framework-said",
+    "prompt-framework-prose",
+    "prompt-framework-clear",
+    "prompt-framework-star",
+    "prompt-framework-approach"
+  ],
+  "audience": "legal",
+  "workflow_stage": "general",
+  "seo": {
+    "title": "Prompt Frameworks Pack",
+    "description": "Framework templates (CONTEXT, CRISPE, SAID, PROSE, CLEAR, STAR, APPROACH) for better prompting."
+  }
+}
+

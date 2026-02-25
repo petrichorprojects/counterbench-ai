@@ -1,0 +1,51 @@
+---
+title: "Prompt Framework: PROSE"
+description: "Define purpose and scope using PROSE (Purpose, Role, Owner, Scope, Expectations)."
+use_case: "Prompt engineering"
+inputs:
+  - "purpose"
+  - "role"
+  - "owner"
+  - "scope"
+  - "expectations"
+steps:
+  - "Fill in PROSE fields"
+  - "Generate a conversational system-style prompt"
+  - "Validate with a small test case"
+output_format: "A conversational, policy-aware prompt."
+tags:
+  - "Prompt engineering"
+  - "Frameworks"
+  - "Templates"
+last_updated: "2026-02-25"
+---
+
+## Prompt
+
+```text
+Create a conversational prompt using the PROSE framework.
+
+P (Purpose):
+{{purpose}}
+
+R (Role):
+{{role}}
+
+O (Owner):
+{{owner}}
+
+S (Scope):
+{{scope}}
+
+E (Expectations):
+{{expectations}}
+
+Requirements:
+- Make it feel like a natural conversation, not a rigid checklist.
+- Include boundaries: what is in-scope vs out-of-scope.
+- Include a short “How we’ll work” section (3-6 bullets).
+- If the user asks for something out-of-scope, propose the closest safe alternative.
+
+Return only the final prompt (copy/paste-ready).
+```
+
