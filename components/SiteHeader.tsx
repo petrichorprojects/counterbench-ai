@@ -60,6 +60,7 @@ export function SiteHeader() {
   const libraryLinks = useMemo<MenuLink[]>(
     () => [
       { href: "/tools", label: "Tools" },
+      { href: "/legal-pad", label: "Legal Pad" },
       { href: "/tools/collections", label: "Collections" },
       { href: "/tools/compare", label: "Compare" },
       { href: "/playbooks", label: "Playbooks" },
@@ -116,7 +117,6 @@ export function SiteHeader() {
 
             {menuOpen && (
               <div className="nav__dropdown" role="menu" aria-label="AI Law Library">
-                {/* Use a list so items don't concatenate even if CSS is stale/missing. */}
                 <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                   {libraryLinks.map((l) => (
                     <li key={l.href}>

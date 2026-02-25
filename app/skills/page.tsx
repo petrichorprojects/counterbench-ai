@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { LegalPadButton } from "@/components/LegalPadButton";
+import { VoteButtons } from "@/components/VoteButtons";
 import { getAllSkills } from "@/lib/content";
 
 export const metadata = { title: "Skills" };
@@ -54,10 +56,15 @@ export default async function SkillsIndexPage({ searchParams }: { searchParams?:
                 <div className="text-muted" style={{ fontSize: "0.875rem", marginTop: 10 }}>
                   {s.frontmatter.description}
                 </div>
-                <div className="mt-4">
+
+                <div className="mt-4 flex flex--between flex--gap-2" style={{ alignItems: "center", flexWrap: "wrap" }}>
                   <Link className="btn btn--secondary btn--sm" href={`/skills/${s.slug}`}>
                     Open
                   </Link>
+                  <div className="flex flex--gap-1" style={{ alignItems: "center", flexWrap: "wrap" }}>
+                    <VoteButtons type="skill" slug={s.slug} compact />
+                    <LegalPadButton type="skill" slug={s.slug} title={s.frontmatter.title} description={s.frontmatter.description} compact />
+                  </div>
                 </div>
               </div>
             ))}

@@ -1,15 +1,13 @@
 import Link from "next/link";
+import { LegalPadButton } from "@/components/LegalPadButton";
+import { VoteButtons } from "@/components/VoteButtons";
 import { getAllPrompts } from "@/lib/content";
 
 export const metadata = { title: "AI Prompts" };
 
 type SearchParams = Record<string, string | string[] | undefined>;
 
-export default async function PromptsIndexPage({
-  searchParams
-}: {
-  searchParams?: Promise<SearchParams>;
-}) {
+export default async function PromptsIndexPage({ searchParams }: { searchParams?: Promise<SearchParams> }) {
   const sp = (await searchParams) ?? {};
   const tag = typeof sp.tag === "string" ? sp.tag : "";
   const q = typeof sp.q === "string" ? sp.q : "";
@@ -112,10 +110,15 @@ export default async function PromptsIndexPage({
                 <div className="text-muted" style={{ fontSize: "0.875rem", marginTop: 10 }}>
                   {p.frontmatter.description}
                 </div>
-                <div className="mt-4">
+
+                <div className="mt-4 flex flex--between flex--gap-2" style={{ alignItems: "center", flexWrap: "wrap" }}>
                   <Link className="btn btn--secondary btn--sm" href={`/prompts/${p.slug}`}>
                     Open
                   </Link>
+                  <div className="flex flex--gap-1" style={{ alignItems: "center", flexWrap: "wrap" }}>
+                    <VoteButtons type="prompt" slug={p.slug} compact />
+                    <LegalPadButton type="prompt" slug={p.slug} title={p.frontmatter.title} description={p.frontmatter.description} compact />
+                  </div>
                 </div>
               </div>
             ))}

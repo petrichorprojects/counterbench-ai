@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import { LegalPadButton } from "@/components/LegalPadButton";
+import { VoteButtons } from "@/components/VoteButtons";
 import { MDX } from "@/components/mdx/MDX";
 import { getAllPrompts, getPromptBySlug } from "@/lib/content";
 
@@ -21,6 +23,12 @@ export default async function PromptDetailPage({ params }: { params: Promise<{ s
           <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>
             {fm.description}
           </p>
+
+          <div className="mt-4 flex flex--gap-2" style={{ flexWrap: "wrap" }}>
+            <VoteButtons type="prompt" slug={slug} />
+            <LegalPadButton type="prompt" slug={slug} title={fm.title} description={fm.description} />
+          </div>
+
           <div className="mt-6">
             <MDX source={doc.content} />
           </div>
