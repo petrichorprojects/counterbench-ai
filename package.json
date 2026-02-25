@@ -22,6 +22,7 @@
     "import-prompts:free-legal-prompts:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/import-prompts-free-legal-prompts.ts",
     "import-prompts:legal-prompts-for-gpt": "node --import tsx scripts/import-prompts-legal-prompts-for-gpt.ts",
     "import-prompts:legal-prompts-for-gpt:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/import-prompts-legal-prompts-for-gpt.ts",
+    "import-prompts:legal-prompts-for-gpt:zip": "node --import tsx scripts/import-prompts-legal-prompts-for-gpt.ts --zip \"/Users/philipprimmler/Downloads/Legal Prompts/legal-prompts-for-gpt-main.zip\"",
     "build-search-index": "node --import tsx scripts/build-search-index.ts",
     "build-search-index:preview": "CB_CONTENT_ROOT=content_preview node --import tsx scripts/build-search-index.ts",
     "e2e": "playwright test",

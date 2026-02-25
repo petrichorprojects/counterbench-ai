@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { slugify } from "../lib/slug";
 
 type ImportReport = {
@@ -158,17 +159,29 @@ function toMdx(params: {
 }
 
 function parseArgs(argv: string[]) {
-  const out: { root?: string; overwrite: boolean } = { overwrite: false };
+  const out: { root?: string; zip?: string; overwrite: boolean } = { overwrite: false };
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i] ?? "";
     if (a === "--overwrite") out.overwrite = true;
     if (a === "--root") out.root = argv[i + 1];
+    if (a === "--zip") out.zip = argv[i + 1];
   }
   return out;
 }
 
 function defaultSourceRoot(): string {
   return "/Users/philipprimmler/Downloads/Legal Prompts/legal-prompts-for-gpt-main";
+}
+
+function readReadmeFromZip(zipPath: string): { readme: string; internalPath: string } {
+  const list = execFileSync("unzip", ["-l", zipPath], { encoding: "utf8" });
+  const lines = list.split(/\r?\n/g);
+  const entryLine = lines.map((l) => l.trim()).find((l) => l.endsWith("/README.md")) ?? "";
+  if (!entryLine) throw new Error("Could not find README.md in zip");
+  const internalPath = entryLine.split(/\s+/g).slice(-1)[0] ?? "";
+  if (!internalPath) throw new Error("Could not parse README.md path in zip");
+  const readme = execFileSync("unzip", ["-p", zipPath, internalPath], { encoding: "utf8" });
+  return { readme, internalPath };
 }
 
 function parseReadme(readmeText: string): PromptDraft[] {
@@ -287,16 +300,32 @@ async function main() {
 
   ensureDir(OUT_DIR);
 
-  const readmePath = path.join(sourceRoot, "README.md");
-  if (!exists(readmePath)) {
-    report.errors.push({ message: `README not found: ${readmePath}` });
+  let readme = "";
+  let sourceFile = "README.md";
+  try {
+    if (args.zip?.trim()) {
+      const zipPath = path.resolve(args.zip.trim());
+      const fromZip = readReadmeFromZip(zipPath);
+      readme = fromZip.readme;
+      sourceFile = `${path.basename(zipPath)}:${fromZip.internalPath}`;
+      report.source_root = zipPath;
+    } else {
+      const readmePath = path.join(sourceRoot, "README.md");
+      if (!exists(readmePath)) throw new Error(`README not found: ${readmePath}`);
+      readme = fs.readFileSync(readmePath, "utf8");
+      sourceFile = "README.md";
+    }
+  } catch (e) {
+    report.errors.push({ message: (e as Error).message });
     ensureDir(path.join(ROOT, "out"));
-    fs.writeFileSync(path.join(ROOT, "out", "import-prompts-legal-prompts-for-gpt-report.json"), `${JSON.stringify(report, null, 2)}\n`);
+    fs.writeFileSync(
+      path.join(ROOT, "out", "import-prompts-legal-prompts-for-gpt-report.json"),
+      `${JSON.stringify(report, null, 2)}\n`
+    );
     console.error(report.errors[0]?.message);
     process.exit(1);
   }
 
-  const readme = fs.readFileSync(readmePath, "utf8");
   const drafts = parseReadme(readme);
   report.prompts_parsed = drafts.length;
 
@@ -323,7 +352,7 @@ async function main() {
       tags: d.tags,
       prompt: d.prompt,
       source_url: d.source_url,
-      source_file: d.source_file,
+      source_file: sourceFile,
       license: d.license,
       author: d.author,
       last_updated_iso: todayIso

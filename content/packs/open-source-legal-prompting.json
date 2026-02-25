@@ -1,0 +1,27 @@
+{
+  "slug": "open-source-legal-prompting",
+  "title": "Open-Source Legal Prompting Pack",
+  "description": "High-signal starter prompts imported from MIT-licensed repositories (with attribution).",
+  "prompt_slugs": [
+    "legal-translation-multi-languages-to-english",
+    "legal-text-summary-irac",
+    "clause-rewriter",
+    "bluebook-citation-generator-website",
+    "bluebook-citation-generator-case",
+    "negotiation-strategies-hints",
+    "legal-research-identify-relevant-cases-for-a-legal-argument",
+    "legal-research-identify-key-legal-issues-that-may-arise-in-a-case",
+    "legal-research-identify-relevant-statutes-for-a-legal-argument",
+    "legal-research-identify-potential-legal-defenses-to-a-particular-claim",
+    "defence-or-feedback-on-subpoena",
+    "witness-hearing-preparation",
+    "legal-document-pareto-summary"
+  ],
+  "audience": "legal",
+  "workflow_stage": "general",
+  "seo": {
+    "title": "Open-Source Legal Prompt Pack",
+    "description": "Curated open-source prompts for translation, citation, negotiation, and legal research workflows."
+  }
+}
+
