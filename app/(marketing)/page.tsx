@@ -13,14 +13,13 @@ export default function HomePage() {
         <div className="container">
           <div style={{ textAlign: "center" }}>
             <div className="label" style={{ display: "inline-block" }}>
-              Counterbench.AI
+              Stop guessing. Start matching.
             </div>
             <h1 className="max-w-900" style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Describe what you need. Get a recommendation.
+              The right AI tool for your legal task — <em>in seconds</em>.
             </h1>
             <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem", marginLeft: "auto", marginRight: "auto" }}>
-              Tell us the task. We’ll suggest the most relevant <span className="text-white">tools</span>,{" "}
-              <span className="text-white">prompts</span>, and <span className="text-white">skills</span> from the library.
+              Legal teams that use AI to win don&apos;t browse five platforms — they match.
             </p>
           </div>
 

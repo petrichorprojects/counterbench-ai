@@ -7,7 +7,7 @@ test.describe("Homepage suggestions", () => {
     const root = page.locator("[data-home-suggest-root]");
     await expect(root).toBeVisible();
 
-    const box = root.getByRole("textbox", { name: "Describe what you need" });
+    const box = root.getByRole("textbox", { name: "Describe your next deliverable" });
     await box.fill("contract review");
 
     await root.getByRole("button", { name: "Suggest" }).click();
@@ -28,7 +28,7 @@ test.describe("Homepage suggestions", () => {
     await page.goto("/");
 
     const root = page.locator("[data-home-suggest-root]");
-    const box = root.getByRole("textbox", { name: "Describe what you need" });
+    const box = root.getByRole("textbox", { name: "Describe your next deliverable" });
     await box.fill("motion to compel");
     await root.getByRole("button", { name: "Suggest" }).click();
 

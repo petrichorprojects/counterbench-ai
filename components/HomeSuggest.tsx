@@ -136,10 +136,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
   const [touched, setTouched] = useState(false);
   const indexRef = useRef<{ mini: MiniSearchType; docsById: Map<string, SearchIndexFile["docs"][number]> } | null>(null);
 
-  const placeholder = useMemo(
-    () => "Type a task or deliverable… (e.g., motion to compel, vendor contract redlines, discovery responses)",
-    []
-  );
+  const placeholder = useMemo(() => "e.g., motion to compel, vendor contract redlines, discovery responses", []);
 
   useEffect(() => {
     // Warm index on idle for a snappy first submit.
@@ -272,11 +269,11 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
         style={{ padding: "1.25rem", borderRadius: 18, textAlign: align === "center" ? "center" : "left" }}
       >
         <div className="label" style={{ marginBottom: 10, letterSpacing: "0.16em", display: "inline-block" }}>
-          Describe what you need
+          Describe your next deliverable
         </div>
         <div
           className="cb-suggestBar"
-          aria-label="Describe what you need"
+          aria-label="Describe your next deliverable"
           style={{ maxWidth: align === "center" ? 760 : undefined, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
         >
           <span className="cb-suggestBar__icon" aria-hidden="true">
@@ -303,7 +300,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
               }
             }}
             placeholder={placeholder}
-            aria-label="Describe what you need"
+            aria-label="Describe your next deliverable"
             inputMode="text"
             autoComplete="off"
             autoCapitalize="none"
@@ -347,10 +344,13 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
           style={{ alignItems: "center", justifyContent: align === "center" ? "center" : "space-between" }}
         >
           <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
-            {ready ? "Computed locally from the library." : "Loading index…"}
+            {ready ? "Private & local" : "Loading index…"}
           </div>
           <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
-            Tip: press <strong>Enter</strong>.
+            {ready ? "Nothing leaves your machine" : " "}
+          </div>
+          <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
+            {ready ? "Zero billable hours wasted" : " "}
           </div>
         </div>
 
