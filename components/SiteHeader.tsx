@@ -136,8 +136,6 @@ export function SiteHeader() {
             )}
           </div>
 
-          <ThemeToggle />
-
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/advisory") ? "is-active" : ""}`} href="/advisory">
             AI Advisory
           </Link>
@@ -145,6 +143,8 @@ export function SiteHeader() {
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/newsletter") ? "is-active" : ""}`} href="/newsletter">
             Newsletter
           </Link>
+
+          <ThemeToggle />
         </div>
       </div>
     </nav>
