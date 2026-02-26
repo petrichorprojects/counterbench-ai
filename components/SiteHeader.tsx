@@ -61,7 +61,6 @@ export function SiteHeader() {
   const libraryLinks = useMemo<MenuLink[]>(
     () => [
       { href: "/tools", label: "Tools" },
-      { href: "/legal-pad", label: "Legal Pad" },
       { href: "/tools/collections", label: "Collections" },
       { href: "/tools/compare", label: "Compare" },
       { href: "/playbooks", label: "Playbooks" },
@@ -138,6 +137,10 @@ export function SiteHeader() {
 
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/advisory") ? "is-active" : ""}`} href="/advisory">
             AI Advisory
+          </Link>
+
+          <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/legal-pad") ? "is-active" : ""}`} href="/legal-pad">
+            Legal Pad
           </Link>
 
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/newsletter") ? "is-active" : ""}`} href="/newsletter">
