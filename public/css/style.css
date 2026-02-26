@@ -306,7 +306,7 @@ p:last-child { margin-bottom: 0; }
   margin-left: 10px;
   text-transform: none;
 }
-.nav__links { display: flex; align-items: center; gap: 2.25rem; }
+.nav__links { display: flex; align-items: center; gap: 1.25rem; }
 .nav__link {
   font-size: 0.8125rem;
   letter-spacing: 1px;

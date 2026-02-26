@@ -7,7 +7,7 @@ export default function HomePage() {
         className="section"
         id="hero"
         // Avoid vertical-centering the entire hero block; it causes below-the-fold clipping on common laptop viewports.
-        style={{ paddingTop: 120, paddingBottom: "5rem" }}
+        style={{ paddingTop: 120, paddingBottom: "4.5rem" }}
       >
         <div className="container">
           <div className="label">Counterbench.AI</div>
@@ -15,7 +15,7 @@ export default function HomePage() {
           <p className="max-w-700 mt-4" style={{ fontSize: "1.125rem" }}>
             374+ tools, plus prompts and skills designed for paralegals, law firms, solo lawyers, and legal researchers.
           </p>
-          <div className="flex flex--gap-3 mt-5 flex--resp-col">
+          <div className="flex flex--gap-3 mt-4 flex--resp-col">
             <Link className="btn btn--primary btn--arrow" href="/tools">
               Browse tools
             </Link>
@@ -23,7 +23,7 @@ export default function HomePage() {
               Explore prompts
             </Link>
           </div>
-          <div className="grid grid--3 grid--gap-2 mt-5" style={{ borderTop: "1px solid var(--border)", paddingTop: "2.25rem" }}>
+          <div className="grid grid--3 grid--gap-2 mt-4" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.75rem" }}>
             <div>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
                 Verified listings
