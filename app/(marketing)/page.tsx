@@ -11,29 +11,38 @@ export default function HomePage() {
         style={{ paddingTop: 120, paddingBottom: "4.5rem" }}
       >
         <div className="container">
-          <div className="label">Counterbench.AI</div>
-          <h1 className="max-w-900">Describe what you need. Get a recommendation.</h1>
-          <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>
-            Tell us the task. We’ll suggest the most relevant <span className="text-white">tools</span>, <span className="text-white">prompts</span>,
-            and <span className="text-white">skills</span> from the library.
-          </p>
+          <div style={{ textAlign: "center" }}>
+            <div className="label" style={{ display: "inline-block" }}>
+              Counterbench.AI
+            </div>
+            <h1 className="max-w-900" style={{ marginLeft: "auto", marginRight: "auto" }}>
+              Describe what you need. Get a recommendation.
+            </h1>
+            <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem", marginLeft: "auto", marginRight: "auto" }}>
+              Tell us the task. We’ll suggest the most relevant <span className="text-white">tools</span>,{" "}
+              <span className="text-white">prompts</span>, and <span className="text-white">skills</span> from the library.
+            </p>
+          </div>
 
-          <HomeSuggest />
+          <HomeSuggest align="center" variant="hero" />
 
-          <div className="grid grid--3 grid--gap-2 mt-5" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.75rem" }}>
-            <div>
+          <div
+            className="grid grid--3 grid--gap-2 mt-5"
+            style={{ borderTop: "1px solid var(--border)", paddingTop: "1.75rem", maxWidth: 980, marginLeft: "auto", marginRight: "auto" }}
+          >
+            <div style={{ textAlign: "left" }}>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
                 Verified listings
               </div>
               <p style={{ fontSize: "0.875rem", marginTop: "0.5rem" }}>Verified badge and last-checked dates where available.</p>
             </div>
-            <div>
+            <div style={{ textAlign: "left" }}>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
                 Comparison view
               </div>
               <p style={{ fontSize: "0.875rem", marginTop: "0.5rem" }}>Compare pricing, platform, tags, and status side by side.</p>
             </div>
-            <div>
+            <div style={{ textAlign: "left" }}>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
                 Collections and packs
               </div>
@@ -41,7 +50,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-5">
+          <div className="mt-5" style={{ textAlign: "center" }}>
             <Link className="btn btn--secondary btn--arrow" href="/tools">
               Browse the full directory
             </Link>

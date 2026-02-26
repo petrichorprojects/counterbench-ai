@@ -125,7 +125,9 @@ function typeLabel(t: DocType) {
   return "Playbook";
 }
 
-export function HomeSuggest() {
+export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero" | "card" } = {}) {
+  const align = props.align ?? "left";
+  const variant = props.variant ?? "card";
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
   const [ready, setReady] = useState(false);
@@ -260,8 +262,12 @@ export function HomeSuggest() {
   }
 
   return (
-    <div data-home-suggest-root className="mt-4" style={{ maxWidth: 820 }}>
-      <div className="card" style={{ padding: "1.25rem", borderRadius: 14 }}>
+    <div
+      data-home-suggest-root
+      className="mt-4"
+      style={{ maxWidth: 820, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
+    >
+      <div className={variant === "card" ? "card" : "cb-homeSuggestShell"} style={{ padding: "1.25rem", borderRadius: 18 }}>
         <div className="label" style={{ marginBottom: 10, letterSpacing: "0.16em" }}>
           Describe what you need
         </div>
@@ -333,7 +339,7 @@ export function HomeSuggest() {
           <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
             {ready ? "Computed locally from the library." : "Loading index…"}
           </div>
-          <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
+          <div className="text-muted" style={{ fontSize: "0.8125rem", textAlign: align === "center" ? "right" : undefined }}>
             Tip: press <strong>Enter</strong>.
           </div>
         </div>
