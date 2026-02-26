@@ -38,7 +38,7 @@ function Icon({ name }: { name: "sun" | "moon" }) {
   return (
     <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
       <path
-        d="M21 14.5A7.5 7.5 0 0 1 9.5 3a6.5 6.5 0 1 0 11.5 11.5Z"
+        d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.6"
