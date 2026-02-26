@@ -128,7 +128,7 @@ export function GlobalSearch() {
           padding: "10px 12px",
           borderRadius: 999,
           border: "1px solid var(--border)",
-          background: "rgba(255,255,255,0.04)",
+          background: "var(--input-bg)",
           color: "var(--fg)"
         }}
       />
@@ -141,7 +141,7 @@ export function GlobalSearch() {
             top: "calc(100% + 10px)",
             left: 0,
             right: 0,
-            background: "rgba(10,10,10,0.98)",
+            background: "var(--dropdown-bg)",
             border: "1px solid var(--border)",
             borderRadius: 12,
             overflow: "hidden",
@@ -170,7 +170,7 @@ export function GlobalSearch() {
                   display: "block",
                   padding: "10px 10px",
                   borderRadius: 10,
-                  background: active ? "rgba(255,255,255,0.06)" : "transparent"
+                  background: active ? "var(--hover-bg)" : "transparent"
                 }}
               >
                 <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>

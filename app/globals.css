@@ -2,8 +2,7 @@
 
 :root {
   --focus: rgba(255, 255, 255, 0.75);
-  --shadow-1: 0 1px 0 rgba(255,255,255,0.06), 0 18px 40px rgba(0,0,0,0.55);
-  --radius-1: 12px;
+--radius-1: 12px;
   --radius-2: 999px;
 }
 
@@ -76,4 +75,8 @@
   .cb-search-mobile {
     display: none !important;
   }
+}
+
+html[data-theme="light"] {
+  --focus: rgba(0, 0, 0, 0.55);
 }

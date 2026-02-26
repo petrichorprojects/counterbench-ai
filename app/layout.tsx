@@ -32,12 +32,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   // /css/style.css is not content-hashed, so never rely on immutable caching.
   // We version the URL per deploy to force a refresh when CSS changes (fixes stale dropdown styling).
   const cssVersion = process.env.VERCEL_DEPLOYMENT_ID ?? process.env.VERCEL_GIT_COMMIT_SHA ?? "dev";
+  // Set theme early to avoid a flash on first paint.
+  const themeInit = `
+(function(){
+  try {
+    var t = localStorage.getItem('cb_theme');
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+  } catch (e) {}
+})();`;
   return (
     <html lang="en" className={`${inter.variable} ${lora.variable}`}>
       <head>
         {/* Keep legacy stylesheet classes for migrated marketing pages */}
         <link rel="stylesheet" href={`/css/style.css?v=${cssVersion}`} />
         <link rel="icon" href="/favicon.ico" />
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body>
         <SiteHeader />

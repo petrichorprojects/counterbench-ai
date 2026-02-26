@@ -10,7 +10,7 @@ export default function ResourcesPage() {
     padding: "6px 10px",
     borderRadius: 999,
     border: "1px solid var(--border)",
-    background: "rgba(255,255,255,0.03)",
+    background: "var(--input-bg)",
     color: "var(--muted)",
     fontSize: "0.75rem",
     lineHeight: 1

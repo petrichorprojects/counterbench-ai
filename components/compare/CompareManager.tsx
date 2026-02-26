@@ -112,15 +112,15 @@ export function CompareManager({ initialSlugs }: { initialSlugs: string[] }) {
           onChange={(e) => void searchTools(e.target.value)}
           placeholder="Add a tool by searching name…"
           aria-label="Add a tool"
-          style={{
-            width: "100%",
-            padding: "12px 14px",
-            borderRadius: 999,
-            border: "1px solid var(--border)",
-            background: "rgba(255,255,255,0.04)",
-            color: "var(--fg)"
-          }}
-        />
+                  style={{
+                    width: "100%",
+                    padding: "12px 14px",
+                    borderRadius: 999,
+                    border: "1px solid var(--border)",
+                    background: "var(--input-bg)",
+                    color: "var(--fg)"
+                  }}
+                />
         <button
           className="btn btn--primary btn--sm"
           type="button"

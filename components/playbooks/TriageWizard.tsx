@@ -49,7 +49,7 @@ function RadioGroup({
               padding: "12px 12px",
               borderRadius: 12,
               border: "1px solid var(--border)",
-              background: value === o.value ? "rgba(255,255,255,0.05)" : "rgba(255,255,255,0.02)",
+              background: value === o.value ? "var(--nav-active-bg)" : "var(--input-bg)",
               cursor: "pointer"
             }}
           >
@@ -120,8 +120,8 @@ export function TriageWizard() {
             {progress}%
           </div>
         </div>
-        <div style={{ height: 6, background: "rgba(255,255,255,0.06)", borderRadius: 999, marginTop: 10, overflow: "hidden" }}>
-          <div style={{ width: `${progress}%`, height: "100%", background: "rgba(255,255,255,0.22)" }} />
+        <div style={{ height: 6, background: "var(--progress-track)", borderRadius: 999, marginTop: 10, overflow: "hidden" }}>
+          <div style={{ width: `${progress}%`, height: "100%", background: "var(--progress-fill)" }} />
         </div>
       </div>
 

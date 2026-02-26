@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { GlobalSearch } from "@/components/GlobalSearch";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 function isActive(pathname: string, href: string): boolean {
   if (href === "/") return pathname === "/";
@@ -134,6 +135,8 @@ export function SiteHeader() {
               </div>
             )}
           </div>
+
+          <ThemeToggle />
 
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/advisory") ? "is-active" : ""}`} href="/advisory">
             AI Advisory

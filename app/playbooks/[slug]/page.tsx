@@ -304,7 +304,7 @@ export default async function PlaybookPage({
                         padding: "12px 14px",
                         borderRadius: 999,
                         border: "1px solid var(--border)",
-                        background: "rgba(255,255,255,0.04)",
+                        background: "var(--input-bg)",
                         color: "var(--fg)"
                       }}
                     />
@@ -322,7 +322,7 @@ export default async function PlaybookPage({
                         padding: "12px 14px",
                         borderRadius: 999,
                         border: "1px solid var(--border)",
-                        background: "rgba(255,255,255,0.04)",
+                        background: "var(--input-bg)",
                         color: "var(--fg)"
                       }}
                     />
