@@ -23,4 +23,17 @@ test.describe("Homepage suggestions", () => {
     // Should show a type pill.
     await expect(first.locator(".label--pill")).toBeVisible();
   });
+
+  test("motion to compel -> prefers Motion Outline Starter over viability analysis", async ({ page }) => {
+    await page.goto("/");
+
+    const root = page.locator("[data-home-suggest-root]");
+    const box = root.getByRole("textbox", { name: "Describe what you need" });
+    await box.fill("motion to compel");
+    await root.getByRole("button", { name: "Suggest" }).click();
+
+    const first = root.locator("[data-home-suggest-item]").first();
+    await expect(first).toBeVisible();
+    await expect(first).toContainText("Motion Outline Starter");
+  });
 });
