@@ -267,11 +267,18 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
       className="mt-4"
       style={{ maxWidth: 820, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
     >
-      <div className={variant === "card" ? "card" : "cb-homeSuggestShell"} style={{ padding: "1.25rem", borderRadius: 18 }}>
-        <div className="label" style={{ marginBottom: 10, letterSpacing: "0.16em" }}>
+      <div
+        className={variant === "card" ? "card" : "cb-homeSuggestShell"}
+        style={{ padding: "1.25rem", borderRadius: 18, textAlign: align === "center" ? "center" : "left" }}
+      >
+        <div className="label" style={{ marginBottom: 10, letterSpacing: "0.16em", display: "inline-block" }}>
           Describe what you need
         </div>
-        <div className="cb-suggestBar" aria-label="Describe what you need">
+        <div
+          className="cb-suggestBar"
+          aria-label="Describe what you need"
+          style={{ maxWidth: align === "center" ? 760 : undefined, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
+        >
           <span className="cb-suggestBar__icon" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
               <path
@@ -335,11 +342,14 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
           </button>
         </div>
 
-        <div className="mt-3 flex flex--between flex--center flex--gap-2 flex--resp-col" style={{ alignItems: "center" }}>
+        <div
+          className="mt-3 flex flex--center flex--gap-2 flex--resp-col"
+          style={{ alignItems: "center", justifyContent: align === "center" ? "center" : "space-between" }}
+        >
           <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
             {ready ? "Computed locally from the library." : "Loading index…"}
           </div>
-          <div className="text-muted" style={{ fontSize: "0.8125rem", textAlign: align === "center" ? "right" : undefined }}>
+          <div className="text-muted" style={{ fontSize: "0.8125rem" }}>
             Tip: press <strong>Enter</strong>.
           </div>
         </div>
@@ -351,7 +361,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
         )}
 
         {results.length > 0 && (
-          <div className="mt-4" style={{ display: "grid", gap: 10 }}>
+          <div className="mt-4" style={{ display: "grid", gap: 10, textAlign: "left" }}>
             {results.map((r, idx) => (
               <Link
                 key={r.id}
