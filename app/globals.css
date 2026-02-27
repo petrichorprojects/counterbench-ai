@@ -253,8 +253,8 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
 
 /* Homepage hero tuning (SciSpace-ish density) */
 .homeHero .homeHero__title{
-  /* Base h1 is clamp(3rem, 6vw, 4.5rem); ~15% smaller here */
-  font-size: clamp(2.55rem, 5.1vw, 3.85rem);
+  /* Base h1 is clamp(3rem, 6vw, 4.5rem); ~20% smaller here */
+  font-size: clamp(2.05rem, 4.1vw, 3.1rem);
   line-height: 0.98;
 }
 .homeHero .homeHero__subhead{
@@ -263,7 +263,7 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
 }
 @media (max-width: 768px){
   .homeHero .homeHero__title{
-    font-size: 1.95rem;
+    font-size: 1.56rem;
     line-height: 1.05;
   }
 }
