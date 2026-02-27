@@ -228,8 +228,8 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   color: var(--fg);
 }
 .cb-suggestBar__go{
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   border-radius: 16px;
   border: 1px solid rgba(95,255,227,0.35);
   background: rgba(95,255,227,0.12);
@@ -239,13 +239,17 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   justify-content: center;
   cursor: pointer;
   transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
-  align-self: flex-end;
+  /* Center in the bar (textarea is taller than the button). */
+  align-self: center;
 }
 html[data-theme="light"] .cb-suggestBar__go{
-  border-color: rgba(2, 132, 199, 0.70);
-  background: linear-gradient(180deg, rgba(2, 132, 199, 0.92), rgba(3, 105, 161, 0.92));
-  color: #FFFFFF;
-  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.18), 0 0 0 3px rgba(56, 189, 248, 0.14);
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border-color: rgba(95, 255, 227, 0.60);
+  background: rgba(95, 255, 227, 0.26);
+  color: rgba(11, 11, 11, 0.92);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08), 0 0 0 3px rgba(95, 255, 227, 0.16);
 }
 .cb-suggestBar__go:hover{
   transform: translateY(-1px);
@@ -253,8 +257,12 @@ html[data-theme="light"] .cb-suggestBar__go{
   border-color: rgba(95,255,227,0.48);
 }
 html[data-theme="light"] .cb-suggestBar__go:hover{
-  background: linear-gradient(180deg, rgba(2, 132, 199, 0.98), rgba(3, 105, 161, 0.98));
-  border-color: rgba(2, 132, 199, 0.82);
+  transform: translateY(-1px);
+  background: rgba(95, 255, 227, 0.32);
+  border-color: rgba(95, 255, 227, 0.74);
+}
+.cb-suggestBar__go:active{
+  transform: translateY(0);
 }
 .cb-suggestBar__go:disabled,
 .cb-suggestBar__clear:disabled{
