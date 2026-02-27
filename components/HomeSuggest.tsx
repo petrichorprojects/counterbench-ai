@@ -286,7 +286,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
               />
             </svg>
           </span>
-          <input
+          <textarea
             className="cb-suggestBar__input"
             value={q}
             onChange={(e) => {
@@ -294,17 +294,18 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
               setQ(e.target.value);
             }}
             onKeyDown={(e) => {
-              if (e.key === "Enter") {
+              // Enter submits; Shift+Enter inserts a newline (SciSpace-like).
+              if (e.key === "Enter" && !e.shiftKey) {
                 e.preventDefault();
                 void runSuggest({ manual: true });
               }
             }}
             placeholder={placeholder}
             aria-label="Describe your next deliverable"
-            inputMode="text"
             autoComplete="off"
             autoCapitalize="none"
             spellCheck={false}
+            rows={2}
           />
           {q.trim().length > 0 && (
             <button
