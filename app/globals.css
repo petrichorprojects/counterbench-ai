@@ -4,6 +4,8 @@
   --focus: rgba(255, 255, 255, 0.75);
   --radius-1: 12px;
   --radius-2: 999px;
+  --suggest-bg: var(--input-bg);
+  --suggest-border: var(--border);
 }
 
 /* Ensure keyboard focus is always visible */
@@ -88,6 +90,9 @@ html[data-theme="light"] {
 
 html[data-theme="light"] {
   --focus: rgba(0, 0, 0, 0.55);
+  /* Subtle "type here" affordance */
+  --suggest-bg: rgba(56, 189, 248, 0.10);
+  --suggest-border: rgba(2, 132, 199, 0.22);
 }
 
 /* Theme toggle switch */
@@ -163,12 +168,19 @@ html[data-theme="light"] .cb-homeSuggestShell{
   gap: 10px;
   padding: 14px 14px;
   border-radius: 18px;
-  border: 1px solid var(--border);
-  background: var(--input-bg);
+  border: 1px solid var(--suggest-border);
+  background: var(--suggest-bg);
   box-shadow: 0 14px 36px rgba(0,0,0,0.22);
 }
 html[data-theme="light"] .cb-suggestBar{
   box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+}
+.cb-suggestBar:focus-within{
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 18px 54px rgba(0,0,0,0.18), 0 0 0 4px rgba(56, 189, 248, 0.10);
+}
+html[data-theme="light"] .cb-suggestBar:focus-within{
+  box-shadow: 0 18px 54px rgba(0,0,0,0.08), 0 0 0 4px rgba(56, 189, 248, 0.14);
 }
 .cb-suggestBar__icon{
   display: inline-flex;
