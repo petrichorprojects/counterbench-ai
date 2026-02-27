@@ -92,8 +92,9 @@ html[data-theme="light"] {
 html[data-theme="light"] {
   --focus: rgba(0, 0, 0, 0.55);
   /* Subtle "type here" affordance */
-  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.22), rgba(56, 189, 248, 0.12));
-  --suggest-border: rgba(2, 132, 199, 0.30);
+  /* Lighter, icier blue so the input reads as "type here" without feeling saturated. */
+  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.14), rgba(56, 189, 248, 0.07));
+  --suggest-border: rgba(2, 132, 199, 0.26);
 }
 
 /* Theme toggle switch */
@@ -240,10 +241,20 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
   align-self: flex-end;
 }
+html[data-theme="light"] .cb-suggestBar__go{
+  border-color: rgba(2, 132, 199, 0.70);
+  background: linear-gradient(180deg, rgba(2, 132, 199, 0.92), rgba(3, 105, 161, 0.92));
+  color: #FFFFFF;
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.18), 0 0 0 3px rgba(56, 189, 248, 0.14);
+}
 .cb-suggestBar__go:hover{
   transform: translateY(-1px);
   background: rgba(95,255,227,0.18);
   border-color: rgba(95,255,227,0.48);
+}
+html[data-theme="light"] .cb-suggestBar__go:hover{
+  background: linear-gradient(180deg, rgba(2, 132, 199, 0.98), rgba(3, 105, 161, 0.98));
+  border-color: rgba(2, 132, 199, 0.82);
 }
 .cb-suggestBar__go:disabled,
 .cb-suggestBar__clear:disabled{
