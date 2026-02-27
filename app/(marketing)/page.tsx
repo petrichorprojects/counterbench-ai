@@ -5,20 +5,20 @@ export default function HomePage() {
   return (
     <main>
       <section
-        className="section"
+        className="section homeHero"
         id="hero"
         // Avoid vertical-centering the entire hero block; it causes below-the-fold clipping on common laptop viewports.
-        style={{ paddingTop: 120, paddingBottom: "4.5rem" }}
+        style={{ paddingTop: 104, paddingBottom: "4.25rem" }}
       >
         <div className="container">
           <div style={{ textAlign: "center" }}>
             <div className="label" style={{ display: "inline-block" }}>
               Stop guessing. Start matching.
             </div>
-            <h1 className="max-w-900" style={{ marginLeft: "auto", marginRight: "auto" }}>
+            <h1 className="max-w-900 homeHero__title" style={{ marginLeft: "auto", marginRight: "auto" }}>
               The right AI tool for your legal task — <em>in seconds</em>.
             </h1>
-            <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem", marginLeft: "auto", marginRight: "auto" }}>
+            <p className="max-w-800 mt-3 homeHero__subhead" style={{ marginLeft: "auto", marginRight: "auto" }}>
               Legal teams that use AI to win don&apos;t browse five platforms — they match.
             </p>
           </div>

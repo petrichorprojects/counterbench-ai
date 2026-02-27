@@ -237,3 +237,20 @@ html[data-theme="light"] .cb-suggestBar{
   opacity: 0.6;
   cursor: default;
 }
+
+/* Homepage hero tuning (SciSpace-ish density) */
+.homeHero .homeHero__title{
+  /* Base h1 is clamp(3rem, 6vw, 4.5rem); ~15% smaller here */
+  font-size: clamp(2.55rem, 5.1vw, 3.85rem);
+  line-height: 0.98;
+}
+.homeHero .homeHero__subhead{
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 768px){
+  .homeHero .homeHero__title{
+    font-size: 1.95rem;
+    line-height: 1.05;
+  }
+}

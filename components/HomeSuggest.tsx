@@ -261,7 +261,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
   return (
     <div
       data-home-suggest-root
-      className="mt-4"
+      className="mt-3"
       style={{ maxWidth: 820, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
     >
       <div
