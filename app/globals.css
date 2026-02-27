@@ -4,8 +4,9 @@
   --focus: rgba(255, 255, 255, 0.75);
   --radius-1: 12px;
   --radius-2: 999px;
-  --suggest-bg: var(--input-bg);
-  --suggest-border: var(--border);
+  /* Homepage "describe your deliverable" box should read as an obvious input surface. */
+  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.08), rgba(255, 255, 255, 0.04));
+  --suggest-border: rgba(56, 189, 248, 0.18);
 }
 
 /* Ensure keyboard focus is always visible */
@@ -91,8 +92,8 @@ html[data-theme="light"] {
 html[data-theme="light"] {
   --focus: rgba(0, 0, 0, 0.55);
   /* Subtle "type here" affordance */
-  --suggest-bg: rgba(56, 189, 248, 0.10);
-  --suggest-border: rgba(2, 132, 199, 0.22);
+  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.22), rgba(56, 189, 248, 0.12));
+  --suggest-border: rgba(2, 132, 199, 0.30);
 }
 
 /* Theme toggle switch */
