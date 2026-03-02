@@ -6,8 +6,8 @@ const isRemote = Boolean(process.env.E2E_SKIP_WEBSERVER) || Boolean(process.env.
 const webServerMode = (process.env.E2E_WEBSERVER_MODE || "prod").toLowerCase();
 const webServerCommand =
   webServerMode === "prod"
-    // Avoid racing builds when e2e is run alongside other commands.
-    ? "bash -lc 'test -f .next/BUILD_ID || npm run build; npx next start -p 3000'"
+    // Build is handled by the npm script (or a previous run); keep the webServer command as start-only.
+    ? "npx next start -p 3000"
     : "npm run dev -- -p 3000";
 const webServerTimeout = webServerMode === "prod" ? 600_000 : 120_000;
 
