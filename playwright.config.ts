@@ -2,6 +2,14 @@ import { defineConfig, devices } from "@playwright/test";
 
 const baseURL = process.env.E2E_BASE_URL || "http://127.0.0.1:3000";
 const isRemote = Boolean(process.env.E2E_SKIP_WEBSERVER) || Boolean(process.env.E2E_BASE_URL);
+// Default to prod build + next start so behavior matches Vercel and avoids dev overlays.
+const webServerMode = (process.env.E2E_WEBSERVER_MODE || "prod").toLowerCase();
+const webServerCommand =
+  webServerMode === "prod"
+    // Avoid racing builds when e2e is run alongside other commands.
+    ? "bash -lc 'test -f .next/BUILD_ID || npm run build; npx next start -p 3000'"
+    : "npm run dev -- -p 3000";
+const webServerTimeout = webServerMode === "prod" ? 600_000 : 120_000;
 
 export default defineConfig({
   testDir: "tests/e2e",
@@ -27,9 +35,9 @@ export default defineConfig({
   webServer: isRemote
     ? undefined
     : {
-        command: "npm run build && npx next start -p 3000",
+        command: webServerCommand,
         url: baseURL,
         reuseExistingServer: true,
-        timeout: 180_000
+        timeout: webServerTimeout
       }
 });

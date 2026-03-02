@@ -5,9 +5,12 @@
   --focus: #3b82f6;
   --radius-1: 12px;
   --radius-2: 999px;
+  /* Design tokens: semantic.info */
+  --info: #3b82f6;
+  --info-light: #60a5fa;
   /* Homepage "describe your deliverable" box should read as an obvious input surface. */
-  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.08), rgba(255, 255, 255, 0.04));
-  --suggest-border: rgba(56, 189, 248, 0.18);
+  --suggest-bg: linear-gradient(180deg, rgba(59, 130, 246, 0.18), rgba(255, 255, 255, 0.04));
+  --suggest-border: rgba(59, 130, 246, 0.26);
 }
 
 /* Ensure keyboard focus is always visible */
@@ -95,8 +98,8 @@ html[data-theme="light"] {
   /* Subtle "type here" affordance */
   /* Lighter, icier blue so the input reads as "type here" without feeling saturated. */
   /* Closer to SciSpace: mostly-white sheet with a faint blue wash. */
-  --suggest-bg: linear-gradient(180deg, rgba(56, 189, 248, 0.10), rgba(255, 255, 255, 0.92));
-  --suggest-border: rgba(2, 132, 199, 0.20);
+  --suggest-bg: linear-gradient(180deg, rgba(59, 130, 246, 0.12), rgba(255, 255, 255, 0.92));
+  --suggest-border: rgba(59, 130, 246, 0.26);
 }
 
 /* Theme toggle switch */
@@ -207,11 +210,11 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   outline: none;
   background: transparent;
   color: var(--fg);
-  font-size: 1.05rem;
+  font-size: 1.0rem;
   letter-spacing: -0.01em;
   line-height: 1.5;
-  min-height: 120px;
-  padding: 10px 0;
+  min-height: 140px;
+  padding: 12px 0;
   resize: none;
 }
 .cb-suggestBar__input::placeholder{
@@ -234,11 +237,12 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   color: var(--fg);
 }
 .cb-suggestBar__go{
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
-  border: 1px solid rgba(95,255,227,0.35);
-  background: rgba(95,255,227,0.12);
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  border: 1px solid rgba(59,130,246,0.55);
+  background: rgba(59,130,246,0.18);
   color: var(--fg);
   display: inline-flex;
   align-items: center;
@@ -249,23 +253,23 @@ html[data-theme="light"] .cb-suggestBar:focus-within{
   align-self: center;
 }
 html[data-theme="light"] .cb-suggestBar__go{
-  width: 56px;
-  height: 56px;
-  border-radius: 20px;
-  border-color: rgba(95, 255, 227, 0.60);
-  background: rgba(95, 255, 227, 0.26);
+  width: 60px;
+  height: 60px;
+  border-radius: 22px;
+  border-color: rgba(59,130,246,0.65);
+  background: rgba(59,130,246,0.20);
   color: rgba(11, 11, 11, 0.92);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.08), 0 0 0 3px rgba(95, 255, 227, 0.16);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08), 0 0 0 3px rgba(59,130,246,0.14);
 }
 .cb-suggestBar__go:hover{
   transform: translateY(-1px);
-  background: rgba(95,255,227,0.18);
-  border-color: rgba(95,255,227,0.48);
+  background: rgba(59,130,246,0.24);
+  border-color: rgba(59,130,246,0.70);
 }
 html[data-theme="light"] .cb-suggestBar__go:hover{
   transform: translateY(-1px);
-  background: rgba(95, 255, 227, 0.32);
-  border-color: rgba(95, 255, 227, 0.74);
+  background: rgba(59,130,246,0.26);
+  border-color: rgba(59,130,246,0.80);
 }
 .cb-suggestBar__go:active{
   transform: translateY(0);
@@ -279,16 +283,42 @@ html[data-theme="light"] .cb-suggestBar__go:hover{
 /* Homepage hero tuning (SciSpace-ish density) */
 .homeHero .homeHero__title{
   /* Base h1 is clamp(3rem, 6vw, 4.5rem); ~20% smaller here */
-  font-size: clamp(2.05rem, 4.1vw, 3.1rem);
-  line-height: 0.98;
+  font-size: clamp(1.9rem, 3.7vw, 2.85rem);
+  line-height: 1.02;
 }
 .homeHero .homeHero__subhead{
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.6;
 }
 @media (max-width: 768px){
   .homeHero .homeHero__title{
-    font-size: 1.56rem;
+    font-size: 1.48rem;
     line-height: 1.05;
   }
+}
+
+/* Tooltip (for "Suggest" CTA on the home search box) */
+.cb-suggestBar__go[data-tooltip]::after{
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--dropdown-bg);
+  color: var(--fg);
+  box-shadow: var(--toggle-shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+  white-space: nowrap;
+}
+.cb-suggestBar__go[data-tooltip]:hover::after,
+.cb-suggestBar__go[data-tooltip]:focus-visible::after{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }

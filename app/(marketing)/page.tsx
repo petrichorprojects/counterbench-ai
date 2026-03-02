@@ -8,7 +8,7 @@ export default function HomePage() {
         className="section homeHero"
         id="hero"
         // Avoid vertical-centering the entire hero block; it causes below-the-fold clipping on common laptop viewports.
-        style={{ paddingTop: 104, paddingBottom: "4.25rem" }}
+        style={{ paddingTop: 88, paddingBottom: "3.25rem" }}
       >
         <div className="container">
           <div style={{ textAlign: "center" }}>
@@ -26,8 +26,8 @@ export default function HomePage() {
           <HomeSuggest align="center" variant="hero" />
 
           <div
-            className="grid grid--3 grid--gap-2 mt-5"
-            style={{ borderTop: "1px solid var(--border)", paddingTop: "1.75rem", maxWidth: 980, marginLeft: "auto", marginRight: "auto" }}
+            className="grid grid--3 grid--gap-2 mt-4"
+            style={{ borderTop: "1px solid var(--border)", paddingTop: "1.25rem", maxWidth: 980, marginLeft: "auto", marginRight: "auto" }}
           >
             <div style={{ textAlign: "left" }}>
               <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
@@ -49,7 +49,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="mt-5" style={{ textAlign: "center" }}>
+          <div className="mt-4" style={{ textAlign: "center" }}>
             <Link className="btn btn--secondary btn--arrow" href="/tools">
               Browse the full directory
             </Link>

@@ -82,11 +82,13 @@ function rerankScore(args: {
   // Intent-based boosts.
   const titleLooksDrafty = /\b(starter|outline|template|draft)\b/.test(title);
   const titleLooksAssessy = /\b(assess|viability|strengths? and weaknesses?|analysis)\b/.test(title);
+  const descLooksAssessy = /\b(strengths? and weaknesses?|assess|viability|likelihood|risk)\b/.test(desc);
 
   if (args.hasDraftIntent) {
     if (isPrompt) s *= 1.12;
-    if (args.looksLikeMotionSubtype && isPrompt && titleLooksDrafty) s *= 1.35;
-    if (args.looksLikeMotionSubtype && isPrompt && titleLooksAssessy && !args.hasAssessIntent) s *= 0.65;
+    if (args.looksLikeMotionSubtype && isPrompt && titleLooksDrafty) s *= 1.65;
+    // "motion to X" almost always means "help me draft" unless the user explicitly says assess.
+    if (args.looksLikeMotionSubtype && isPrompt && (titleLooksAssessy || descLooksAssessy) && !args.hasAssessIntent) s *= 0.45;
   }
 
   if (args.hasAssessIntent) {
@@ -261,7 +263,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
   return (
     <div
       data-home-suggest-root
-      className="mt-3"
+      className={variant === "hero" ? "mt-2" : "mt-3"}
       style={{ maxWidth: 820, marginLeft: align === "center" ? "auto" : undefined, marginRight: align === "center" ? "auto" : undefined }}
     >
       <div
@@ -305,7 +307,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
             autoComplete="off"
             autoCapitalize="none"
             spellCheck={false}
-            rows={2}
+            rows={3}
           />
           {q.trim().length > 0 && (
             <button
@@ -332,6 +334,7 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
             onClick={() => void runSuggest({ manual: true })}
             aria-label="Suggest"
             title="Suggest"
+            data-tooltip="Suggest"
             disabled={busy}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
