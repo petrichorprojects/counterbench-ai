@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
-type DocType = "tool" | "prompt" | "skill" | "playbook";
+type DocType = "tool" | "agent" | "prompt" | "skill" | "playbook";
 
 interface SearchIndexFile {
   index: unknown;
-  docs: Array<{ id: string; type: DocType; slug: string; title: string; description: string }>;
+  docs: Array<{ id: string; type: DocType; slug: string; title: string; description: string; platform?: string[] }>;
 }
 
 type MiniSearchType = {
@@ -114,7 +114,7 @@ function rerankScore(args: {
 }
 
 function routeFor(doc: SearchIndexFile["docs"][number]) {
-  if (doc.type === "tool") return `/tools/${doc.slug}`;
+  if (doc.type === "tool" || doc.type === "agent") return `/tools/${doc.slug}`;
   if (doc.type === "playbook") return `/playbooks/${doc.slug}`;
   if (doc.type === "prompt") return `/prompts/${doc.slug}`;
   return `/skills/${doc.slug}`;
@@ -122,6 +122,7 @@ function routeFor(doc: SearchIndexFile["docs"][number]) {
 
 function typeLabel(t: DocType) {
   if (t === "tool") return "Tool";
+  if (t === "agent") return "Agent";
   if (t === "prompt") return "Prompt";
   if (t === "skill") return "Skill";
   return "Playbook";
@@ -243,10 +244,10 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
 
       // Curate: prioritize tools/prompts/skills, and keep the list short.
       const curated: Array<SearchIndexFile["docs"][number]> = [];
-      const buckets: Record<DocType, number> = { tool: 0, prompt: 0, skill: 0, playbook: 0 };
+      const buckets: Record<DocType, number> = { tool: 0, agent: 0, prompt: 0, skill: 0, playbook: 0 };
       for (const { doc: d } of mapped) {
         if (d.type === "playbook") continue; // homepage: focus on tool/prompt/skill
-        const cap = d.type === "tool" ? 4 : 3;
+        const cap = d.type === "tool" || d.type === "agent" ? 4 : 3;
         if (buckets[d.type] >= cap) continue;
         curated.push(d);
         buckets[d.type]++;
