@@ -1,19 +1,34 @@
-# Counterbench Design Tokens (v1)
+# Counterbench Design Tokens (v1.0)
 
-These mirror the CSS variables in `css/style.css`.
+Source of truth: `design-system/counterbench-design-tokens.json`
+
+These mirror the CSS variables in `public/css/style.css` (and a few app-level tokens in `app/globals.css`).
 
 ## Color
-- `--bg` #000000
-- `--bg2` #0B0B0B
-- `--bg3` #111111
-- `--fg` #FFFFFF
-- `--muted` #B3B3B3
-- `--muted-2` #737373
-- `--border` #1F1F1F
+Dark (default):
+- `--bg` `#0d0f12`
+- `--bg2` `#111827`
+- `--bg3` `#1f2937`
+- `--fg` `#f9fafb`
+- `--muted` `#9ca3af`
+- `--muted-2` `#6b7280`
+- `--border` `#374151`
+
+Light (`html[data-theme="light"]`):
+- `--bg` `#ffffff`
+- `--bg2` `#f9fafb`
+- `--bg3` `#f3f4f6`
+- `--fg` `#111827`
+- `--muted` `#6b7280`
+- `--muted-2` `#9ca3af`
+- `--border` `#e5e7eb`
+
+Accent (links and subtle emphasis):
+- `--teal` (dark) `#aab9d1` (light) `#3a4c6c`
 
 ## Typography
-- `--serif`: Lora
-- `--sans`: Inter
+- `--serif`: New York (fallback Georgia)
+- `--sans`: SF Pro Display (system fallbacks)
 
 ## Layout
 - Max container: 1120px
@@ -30,3 +45,5 @@ These mirror the CSS variables in `css/style.css`.
 - ease-out
 - no bounce
 
+## Accessibility
+- Focus outline color: `#3b82f6` (see `app/globals.css`)

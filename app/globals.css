@@ -1,7 +1,8 @@
 /* App-level additions layered on top of /public/css/style.css */
 
 :root {
-  --focus: rgba(255, 255, 255, 0.75);
+  /* Design tokens: accessibility.focus_indicators.outline_color */
+  --focus: #3b82f6;
   --radius-1: 12px;
   --radius-2: 999px;
   /* Homepage "describe your deliverable" box should read as an obvious input surface. */
@@ -90,7 +91,7 @@ html[data-theme="light"] {
 }
 
 html[data-theme="light"] {
-  --focus: rgba(0, 0, 0, 0.55);
+  --focus: #3b82f6;
   /* Subtle "type here" affordance */
   /* Lighter, icier blue so the input reads as "type here" without feeling saturated. */
   /* Closer to SciSpace: mostly-white sheet with a faint blue wash. */
