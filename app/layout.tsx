@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PreviewBanner } from "@/components/PreviewBanner";
 import { siteUrl } from "@/lib/seo";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap"
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   title: {
@@ -41,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   } catch (e) {}
 })();`;
   return (
-    <html lang="en" className={`${inter.variable} ${lora.variable}`}>
+    <html lang="en">
       <head>
         {/* Keep legacy stylesheet classes for migrated marketing pages */}
         <link rel="stylesheet" href={`/css/style.css?v=${cssVersion}`} />

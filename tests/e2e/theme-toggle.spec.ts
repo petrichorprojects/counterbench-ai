@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("Theme toggle", () => {
-  test("toggles theme, persists, and uses a crescent moon icon", async ({ page }) => {
+  test("toggles theme, persists, and renders a half-moon icon", async ({ page }) => {
     // Force a deterministic start state.
     await page.addInitScript(() => {
       try {
@@ -23,9 +23,10 @@ test.describe("Theme toggle", () => {
     await expect(toggle).toHaveAttribute("aria-checked", "false");
     await expect(toggle).toHaveAttribute("data-state", "dark");
 
-    // Ensure the dark icon is a proper crescent/halfmoon.
-    const moonPath = page.locator(".cb-theme-toggle__icon--dark svg path");
-    await expect(moonPath).toHaveAttribute("d", "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z");
+    // Ensure the dark icon renders (half-moon mark).
+    const moonPaths = page.locator(".cb-theme-toggle__icon--dark svg path");
+    await expect(moonPaths).toHaveCount(2);
+    await expect(moonPaths.nth(0)).toHaveAttribute("d", "M12 3a9 9 0 1 0 0 18V3z");
 
     await toggle.click();
     await expect(toggle).toHaveAttribute("aria-checked", "true");
