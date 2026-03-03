@@ -1,0 +1,61 @@
+---
+title: "Anti-Corruption Quiz (10 Questions, Multiple Choice)"
+description: "Create a 10-question multiple choice quiz on anti-corruption and gifts/entertainment rules."
+use_case: "Compliance & Ethics"
+inputs:
+  - "policy_summary"
+  - "regions"
+  - "roles"
+steps:
+  - "Provide policy summary"
+  - "List regions/roles"
+  - "Generate quiz + answer key"
+output_format: "10 MCQs + answer key + 1-paragraph rationale per question."
+tags:
+  - "compliance"
+  - "anti-corruption"
+  - "training"
+  - "quiz"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create a 10-question multiple choice quiz on anti-corruption and gifts/entertainment rules.
+
+## Inputs
+- `{{policy_summary}}`
+- `{{regions}}`
+- `{{roles}}`
+
+## Prompt
+```text
+You are a compliance training designer.
+
+Context / inputs:
+- Policy summary: {{policy_summary}}
+- Regions: {{regions}}
+- Roles: {{roles}}
+
+Task:
+Design a 10-question multiple choice quiz on anti-corruption and gifts/entertainment. Use realistic scenarios for sales, partnerships, and procurement.
+
+Deliverable:
+Quiz + answer key + brief rationale.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+10 MCQs + answer key + 1-paragraph rationale per question.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

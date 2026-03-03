@@ -1,0 +1,64 @@
+---
+title: "Term Sheet Confidentiality Clause (M&A)"
+description: "Draft a confidentiality clause for use in a term sheet during M&A discussions."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "parties"
+  - "confidential_info_scope"
+  - "duration"
+  - "permitted_disclosures"
+steps:
+  - "Fill key variables"
+  - "Generate clause"
+  - "Add fallback option"
+output_format: "Clause text + fallback version."
+tags:
+  - "m&a"
+  - "confidentiality"
+  - "drafting"
+  - "term-sheet"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a confidentiality clause for use in a term sheet during M&A discussions.
+
+## Inputs
+- `{{parties}}`
+- `{{confidential_info_scope}}`
+- `{{duration}}`
+- `{{permitted_disclosures}}`
+
+## Prompt
+```text
+You are an M&A term sheet drafter.
+
+Context / inputs:
+- Parties: {{parties}}
+- Scope: {{confidential_info_scope}}
+- Duration: {{duration}}
+- Permitted disclosures: {{permitted_disclosures}}
+
+Task:
+Draft a confidentiality clause suitable for a term sheet, including permitted disclosures (advisors), required protections, and return/destruction obligations.
+
+Deliverable:
+Provide clause text plus a softer fallback if the counterparty pushes back.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + fallback version.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

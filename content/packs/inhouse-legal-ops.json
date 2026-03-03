@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-legal-ops",
+  "title": "In-House Starters: Legal Ops and Leadership",
+  "description": "Intake, KPI, and operating-system prompt templates for running Legal like a function.",
+  "prompt_slugs": [
+    "inhouse-legal-ops-document-summary-template-pleading-policy-contract-article",
+    "inhouse-legal-ops-how-to-work-with-legal-business-team-guide",
+    "inhouse-legal-ops-junior-in-house-prioritization-guide-workflow-comms",
+    "inhouse-legal-ops-legal-department-relationship-playbook-sales-finance-hr",
+    "inhouse-legal-ops-legal-intake-form-business-request-template",
+    "inhouse-legal-ops-legal-ops-kpi-dashboard-framework",
+    "inhouse-legal-ops-legal-project-tracker-template-issue-owner-deadline-status",
+    "inhouse-legal-ops-onboarding-playbook-outline-new-in-house-lawyer",
+    "inhouse-legal-ops-quarterly-legal-kpi-status-update-exec-format",
+    "inhouse-legal-ops-when-to-involve-legal-in-vendor-negotiations-internal-comms"
+  ],
+  "audience": "legal",
+  "workflow_stage": "legal-ops",
+  "seo": {
+    "title": "In-House Starters: Legal Ops and Leadership",
+    "description": "Intake, KPI, and operating-system prompt templates for running Legal like a function."
+  },
+  "last_updated": "2026-03-03"
+}

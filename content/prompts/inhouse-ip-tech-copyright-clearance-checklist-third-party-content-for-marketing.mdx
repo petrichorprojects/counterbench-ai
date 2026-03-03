@@ -1,0 +1,63 @@
+---
+title: "Copyright Clearance Checklist (Third-Party Content for Marketing)"
+description: "Explain how to do a basic copyright clearance for using third-party content in marketing materials."
+use_case: "IP & Technology"
+inputs:
+  - "content_type"
+  - "source"
+  - "intended_use"
+  - "distribution_channels"
+steps:
+  - "Describe content and use"
+  - "Generate clearance checklist"
+output_format: "Checklist + risk notes + documentation to save."
+tags:
+  - "ip"
+  - "copyright"
+  - "marketing"
+  - "checklist"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain how to do a basic copyright clearance for using third-party content in marketing materials.
+
+## Inputs
+- `{{content_type}}`
+- `{{source}}`
+- `{{intended_use}}`
+- `{{distribution_channels}}`
+
+## Prompt
+```text
+You are an IP clearance assistant.
+
+Context / inputs:
+- Content type: {{content_type}}
+- Source: {{source}}
+- Intended use: {{intended_use}}
+- Channels: {{distribution_channels}}
+
+Task:
+Provide a clearance checklist: ownership, license terms, attribution, modifications, and recordkeeping. Flag common red flags.
+
+Deliverable:
+A checklist plus what to store for audit trail.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist + risk notes + documentation to save.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

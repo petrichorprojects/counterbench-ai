@@ -1,0 +1,64 @@
+---
+title: "Litigation Hold Notice (Employee Draft)"
+description: "Draft a litigation hold notice for employees to preserve documents and communications."
+use_case: "Litigation & Disputes"
+inputs:
+  - "matter_summary"
+  - "custodians"
+  - "systems_in_scope"
+  - "effective_date"
+steps:
+  - "Describe matter and scope"
+  - "List custodians/systems"
+  - "Generate hold notice"
+output_format: "Hold notice email + acknowledgement text + FAQ."
+tags:
+  - "litigation"
+  - "ediscovery"
+  - "hold"
+  - "templates"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a litigation hold notice for employees to preserve documents and communications.
+
+## Inputs
+- `{{matter_summary}}`
+- `{{custodians}}`
+- `{{systems_in_scope}}`
+- `{{effective_date}}`
+
+## Prompt
+```text
+You are a litigation support coordinator.
+
+Context / inputs:
+- Matter summary: {{matter_summary}}
+- Custodians: {{custodians}}
+- Systems in scope: {{systems_in_scope}}
+- Effective date: {{effective_date}}
+
+Task:
+Draft a litigation hold notice that is clear, specific about what to preserve, and includes instructions for Slack/email/doc systems.
+
+Deliverable:
+An employee-facing hold notice + acknowledgement language + a short FAQ.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Hold notice email + acknowledgement text + FAQ.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

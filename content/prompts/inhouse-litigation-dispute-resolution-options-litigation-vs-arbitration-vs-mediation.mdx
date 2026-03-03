@@ -1,0 +1,60 @@
+---
+title: "Dispute Resolution Options: Litigation vs Arbitration vs Mediation"
+description: "Summarize typical dispute resolution clauses and when each approach is appropriate."
+use_case: "Litigation & Disputes"
+inputs:
+  - "contract_context"
+  - "risk_profile"
+  - "geographies"
+steps:
+  - "Describe context and risk profile"
+  - "Generate comparison + recommendations"
+output_format: "Comparison table + recommended default + negotiation notes."
+tags:
+  - "litigation"
+  - "dispute-resolution"
+  - "contracts"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize typical dispute resolution clauses and when each approach is appropriate.
+
+## Inputs
+- `{{contract_context}}`
+- `{{risk_profile}}`
+- `{{geographies}}`
+
+## Prompt
+```text
+You are an in-house disputes advisor.
+
+Context / inputs:
+- Contract context: {{contract_context}}
+- Risk profile: {{risk_profile}}
+- Geographies: {{geographies}}
+
+Task:
+Compare litigation, arbitration, and mediation for the scenario above: speed, cost, confidentiality, discovery, appeal rights, enforcement.
+
+Deliverable:
+A comparison table plus a recommended default clause posture.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Comparison table + recommended default + negotiation notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,63 @@
+---
+title: "Maintain Compliance Steps (Regulation Playbook Outline)"
+description: "Outline steps required to maintain ongoing compliance with a regulation."
+use_case: "Legal Research"
+inputs:
+  - "regulation"
+  - "jurisdiction"
+  - "business_processes"
+  - "owners"
+steps:
+  - "Name regulation/jurisdiction"
+  - "List processes/owners"
+  - "Generate playbook outline"
+output_format: "Ongoing playbook: cadence, owners, evidence, audits, change management."
+tags:
+  - "research"
+  - "compliance"
+  - "playbook"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Outline steps required to maintain ongoing compliance with a regulation.
+
+## Inputs
+- `{{regulation}}`
+- `{{jurisdiction}}`
+- `{{business_processes}}`
+- `{{owners}}`
+
+## Prompt
+```text
+You are a compliance operations assistant.
+
+Context / inputs:
+- Regulation: {{regulation}}
+- Jurisdiction: {{jurisdiction}}
+- Processes: {{business_processes}}
+- Owners: {{owners}}
+
+Task:
+Create a maintain-compliance playbook outline: what to do weekly/monthly/quarterly, evidence to store, and how to handle change.
+
+Deliverable:
+A playbook outline with a clear cadence and owner map.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Ongoing playbook: cadence, owners, evidence, audits, change management.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

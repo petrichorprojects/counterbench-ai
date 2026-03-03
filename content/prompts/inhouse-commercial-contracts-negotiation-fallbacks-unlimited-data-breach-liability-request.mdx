@@ -1,0 +1,62 @@
+---
+title: "Negotiation Fallbacks (Unlimited Data Breach Liability Request)"
+description: "Create fallback positions when a customer asks for unlimited breach liability in a SaaS contract."
+use_case: "Commercial Contracts"
+inputs:
+  - "customer_request"
+  - "our_security_posture"
+  - "current_liability_model"
+steps:
+  - "Paste customer request"
+  - "Describe current model"
+  - "Generate fallbacks + clause language"
+output_format: "Table: Customer ask -> Response -> Proposed language -> Why it’s fair -> Acceptability (green/yellow/red)."
+tags:
+  - "contracts"
+  - "negotiation"
+  - "liability"
+  - "data-breach"
+  - "saas"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create fallback positions when a customer asks for unlimited breach liability in a SaaS contract.
+
+## Inputs
+- `{{customer_request}}`
+- `{{our_security_posture}}`
+- `{{current_liability_model}}`
+
+## Prompt
+```text
+You are an in-house SaaS contracts negotiator.
+
+Context / inputs:
+- Customer request: {{customer_request}}
+- Our security posture summary: {{our_security_posture}}
+- Current liability model: {{current_liability_model}}
+
+Task:
+Generate fallback positions to move away from unlimited liability while still addressing legitimate customer risk concerns.
+
+Deliverable:
+Provide 5 fallback options, each with suggested clause language and a short negotiation rationale.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Table: Customer ask -> Response -> Proposed language -> Why it’s fair -> Acceptability (green/yellow/red).
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

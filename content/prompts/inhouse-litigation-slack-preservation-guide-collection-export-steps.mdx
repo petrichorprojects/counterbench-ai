@@ -1,0 +1,64 @@
+---
+title: "Slack Preservation Guide (Collection + Export Steps)"
+description: "Write a step-by-step guide for collecting and preserving Slack and collaboration tool data for litigation."
+use_case: "Litigation & Disputes"
+inputs:
+  - "tools_in_scope"
+  - "admin_roles"
+  - "time_range"
+  - "channels_custodians"
+steps:
+  - "List tools and admins"
+  - "Set time range and custodians"
+  - "Generate collection guide"
+output_format: "Step-by-step guide + evidence log template + chain-of-custody notes."
+tags:
+  - "litigation"
+  - "ediscovery"
+  - "slack"
+  - "preservation"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a step-by-step guide for collecting and preserving Slack and collaboration tool data for litigation.
+
+## Inputs
+- `{{tools_in_scope}}`
+- `{{admin_roles}}`
+- `{{time_range}}`
+- `{{channels_custodians}}`
+
+## Prompt
+```text
+You are an eDiscovery project lead.
+
+Context / inputs:
+- Tools: {{tools_in_scope}}
+- Admins: {{admin_roles}}
+- Time range: {{time_range}}
+- Channels/custodians: {{channels_custodians}}
+
+Task:
+Create a practical preservation guide that focuses on repeatability and defensibility: what to collect, how to export, how to log, and how to secure.
+
+Deliverable:
+A step-by-step guide plus an evidence log template.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Step-by-step guide + evidence log template + chain-of-custody notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

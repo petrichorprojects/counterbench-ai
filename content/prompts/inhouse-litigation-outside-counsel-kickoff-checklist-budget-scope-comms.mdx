@@ -1,0 +1,64 @@
+---
+title: "Outside Counsel Kickoff Checklist (Budget, Scope, Comms)"
+description: "Create a checklist for coordinating with outside counsel on a new litigation matter."
+use_case: "Litigation & Disputes"
+inputs:
+  - "matter_summary"
+  - "goals"
+  - "budget_constraints"
+  - "internal_stakeholders"
+steps:
+  - "Describe the matter"
+  - "Set goals/budget"
+  - "Generate kickoff checklist"
+output_format: "Checklist grouped by: scope, budget, comms, preservation, roles, cadence."
+tags:
+  - "litigation"
+  - "outside-counsel"
+  - "checklist"
+  - "legal-ops"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create a checklist for coordinating with outside counsel on a new litigation matter.
+
+## Inputs
+- `{{matter_summary}}`
+- `{{goals}}`
+- `{{budget_constraints}}`
+- `{{internal_stakeholders}}`
+
+## Prompt
+```text
+You are a legal operations manager.
+
+Context / inputs:
+- Matter summary: {{matter_summary}}
+- Goals: {{goals}}
+- Budget constraints: {{budget_constraints}}
+- Stakeholders: {{internal_stakeholders}}
+
+Task:
+Create a kickoff checklist that sets scope, roles, communication cadence, budget tracking, and evidence preservation responsibilities.
+
+Deliverable:
+A checklist and a suggested kickoff agenda.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist grouped by: scope, budget, comms, preservation, roles, cadence.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

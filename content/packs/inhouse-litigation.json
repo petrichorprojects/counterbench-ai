@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-litigation",
+  "title": "In-House Starters: Litigation and Disputes",
+  "description": "Litigation holds, privilege hygiene, and dispute clause workflow starter prompts.",
+  "prompt_slugs": [
+    "inhouse-litigation-arbitration-clause-faq-internal",
+    "inhouse-litigation-cease-and-desist-letter-first-steps-checklist",
+    "inhouse-litigation-dispute-resolution-options-litigation-vs-arbitration-vs-mediation",
+    "inhouse-litigation-litigation-hold-notice-employee-draft",
+    "inhouse-litigation-non-disparagement-clause-settlement-agreement",
+    "inhouse-litigation-outside-counsel-kickoff-checklist-budget-scope-comms",
+    "inhouse-litigation-privilege-preservation-training-script-10-minutes",
+    "inhouse-litigation-privilege-waiver-mistakes-common-patterns-how-to-avoid",
+    "inhouse-litigation-slack-preservation-guide-collection-export-steps",
+    "inhouse-litigation-why-privileged-comms-shouldn-t-be-forwarded-internal-explainer"
+  ],
+  "audience": "legal",
+  "workflow_stage": "disputes",
+  "seo": {
+    "title": "In-House Starters: Litigation and Disputes",
+    "description": "Litigation holds, privilege hygiene, and dispute clause workflow starter prompts."
+  },
+  "last_updated": "2026-03-03"
+}

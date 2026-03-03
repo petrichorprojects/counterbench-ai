@@ -1,0 +1,61 @@
+---
+title: "AI Tool Use Memo (Protect Personal + Confidential Data)"
+description: "Draft internal rules for using AI tools while protecting personal, confidential, and privileged data."
+use_case: "Data Privacy & Security"
+inputs:
+  - "allowed_tools"
+  - "prohibited_data"
+  - "approved_workflows"
+steps:
+  - "List allowed tools"
+  - "Define prohibited inputs"
+  - "Draft policy memo + examples"
+output_format: "1-page memo + examples of allowed vs prohibited use."
+tags:
+  - "ai-policy"
+  - "privacy"
+  - "security"
+  - "internal-comms"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft internal rules for using AI tools while protecting personal, confidential, and privileged data.
+
+## Inputs
+- `{{allowed_tools}}`
+- `{{prohibited_data}}`
+- `{{approved_workflows}}`
+
+## Prompt
+```text
+You are a legal/privacy policy drafter for an internal AI usage policy.
+
+Context / inputs:
+- Allowed tools: {{allowed_tools}}
+- Prohibited data: {{prohibited_data}}
+- Approved workflows: {{approved_workflows}}
+
+Task:
+Draft an internal memo that sets clear rules for AI tool usage: what is allowed, what is prohibited, and how to sanitize inputs.
+
+Deliverable:
+A memo that is easy to enforce and includes concrete examples for common teams.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+1-page memo + examples of allowed vs prohibited use.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

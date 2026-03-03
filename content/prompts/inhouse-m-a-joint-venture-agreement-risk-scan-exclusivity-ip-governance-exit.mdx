@@ -1,0 +1,63 @@
+---
+title: "Joint Venture Agreement Risk Scan (Exclusivity, IP, Governance, Exit)"
+description: "Summarize the main risks in a joint venture agreement and what to clarify before signing."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "jv_text_or_summary"
+  - "our_goals"
+  - "risk_tolerance"
+steps:
+  - "Paste JV text or summary"
+  - "State goals and risk tolerance"
+  - "Generate risk scan + questions"
+output_format: "Risks grouped by: exclusivity, IP, governance, economics, exit/termination, dispute resolution."
+tags:
+  - "m&a"
+  - "joint-venture"
+  - "risk"
+  - "ip"
+  - "governance"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize the main risks in a joint venture agreement and what to clarify before signing.
+
+## Inputs
+- `{{jv_text_or_summary}}`
+- `{{our_goals}}`
+- `{{risk_tolerance}}`
+
+## Prompt
+```text
+You are an M&A risk analyst.
+
+Context / inputs:
+- Our goals: {{our_goals}}
+- Risk tolerance: {{risk_tolerance}}
+- JV text/summary:
+- {{jv_text_or_summary}}
+
+Task:
+Identify key risks in the JV: exclusivity constraints, IP ownership/licensing, governance deadlocks, economic splits, and exit rights.
+
+Deliverable:
+A risk memo plus the top 15 questions to clarify with the counterparty.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Risks grouped by: exclusivity, IP, governance, economics, exit/termination, dispute resolution.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,64 @@
+---
+title: "Document Summary Template (Pleading, Policy, Contract, Article)"
+description: "Summarize a document into a reusable template: what it is, what it requires, and what to do next."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "document_text"
+  - "document_type"
+  - "audience"
+  - "decision_needed"
+steps:
+  - "Paste document text"
+  - "Set type/audience"
+  - "Generate summary + action items"
+output_format: "Sections: TL;DR; Key points; Deadlines; Risks; Open questions; Recommended next steps."
+tags:
+  - "legal-ops"
+  - "summary"
+  - "templates"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize a document into a reusable template: what it is, what it requires, and what to do next.
+
+## Inputs
+- `{{document_text}}`
+- `{{document_type}}`
+- `{{audience}}`
+- `{{decision_needed}}`
+
+## Prompt
+```text
+You are a legal operations assistant.
+
+Context / inputs:
+- Document type: {{document_type}}
+- Audience: {{audience}}
+- Decision needed: {{decision_needed}}
+- Document text:
+- {{document_text}}
+
+Task:
+Summarize the document for the target audience. Focus on what it means operationally: obligations, deadlines, decision points, and risks.
+
+Deliverable:
+A structured summary plus a clear next-steps list.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Sections: TL;DR; Key points; Deadlines; Risks; Open questions; Recommended next steps.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

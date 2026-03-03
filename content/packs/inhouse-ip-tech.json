@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-ip-tech",
+  "title": "In-House Starters: IP and Technology",
+  "description": "IP clauses, licensing, and trade secret hygiene starter prompts for tech teams.",
+  "prompt_slugs": [
+    "inhouse-ip-tech-copyright-clearance-checklist-third-party-content-for-marketing",
+    "inhouse-ip-tech-customer-license-clause-non-exclusive-non-transferable-usage-limits",
+    "inhouse-ip-tech-employee-invention-assignment-clause-waiver-of-moral-rights",
+    "inhouse-ip-tech-ip-ownership-clause-pitfalls-contractors-checklist",
+    "inhouse-ip-tech-no-reverse-engineering-clause-saas-software",
+    "inhouse-ip-tech-patent-vs-trade-secret-decision-guide-high-level",
+    "inhouse-ip-tech-trade-secret-protection-checklist-vendor-relationships",
+    "inhouse-ip-tech-trademark-protection-best-practices-co-branding-white-label",
+    "inhouse-ip-tech-trademark-rights-registration-vs-use-based-us-high-level",
+    "inhouse-ip-tech-work-for-hire-clause-contractor-deliverables-owned-by-company"
+  ],
+  "audience": "legal",
+  "workflow_stage": "ip",
+  "seo": {
+    "title": "In-House Starters: IP and Technology",
+    "description": "IP clauses, licensing, and trade secret hygiene starter prompts for tech teams."
+  },
+  "last_updated": "2026-03-03"
+}

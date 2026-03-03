@@ -1,0 +1,62 @@
+---
+title: "Software Acquisition Due Diligence Questions (IP, Contracts, Litigation, Employment)"
+description: "List key due diligence questions for acquiring a software company, focused on the highest-risk areas."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "target_profile"
+  - "deal_type"
+  - "timeline"
+steps:
+  - "Describe target and deal type"
+  - "Set timeline"
+  - "Generate DD question list"
+output_format: "DD questions grouped by topic + red flag list + requested documents list."
+tags:
+  - "m&a"
+  - "due-diligence"
+  - "software"
+  - "ip"
+  - "contracts"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List key due diligence questions for acquiring a software company, focused on the highest-risk areas.
+
+## Inputs
+- `{{target_profile}}`
+- `{{deal_type}}`
+- `{{timeline}}`
+
+## Prompt
+```text
+You are an M&A diligence coordinator.
+
+Context / inputs:
+- Target profile: {{target_profile}}
+- Deal type: {{deal_type}}
+- Timeline: {{timeline}}
+
+Task:
+Generate a diligence question list for a software acquisition, emphasizing IP ownership, key customer/vendor contracts, litigation exposure, privacy/security posture, and employment/contractor issues.
+
+Deliverable:
+A DD questionnaire plus a short list of 'stop sign' red flags.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+DD questions grouped by topic + red flag list + requested documents list.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,63 @@
+---
+title: "Legal Ops KPI Dashboard (Framework)"
+description: "Draft a simple KPI dashboard framework for contract volume, turnaround time, litigation, and spend."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "team_size"
+  - "tools_used"
+  - "stakeholders"
+  - "reporting_cadence"
+steps:
+  - "Describe team/tools"
+  - "Set cadence"
+  - "Generate KPI framework"
+output_format: "Dashboard sections + metric definitions + data sources."
+tags:
+  - "legal-ops"
+  - "kpis"
+  - "reporting"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a simple KPI dashboard framework for contract volume, turnaround time, litigation, and spend.
+
+## Inputs
+- `{{team_size}}`
+- `{{tools_used}}`
+- `{{stakeholders}}`
+- `{{reporting_cadence}}`
+
+## Prompt
+```text
+You are a legal operations analyst.
+
+Context / inputs:
+- Team size: {{team_size}}
+- Tools used: {{tools_used}}
+- Stakeholders: {{stakeholders}}
+- Cadence: {{reporting_cadence}}
+
+Task:
+Propose a KPI dashboard framework with clear metric definitions, data sources, and how to interpret trends (not vanity metrics).
+
+Deliverable:
+A KPI framework plus a minimal first dashboard (top 8 metrics).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Dashboard sections + metric definitions + data sources.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

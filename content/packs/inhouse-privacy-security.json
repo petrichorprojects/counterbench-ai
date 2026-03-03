@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-privacy-security",
+  "title": "In-House Starters: Privacy and Security",
+  "description": "Privacy ops, incident response, and policy starter prompts for privacy/security workflows.",
+  "prompt_slugs": [
+    "inhouse-privacy-security-ai-tool-use-memo-protect-personal-confidential-data",
+    "inhouse-privacy-security-ccpa-cpra-request-handling-checklist-access-delete-opt-out",
+    "inhouse-privacy-security-cookie-notice-us-cpra-aligned",
+    "inhouse-privacy-security-coppa-children-s-data-policy-language",
+    "inhouse-privacy-security-data-breach-first-48-hours-checklist",
+    "inhouse-privacy-security-employee-faq-when-consent-is-required-to-collect-personal-data",
+    "inhouse-privacy-security-gdpr-controller-vs-processor-saas-examples",
+    "inhouse-privacy-security-gdpr-legitimate-interest-pros-cons-when-to-avoid",
+    "inhouse-privacy-security-support-faq-gdpr-data-subject-requests",
+    "inhouse-privacy-security-vendor-due-diligence-summary-privacy-lens"
+  ],
+  "audience": "legal",
+  "workflow_stage": "compliance",
+  "seo": {
+    "title": "In-House Starters: Privacy and Security",
+    "description": "Privacy ops, incident response, and policy starter prompts for privacy/security workflows."
+  },
+  "last_updated": "2026-03-03"
+}

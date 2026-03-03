@@ -1,0 +1,70 @@
+---
+title: "Advanced Contract Review (Structured 5-Step)"
+description: "Run a structured contract review workflow that produces a summary, clause analysis, risk matrix, and suggested edits."
+use_case: "Commercial Contracts"
+inputs:
+  - "contract_text"
+  - "our_role"
+  - "jurisdiction_if_known"
+  - "playbook_or_redlines_if_any"
+steps:
+  - "Paste contract"
+  - "Set role + jurisdiction"
+  - "Run 5-step analysis"
+  - "Review risk matrix and edits"
+output_format: "Executive summary; Key obligations; Clause-by-clause notes; Risk matrix; Proposed edits; Open questions."
+tags:
+  - "contracts"
+  - "review"
+  - "risk-matrix"
+  - "redlines"
+  - "advanced"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Run a structured contract review workflow that produces a summary, clause analysis, risk matrix, and suggested edits.
+
+## Inputs
+- `{{contract_text}}`
+- `{{our_role}}`
+- `{{jurisdiction_if_known}}`
+- `{{playbook_or_redlines_if_any}}`
+
+## Prompt
+```text
+You are an experienced contracts reviewer.
+
+Context / inputs:
+- Our role: {{our_role}}
+- Jurisdiction (if known): {{jurisdiction_if_known}}
+- Contract text:
+- {{contract_text}}
+- Internal playbook or preferred redlines (optional):
+- {{playbook_or_redlines_if_any}}
+
+Task:
+Follow a structured workflow: 1) executive summary 2) governing law/venue/DR 3) clause review across key topics 4) risk matrix 5) propose edits for top issues.
+
+Deliverable:
+A scannable review memo with quoted clause snippets, a risk matrix (H/M/L), and precise replacement language for the top issues.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+- Do not claim legal requirements without jurisdiction.
+- If critical facts are missing, ask questions before drafting edits.
+```
+
+## Output format
+Executive summary; Key obligations; Clause-by-clause notes; Risk matrix; Proposed edits; Open questions.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

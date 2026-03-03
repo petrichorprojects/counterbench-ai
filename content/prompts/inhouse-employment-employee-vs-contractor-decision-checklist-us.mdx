@@ -1,0 +1,64 @@
+---
+title: "Employee vs Contractor Decision Checklist (US)"
+description: "Compare employees vs contractors and generate a decision checklist for classification."
+use_case: "Employment & Labor"
+inputs:
+  - "role_description"
+  - "work_location"
+  - "supervision_level"
+  - "duration"
+steps:
+  - "Describe the role"
+  - "List supervision/duration"
+  - "Generate checklist + recommendation"
+output_format: "Decision checklist + risk notes + what to document."
+tags:
+  - "employment"
+  - "contractors"
+  - "classification"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Compare employees vs contractors and generate a decision checklist for classification.
+
+## Inputs
+- `{{role_description}}`
+- `{{work_location}}`
+- `{{supervision_level}}`
+- `{{duration}}`
+
+## Prompt
+```text
+You are an employment compliance assistant.
+
+Context / inputs:
+- Role description: {{role_description}}
+- Work location: {{work_location}}
+- Supervision level: {{supervision_level}}
+- Duration: {{duration}}
+
+Task:
+Provide a practical checklist of factors to consider when classifying a worker as employee vs independent contractor. Explain tradeoffs and risks in business terms.
+
+Deliverable:
+A checklist, risk flags, and what evidence to document regardless of the choice.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Decision checklist + risk notes + what to document.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

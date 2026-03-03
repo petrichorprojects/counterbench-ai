@@ -1,0 +1,62 @@
+---
+title: "Vendor Agreement Review Checklist (Long-Term Risk)"
+description: "Generate a practical checklist for reviewing vendor agreements for long-term operational risk."
+use_case: "Commercial Contracts"
+inputs:
+  - "vendor_type"
+  - "data_sensitivity"
+  - "integration_scope"
+steps:
+  - "Describe the vendor and integration"
+  - "Generate checklist"
+  - "Add internal owners and follow-ups"
+output_format: "Checklist grouped by: security/privacy, uptime/support, pricing/renewal, liability/indemnity, IP, exit/portability, compliance, notices."
+tags:
+  - "contracts"
+  - "vendor"
+  - "checklist"
+  - "risk"
+  - "operations"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Generate a practical checklist for reviewing vendor agreements for long-term operational risk.
+
+## Inputs
+- `{{vendor_type}}`
+- `{{data_sensitivity}}`
+- `{{integration_scope}}`
+
+## Prompt
+```text
+You are a legal operations-focused contracts reviewer.
+
+Context / inputs:
+- Vendor type: {{vendor_type}}
+- Data sensitivity: {{data_sensitivity}}
+- Integration scope: {{integration_scope}}
+
+Task:
+Create a checklist to review a vendor agreement with a bias toward preventing long-term operational surprises: auto-renewals, data portability, audit rights, SLA gaps, hidden fees, unilateral changes, and termination traps.
+
+Deliverable:
+Return a checklist that a PM or procurement lead can use without legal training.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist grouped by: security/privacy, uptime/support, pricing/renewal, liability/indemnity, IP, exit/portability, compliance, notices.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

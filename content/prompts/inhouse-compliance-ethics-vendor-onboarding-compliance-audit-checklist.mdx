@@ -1,0 +1,61 @@
+---
+title: "Vendor Onboarding Compliance Audit Checklist"
+description: "List key steps for conducting an internal compliance audit on vendor onboarding practices."
+use_case: "Compliance & Ethics"
+inputs:
+  - "current_process_summary"
+  - "systems_used"
+  - "risk_areas"
+steps:
+  - "Describe process and systems"
+  - "List risk areas"
+  - "Generate audit checklist"
+output_format: "Audit checklist + evidence to collect + remediation plan template."
+tags:
+  - "compliance"
+  - "vendors"
+  - "audit"
+  - "operations"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List key steps for conducting an internal compliance audit on vendor onboarding practices.
+
+## Inputs
+- `{{current_process_summary}}`
+- `{{systems_used}}`
+- `{{risk_areas}}`
+
+## Prompt
+```text
+You are a compliance auditor.
+
+Context / inputs:
+- Process summary: {{current_process_summary}}
+- Systems used: {{systems_used}}
+- Risk areas: {{risk_areas}}
+
+Task:
+Create an audit checklist to evaluate vendor onboarding for policy compliance: due diligence, approvals, contracts, security review, and recordkeeping.
+
+Deliverable:
+Checklist + evidence list + a remediation plan skeleton.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Audit checklist + evidence to collect + remediation plan template.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

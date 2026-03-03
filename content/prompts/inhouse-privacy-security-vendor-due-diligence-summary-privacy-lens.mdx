@@ -1,0 +1,60 @@
+---
+title: "Vendor Due Diligence Summary (Privacy Lens)"
+description: "Summarize what to check in vendor due diligence from a privacy and data governance perspective."
+use_case: "Data Privacy & Security"
+inputs:
+  - "vendor_type"
+  - "data_shared"
+  - "risk_level"
+steps:
+  - "Describe vendor and data shared"
+  - "Generate due diligence checklist"
+output_format: "Checklist + what evidence to collect + red flags."
+tags:
+  - "privacy"
+  - "vendors"
+  - "due-diligence"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize what to check in vendor due diligence from a privacy and data governance perspective.
+
+## Inputs
+- `{{vendor_type}}`
+- `{{data_shared}}`
+- `{{risk_level}}`
+
+## Prompt
+```text
+You are a privacy compliance reviewer.
+
+Context / inputs:
+- Vendor type: {{vendor_type}}
+- Data shared: {{data_shared}}
+- Risk level: {{risk_level}}
+
+Task:
+Generate a due diligence checklist covering retention, subprocessors, security controls, breach notification, data location, and audit rights.
+
+Deliverable:
+A checklist plus a short red-flag list that triggers escalation.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist + what evidence to collect + red flags.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

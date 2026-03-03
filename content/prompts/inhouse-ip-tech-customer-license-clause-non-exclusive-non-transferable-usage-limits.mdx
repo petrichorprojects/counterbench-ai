@@ -1,0 +1,64 @@
+---
+title: "Customer License Clause (Non-Exclusive, Non-Transferable, Usage Limits)"
+description: "Draft a customer license clause for software with clear usage limitations."
+use_case: "IP & Technology"
+inputs:
+  - "software_description"
+  - "license_scope"
+  - "usage_limits"
+  - "restrictions"
+steps:
+  - "Describe software and scope"
+  - "Set usage limits/restrictions"
+  - "Generate clause"
+output_format: "Clause text + plain-English explanation."
+tags:
+  - "ip"
+  - "saas"
+  - "license"
+  - "drafting"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a customer license clause for software with clear usage limitations.
+
+## Inputs
+- `{{software_description}}`
+- `{{license_scope}}`
+- `{{usage_limits}}`
+- `{{restrictions}}`
+
+## Prompt
+```text
+You are a SaaS licensing drafter.
+
+Context / inputs:
+- Software: {{software_description}}
+- Scope: {{license_scope}}
+- Usage limits: {{usage_limits}}
+- Restrictions: {{restrictions}}
+
+Task:
+Draft a license grant clause that is non-exclusive, non-transferable, limited to internal business use, and includes usage restrictions appropriate for SaaS.
+
+Deliverable:
+Clause text plus a short explanation for business stakeholders.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + plain-English explanation.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

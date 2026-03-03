@@ -1,0 +1,61 @@
+---
+title: "Limitation of Liability Clause (12-Month Fees Cap)"
+description: "Draft a SaaS limitation of liability clause capping liability at 12 months of fees and excluding indirect damages."
+use_case: "Commercial Contracts"
+inputs:
+  - "fees_paid_last_12_months_definition"
+  - "exceptions_to_cap"
+  - "our_role"
+steps:
+  - "Specify fee definition"
+  - "Pick exceptions"
+  - "Generate clause + rationale"
+output_format: "Clause text + bullets: what it caps, what it excludes, and negotiation notes."
+tags:
+  - "contracts"
+  - "liability"
+  - "drafting"
+  - "saas"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a SaaS limitation of liability clause capping liability at 12 months of fees and excluding indirect damages.
+
+## Inputs
+- `{{fees_paid_last_12_months_definition}}`
+- `{{exceptions_to_cap}}`
+- `{{our_role}}`
+
+## Prompt
+```text
+You are a commercial contracts drafter for a SaaS vendor.
+
+Context / inputs:
+- Our role: {{our_role}}
+- Fees definition: {{fees_paid_last_12_months_definition}}
+- Exceptions (if any): {{exceptions_to_cap}} (e.g., 'IP infringement, willful misconduct')
+
+Task:
+Draft a limitation of liability clause that caps total liability at 12 months of fees paid (as defined above) and excludes indirect, incidental, special, consequential, and punitive damages.
+
+Deliverable:
+Provide the clause text, then a short explanation of how it works and what to watch for in carve-outs.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + bullets: what it caps, what it excludes, and negotiation notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

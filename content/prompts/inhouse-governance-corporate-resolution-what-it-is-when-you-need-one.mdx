@@ -1,0 +1,57 @@
+---
+title: "Corporate Resolution: What It Is + When You Need One"
+description: "Write a one-paragraph explanation of corporate resolutions and when they’re required."
+use_case: "Corporate Governance"
+inputs:
+  - "audience"
+  - "examples"
+steps:
+  - "Set audience"
+  - "Add examples"
+  - "Generate explanation"
+output_format: "One paragraph + 5 examples."
+tags:
+  - "governance"
+  - "education"
+  - "resolutions"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a one-paragraph explanation of corporate resolutions and when they’re required.
+
+## Inputs
+- `{{audience}}`
+- `{{examples}}`
+
+## Prompt
+```text
+You are a corporate governance explainer.
+
+Context / inputs:
+- Audience: {{audience}}
+- Examples: {{examples}}
+
+Task:
+Explain what a corporate resolution is and list common situations where one is required or recommended.
+
+Deliverable:
+A short paragraph plus 5 practical examples for a private US company.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+One paragraph + 5 examples.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

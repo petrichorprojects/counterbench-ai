@@ -1,0 +1,60 @@
+---
+title: "Reps and Warranties (Stock Purchase): Typical Set + Business Rationale"
+description: "List typical reps and warranties in a stock purchase agreement and explain why they exist."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "deal_profile"
+  - "industry"
+  - "audience"
+steps:
+  - "Describe deal profile"
+  - "Set audience"
+  - "Generate list + rationale"
+output_format: "Table: rep/warranty -> what it covers -> why it matters -> typical pushback."
+tags:
+  - "m&a"
+  - "reps-and-warranties"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List typical reps and warranties in a stock purchase agreement and explain why they exist.
+
+## Inputs
+- `{{deal_profile}}`
+- `{{industry}}`
+- `{{audience}}`
+
+## Prompt
+```text
+You are an M&A explainer for business stakeholders.
+
+Context / inputs:
+- Deal profile: {{deal_profile}}
+- Industry: {{industry}}
+- Audience: {{audience}}
+
+Task:
+Provide a high-level list of typical reps and warranties in a stock purchase agreement and explain the business rationale for each.
+
+Deliverable:
+A table plus 5 negotiation tips for non-lawyers.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Table: rep/warranty -> what it covers -> why it matters -> typical pushback.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

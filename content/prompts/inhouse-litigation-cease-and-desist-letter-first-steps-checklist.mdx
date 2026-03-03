@@ -1,0 +1,61 @@
+---
+title: "Cease-and-Desist Letter: First Steps Checklist"
+description: "List steps an in-house team should take after receiving a cease-and-desist letter."
+use_case: "Litigation & Disputes"
+inputs:
+  - "letter_summary"
+  - "business_context"
+  - "deadline"
+steps:
+  - "Summarize letter and claims"
+  - "Describe business context"
+  - "Generate response plan"
+output_format: "Checklist + timeline + what to preserve + who to loop in."
+tags:
+  - "litigation"
+  - "trademark"
+  - "response"
+  - "checklist"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List steps an in-house team should take after receiving a cease-and-desist letter.
+
+## Inputs
+- `{{letter_summary}}`
+- `{{business_context}}`
+- `{{deadline}}`
+
+## Prompt
+```text
+You are an in-house legal operations assistant.
+
+Context / inputs:
+- Letter summary: {{letter_summary}}
+- Business context: {{business_context}}
+- Deadline: {{deadline}}
+
+Task:
+Create a first-response checklist: preserve evidence, assess claims, route to counsel, manage communications, and avoid admissions.
+
+Deliverable:
+A timeline checklist plus a short list of do/don’t for internal stakeholders.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist + timeline + what to preserve + who to loop in.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

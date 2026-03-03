@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-employment",
+  "title": "In-House Starters: Employment and Labor",
+  "description": "HR/legal templates and checklists for hiring, policies, and termination workflows.",
+  "prompt_slugs": [
+    "inhouse-employment-california-hr-quick-guide-hiring-termination",
+    "inhouse-employment-employee-confidentiality-agreement-us-basic",
+    "inhouse-employment-employee-monitoring-tool-legal-risk-summary",
+    "inhouse-employment-employee-vs-contractor-decision-checklist-us",
+    "inhouse-employment-multi-state-hybrid-work-common-employment-risks",
+    "inhouse-employment-new-hire-onboarding-documents-checklist-us-full-time",
+    "inhouse-employment-non-exempt-timekeeping-explainer-remote-overtime",
+    "inhouse-employment-pto-policy-draft-us-remote-workforce",
+    "inhouse-employment-termination-for-performance-legal-considerations-checklist",
+    "inhouse-employment-termination-letter-language-avoid-implied-promises"
+  ],
+  "audience": "legal",
+  "workflow_stage": "employment",
+  "seo": {
+    "title": "In-House Starters: Employment and Labor",
+    "description": "HR/legal templates and checklists for hiring, policies, and termination workflows."
+  },
+  "last_updated": "2026-03-03"
+}

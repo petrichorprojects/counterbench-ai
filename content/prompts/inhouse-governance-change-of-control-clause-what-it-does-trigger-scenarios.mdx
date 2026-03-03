@@ -1,0 +1,57 @@
+---
+title: "Change of Control Clause: What It Does + Trigger Scenarios"
+description: "Explain change-of-control clauses and give examples of when they trigger."
+use_case: "Corporate Governance"
+inputs:
+  - "clause_text_optional"
+  - "context"
+steps:
+  - "Provide context and clause text (if any)"
+  - "Generate explanation + scenarios"
+output_format: "Plain-English explanation + 3 trigger scenarios + what to check next."
+tags:
+  - "governance"
+  - "contracts"
+  - "change-of-control"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain change-of-control clauses and give examples of when they trigger.
+
+## Inputs
+- `{{clause_text_optional}}`
+- `{{context}}`
+
+## Prompt
+```text
+You are an in-house legal educator.
+
+Context / inputs:
+- Context: {{context}}
+- Clause text (optional): {{clause_text_optional}}
+
+Task:
+Explain what a change-of-control clause does and why it matters. Provide three realistic scenarios where it could be triggered.
+
+Deliverable:
+An exec-friendly explanation plus a checklist of what to verify in the actual agreement.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-English explanation + 3 trigger scenarios + what to check next.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

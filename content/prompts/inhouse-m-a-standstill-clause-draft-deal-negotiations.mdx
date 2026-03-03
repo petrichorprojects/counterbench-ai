@@ -1,0 +1,61 @@
+---
+title: "Standstill Clause Draft (Deal Negotiations)"
+description: "Draft a standstill clause to prevent the other party from pursuing a competing opportunity during negotiations."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "standstill_scope"
+  - "duration"
+  - "exceptions"
+steps:
+  - "Define scope and duration"
+  - "Add exceptions"
+  - "Generate clause"
+output_format: "Clause text + fallback version + negotiation notes."
+tags:
+  - "m&a"
+  - "drafting"
+  - "standstill"
+  - "negotiation"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a standstill clause to prevent the other party from pursuing a competing opportunity during negotiations.
+
+## Inputs
+- `{{standstill_scope}}`
+- `{{duration}}`
+- `{{exceptions}}`
+
+## Prompt
+```text
+You are an M&A term sheet drafter.
+
+Context / inputs:
+- Scope: {{standstill_scope}}
+- Duration: {{duration}}
+- Exceptions: {{exceptions}}
+
+Task:
+Draft a standstill clause appropriate for deal negotiations, with clear scope, duration, and enforcement language.
+
+Deliverable:
+Provide clause text plus a softer fallback version.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + fallback version + negotiation notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

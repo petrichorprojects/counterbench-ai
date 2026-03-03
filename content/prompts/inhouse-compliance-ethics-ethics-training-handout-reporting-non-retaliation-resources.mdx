@@ -1,0 +1,60 @@
+---
+title: "Ethics Training Handout (Reporting + Non-Retaliation + Resources)"
+description: "Generate a one-page ethics training handout with reporting channels and key compliance resources."
+use_case: "Compliance & Ethics"
+inputs:
+  - "reporting_channels"
+  - "non_retaliation_statement"
+  - "resources_links"
+steps:
+  - "Provide channels/resources"
+  - "Generate handout"
+output_format: "One-page handout + FAQ."
+tags:
+  - "compliance"
+  - "ethics"
+  - "training"
+  - "handout"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Generate a one-page ethics training handout with reporting channels and key compliance resources.
+
+## Inputs
+- `{{reporting_channels}}`
+- `{{non_retaliation_statement}}`
+- `{{resources_links}}`
+
+## Prompt
+```text
+You are a compliance training designer.
+
+Context / inputs:
+- Reporting channels: {{reporting_channels}}
+- Non-retaliation statement: {{non_retaliation_statement}}
+- Resources: {{resources_links}}
+
+Task:
+Create a one-page handout that employees can reference: what to report, how to report, what happens next, and assurances about non-retaliation.
+
+Deliverable:
+Handout text + a short FAQ.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+One-page handout + FAQ.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

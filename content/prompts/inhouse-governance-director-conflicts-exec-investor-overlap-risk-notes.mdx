@@ -1,0 +1,58 @@
+---
+title: "Director Conflicts: Exec/Investor Overlap Risk Notes"
+description: "Summarize common fiduciary duty issues when directors are also executives or investors."
+use_case: "Corporate Governance"
+inputs:
+  - "scenario"
+  - "stakeholders"
+steps:
+  - "Describe scenario"
+  - "List stakeholders"
+  - "Generate risk notes + mitigations"
+output_format: "Risk notes + mitigation checklist + questions to ask counsel."
+tags:
+  - "governance"
+  - "fiduciary-duties"
+  - "conflicts"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize common fiduciary duty issues when directors are also executives or investors.
+
+## Inputs
+- `{{scenario}}`
+- `{{stakeholders}}`
+
+## Prompt
+```text
+You are a governance risk analyst.
+
+Context / inputs:
+- Scenario: {{scenario}}
+- Stakeholders: {{stakeholders}}
+
+Task:
+Summarize common fiduciary duty and conflict issues when directors are also executives or investors, and list practical mitigation steps (recusal, process, documentation).
+
+Deliverable:
+A short risk memo with a mitigation checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Risk notes + mitigation checklist + questions to ask counsel.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

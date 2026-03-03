@@ -1,0 +1,61 @@
+---
+title: "Delegation of Authority Matrix (Who Can Sign What)"
+description: "Create a delegation of authority matrix for signing, payments, and approving legal claims."
+use_case: "Corporate Governance"
+inputs:
+  - "roles"
+  - "contract_value_tiers"
+  - "exceptions"
+steps:
+  - "List roles and tiers"
+  - "Add exceptions"
+  - "Generate matrix"
+output_format: "Table: action x threshold x approver x notes."
+tags:
+  - "governance"
+  - "legal-ops"
+  - "approvals"
+  - "templates"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create a delegation of authority matrix for signing, payments, and approving legal claims.
+
+## Inputs
+- `{{roles}}`
+- `{{contract_value_tiers}}`
+- `{{exceptions}}`
+
+## Prompt
+```text
+You are a legal operations analyst.
+
+Context / inputs:
+- Roles: {{roles}}
+- Contract value tiers: {{contract_value_tiers}}
+- Exceptions: {{exceptions}}
+
+Task:
+Draft a delegation of authority matrix that clearly defines who can sign contracts, approve spend, and approve settlement/legal claims at various thresholds.
+
+Deliverable:
+A clean table plus a short implementation note for rollout (training + enforcement).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Table: action x threshold x approver x notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

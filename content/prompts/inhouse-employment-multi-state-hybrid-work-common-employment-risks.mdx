@@ -1,0 +1,61 @@
+---
+title: "Multi-State Hybrid Work: Common Employment Risks"
+description: "List common employment law risks for a company with hybrid work arrangements across multiple states."
+use_case: "Employment & Labor"
+inputs:
+  - "states"
+  - "roles"
+  - "current_policies"
+steps:
+  - "List states/roles"
+  - "Describe current policies"
+  - "Generate risk list + next steps"
+output_format: "Risk list + prioritized next steps + owner map."
+tags:
+  - "employment"
+  - "multi-state"
+  - "risk"
+  - "policy"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List common employment law risks for a company with hybrid work arrangements across multiple states.
+
+## Inputs
+- `{{states}}`
+- `{{roles}}`
+- `{{current_policies}}`
+
+## Prompt
+```text
+You are an employment risk analyst.
+
+Context / inputs:
+- States: {{states}}
+- Roles: {{roles}}
+- Current policies: {{current_policies}}
+
+Task:
+Identify the most common HR/legal risk areas for multi-state hybrid work (timekeeping, leave, payroll taxes, privacy, accommodations, termination process).
+
+Deliverable:
+A prioritized risk list and a short implementation plan.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Risk list + prioritized next steps + owner map.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

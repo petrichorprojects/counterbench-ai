@@ -1,0 +1,57 @@
+---
+title: "Delaware Fiduciary Duties One-Pager"
+description: "Write a one-page overview of fiduciary duties (care, loyalty) and the business judgment rule."
+use_case: "Corporate Governance"
+inputs:
+  - "audience"
+  - "company_stage"
+steps:
+  - "Set audience + company stage"
+  - "Generate overview + examples"
+output_format: "One page with headings + examples + do/don’t list."
+tags:
+  - "governance"
+  - "delaware"
+  - "fiduciary-duties"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a one-page overview of fiduciary duties (care, loyalty) and the business judgment rule.
+
+## Inputs
+- `{{audience}}`
+- `{{company_stage}}`
+
+## Prompt
+```text
+You are a corporate governance explainer.
+
+Context / inputs:
+- Audience: {{audience}}
+- Company stage: {{company_stage}}
+
+Task:
+Write a one-page overview of directors’ fiduciary duties under Delaware law: duty of care, duty of loyalty, and business judgment rule. Use practical examples.
+
+Deliverable:
+A crisp one-pager an exec can read in 3 minutes.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+One page with headings + examples + do/don’t list.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

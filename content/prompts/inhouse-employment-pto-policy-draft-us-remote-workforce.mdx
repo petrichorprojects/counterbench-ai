@@ -1,0 +1,65 @@
+---
+title: "PTO Policy Draft (US Remote Workforce)"
+description: "Draft a PTO policy for a US-based remote workforce with clear accrual, approval, and payout notes."
+use_case: "Employment & Labor"
+inputs:
+  - "pto_model"
+  - "states"
+  - "carryover_rules"
+  - "approval_process"
+steps:
+  - "Pick PTO model"
+  - "List states"
+  - "Define carryover/approval"
+  - "Generate policy draft"
+output_format: "Policy text + manager FAQ + employee FAQ."
+tags:
+  - "employment"
+  - "policy-draft"
+  - "pto"
+  - "remote-work"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a PTO policy for a US-based remote workforce with clear accrual, approval, and payout notes.
+
+## Inputs
+- `{{pto_model}}`
+- `{{states}}`
+- `{{carryover_rules}}`
+- `{{approval_process}}`
+
+## Prompt
+```text
+You are an HR policy writer.
+
+Context / inputs:
+- PTO model: {{pto_model}} (accrual/unlimited/hybrid)
+- States: {{states}}
+- Carryover rules: {{carryover_rules}}
+- Approval process: {{approval_process}}
+
+Task:
+Draft a PTO policy that is clear, fair, and operationally usable for a remote workforce. Include how PTO is requested, tracked, and handled at termination.
+
+Deliverable:
+A policy draft plus questions to confirm for state-specific compliance.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Policy text + manager FAQ + employee FAQ.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,25 @@
+{
+  "slug": "inhouse-commercial-contracts",
+  "title": "In-House Starters: Commercial Contracts",
+  "description": "Contract review, drafting, and negotiation starter prompts for in-house teams.",
+  "prompt_slugs": [
+    "inhouse-commercial-contracts-advanced-contract-review-structured-5-step",
+    "inhouse-commercial-contracts-balanced-indemnity-clause-rewrite",
+    "inhouse-commercial-contracts-contract-risk-scan-indemnity-liability-termination-exclusivity",
+    "inhouse-commercial-contracts-draft-a-contract-template-pick-document-type",
+    "inhouse-commercial-contracts-limitation-of-liability-clause-12-month-fees-cap",
+    "inhouse-commercial-contracts-nda-redline-checklist-mutual-no-reverse-engineering-trade-secrets",
+    "inhouse-commercial-contracts-negotiation-fallbacks-unlimited-data-breach-liability-request",
+    "inhouse-commercial-contracts-no-assignment-without-consent-clause",
+    "inhouse-commercial-contracts-reseller-agreement-scan-channel-conflict-exclusivity",
+    "inhouse-commercial-contracts-sow-plain-english-summary-for-project-manager",
+    "inhouse-commercial-contracts-vendor-agreement-review-checklist-long-term-risk"
+  ],
+  "audience": "legal",
+  "workflow_stage": "review",
+  "seo": {
+    "title": "In-House Starters: Commercial Contracts",
+    "description": "Contract review, drafting, and negotiation starter prompts for in-house teams."
+  },
+  "last_updated": "2026-03-03"
+}

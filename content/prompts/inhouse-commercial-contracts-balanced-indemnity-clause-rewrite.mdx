@@ -1,0 +1,67 @@
+---
+title: "Balanced Indemnity Clause Rewrite"
+description: "Propose a more balanced indemnity clause that limits exposure and excludes the other party’s negligence."
+use_case: "Commercial Contracts"
+inputs:
+  - "current_indemnity_clause"
+  - "our_role"
+  - "product_description"
+  - "risk_tolerance"
+steps:
+  - "Paste the indemnity clause"
+  - "Specify role and product"
+  - "Choose risk tolerance"
+  - "Generate a rewrite + rationale"
+output_format: "1) Issues with current clause; 2) Proposed rewrite; 3) Negotiation notes; 4) Fallback version."
+tags:
+  - "contracts"
+  - "indemnity"
+  - "drafting"
+  - "negotiation"
+  - "saas"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Propose a more balanced indemnity clause that limits exposure and excludes the other party’s negligence.
+
+## Inputs
+- `{{current_indemnity_clause}}`
+- `{{our_role}}`
+- `{{product_description}}`
+- `{{risk_tolerance}}`
+
+## Prompt
+```text
+You are an experienced contracts lawyer drafting SaaS terms.
+
+Context / inputs:
+- Our role: {{our_role}}
+- Product: {{product_description}}
+- Risk tolerance: {{risk_tolerance}} (low/medium/high)
+- Current indemnity clause:
+- {{current_indemnity_clause}}
+
+Task:
+Rewrite the indemnity clause to be more balanced. Limit scope to third-party claims, exclude indemnity for the other party’s negligence, and add reasonable defense/control language where appropriate.
+
+Deliverable:
+Provide replacement clause text, explain changes in plain English, and give 2 fallback positions for negotiation.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+1) Issues with current clause; 2) Proposed rewrite; 3) Negotiation notes; 4) Fallback version.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

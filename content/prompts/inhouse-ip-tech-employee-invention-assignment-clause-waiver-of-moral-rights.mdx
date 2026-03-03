@@ -1,0 +1,61 @@
+---
+title: "Employee Invention Assignment Clause (Waiver of Moral Rights)"
+description: "Draft a clause assigning inventions created during employment to the company, with a moral rights waiver where applicable."
+use_case: "IP & Technology"
+inputs:
+  - "company_name"
+  - "role"
+  - "scope_limits_optional"
+steps:
+  - "Fill company/role"
+  - "Set scope limits"
+  - "Generate clause"
+output_format: "Clause text + companion checklist (IP policy, disclosures, OSS)."
+tags:
+  - "ip"
+  - "employment"
+  - "inventions"
+  - "drafting"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a clause assigning inventions created during employment to the company, with a moral rights waiver where applicable.
+
+## Inputs
+- `{{company_name}}`
+- `{{role}}`
+- `{{scope_limits_optional}}`
+
+## Prompt
+```text
+You are an IP and employment drafting assistant.
+
+Context / inputs:
+- Company: {{company_name}}
+- Role: {{role}}
+- Scope limits (optional): {{scope_limits_optional}}
+
+Task:
+Draft an invention assignment clause that assigns relevant inventions to the company, requires disclosure, and includes cooperation obligations. Include a moral rights waiver where appropriate.
+
+Deliverable:
+Clause text plus a checklist of companion policies/processes.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + companion checklist (IP policy, disclosures, OSS).
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

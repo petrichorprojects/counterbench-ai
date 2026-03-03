@@ -1,0 +1,57 @@
+---
+title: "GDPR Controller vs Processor (SaaS Examples)"
+description: "Explain controller vs processor under GDPR using SaaS-relevant examples and a simple decision test."
+use_case: "Data Privacy & Security"
+inputs:
+  - "product_description"
+  - "data_flows_summary"
+steps:
+  - "Describe your product + data flows"
+  - "Generate explanation + examples"
+output_format: "Plain-English explanation + 3 examples + a decision checklist."
+tags:
+  - "privacy"
+  - "gdpr"
+  - "saas"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain controller vs processor under GDPR using SaaS-relevant examples and a simple decision test.
+
+## Inputs
+- `{{product_description}}`
+- `{{data_flows_summary}}`
+
+## Prompt
+```text
+You are a privacy educator for a SaaS company.
+
+Context / inputs:
+- Product: {{product_description}}
+- Data flows: {{data_flows_summary}}
+
+Task:
+Explain what it means to be a controller vs. processor, using the product and data flows above.
+
+Deliverable:
+A short explainer with examples, a decision checklist, and common mistakes to avoid.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-English explanation + 3 examples + a decision checklist.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

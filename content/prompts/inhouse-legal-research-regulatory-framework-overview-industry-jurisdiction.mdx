@@ -1,0 +1,63 @@
+---
+title: "Regulatory Framework Overview (Industry + Jurisdiction)"
+description: "Provide a high-level overview of the regulatory framework governing an activity in a jurisdiction."
+use_case: "Legal Research"
+inputs:
+  - "industry_or_activity"
+  - "jurisdiction"
+  - "company_profile"
+  - "risk_tolerance"
+steps:
+  - "Describe activity + jurisdiction"
+  - "Provide company profile"
+  - "Generate overview"
+output_format: "Overview + key regulators + top obligations + enforcement posture + what to monitor."
+tags:
+  - "research"
+  - "regulatory"
+  - "overview"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Provide a high-level overview of the regulatory framework governing an activity in a jurisdiction.
+
+## Inputs
+- `{{industry_or_activity}}`
+- `{{jurisdiction}}`
+- `{{company_profile}}`
+- `{{risk_tolerance}}`
+
+## Prompt
+```text
+You are a legal research assistant.
+
+Context / inputs:
+- Activity: {{industry_or_activity}}
+- Jurisdiction: {{jurisdiction}}
+- Company profile: {{company_profile}}
+- Risk tolerance: {{risk_tolerance}}
+
+Task:
+Summarize the main regulatory bodies, key obligations, and common enforcement mechanisms relevant to the activity. Call out unknowns.
+
+Deliverable:
+A scannable overview plus a monitoring checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Overview + key regulators + top obligations + enforcement posture + what to monitor.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

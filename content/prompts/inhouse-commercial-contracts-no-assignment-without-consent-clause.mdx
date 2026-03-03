@@ -1,0 +1,61 @@
+---
+title: "No Assignment Without Consent Clause"
+description: "Draft an assignment clause requiring written consent and voiding unauthorized transfers."
+use_case: "Commercial Contracts"
+inputs:
+  - "carveouts"
+  - "change_of_control_handling"
+  - "notice_period"
+steps:
+  - "Pick carveouts"
+  - "Decide change-of-control treatment"
+  - "Generate clause"
+output_format: "Clause text + negotiation notes + fallback option."
+tags:
+  - "contracts"
+  - "assignment"
+  - "boilerplate"
+  - "drafting"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft an assignment clause requiring written consent and voiding unauthorized transfers.
+
+## Inputs
+- `{{carveouts}}`
+- `{{change_of_control_handling}}`
+- `{{notice_period}}`
+
+## Prompt
+```text
+You are a contracts drafter.
+
+Context / inputs:
+- Carveouts (if any): {{carveouts}}
+- Change of control: {{change_of_control_handling}}
+- Notice period (if any): {{notice_period}}
+
+Task:
+Draft an assignment clause that prohibits assignment without prior written consent and states that unauthorized transfers are void. Include a clear approach for change of control.
+
+Deliverable:
+Provide the clause plus a short rationale and one fallback version.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + negotiation notes + fallback option.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,58 @@
+---
+title: "Privilege Waiver Mistakes: Common Patterns + How to Avoid"
+description: "List common mistakes employees make that risk waiving privilege, and how to avoid them."
+use_case: "Litigation & Disputes"
+inputs:
+  - "communication_channels"
+  - "common_scenarios"
+steps:
+  - "List comms channels"
+  - "Provide scenarios"
+  - "Generate mistakes + mitigations"
+output_format: "List of mistakes + mitigations + short training bullets."
+tags:
+  - "litigation"
+  - "privilege"
+  - "training"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List common mistakes employees make that risk waiving privilege, and how to avoid them.
+
+## Inputs
+- `{{communication_channels}}`
+- `{{common_scenarios}}`
+
+## Prompt
+```text
+You are a litigation training writer.
+
+Context / inputs:
+- Channels: {{communication_channels}}
+- Scenarios: {{common_scenarios}}
+
+Task:
+Identify common privilege-waiver patterns in modern collaboration tools (Slack threads, forwarding emails, adding third parties) and propose simple behavioral rules.
+
+Deliverable:
+A list of mistakes, how to avoid them, and a short checklist to share company-wide.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+List of mistakes + mitigations + short training bullets.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

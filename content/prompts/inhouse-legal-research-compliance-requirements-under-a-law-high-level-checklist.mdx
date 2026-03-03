@@ -1,0 +1,63 @@
+---
+title: "Compliance Requirements Under a Law (High-Level Checklist)"
+description: "Create a high-level compliance checklist for an activity under a specified law in a jurisdiction."
+use_case: "Legal Research"
+inputs:
+  - "law"
+  - "activity"
+  - "jurisdiction"
+  - "data_types_optional"
+steps:
+  - "Specify law + activity + jurisdiction"
+  - "Add data types (optional)"
+  - "Generate checklist"
+output_format: "Checklist + implementation notes + what to verify."
+tags:
+  - "research"
+  - "compliance"
+  - "checklist"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create a high-level compliance checklist for an activity under a specified law in a jurisdiction.
+
+## Inputs
+- `{{law}}`
+- `{{activity}}`
+- `{{jurisdiction}}`
+- `{{data_types_optional}}`
+
+## Prompt
+```text
+You are a compliance research assistant.
+
+Context / inputs:
+- Law: {{law}}
+- Activity: {{activity}}
+- Jurisdiction: {{jurisdiction}}
+- Data types (optional): {{data_types_optional}}
+
+Task:
+Provide a high-level compliance checklist and call out the most common pitfalls. Note what typically requires counsel review.
+
+Deliverable:
+A checklist plus a short implementation plan.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist + implementation notes + what to verify.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,64 @@
+---
+title: "Board Resolution: Authorize CEO to Sign Partnership Agreement"
+description: "Draft a board resolution authorizing the CEO to execute a partnership agreement."
+use_case: "Corporate Governance"
+inputs:
+  - "company_name"
+  - "counterparty_name"
+  - "agreement_summary"
+  - "effective_date"
+steps:
+  - "Fill company + counterparty details"
+  - "Describe the agreement"
+  - "Generate resolution"
+output_format: "Board resolution text + a short checklist for board packet completion."
+tags:
+  - "governance"
+  - "board"
+  - "resolutions"
+  - "templates"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a board resolution authorizing the CEO to execute a partnership agreement.
+
+## Inputs
+- `{{company_name}}`
+- `{{counterparty_name}}`
+- `{{agreement_summary}}`
+- `{{effective_date}}`
+
+## Prompt
+```text
+You are a corporate paralegal drafting board resolutions.
+
+Context / inputs:
+- Company: {{company_name}}
+- Counterparty: {{counterparty_name}}
+- Agreement summary: {{agreement_summary}}
+- Effective date: {{effective_date}}
+
+Task:
+Draft a board resolution that authorizes the CEO to execute the partnership agreement and take related actions (sign, deliver, and perform).
+
+Deliverable:
+Provide resolution text suitable for minutes, plus a checklist of attachments (agreement, consents, exhibits).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Board resolution text + a short checklist for board packet completion.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

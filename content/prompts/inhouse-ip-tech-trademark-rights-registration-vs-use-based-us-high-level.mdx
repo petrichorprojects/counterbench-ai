@@ -1,0 +1,59 @@
+---
+title: "Trademark Rights: Registration vs Use-Based (US, High Level)"
+description: "Summarize the difference between trademark registration and use-based rights in the US."
+use_case: "IP & Technology"
+inputs:
+  - "brand_names"
+  - "channels"
+  - "geographies"
+steps:
+  - "List brands/channels"
+  - "Generate summary + next steps"
+output_format: "Plain-English summary + checklist for brand hygiene."
+tags:
+  - "ip"
+  - "trademarks"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize the difference between trademark registration and use-based rights in the US.
+
+## Inputs
+- `{{brand_names}}`
+- `{{channels}}`
+- `{{geographies}}`
+
+## Prompt
+```text
+You are an IP educator.
+
+Context / inputs:
+- Brand names: {{brand_names}}
+- Channels: {{channels}}
+- Geographies: {{geographies}}
+
+Task:
+Explain (at a high level) use-based trademark rights vs registration benefits. Include practical brand hygiene tips and what to track.
+
+Deliverable:
+A short explainer plus a brand hygiene checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-English summary + checklist for brand hygiene.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

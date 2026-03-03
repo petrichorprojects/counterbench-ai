@@ -1,0 +1,61 @@
+---
+title: "GC Talking Points: Legal Team Value-Add"
+description: "Prepare executive-friendly talking points explaining how Legal de-risks and accelerates the business."
+use_case: "Corporate Governance"
+inputs:
+  - "company_priorities"
+  - "legal_team_scope"
+  - "recent_wins"
+steps:
+  - "List priorities + scope"
+  - "Add wins/examples"
+  - "Generate talking points"
+output_format: "Bullets for a 3-5 minute update + optional slide outline."
+tags:
+  - "leadership"
+  - "legal-ops"
+  - "internal-comms"
+  - "exec"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Prepare executive-friendly talking points explaining how Legal de-risks and accelerates the business.
+
+## Inputs
+- `{{company_priorities}}`
+- `{{legal_team_scope}}`
+- `{{recent_wins}}`
+
+## Prompt
+```text
+You are a communications writer for a General Counsel.
+
+Context / inputs:
+- Company priorities: {{company_priorities}}
+- Legal scope: {{legal_team_scope}}
+- Recent wins: {{recent_wins}}
+
+Task:
+Write concise talking points that communicate Legal’s value in terms executives care about: revenue, risk, speed, and trust.
+
+Deliverable:
+3-5 minute speaking bullets plus a short list of metrics to track going forward.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Bullets for a 3-5 minute update + optional slide outline.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

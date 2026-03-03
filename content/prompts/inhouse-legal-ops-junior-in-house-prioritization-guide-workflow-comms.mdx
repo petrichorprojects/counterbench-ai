@@ -1,0 +1,60 @@
+---
+title: "Junior In-House Prioritization Guide (Workflow + Comms)"
+description: "Write a short guide for junior in-house lawyers on prioritizing and communicating with business leaders."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "company_context"
+  - "typical_request_types"
+  - "escalation_rules"
+steps:
+  - "Describe context and request types"
+  - "Define escalation rules"
+  - "Generate guide"
+output_format: "Guide + example status update templates."
+tags:
+  - "legal-ops"
+  - "career"
+  - "communication"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a short guide for junior in-house lawyers on prioritizing and communicating with business leaders.
+
+## Inputs
+- `{{company_context}}`
+- `{{typical_request_types}}`
+- `{{escalation_rules}}`
+
+## Prompt
+```text
+You are a legal ops mentor.
+
+Context / inputs:
+- Company context: {{company_context}}
+- Requests: {{typical_request_types}}
+- Escalation rules: {{escalation_rules}}
+
+Task:
+Write a practical guide on prioritizing legal requests, setting expectations, and communicating risks without blocking the business.
+
+Deliverable:
+A short guide plus 3 reusable status update templates.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Guide + example status update templates.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

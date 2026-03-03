@@ -1,0 +1,61 @@
+---
+title: "Work-for-Hire Clause (Contractor Deliverables Owned by Company)"
+description: "Draft work-for-hire / assignment language to ensure contractor deliverables are owned by the company."
+use_case: "IP & Technology"
+inputs:
+  - "scope_of_work"
+  - "deliverables"
+  - "jurisdiction_if_known"
+steps:
+  - "Describe scope/deliverables"
+  - "Set jurisdiction (optional)"
+  - "Generate clause"
+output_format: "Clause text + checklist of related clauses (IP, moral rights, open source)."
+tags:
+  - "ip"
+  - "contracts"
+  - "work-for-hire"
+  - "drafting"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft work-for-hire / assignment language to ensure contractor deliverables are owned by the company.
+
+## Inputs
+- `{{scope_of_work}}`
+- `{{deliverables}}`
+- `{{jurisdiction_if_known}}`
+
+## Prompt
+```text
+You are an IP-savvy contracts drafter.
+
+Context / inputs:
+- Scope of work: {{scope_of_work}}
+- Deliverables: {{deliverables}}
+- Jurisdiction (optional): {{jurisdiction_if_known}}
+
+Task:
+Draft work-for-hire and IP assignment language that clearly transfers ownership of deliverables and related IP rights to the company, with reasonable cooperation obligations.
+
+Deliverable:
+Clause text plus a checklist of companion provisions to include.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + checklist of related clauses (IP, moral rights, open source).
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

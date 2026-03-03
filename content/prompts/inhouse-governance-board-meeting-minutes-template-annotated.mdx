@@ -1,0 +1,61 @@
+---
+title: "Board Meeting Minutes Template (Annotated)"
+description: "Generate an annotated template for board meeting minutes for a Delaware corporation."
+use_case: "Corporate Governance"
+inputs:
+  - "company_name"
+  - "meeting_type"
+  - "agenda_items"
+steps:
+  - "Fill meeting details"
+  - "List agenda items"
+  - "Generate annotated minutes template"
+output_format: "Minutes template with placeholders + notes on what to attach."
+tags:
+  - "governance"
+  - "board"
+  - "minutes"
+  - "templates"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Generate an annotated template for board meeting minutes for a Delaware corporation.
+
+## Inputs
+- `{{company_name}}`
+- `{{meeting_type}}`
+- `{{agenda_items}}`
+
+## Prompt
+```text
+You are a corporate paralegal.
+
+Context / inputs:
+- Company: {{company_name}}
+- Meeting type: {{meeting_type}}
+- Agenda items: {{agenda_items}}
+
+Task:
+Create an annotated minutes template that includes attendance, notice, quorum, resolutions, and adjournment. Keep it clean and reusable.
+
+Deliverable:
+Template text plus a short list of attachments (resolutions, exhibits, approvals).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Minutes template with placeholders + notes on what to attach.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

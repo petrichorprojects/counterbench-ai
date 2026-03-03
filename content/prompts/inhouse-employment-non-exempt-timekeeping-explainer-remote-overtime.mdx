@@ -1,0 +1,61 @@
+---
+title: "Non-Exempt Timekeeping Explainer (Remote + Overtime)"
+description: "Explain why non-exempt employees must track all time worked, including remote work and overtime."
+use_case: "Employment & Labor"
+inputs:
+  - "audience"
+  - "timekeeping_tool"
+  - "common_edge_cases"
+steps:
+  - "Set audience"
+  - "List tools/edge cases"
+  - "Generate explainer + examples"
+output_format: "Plain-language explainer + examples + manager do/don’t list."
+tags:
+  - "employment"
+  - "timekeeping"
+  - "remote-work"
+  - "education"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain why non-exempt employees must track all time worked, including remote work and overtime.
+
+## Inputs
+- `{{audience}}`
+- `{{timekeeping_tool}}`
+- `{{common_edge_cases}}`
+
+## Prompt
+```text
+You are an HR policy writer.
+
+Context / inputs:
+- Audience: {{audience}}
+- Timekeeping tool: {{timekeeping_tool}}
+- Edge cases: {{common_edge_cases}}
+
+Task:
+Write a plain-language explainer for why non-exempt employees must track all time worked (including overtime) and how this applies to remote work.
+
+Deliverable:
+A short internal doc plus examples of what counts as work time.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-language explainer + examples + manager do/don’t list.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

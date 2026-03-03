@@ -1,0 +1,64 @@
+---
+title: "Non-Disparagement Clause (Settlement Agreement)"
+description: "Draft a non-disparagement clause for a settlement agreement with clear scope and exceptions."
+use_case: "Litigation & Disputes"
+inputs:
+  - "parties"
+  - "scope"
+  - "exceptions"
+  - "duration"
+steps:
+  - "Fill variables"
+  - "Generate clause + fallback"
+  - "Add negotiation notes"
+output_format: "Clause text + fallback version + negotiation notes."
+tags:
+  - "litigation"
+  - "settlement"
+  - "drafting"
+  - "non-disparagement"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a non-disparagement clause for a settlement agreement with clear scope and exceptions.
+
+## Inputs
+- `{{parties}}`
+- `{{scope}}`
+- `{{exceptions}}`
+- `{{duration}}`
+
+## Prompt
+```text
+You are a settlement agreement drafter.
+
+Context / inputs:
+- Parties: {{parties}}
+- Scope: {{scope}}
+- Exceptions: {{exceptions}}
+- Duration: {{duration}}
+
+Task:
+Draft a non-disparagement clause with clear scope, reasonable exceptions (legal process, required disclosures), and enforcement language.
+
+Deliverable:
+Provide clause text plus one fallback option if the counterparty pushes back.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Clause text + fallback version + negotiation notes.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

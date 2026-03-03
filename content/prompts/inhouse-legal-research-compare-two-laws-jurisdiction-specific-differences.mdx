@@ -1,0 +1,63 @@
+---
+title: "Compare Two Laws (Jurisdiction-Specific Differences)"
+description: "Outline major differences between two laws as applied in a jurisdiction, with practical implications."
+use_case: "Legal Research"
+inputs:
+  - "law_a"
+  - "law_b"
+  - "jurisdiction"
+  - "use_case_context"
+steps:
+  - "Name both laws and jurisdiction"
+  - "Provide use case context"
+  - "Generate comparison"
+output_format: "Comparison table + what changes in compliance/workflow."
+tags:
+  - "research"
+  - "comparison"
+  - "compliance"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Outline major differences between two laws as applied in a jurisdiction, with practical implications.
+
+## Inputs
+- `{{law_a}}`
+- `{{law_b}}`
+- `{{jurisdiction}}`
+- `{{use_case_context}}`
+
+## Prompt
+```text
+You are a legal research assistant.
+
+Context / inputs:
+- Law A: {{law_a}}
+- Law B: {{law_b}}
+- Jurisdiction: {{jurisdiction}}
+- Use case: {{use_case_context}}
+
+Task:
+Compare the laws at a high level (scope, definitions, obligations, enforcement). Emphasize practical consequences for the use case.
+
+Deliverable:
+A comparison table plus a short recommendation checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Comparison table + what changes in compliance/workflow.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

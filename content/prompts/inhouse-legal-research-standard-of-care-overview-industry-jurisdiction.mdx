@@ -1,0 +1,60 @@
+---
+title: "Standard of Care Overview (Industry + Jurisdiction)"
+description: "Explain the general standard of care concept and what to verify for a specific industry/jurisdiction."
+use_case: "Legal Research"
+inputs:
+  - "industry"
+  - "jurisdiction"
+  - "scenario"
+steps:
+  - "Specify industry/jurisdiction"
+  - "Describe scenario"
+  - "Generate overview"
+output_format: "Plain-English overview + what sources to check + open questions."
+tags:
+  - "research"
+  - "torts"
+  - "negligence"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain the general standard of care concept and what to verify for a specific industry/jurisdiction.
+
+## Inputs
+- `{{industry}}`
+- `{{jurisdiction}}`
+- `{{scenario}}`
+
+## Prompt
+```text
+You are a legal research assistant.
+
+Context / inputs:
+- Industry: {{industry}}
+- Jurisdiction: {{jurisdiction}}
+- Scenario: {{scenario}}
+
+Task:
+Provide a general explanation of standard of care for negligence analysis and outline what types of sources typically inform it (statutes, regs, case law, industry standards).
+
+Deliverable:
+A short overview plus a verification checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-English overview + what sources to check + open questions.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

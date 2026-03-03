@@ -1,0 +1,64 @@
+---
+title: "Cross-Border M&A: Common Filings and Approvals Overview"
+description: "Summarize regulatory filings/approvals that may be required in cross-border M&A involving a US company."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "countries_involved"
+  - "deal_size"
+  - "industry"
+  - "timeline"
+steps:
+  - "List countries and industry"
+  - "Set deal size/timeline"
+  - "Generate overview + questions"
+output_format: "High-level overview + what to ask counsel + timeline risks."
+tags:
+  - "m&a"
+  - "regulatory"
+  - "cross-border"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize regulatory filings/approvals that may be required in cross-border M&A involving a US company.
+
+## Inputs
+- `{{countries_involved}}`
+- `{{deal_size}}`
+- `{{industry}}`
+- `{{timeline}}`
+
+## Prompt
+```text
+You are an M&A coordinator.
+
+Context / inputs:
+- Countries: {{countries_involved}}
+- Deal size: {{deal_size}}
+- Industry: {{industry}}
+- Timeline: {{timeline}}
+
+Task:
+Provide a high-level overview of typical filings/approvals to consider (competition/antitrust, sector-specific, foreign investment review) and how they impact timing.
+
+Deliverable:
+A scannable list plus a question set for outside counsel.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+High-level overview + what to ask counsel + timeline risks.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

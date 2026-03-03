@@ -1,0 +1,63 @@
+---
+title: "Contract Type Requirements (Jurisdiction Checklist)"
+description: "List primary legal requirements for a given contract type in a specified jurisdiction (high level)."
+use_case: "Legal Research"
+inputs:
+  - "contract_type"
+  - "jurisdiction"
+  - "party_roles"
+  - "industry_context_optional"
+steps:
+  - "Specify contract type + jurisdiction"
+  - "Describe roles/context"
+  - "Generate checklist"
+output_format: "Checklist of elements + common pitfalls + what to verify."
+tags:
+  - "research"
+  - "contracts"
+  - "checklist"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List primary legal requirements for a given contract type in a specified jurisdiction (high level).
+
+## Inputs
+- `{{contract_type}}`
+- `{{jurisdiction}}`
+- `{{party_roles}}`
+- `{{industry_context_optional}}`
+
+## Prompt
+```text
+You are a legal research assistant.
+
+Context / inputs:
+- Contract type: {{contract_type}}
+- Jurisdiction: {{jurisdiction}}
+- Party roles: {{party_roles}}
+- Industry context: {{industry_context_optional}}
+
+Task:
+Provide a high-level checklist of typical requirements and issues for the contract type. Include what varies materially by jurisdiction and what to verify with primary sources.
+
+Deliverable:
+A checklist plus a short verification plan.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist of elements + common pitfalls + what to verify.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

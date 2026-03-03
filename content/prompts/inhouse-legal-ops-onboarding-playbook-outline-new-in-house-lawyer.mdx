@@ -1,0 +1,63 @@
+---
+title: "Onboarding Playbook Outline (New In-House Lawyer)"
+description: "Create a playbook outline for onboarding a new in-house lawyer: systems, team, workflows, and stakeholders."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "company_context"
+  - "systems"
+  - "stakeholders"
+  - "first_30_days_goals"
+steps:
+  - "Describe context and systems"
+  - "List stakeholders/goals"
+  - "Generate playbook outline"
+output_format: "Onboarding outline: Week 1/2/3/4 with tasks and meetings."
+tags:
+  - "legal-ops"
+  - "onboarding"
+  - "playbook"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Create a playbook outline for onboarding a new in-house lawyer: systems, team, workflows, and stakeholders.
+
+## Inputs
+- `{{company_context}}`
+- `{{systems}}`
+- `{{stakeholders}}`
+- `{{first_30_days_goals}}`
+
+## Prompt
+```text
+You are a legal ops onboarding designer.
+
+Context / inputs:
+- Company context: {{company_context}}
+- Systems: {{systems}}
+- Stakeholders: {{stakeholders}}
+- 30-day goals: {{first_30_days_goals}}
+
+Task:
+Design a 30-day onboarding outline that gets a new lawyer productive quickly without missing key systems and stakeholders.
+
+Deliverable:
+A week-by-week plan with goals, meetings, and deliverables.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Onboarding outline: Week 1/2/3/4 with tasks and meetings.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

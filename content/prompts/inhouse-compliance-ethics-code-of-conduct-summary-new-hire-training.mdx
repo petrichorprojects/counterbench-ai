@@ -1,0 +1,60 @@
+---
+title: "Code of Conduct Summary (New Hire Training)"
+description: "Write a concise Code of Conduct overview for new hire training: what it is, why it matters, how to report issues."
+use_case: "Compliance & Ethics"
+inputs:
+  - "company_values"
+  - "reporting_channels"
+  - "key_policies"
+steps:
+  - "List values, channels, policies"
+  - "Generate summary + training bullets"
+output_format: "1-page summary + 5 scenario examples."
+tags:
+  - "compliance"
+  - "ethics"
+  - "training"
+  - "internal-comms"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a concise Code of Conduct overview for new hire training: what it is, why it matters, how to report issues.
+
+## Inputs
+- `{{company_values}}`
+- `{{reporting_channels}}`
+- `{{key_policies}}`
+
+## Prompt
+```text
+You are a compliance communications writer.
+
+Context / inputs:
+- Company values: {{company_values}}
+- Reporting channels: {{reporting_channels}}
+- Key policies: {{key_policies}}
+
+Task:
+Write a clear Code of Conduct overview for new hires, emphasizing reporting, non-retaliation, and practical examples (gifts, conflicts, harassment, data handling).
+
+Deliverable:
+A one-page handout plus scenario examples.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+1-page summary + 5 scenario examples.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

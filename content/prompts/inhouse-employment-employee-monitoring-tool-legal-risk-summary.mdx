@@ -1,0 +1,64 @@
+---
+title: "Employee Monitoring Tool: Legal Risk Summary"
+description: "Summarize key legal and trust issues before implementing employee surveillance/productivity monitoring."
+use_case: "Employment & Labor"
+inputs:
+  - "tool_description"
+  - "data_collected"
+  - "countries_states"
+  - "business_rationale"
+steps:
+  - "Describe tool and data collected"
+  - "List jurisdictions"
+  - "Generate risk summary + mitigations"
+output_format: "Risks + mitigations + rollout checklist + employee comms draft."
+tags:
+  - "employment"
+  - "privacy"
+  - "monitoring"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize key legal and trust issues before implementing employee surveillance/productivity monitoring.
+
+## Inputs
+- `{{tool_description}}`
+- `{{data_collected}}`
+- `{{countries_states}}`
+- `{{business_rationale}}`
+
+## Prompt
+```text
+You are a privacy and employment policy analyst.
+
+Context / inputs:
+- Tool description: {{tool_description}}
+- Data collected: {{data_collected}}
+- Jurisdictions: {{countries_states}}
+- Business rationale: {{business_rationale}}
+
+Task:
+Summarize key legal, privacy, and culture risks of the monitoring tool and propose mitigations: purpose limitation, transparency, retention limits, and access controls.
+
+Deliverable:
+A short risk memo plus a rollout checklist (policy, training, comms, and logging).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Risks + mitigations + rollout checklist + employee comms draft.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

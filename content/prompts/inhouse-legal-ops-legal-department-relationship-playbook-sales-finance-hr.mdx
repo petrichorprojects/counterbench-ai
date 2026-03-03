@@ -1,0 +1,60 @@
+---
+title: "Legal Department Relationship Playbook (Sales, Finance, HR)"
+description: "List strategies a legal department can use to improve relationships with key business teams."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "teams"
+  - "pain_points"
+  - "current_processes"
+steps:
+  - "List teams and pain points"
+  - "Describe processes"
+  - "Generate strategies + quick wins"
+output_format: "Strategies + quick wins + meeting cadence suggestions."
+tags:
+  - "legal-ops"
+  - "stakeholders"
+  - "process"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List strategies a legal department can use to improve relationships with key business teams.
+
+## Inputs
+- `{{teams}}`
+- `{{pain_points}}`
+- `{{current_processes}}`
+
+## Prompt
+```text
+You are a legal ops advisor.
+
+Context / inputs:
+- Teams: {{teams}}
+- Pain points: {{pain_points}}
+- Current processes: {{current_processes}}
+
+Task:
+Generate strategies to improve collaboration: SLAs, intake hygiene, templates, office hours, playbooks, and escalation paths.
+
+Deliverable:
+A prioritized list of quick wins and a 30-day relationship plan.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Strategies + quick wins + meeting cadence suggestions.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

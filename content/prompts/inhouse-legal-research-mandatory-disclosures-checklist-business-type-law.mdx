@@ -1,0 +1,63 @@
+---
+title: "Mandatory Disclosures Checklist (Business Type + Law)"
+description: "List mandatory disclosures required under a law for a specific business type, at a high level."
+use_case: "Legal Research"
+inputs:
+  - "law"
+  - "jurisdiction"
+  - "business_type"
+  - "channels"
+steps:
+  - "Specify business type and channels"
+  - "Name law/jurisdiction"
+  - "Generate checklist"
+output_format: "Checklist grouped by channel (website, contracts, marketing, product UI)."
+tags:
+  - "research"
+  - "disclosures"
+  - "compliance"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List mandatory disclosures required under a law for a specific business type, at a high level.
+
+## Inputs
+- `{{law}}`
+- `{{jurisdiction}}`
+- `{{business_type}}`
+- `{{channels}}`
+
+## Prompt
+```text
+You are a compliance research assistant.
+
+Context / inputs:
+- Law: {{law}}
+- Jurisdiction: {{jurisdiction}}
+- Business type: {{business_type}}
+- Channels: {{channels}}
+
+Task:
+Provide a high-level checklist of mandatory disclosures and where they typically appear (website footer, checkout flows, contracts, privacy notices).
+
+Deliverable:
+A channel-based checklist plus a short verification plan.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist grouped by channel (website, contracts, marketing, product UI).
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

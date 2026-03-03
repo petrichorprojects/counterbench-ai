@@ -1,0 +1,64 @@
+---
+title: "Post-Closing Transition Support Covenant (90 Days)"
+description: "Generate a sample covenant requiring seller transition support for 90 days post-close."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "support_scope"
+  - "hours_per_week"
+  - "fees_if_any"
+  - "termination_conditions"
+steps:
+  - "Define support scope"
+  - "Set hours/fees"
+  - "Generate covenant text"
+output_format: "Covenant text + support deliverables checklist."
+tags:
+  - "m&a"
+  - "transition"
+  - "drafting"
+  - "post-close"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Generate a sample covenant requiring seller transition support for 90 days post-close.
+
+## Inputs
+- `{{support_scope}}`
+- `{{hours_per_week}}`
+- `{{fees_if_any}}`
+- `{{termination_conditions}}`
+
+## Prompt
+```text
+You are an M&A drafter.
+
+Context / inputs:
+- Support scope: {{support_scope}}
+- Hours/week: {{hours_per_week}}
+- Fees (if any): {{fees_if_any}}
+- Termination conditions: {{termination_conditions}}
+
+Task:
+Draft a post-closing covenant requiring the seller to provide transition support for 90 days, with clear scope, availability, and handoff obligations.
+
+Deliverable:
+Provide covenant text plus a checklist of deliverables (accounts, docs, training, contacts).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Covenant text + support deliverables checklist.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

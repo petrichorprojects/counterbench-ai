@@ -1,0 +1,61 @@
+---
+title: "Change-of-Control Contract Risk Note (Merger Impact)"
+description: "Write an internal note explaining how change-of-control clauses can impact a merger or acquisition."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "contract_portfolio_summary"
+  - "deal_type"
+  - "timing"
+steps:
+  - "Summarize contract portfolio"
+  - "Describe deal type"
+  - "Generate internal note"
+output_format: "Internal note + action list + data to request from the business."
+tags:
+  - "m&a"
+  - "contracts"
+  - "change-of-control"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write an internal note explaining how change-of-control clauses can impact a merger or acquisition.
+
+## Inputs
+- `{{contract_portfolio_summary}}`
+- `{{deal_type}}`
+- `{{timing}}`
+
+## Prompt
+```text
+You are an in-house M&A counsel.
+
+Context / inputs:
+- Contracts summary: {{contract_portfolio_summary}}
+- Deal type: {{deal_type}}
+- Timing: {{timing}}
+
+Task:
+Explain why change-of-control clauses matter for deals (consent requirements, termination rights, pricing changes) and outline a plan to triage contracts.
+
+Deliverable:
+A short memo plus a prioritized plan for contract review.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Internal note + action list + data to request from the business.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

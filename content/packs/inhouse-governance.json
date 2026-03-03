@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-governance",
+  "title": "In-House Starters: Corporate Governance",
+  "description": "Governance explainers, templates, and operating docs for board/corporate workflows.",
+  "prompt_slugs": [
+    "inhouse-governance-annual-governance-documents-checklist-private-us-company",
+    "inhouse-governance-board-meeting-minutes-template-annotated",
+    "inhouse-governance-board-resolution-authorize-ceo-to-sign-partnership-agreement",
+    "inhouse-governance-change-of-control-clause-what-it-does-trigger-scenarios",
+    "inhouse-governance-corporate-resolution-what-it-is-when-you-need-one",
+    "inhouse-governance-delaware-fiduciary-duties-one-pager",
+    "inhouse-governance-delegation-of-authority-matrix-who-can-sign-what",
+    "inhouse-governance-director-conflicts-exec-investor-overlap-risk-notes",
+    "inhouse-governance-gc-talking-points-legal-team-value-add",
+    "inhouse-governance-why-legal-must-be-looped-in-internal-explainer"
+  ],
+  "audience": "legal",
+  "workflow_stage": "governance",
+  "seo": {
+    "title": "In-House Starters: Corporate Governance",
+    "description": "Governance explainers, templates, and operating docs for board/corporate workflows."
+  },
+  "last_updated": "2026-03-03"
+}

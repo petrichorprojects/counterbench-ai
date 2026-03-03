@@ -1,0 +1,60 @@
+---
+title: "Annual Governance Documents Checklist (Private US Company)"
+description: "List key governance documents a private US corporation should maintain and update annually."
+use_case: "Corporate Governance"
+inputs:
+  - "company_stage"
+  - "board_structure"
+  - "investors_optional"
+steps:
+  - "Describe stage + board"
+  - "List investors (optional)"
+  - "Generate checklist"
+output_format: "Checklist grouped by: corporate records, equity, contracts, policies, finance/tax."
+tags:
+  - "governance"
+  - "checklist"
+  - "operations"
+last_updated: "2026-03-03"
+---
+
+## When to use
+List key governance documents a private US corporation should maintain and update annually.
+
+## Inputs
+- `{{company_stage}}`
+- `{{board_structure}}`
+- `{{investors_optional}}`
+
+## Prompt
+```text
+You are a corporate legal operations assistant.
+
+Context / inputs:
+- Company stage: {{company_stage}}
+- Board structure: {{board_structure}}
+- Investors (optional): {{investors_optional}}
+
+Task:
+Create a checklist of governance documents to maintain and review annually, including where they should live and who owns updates.
+
+Deliverable:
+A checklist that can be used as a yearly recurring task list.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Checklist grouped by: corporate records, equity, contracts, policies, finance/tax.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,60 @@
+---
+title: "Reseller Agreement Scan (Channel Conflict, Exclusivity)"
+description: "Spot reseller terms that create exclusivity, channel conflict, or partner lock-in."
+use_case: "Commercial Contracts"
+inputs:
+  - "reseller_agreement_text"
+  - "our_channel_strategy"
+steps:
+  - "Paste agreement"
+  - "Describe channel strategy"
+  - "Flag exclusivity + conflict terms"
+output_format: "Findings grouped by: exclusivity, territory, pricing controls, marketing restrictions, customer ownership, termination, non-compete."
+tags:
+  - "contracts"
+  - "reseller"
+  - "channels"
+  - "exclusivity"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Spot reseller terms that create exclusivity, channel conflict, or partner lock-in.
+
+## Inputs
+- `{{reseller_agreement_text}}`
+- `{{our_channel_strategy}}`
+
+## Prompt
+```text
+You are a commercial counsel reviewing reseller terms.
+
+Context / inputs:
+- Channel strategy context: {{our_channel_strategy}}
+- Agreement text:
+- {{reseller_agreement_text}}
+
+Task:
+Identify terms that create exclusivity, channel conflict, or limit our ability to sell directly or through other partners. Flag hidden lock-in mechanisms.
+
+Deliverable:
+A risk memo + suggested edits to reduce exclusivity and preserve sales flexibility.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Findings grouped by: exclusivity, territory, pricing controls, marketing restrictions, customer ownership, termination, non-compete.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

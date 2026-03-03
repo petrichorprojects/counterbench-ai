@@ -1,0 +1,63 @@
+---
+title: "When to Involve Legal in Vendor Negotiations (Internal Comms)"
+description: "Draft a short communication outlining when and how business teams should involve Legal in vendor negotiations."
+use_case: "Legal Department Operations & Leadership"
+inputs:
+  - "triggers"
+  - "intake_link"
+  - "what_to_include"
+  - "tone"
+steps:
+  - "List triggers and intake link"
+  - "Define what to include"
+  - "Generate communication"
+output_format: "Slack version + email version + quick checklist."
+tags:
+  - "legal-ops"
+  - "internal-comms"
+  - "vendors"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a short communication outlining when and how business teams should involve Legal in vendor negotiations.
+
+## Inputs
+- `{{triggers}}`
+- `{{intake_link}}`
+- `{{what_to_include}}`
+- `{{tone}}`
+
+## Prompt
+```text
+You are a legal ops communications writer.
+
+Context / inputs:
+- Triggers: {{triggers}}
+- Intake link: {{intake_link}}
+- What to include: {{what_to_include}}
+- Tone: {{tone}}
+
+Task:
+Write a message that sets expectations for involving Legal early in vendor negotiations, and explains what happens when Legal is brought in late.
+
+Deliverable:
+Two versions (Slack + email) plus a 6-bullet checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Slack version + email version + quick checklist.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

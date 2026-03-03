@@ -1,0 +1,58 @@
+---
+title: "Anti-Retaliation Policy Summary + Manager Talking Points"
+description: "Summarize key provisions of an anti-retaliation policy and create manager talking points."
+use_case: "Compliance & Ethics"
+inputs:
+  - "policy_text_or_summary"
+  - "reporting_channels"
+steps:
+  - "Paste policy text/summary"
+  - "Add reporting channels"
+  - "Generate summary + talking points"
+output_format: "Summary + manager script + do/don’t examples."
+tags:
+  - "compliance"
+  - "anti-retaliation"
+  - "training"
+  - "internal-comms"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize key provisions of an anti-retaliation policy and create manager talking points.
+
+## Inputs
+- `{{policy_text_or_summary}}`
+- `{{reporting_channels}}`
+
+## Prompt
+```text
+You are a compliance policy communicator.
+
+Context / inputs:
+- Policy text/summary: {{policy_text_or_summary}}
+- Reporting channels: {{reporting_channels}}
+
+Task:
+Summarize the anti-retaliation policy in clear language and create talking points managers can use in a 5-minute team meeting.
+
+Deliverable:
+A summary + manager talking points + example scenarios.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Summary + manager script + do/don’t examples.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

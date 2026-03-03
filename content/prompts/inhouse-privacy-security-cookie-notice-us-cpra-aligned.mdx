@@ -1,0 +1,61 @@
+---
+title: "Cookie Notice (US, CPRA-Aligned)"
+description: "Draft a cookie notice section that explains categories, purposes, and opt-out mechanisms for a US audience."
+use_case: "Data Privacy & Security"
+inputs:
+  - "cookie_categories"
+  - "tracking_tools"
+  - "opt_out_mechanism"
+steps:
+  - "List cookie categories/tools"
+  - "Generate notice text"
+  - "Add opt-out instructions"
+output_format: "Policy section with headings + plain-language summary."
+tags:
+  - "privacy"
+  - "cookies"
+  - "cpra"
+  - "policy-draft"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a cookie notice section that explains categories, purposes, and opt-out mechanisms for a US audience.
+
+## Inputs
+- `{{cookie_categories}}`
+- `{{tracking_tools}}`
+- `{{opt_out_mechanism}}`
+
+## Prompt
+```text
+You are a privacy policy writer.
+
+Context / inputs:
+- Cookie categories: {{cookie_categories}}
+- Tracking tools/vendors: {{tracking_tools}}
+- Opt-out mechanism: {{opt_out_mechanism}}
+
+Task:
+Draft a cookie notice section that explains what cookies/trackers are used for, how users can control them, and what choices are available.
+
+Deliverable:
+A cookie notice section suitable for a website policy page, plus a short summary for a banner.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Policy section with headings + plain-language summary.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

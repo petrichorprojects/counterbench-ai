@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-m-a",
+  "title": "In-House Starters: M&A and Strategic Transactions",
+  "description": "Due diligence, term sheet, and deal workflow starter prompts.",
+  "prompt_slugs": [
+    "inhouse-m-a-change-of-control-contract-risk-note-merger-impact",
+    "inhouse-m-a-cross-border-m-and-a-common-filings-and-approvals-overview",
+    "inhouse-m-a-earnout-explained-seller-protections-checklist",
+    "inhouse-m-a-joint-venture-agreement-risk-scan-exclusivity-ip-governance-exit",
+    "inhouse-m-a-no-shop-clause-explained-acquisitions",
+    "inhouse-m-a-post-closing-transition-support-covenant-90-days",
+    "inhouse-m-a-reps-and-warranties-stock-purchase-typical-set-business-rationale",
+    "inhouse-m-a-software-acquisition-due-diligence-questions-ip-contracts-litigation-employment",
+    "inhouse-m-a-standstill-clause-draft-deal-negotiations",
+    "inhouse-m-a-term-sheet-confidentiality-clause-m-and-a"
+  ],
+  "audience": "legal",
+  "workflow_stage": "deal",
+  "seo": {
+    "title": "In-House Starters: M&A and Strategic Transactions",
+    "description": "Due diligence, term sheet, and deal workflow starter prompts."
+  },
+  "last_updated": "2026-03-03"
+}

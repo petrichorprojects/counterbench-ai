@@ -1,0 +1,60 @@
+---
+title: "Enforcement Mechanisms Summary (Law + Jurisdiction)"
+description: "Summarize how a regulation is enforced in a jurisdiction and what penalties or remedies are typical."
+use_case: "Legal Research"
+inputs:
+  - "regulation"
+  - "jurisdiction"
+  - "industry_context"
+steps:
+  - "Name regulation/jurisdiction"
+  - "Add industry context"
+  - "Generate enforcement summary"
+output_format: "Enforcement overview + typical triggers + what to monitor."
+tags:
+  - "research"
+  - "enforcement"
+  - "regulatory"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Summarize how a regulation is enforced in a jurisdiction and what penalties or remedies are typical.
+
+## Inputs
+- `{{regulation}}`
+- `{{jurisdiction}}`
+- `{{industry_context}}`
+
+## Prompt
+```text
+You are a legal research assistant.
+
+Context / inputs:
+- Regulation: {{regulation}}
+- Jurisdiction: {{jurisdiction}}
+- Industry context: {{industry_context}}
+
+Task:
+Provide a high-level summary of enforcement mechanisms: regulator powers, complaint processes, civil penalties, private rights of action (if relevant).
+
+Deliverable:
+A scannable enforcement overview and monitoring checklist.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Enforcement overview + typical triggers + what to monitor.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-compliance-ethics",
+  "title": "In-House Starters: Compliance and Ethics",
+  "description": "Training, escalation, and policy templates for compliance and ethics programs.",
+  "prompt_slugs": [
+    "inhouse-compliance-ethics-anti-bribery-reminder-message-before-sales-meeting",
+    "inhouse-compliance-ethics-anti-corruption-quiz-10-questions-multiple-choice",
+    "inhouse-compliance-ethics-anti-retaliation-policy-summary-manager-talking-points",
+    "inhouse-compliance-ethics-anti-retaliation-statement-handbook-language",
+    "inhouse-compliance-ethics-code-of-conduct-summary-new-hire-training",
+    "inhouse-compliance-ethics-conflict-of-interest-policy-annual-disclosure-form-template",
+    "inhouse-compliance-ethics-conflicts-of-interest-how-to-recognize-report-employee-memo",
+    "inhouse-compliance-ethics-escalation-protocol-suspected-policy-or-legal-violation",
+    "inhouse-compliance-ethics-ethics-training-handout-reporting-non-retaliation-resources",
+    "inhouse-compliance-ethics-vendor-onboarding-compliance-audit-checklist"
+  ],
+  "audience": "legal",
+  "workflow_stage": "compliance",
+  "seo": {
+    "title": "In-House Starters: Compliance and Ethics",
+    "description": "Training, escalation, and policy templates for compliance and ethics programs."
+  },
+  "last_updated": "2026-03-03"
+}

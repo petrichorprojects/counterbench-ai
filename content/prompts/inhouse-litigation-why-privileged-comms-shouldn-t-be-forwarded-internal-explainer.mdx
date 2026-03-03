@@ -1,0 +1,57 @@
+---
+title: "Why Privileged Comms Shouldn’t Be Forwarded (Internal Explainer)"
+description: "Explain why privileged communications should not be forwarded to third parties and what risks that creates."
+use_case: "Litigation & Disputes"
+inputs:
+  - "audience"
+  - "examples"
+steps:
+  - "Set audience"
+  - "Provide examples"
+  - "Generate explainer + do/don’t list"
+output_format: "Short explainer + do/don’t list + escalation path."
+tags:
+  - "litigation"
+  - "privilege"
+  - "internal-comms"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain why privileged communications should not be forwarded to third parties and what risks that creates.
+
+## Inputs
+- `{{audience}}`
+- `{{examples}}`
+
+## Prompt
+```text
+You are an internal legal educator.
+
+Context / inputs:
+- Audience: {{audience}}
+- Examples: {{examples}}
+
+Task:
+Write a plain-language explanation of why forwarding privileged legal comms can waive privilege and increase risk.
+
+Deliverable:
+A short explainer with examples and an escalation script.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Short explainer + do/don’t list + escalation path.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

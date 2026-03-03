@@ -1,0 +1,60 @@
+---
+title: "GDPR Legitimate Interest: Pros/Cons + When to Avoid"
+description: "Explain pros/cons of relying on legitimate interest and list when it’s a bad fit."
+use_case: "Data Privacy & Security"
+inputs:
+  - "processing_activity"
+  - "data_subjects"
+  - "jurisdiction_notes"
+steps:
+  - "Describe processing activity"
+  - "Generate pros/cons + risk notes"
+output_format: "Pros/cons + risk checklist + recommended next steps (LIA)."
+tags:
+  - "privacy"
+  - "gdpr"
+  - "legal-basis"
+  - "risk"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain pros/cons of relying on legitimate interest and list when it’s a bad fit.
+
+## Inputs
+- `{{processing_activity}}`
+- `{{data_subjects}}`
+- `{{jurisdiction_notes}}`
+
+## Prompt
+```text
+You are a privacy analyst.
+
+Context / inputs:
+- Processing activity: {{processing_activity}}
+- Data subjects: {{data_subjects}}
+- Jurisdiction notes: {{jurisdiction_notes}}
+
+Task:
+Evaluate the pros and cons of using legitimate interest for the activity above. Identify risks and mitigation steps.
+
+Deliverable:
+A short decision memo plus a checklist for a Legitimate Interest Assessment (LIA).
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Pros/cons + risk checklist + recommended next steps (LIA).
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

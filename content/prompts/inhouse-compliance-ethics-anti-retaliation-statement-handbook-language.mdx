@@ -1,0 +1,59 @@
+---
+title: "Anti-Retaliation Statement (Handbook Language)"
+description: "Draft a short anti-retaliation statement suitable for an employee handbook."
+use_case: "Compliance & Ethics"
+inputs:
+  - "reporting_channels"
+  - "tone"
+  - "jurisdiction_notes_optional"
+steps:
+  - "Set reporting channels and tone"
+  - "Generate statement"
+output_format: "Short statement + optional longer version."
+tags:
+  - "compliance"
+  - "anti-retaliation"
+  - "policy-draft"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a short anti-retaliation statement suitable for an employee handbook.
+
+## Inputs
+- `{{reporting_channels}}`
+- `{{tone}}`
+- `{{jurisdiction_notes_optional}}`
+
+## Prompt
+```text
+You are a policy drafter.
+
+Context / inputs:
+- Reporting channels: {{reporting_channels}}
+- Tone: {{tone}}
+- Jurisdiction notes (optional): {{jurisdiction_notes_optional}}
+
+Task:
+Write a clear anti-retaliation statement that encourages reporting and explains consequences for retaliation.
+
+Deliverable:
+A short handbook-ready statement and an expanded version.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Short statement + optional longer version.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

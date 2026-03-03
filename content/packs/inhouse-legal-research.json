@@ -1,0 +1,24 @@
+{
+  "slug": "inhouse-legal-research",
+  "title": "In-House Starters: Legal Research",
+  "description": "Research prompt templates for quick briefs, comparisons, and compliance checklists.",
+  "prompt_slugs": [
+    "inhouse-legal-research-compare-two-laws-jurisdiction-specific-differences",
+    "inhouse-legal-research-compliance-requirements-under-a-law-high-level-checklist",
+    "inhouse-legal-research-contract-type-requirements-jurisdiction-checklist",
+    "inhouse-legal-research-enforcement-mechanisms-summary-law-jurisdiction",
+    "inhouse-legal-research-injunctive-relief-standards-overview-jurisdiction",
+    "inhouse-legal-research-legal-research-brief-concise-cited",
+    "inhouse-legal-research-maintain-compliance-steps-regulation-playbook-outline",
+    "inhouse-legal-research-mandatory-disclosures-checklist-business-type-law",
+    "inhouse-legal-research-regulatory-framework-overview-industry-jurisdiction",
+    "inhouse-legal-research-standard-of-care-overview-industry-jurisdiction"
+  ],
+  "audience": "legal",
+  "workflow_stage": "research",
+  "seo": {
+    "title": "In-House Starters: Legal Research",
+    "description": "Research prompt templates for quick briefs, comparisons, and compliance checklists."
+  },
+  "last_updated": "2026-03-03"
+}

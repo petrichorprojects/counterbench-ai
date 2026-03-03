@@ -1,0 +1,61 @@
+---
+title: "Escalation Protocol (Suspected Policy or Legal Violation)"
+description: "Draft a one-page escalation protocol for when business teams suspect a violation."
+use_case: "Compliance & Ethics"
+inputs:
+  - "reporting_channels"
+  - "response_sla"
+  - "examples"
+steps:
+  - "List channels and SLA"
+  - "Add examples"
+  - "Generate protocol"
+output_format: "Protocol with steps, owners, and what evidence to capture."
+tags:
+  - "compliance"
+  - "escalation"
+  - "policy"
+  - "operations"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a one-page escalation protocol for when business teams suspect a violation.
+
+## Inputs
+- `{{reporting_channels}}`
+- `{{response_sla}}`
+- `{{examples}}`
+
+## Prompt
+```text
+You are a compliance operations writer.
+
+Context / inputs:
+- Reporting channels: {{reporting_channels}}
+- Response SLA: {{response_sla}}
+- Examples: {{examples}}
+
+Task:
+Create a simple escalation protocol: what to do, what not to do, who to notify, and what details to include to speed investigation.
+
+Deliverable:
+A one-page protocol that can be pasted into the handbook.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Protocol with steps, owners, and what evidence to capture.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

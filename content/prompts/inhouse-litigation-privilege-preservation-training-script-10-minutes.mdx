@@ -1,0 +1,58 @@
+---
+title: "Privilege Preservation Training Script (10 Minutes)"
+description: "Write a short training script to help employees preserve attorney-client privilege in writing."
+use_case: "Litigation & Disputes"
+inputs:
+  - "company_context"
+  - "common_mistakes"
+steps:
+  - "Describe context"
+  - "List common mistakes"
+  - "Generate training script"
+output_format: "10-minute script + 5 scenario Q&As."
+tags:
+  - "litigation"
+  - "privilege"
+  - "training"
+  - "internal-comms"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Write a short training script to help employees preserve attorney-client privilege in writing.
+
+## Inputs
+- `{{company_context}}`
+- `{{common_mistakes}}`
+
+## Prompt
+```text
+You are a litigation training writer.
+
+Context / inputs:
+- Company context: {{company_context}}
+- Common mistakes: {{common_mistakes}}
+
+Task:
+Write a short training script on attorney-client privilege basics, how to label/route communications, and what not to do in Slack/email.
+
+Deliverable:
+A 10-minute script plus scenarios employees can recognize.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+10-minute script + 5 scenario Q&As.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+

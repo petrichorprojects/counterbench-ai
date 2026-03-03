@@ -1,0 +1,57 @@
+---
+title: "No-Shop Clause Explained (Acquisitions)"
+description: "Explain what a no-shop clause is and how it protects parties in an acquisition."
+use_case: "M&A and Strategic Transactions"
+inputs:
+  - "deal_context"
+  - "audience"
+steps:
+  - "Provide deal context and audience"
+  - "Generate explanation + examples"
+output_format: "Plain-English explanation + pros/cons + when to use a go-shop carveout."
+tags:
+  - "m&a"
+  - "education"
+  - "no-shop"
+  - "term-sheet"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Explain what a no-shop clause is and how it protects parties in an acquisition.
+
+## Inputs
+- `{{deal_context}}`
+- `{{audience}}`
+
+## Prompt
+```text
+You are an M&A explainer.
+
+Context / inputs:
+- Deal context: {{deal_context}}
+- Audience: {{audience}}
+
+Task:
+Explain no-shop clauses in plain English, including typical carve-outs (fiduciary out, unsolicited superior proposals) and why sellers/buyers care.
+
+Deliverable:
+A short explainer plus a checklist of negotiation levers.
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions.
+- Use plain English. Avoid legal jargon when a business reader would misunderstand it.
+- Do not give legal advice. Provide drafting and risk-spotting support only.
+```
+
+## Output format
+Plain-English explanation + pros/cons + when to use a go-shop carveout.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- When reviewing a document, quote the exact clause text you rely on.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+
