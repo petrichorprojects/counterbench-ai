@@ -1,0 +1,12 @@
+{
+  "slug": "lta-dutch-case-law-extractor-a2eee7",
+  "title": "Dutch Case Law Extractor",
+  "url": "https://github.com/maastrichtlawtech/extraction_libraries/tree/main/rechtspraak/rechtspraak_extractor",
+  "type": "toolkit",
+  "tags": [
+    "Legal Text Analytics",
+    "Libraries"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Libraries."
+}

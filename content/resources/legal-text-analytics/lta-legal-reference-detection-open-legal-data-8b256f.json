@@ -1,0 +1,12 @@
+{
+  "slug": "lta-legal-reference-detection-open-legal-data-8b256f",
+  "title": "Legal Reference Detection - Open Legal Data",
+  "url": "https://github.com/openlegaldata/legal-reference-extraction",
+  "type": "toolkit",
+  "tags": [
+    "Legal Text Analytics",
+    "Libraries"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Libraries."
+}

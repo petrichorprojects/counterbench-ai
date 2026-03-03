@@ -1,0 +1,12 @@
+{
+  "slug": "lta-swiss-criticality-prediction-121e33",
+  "title": "Swiss Criticality Prediction",
+  "url": "https://huggingface.co/datasets/rcds/swiss_criticality_prediction",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Datasets"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Datasets and Data."
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "lta-us-caselaw-sentence-boundary-detection-dataset-e7d654",
+  "title": "US Caselaw Sentence Boundary Detection Dataset",
+  "url": "https://github.com/jsavelka/sbd_adjudicatory_dec.git",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Datasets"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Datasets and Data."
+}

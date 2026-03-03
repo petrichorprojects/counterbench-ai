@@ -1,0 +1,12 @@
+{
+  "slug": "lta-flair-sota-nlp-incl-biomedical-and-legal-data-10860f",
+  "title": "Flair - SOTA NLP (incl. biomedical and legal data)",
+  "url": "https://github.com/flairNLP/flair",
+  "type": "toolkit",
+  "tags": [
+    "Legal Text Analytics",
+    "Libraries"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Libraries."
+}

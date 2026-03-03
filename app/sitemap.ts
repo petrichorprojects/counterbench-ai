@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: absoluteUrl("/insights"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: absoluteUrl("/resources"), lastModified: now, changeFrequency: "weekly", priority: 0.65 },
+    { url: absoluteUrl("/resources/attribution"), lastModified: now, changeFrequency: "monthly", priority: 0.2 },
     { url: absoluteUrl("/advisory"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/diagnostic"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/newsletter"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },

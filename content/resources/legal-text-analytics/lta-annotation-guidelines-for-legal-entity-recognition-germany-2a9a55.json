@@ -1,0 +1,12 @@
+{
+  "slug": "lta-annotation-guidelines-for-legal-entity-recognition-germany-2a9a55",
+  "title": "Annotation guidelines for Legal Entity Recognition (Germany)",
+  "url": "https://github.com/elenanereiss/Legal-Entity-Recognition/blob/master/docs/Annotationsrichtlinien.pdf",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Annotation schemes"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Annotation and Data Schemes."
+}

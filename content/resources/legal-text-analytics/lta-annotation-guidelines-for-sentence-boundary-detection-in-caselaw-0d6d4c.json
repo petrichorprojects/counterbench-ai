@@ -1,0 +1,12 @@
+{
+  "slug": "lta-annotation-guidelines-for-sentence-boundary-detection-in-caselaw-0d6d4c",
+  "title": "Annotation Guidelines for Sentence Boundary Detection in Caselaw (US)",
+  "url": "https://github.com/jsavelka/sbd_adjudicatory_dec/blob/master/LLT_sentence_annotation_protocol.md",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Annotation schemes"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Annotation and Data Schemes."
+}

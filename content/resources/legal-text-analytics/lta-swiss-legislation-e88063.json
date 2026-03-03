@@ -1,0 +1,12 @@
+{
+  "slug": "lta-swiss-legislation-e88063",
+  "title": "Swiss Legislation",
+  "url": "https://huggingface.co/datasets/rcds/swiss_legislation",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Datasets"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Datasets and Data."
+}

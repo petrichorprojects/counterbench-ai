@@ -1,0 +1,12 @@
+{
+  "slug": "lta-german-dataset-for-legal-information-retrieval-gerdalir-d94831",
+  "title": "German Dataset for Legal Information Retrieval (GerDaLIR)",
+  "url": "https://github.com/lavis-nlp/GerDaLIR",
+  "type": "research",
+  "tags": [
+    "Legal Text Analytics",
+    "Datasets"
+  ],
+  "last_checked": "2026-03-03",
+  "description": "Referenced in Liquid Legal Institute’s “Legal Text Analytics” list. Category: Datasets and Data."
+}

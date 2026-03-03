@@ -30,10 +30,34 @@ export type Resource = z.infer<typeof ResourceSchema>;
 
 function readDirSafe(dirPath: string): string[] {
   if (!fs.existsSync(dirPath)) return [];
-  return fs
-    .readdirSync(dirPath)
-    .filter((f) => !f.startsWith("."))
-    .sort((a, b) => a.localeCompare(b));
+  return fs.readdirSync(dirPath).filter((f) => !f.startsWith("."));
+}
+
+function walkJsonFiles(rootDir: string): string[] {
+  const out: string[] = [];
+
+  const stack: string[] = [rootDir];
+  while (stack.length > 0) {
+    const dir = stack.pop();
+    if (!dir) break;
+    for (const entry of readDirSafe(dir)) {
+      const full = path.join(dir, entry);
+      let st: fs.Stats;
+      try {
+        st = fs.statSync(full);
+      } catch {
+        continue;
+      }
+      if (st.isDirectory()) {
+        stack.push(full);
+        continue;
+      }
+      if (st.isFile() && entry.endsWith(".json")) out.push(full);
+    }
+  }
+
+  out.sort((a, b) => a.localeCompare(b));
+  return out;
 }
 
 function readJsonFile<T>(filePath: string, parser: (value: unknown) => T): T {
@@ -44,8 +68,7 @@ function readJsonFile<T>(filePath: string, parser: (value: unknown) => T): T {
 
 export function getAllResources(): Resource[] {
   const dir = overlayDir("resources");
-  return readDirSafe(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((filename) => readJsonFile(path.join(dir, filename), (v) => ResourceSchema.parse(v)));
+  return walkJsonFiles(dir)
+    .map((filePath) => readJsonFile(filePath, (v) => ResourceSchema.parse(v)))
+    .sort((a, b) => a.title.localeCompare(b.title));
 }
-

@@ -1,4 +1,5 @@
 import { getAllResources } from "@/lib/resources";
+import Link from "next/link";
 
 export const metadata = { title: "Resources" };
 
@@ -76,10 +77,18 @@ export default function ResourcesPage() {
                 No resources yet.
               </div>
               <div className="text-muted" style={{ marginTop: 8 }}>
-                Add JSON files under <code>content/resources</code>.
+                Add JSON files under <code>content/resources</code> (subfolders supported).
               </div>
             </div>
           )}
+
+          <div className="text-muted" style={{ marginTop: 18, fontSize: "0.8125rem" }}>
+            Some entries are imported from third-party curated lists and include required attribution.{" "}
+            <Link href="/resources/attribution" className="text-white" style={{ textDecoration: "underline" }}>
+              View attribution
+            </Link>
+            .
+          </div>
         </div>
       </section>
     </main>
