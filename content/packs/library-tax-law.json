@@ -1,0 +1,31 @@
+{
+  "slug": "library-tax-law",
+  "title": "Library: Tax and Transaction Templates",
+  "description": "Tax-adjacent drafting starters: transaction docs and supporting legal templates.",
+  "prompt_slugs": [
+    "library-tax-law-draft-a-bill-of-sale-starter-template",
+    "library-tax-law-draft-a-bylaws-starter-template",
+    "library-tax-law-draft-a-convertible-note-agreement-starter-template",
+    "library-tax-law-draft-a-donation-agreement-starter-template",
+    "library-tax-law-draft-a-indemnification-agreement-starter-template",
+    "library-tax-law-draft-a-letter-of-demand-starter-template",
+    "library-tax-law-draft-a-management-agreement-starter-template",
+    "library-tax-law-draft-a-option-agreement-starter-template",
+    "library-tax-law-draft-a-personal-guarantee-starter-template",
+    "library-tax-law-draft-a-professional-services-agreement-starter-template",
+    "library-tax-law-draft-a-property-purchase-agreement-starter-template",
+    "library-tax-law-draft-a-quitclaim-deed-starter-template",
+    "library-tax-law-draft-a-real-estate-purchase-contract-starter-template",
+    "library-tax-law-draft-a-software-license-agreement-starter-template",
+    "library-tax-law-draft-a-sublease-agreement-starter-template",
+    "library-tax-law-draft-a-terms-of-service-starter-template",
+    "library-tax-law-draft-a-work-for-hire-agreement-starter-template"
+  ],
+  "audience": "legal",
+  "workflow_stage": "draft",
+  "seo": {
+    "title": "Library: Tax and Transaction Templates",
+    "description": "Tax-adjacent drafting starters: transaction docs and supporting legal templates."
+  },
+  "last_updated": "2026-03-03"
+}

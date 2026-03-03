@@ -79,6 +79,10 @@ function rerankScore(args: {
   const isTool = doc.type === "tool";
   const isSkill = doc.type === "skill";
 
+  // Hard preference for drafting-oriented motion queries: keep a general outline starter on top.
+  // This prevents overly-specific "motion to X" templates from crowding out the reusable outline.
+  if (args.looksLikeMotionSubtype && isPrompt && doc.slug === "motion-outline-starter") s *= 3.25;
+
   // Intent-based boosts.
   const titleLooksDrafty = /\b(starter|outline|template|draft)\b/.test(title);
   const titleLooksAssessy = /\b(assess|viability|strengths? and weaknesses?|analysis)\b/.test(title);
@@ -165,12 +169,20 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
   async function ensureIndexLoaded() {
     if (indexRef.current) return;
     try {
-      const res = await fetch("/search-index.json", { cache: "force-cache" });
-      if (!res.ok) {
+      // Local dev + e2e can race the static file server at startup. Do a couple quick retries.
+      let data: SearchIndexFile | null = null;
+      for (let attempt = 0; attempt < 3; attempt += 1) {
+        const res = await fetch("/search-index.json", { cache: "no-store" });
+        if (res.ok) {
+          data = (await res.json()) as SearchIndexFile;
+          break;
+        }
+        await new Promise((r) => window.setTimeout(r, 180 + attempt * 220));
+      }
+      if (!data) {
         setReady(true);
         return;
       }
-      const data = (await res.json()) as SearchIndexFile;
       const docsById = new Map(data.docs.map((d) => [d.id, d]));
       const { default: MiniSearch } = await import("minisearch");
       // MiniSearch.loadJSON expects a JSON string; our file stores the parsed object.
@@ -241,6 +253,19 @@ export function HomeSuggest(props: { align?: "left" | "center"; variant?: "hero"
         mapped.push({ doc, score });
       }
       mapped.sort((a, b) => b.score - a.score);
+
+      // For "motion to X" queries, keep the reusable outline starter on top unless the user explicitly wants viability analysis.
+      if (looksLikeMotionSubtype && !hasAssessIntent) {
+        const preferredId = "prompt:motion-outline-starter";
+        const prefIdx = mapped.findIndex((m) => m.doc.id === preferredId);
+        if (prefIdx >= 0) {
+          const [picked] = mapped.splice(prefIdx, 1);
+          if (picked) mapped.unshift({ doc: picked.doc, score: picked.score * 10 });
+        } else {
+          const preferredDoc = idx.docsById.get(preferredId);
+          if (preferredDoc) mapped.unshift({ doc: preferredDoc, score: (mapped[0]?.score ?? 1) * 10 });
+        }
+      }
 
       // Curate: prioritize tools/prompts/skills, and keep the list short.
       const curated: Array<SearchIndexFile["docs"][number]> = [];
