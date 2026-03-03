@@ -81,7 +81,10 @@ export function SiteHeader() {
       <div className="nav__inner">
         <Link className="nav__logo" href="/" aria-label="Counterbench.AI">
           <span className="nav__logoInner">
-            <span className="nav__mark" aria-hidden="true" />
+            <span className="nav__markWrap" aria-hidden="true">
+              <span className="nav__mark nav__mark--mono" />
+              <span className="nav__mark nav__mark--accent" />
+            </span>
             <span className="nav__word">COUNTERBENCH</span>
             <span className="nav__ai">AI</span>
           </span>

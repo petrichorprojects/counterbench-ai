@@ -7,7 +7,10 @@ export function SiteFooter() {
         <div className="footer__grid">
           <div>
             <div className="footer__brandRow">
-              <span className="footer__mark" aria-hidden="true" />
+              <span className="footer__markWrap" aria-hidden="true">
+                <span className="footer__mark footer__mark--mono" />
+                <span className="footer__mark footer__mark--accent" />
+              </span>
               <div className="footer__brand">COUNTERBENCH</div>
             </div>
             <div className="footer__sub">A directory for legal AI</div>

@@ -18,12 +18,13 @@ export default function HomePage() {
             <h1 className="max-w-900 homeHero__title" style={{ marginLeft: "auto", marginRight: "auto" }}>
               The right AI tool for your legal task — <em>in seconds</em>.
             </h1>
-            <p className="max-w-800 mt-3 homeHero__subhead" style={{ marginLeft: "auto", marginRight: "auto" }}>
-              Legal teams that use AI to win don&apos;t browse five platforms — they match.
-            </p>
           </div>
 
           <HomeSuggest align="center" variant="hero" />
+
+          <p className="max-w-800 mt-3 homeHero__subhead" style={{ marginLeft: "auto", marginRight: "auto", textAlign: "center" }}>
+            Legal teams that use AI to win don&apos;t browse five platforms — they match.
+          </p>
 
           <div
             className="grid grid--3 grid--gap-2 mt-4"
