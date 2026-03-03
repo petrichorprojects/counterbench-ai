@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HomeSuggest } from "@/components/HomeSuggest";
+import { HeroSection } from "@/components/HeroSection";
 
 export default function HomePage() {
   return (
@@ -58,29 +59,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt section--border-t" id="shift">
-        <div className="container">
-          <div className="grid grid--2 grid--gap-3">
-            <div>
-              <div className="label">Designed for scanning</div>
-              <h2 className="max-w-600">Fast, legible, and built for real work.</h2>
-            </div>
-            <div>
-              <p className="lead max-w-600">
-                Minimal JavaScript. Accessible keyboard navigation. Filters that intersect cleanly. Static generation wherever possible.
-              </p>
-              <p className="mt-4 max-w-600">
-                Counterbench.AI keeps running costs low: content in Git, a prebuilt search index, and no database required.
-              </p>
-              <div className="mt-5">
-                <Link className="btn btn--secondary btn--arrow" href="/advisory">
-                  Talk to Advisory
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
     </main>
   );
 }
