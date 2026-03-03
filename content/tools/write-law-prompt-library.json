@@ -1,0 +1,32 @@
+{
+  "slug": "write-law-prompt-library",
+  "name": "Write.law Prompt Library",
+  "description": "A prompt library for legal writing and drafting, with research-based prompts designed to help legal teams draft faster and more accurately.",
+  "categories": [
+    "Legal drafting",
+    "Legal writing"
+  ],
+  "tags": [
+    "Prompt library",
+    "Prompts",
+    "Templates",
+    "Legal writing"
+  ],
+  "pricing": "unknown",
+  "platform": [
+    "web"
+  ],
+  "url": "https://write.law/ailibrary",
+  "affiliate_url": null,
+  "logo": null,
+  "featured": false,
+  "last_verified": null,
+  "status": "active",
+  "change_log": [
+    {
+      "date": "2026-03-03",
+      "note": "Added to Counterbench.AI catalog"
+    }
+  ]
+}
+
