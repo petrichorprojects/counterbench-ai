@@ -7,7 +7,7 @@ type DocType = "tool" | "prompt" | "skill" | "playbook";
 
 interface SearchIndexFile {
   index: unknown;
-  docs: Array<{ id: string; type: DocType; slug: string; title: string; description: string }>;
+  docs: Array<{ id: string; type: DocType | "agent"; slug: string; title: string; description: string; platform?: string[] }>;
 }
 
 type MiniSearchType = {
@@ -22,6 +22,7 @@ export function GlobalSearch() {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const indexRef = useRef<{ mini: MiniSearchType; docsById: Map<string, SearchIndexFile["docs"][number]> } | null>(null);
+  const indexLoadingRef = useRef<Promise<void> | null>(null);
 
   const placeholder = useMemo(() => "Search tools, playbooks, prompts, skills…", []);
 
@@ -38,6 +39,11 @@ export function GlobalSearch() {
 
   async function ensureIndexLoaded() {
     if (indexRef.current) return;
+    if (indexLoadingRef.current) {
+      await indexLoadingRef.current;
+      return;
+    }
+    indexLoadingRef.current = (async () => {
     try {
       const res = await fetch("/search-index.json", { cache: "force-cache" });
       if (!res.ok) {
@@ -60,10 +66,14 @@ export function GlobalSearch() {
       setReady(true);
       indexRef.current = null;
     }
+    })().finally(() => {
+      indexLoadingRef.current = null;
+    });
+    await indexLoadingRef.current;
   }
 
   function routeFor(doc: SearchIndexFile["docs"][number]) {
-    if (doc.type === "tool") return `/tools/${doc.slug}`;
+    if (doc.type === "tool" || doc.type === "agent") return `/tools/${doc.slug}`;
     if (doc.type === "playbook") return `/playbooks/${doc.slug}`;
     if (doc.type === "prompt") return `/prompts/${doc.slug}`;
     return `/skills/${doc.slug}`;
@@ -86,8 +96,11 @@ export function GlobalSearch() {
       if (doc) mapped.push(doc);
     }
     setResults(mapped);
-    setActiveIndex(mapped.length ? 0 : -1);
+    // Default: Enter should "run a search" (go to /search). Use arrows/mouse to select a hit.
+    setActiveIndex(-1);
   }
+
+  const showAllHref = q.trim() ? `/search?q=${encodeURIComponent(q.trim())}` : "/search";
 
   return (
     <div data-global-search-root style={{ position: "relative" }}>
@@ -108,7 +121,7 @@ export function GlobalSearch() {
           }
           if (e.key === "ArrowDown") {
             e.preventDefault();
-            setActiveIndex((i) => Math.min(i + 1, results.length - 1));
+            setActiveIndex((i) => (i < 0 ? 0 : Math.min(i + 1, results.length - 1)));
             return;
           }
           if (e.key === "ArrowUp") {
@@ -116,9 +129,10 @@ export function GlobalSearch() {
             setActiveIndex((i) => Math.max(i - 1, 0));
             return;
           }
-          if (e.key === "Enter" && activeIndex >= 0 && results[activeIndex]) {
-            const doc = results[activeIndex];
-            window.location.href = routeFor(doc);
+          if (e.key === "Enter") {
+            e.preventDefault();
+            if (activeIndex >= 0 && results[activeIndex]) window.location.href = routeFor(results[activeIndex]);
+            else if (q.trim()) window.location.href = showAllHref;
           }
         }}
         placeholder={placeholder}
@@ -183,6 +197,29 @@ export function GlobalSearch() {
               </Link>
             );
           })}
+
+          {ready && q.trim() && (
+            <Link
+              href={showAllHref}
+              role="option"
+              aria-selected={false}
+              onClick={() => setOpen(false)}
+              style={{
+                display: "block",
+                padding: "10px 10px",
+                borderRadius: 10,
+                marginTop: 6,
+                borderTop: "1px solid var(--border)"
+              }}
+            >
+              <div className="text-white" style={{ fontSize: "0.9375rem", fontWeight: 600 }}>
+                Search all results
+              </div>
+              <div className="text-muted" style={{ fontSize: "0.8125rem", marginTop: 4 }}>
+                View tabs and filters for “{q.trim()}”
+              </div>
+            </Link>
+          )}
         </div>
       )}
     </div>

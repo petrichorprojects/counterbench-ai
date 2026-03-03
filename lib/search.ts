@@ -2,14 +2,14 @@ import fs from "node:fs";
 import path from "node:path";
 import MiniSearch from "minisearch";
 
-type DocType = "tool" | "prompt" | "skill" | "playbook";
+type DocType = "tool" | "agent" | "prompt" | "skill" | "playbook";
 
 interface SearchIndexFile {
   version: number;
   built_at_iso: string;
   doc_count: number;
   index: unknown;
-  docs: Array<{ id: string; type: DocType; slug: string; title: string; description: string }>;
+  docs: Array<{ id: string; type: DocType; slug: string; title: string; description: string; platform?: string[] }>;
 }
 
 let cached: { mini: MiniSearch; docsById: Map<string, SearchIndexFile["docs"][number]> } | null = null;

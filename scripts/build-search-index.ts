@@ -3,7 +3,7 @@ import path from "node:path";
 import MiniSearch from "minisearch";
 import { getAllPlaybooks, getAllPrompts, getAllSkills, getAllTools } from "../lib/content";
 
-type DocType = "tool" | "prompt" | "skill" | "playbook";
+type DocType = "tool" | "agent" | "prompt" | "skill" | "playbook";
 
 interface SearchDoc {
   id: string;
@@ -13,6 +13,7 @@ interface SearchDoc {
   description: string;
   tags: string[];
   categories?: string[];
+  platform?: string[];
 }
 
 function ensureDir(dirPath: string) {
@@ -32,15 +33,29 @@ async function main() {
 
   const docs: SearchDoc[] = [];
 
+  function isAgentLikeTool(args: { slug: string; name: string; description: string; tags: string[]; categories: string[] }) {
+    const hay = `${args.slug} ${args.name} ${args.description} ${(args.tags ?? []).join(" ")} ${(args.categories ?? []).join(" ")}`.toLowerCase();
+    // Broad but intentional: we want an "Agents" scope even if the underlying record is a Tool.
+    return /\bagents?\b/.test(hay) || /\bvoice agents?\b/.test(hay) || /\bagentic\b/.test(hay);
+  }
+
   for (const t of tools) {
+    const agent = isAgentLikeTool({
+      slug: t.slug,
+      name: t.name,
+      description: t.description,
+      tags: t.tags,
+      categories: t.categories
+    });
     docs.push({
       id: `tool:${t.slug}`,
-      type: "tool",
+      type: agent ? "agent" : "tool",
       slug: t.slug,
       title: t.name,
       description: t.description,
       tags: [...t.tags, ...t.platform],
-      categories: t.categories
+      categories: t.categories,
+      platform: t.platform
     });
   }
   for (const p of playbooks) {
@@ -76,7 +91,7 @@ async function main() {
 
   const mini = new MiniSearch<SearchDoc>({
     fields: ["title", "description", "tags", "categories"],
-    storeFields: ["id", "type", "slug", "title", "description"],
+    storeFields: ["id", "type", "slug", "title", "description", "platform"],
     searchOptions: {
       boost: { title: 4, tags: 2, categories: 2, description: 1 },
       fuzzy: 0.2,
@@ -90,7 +105,14 @@ async function main() {
     built_at_iso: new Date().toISOString(),
     doc_count: docs.length,
     index: mini.toJSON(),
-    docs: docs.map((d) => ({ id: d.id, type: d.type, slug: d.slug, title: d.title, description: d.description }))
+    docs: docs.map((d) => ({
+      id: d.id,
+      type: d.type,
+      slug: d.slug,
+      title: d.title,
+      description: d.description,
+      platform: d.platform
+    }))
   };
 
   const outPath = path.join(process.cwd(), "public", "search-index.json");

@@ -44,9 +44,9 @@ test.describe("Counterbench smoke", () => {
     const firstResult = page.getByRole("option").first();
     await expect(firstResult).toBeVisible();
 
-    // Enter navigates to the active result.
+    // Enter runs a full search (workspace).
     await input.press("Enter");
-    await expect(page).toHaveURL(/\/(tools|playbooks|prompts|skills)\//);
+    await expect(page).toHaveURL(/\/search\?q=contract/);
   });
 
   test("Tools directory: loads, has descriptions, no placeholder text, compare flow works", async ({ page }) => {
