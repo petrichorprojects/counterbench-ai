@@ -6,7 +6,10 @@ export function SiteFooter() {
       <div className="container">
         <div className="footer__grid">
           <div>
-            <div className="footer__brand">COUNTERBENCH</div>
+            <div className="footer__brandRow">
+              <span className="footer__mark" aria-hidden="true" />
+              <div className="footer__brand">COUNTERBENCH</div>
+            </div>
             <div className="footer__sub">A directory for legal AI</div>
             <p style={{ fontSize: "0.8125rem", color: "var(--muted)", marginTop: "1rem", maxWidth: 360 }}>
               Curated tools, prompts, and skills for paralegals, solo attorneys, and legal research teams.

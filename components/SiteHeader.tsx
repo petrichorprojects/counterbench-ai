@@ -79,8 +79,12 @@ export function SiteHeader() {
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`} aria-label="Main navigation">
       <div className="nav__inner">
-        <Link className="nav__logo" href="/">
-          COUNTERBENCH<span>AI</span>
+        <Link className="nav__logo" href="/" aria-label="Counterbench.AI">
+          <span className="nav__logoInner">
+            <span className="nav__mark" aria-hidden="true" />
+            <span className="nav__word">COUNTERBENCH</span>
+            <span className="nav__ai">AI</span>
+          </span>
         </Link>
 
         <div style={{ flex: 1, maxWidth: 520, margin: "0 1.25rem", display: "none" }} className="cb-search-desktop">

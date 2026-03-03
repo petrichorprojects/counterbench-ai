@@ -343,12 +343,29 @@ p:last-child { margin-bottom: 0; }
   text-transform: uppercase;
   text-decoration: none;
 }
-.nav__logo span {
+.nav__logoInner{ display: inline-flex; align-items: center; gap: 10px; }
+.nav__mark{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background-color: currentColor;
+  /* Use the PNG as a mask so it inherits light/dark ink automatically via currentColor */
+  -webkit-mask-image: url('/logos/counterbench-mark-mono.png');
+  mask-image: url('/logos/counterbench-mark-mono.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.nav__word{ line-height: 1; }
+.nav__logo .nav__ai {
   font-family: var(--sans);
   font-size: 0.75rem;
   letter-spacing: 0;
   color: var(--muted);
-  margin-left: 10px;
+  margin-left: 0;
   text-transform: none;
 }
 .nav__links { display: flex; align-items: center; gap: 0.85rem; }
@@ -460,6 +477,21 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
 /* --- FOOTER --- */
 .footer { padding: 3rem 0 2.25rem; border-top: 1px solid var(--border); }
 .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+.footer__brandRow{ display: flex; align-items: center; gap: 12px; }
+.footer__mark{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  background-color: var(--white);
+  -webkit-mask-image: url('/logos/counterbench-mark-mono.png');
+  mask-image: url('/logos/counterbench-mark-mono.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
 .footer__brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--white); }
 .footer__sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
 .footer__heading { font-size: 0.625rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; font-family: var(--sans); }
