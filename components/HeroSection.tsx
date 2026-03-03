@@ -12,7 +12,7 @@ export function HeroSection() {
             <h2 id="cb-piHero-title" className="cb-piHero__title">
               Find the defense strategy
               <br />
-              before they file it.
+              before they <span className="cb-nowrap">file it.</span>
             </h2>
             <p className="cb-piHero__body">
               Counterbench reveals how insurers, defense firms, and expert witnesses behave in real litigation.
@@ -21,15 +21,34 @@ export function HeroSection() {
             <div className="cb-piHero__ctaRow">
               <PrimaryButton href="/search">Search Litigation Intelligence →</PrimaryButton>
             </div>
+            <p className="cb-piHero__trust" aria-label="Trust statement">
+              Built for litigation workflows. Evidence-first results. Fast enough to use between calls.
+            </p>
           </div>
 
           <div className="cb-piHero__right" aria-label="Feature proof">
             <FeatureGrid
               features={[
-                { title: "INSURER INTELLIGENCE", description: "Track how specific insurance carriers defend injury claims." },
-                { title: "EXPERT HISTORY", description: "Review expert witness testimony across prior cases." },
-                { title: "DEFENSE PATTERNS", description: "See which arguments defense firms rely on most." },
-                { title: "CASE RESEARCH", description: "Search litigation records in seconds." }
+                {
+                  title: "INSURER INTELLIGENCE",
+                  description: "Track how specific insurance carriers defend injury claims.",
+                  meta: "Signals: recurring defenses, settlement posture, delay patterns."
+                },
+                {
+                  title: "EXPERT HISTORY",
+                  description: "Review expert witness testimony across prior cases.",
+                  meta: "Signals: prior themes, impeachment flags, credibility notes."
+                },
+                {
+                  title: "DEFENSE PATTERNS",
+                  description: "See which arguments defense firms rely on most.",
+                  meta: "Signals: motion language, causation angles, damages attacks."
+                },
+                {
+                  title: "CASE RESEARCH",
+                  description: "Search litigation records in seconds.",
+                  meta: "Find: similar fact patterns, motions, experts, outcomes."
+                }
               ]}
             />
           </div>
@@ -47,4 +66,3 @@ export function HeroSection() {
     </section>
   );
 }
-
