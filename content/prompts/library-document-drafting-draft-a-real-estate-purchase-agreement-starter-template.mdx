@@ -1,0 +1,89 @@
+---
+title: "Draft a Real Estate Purchase Agreement (Starter Template)"
+description: "Draft a Real Estate Purchase Agreement with a clear structure, questions-to-ask first, and a pitfalls checklist."
+use_case: "Document Drafting"
+inputs:
+  - "jurisdiction"
+  - "parties"
+  - "facts_and_context"
+  - "business_goal"
+  - "must_have_terms"
+  - "constraints_or_red_lines"
+steps:
+  - "Fill in the inputs"
+  - "Answer clarifying questions"
+  - "Review the draft for missing business terms"
+  - "Verify jurisdiction-specific requirements"
+output_format: "Sections: Questions; Summary; Draft; Negotiation notes; Pitfalls; Attachments checklist."
+tags:
+  - "drafting"
+  - "agreement"
+  - "ChatGPT Prompts for Drafting Legal Documents"
+  - "starter template"
+  - "business"
+  - "contracts"
+  - "ChatGPT Prompts for Business Lawyers / Document Drafting in Business Law"
+last_updated: "2026-03-03"
+---
+
+## When to use
+Draft a Real Estate Purchase Agreement with a clear structure, questions-to-ask first, and a pitfalls checklist.
+
+## Inputs
+- `{{jurisdiction}}`
+- `{{parties}}`
+- `{{facts_and_context}}`
+- `{{business_goal}}`
+- `{{must_have_terms}}`
+- `{{constraints_or_red_lines}}`
+
+## Prompt
+```text
+You are a careful legal drafting assistant for a busy legal team.
+
+Context / inputs:
+- Document: Real Estate Purchase Agreement
+- Jurisdiction: {{jurisdiction}}
+- Parties: {{parties}}
+- Facts/context: {{facts_and_context}}
+- Business goal: {{business_goal}}
+- Must-have terms: {{must_have_terms}}
+- Constraints / red lines: {{constraints_or_red_lines}}
+- Include: parties; purpose; definitions; term/termination; payment/fees (if applicable); confidentiality; IP; liability/indemnity; dispute resolution; assignment; notices; signature blocks.
+
+Task:
+Draft a Real Estate Purchase Agreement tailored to the provided context.
+Scenario hints: residential property.
+
+Before drafting, ask up to 8 clarifying questions if any key inputs are missing (jurisdiction, parties, timing, money, data, IP, termination, confidentiality).
+
+Then draft the document and include a short 'pitfalls / mistakes to avoid' section relevant to this document type.
+
+Deliverable:
+Return in this order:
+1) Clarifying questions (if needed, otherwise write: 'No questions.')
+2) One-paragraph plain-English summary of what the document does
+3) Draft document text (agreement)
+4) Key choices and negotiation notes (bullets)
+5) Pitfalls / mistakes to avoid (bullets)
+6) Checklist of attachments/exhibits (if applicable)
+
+Guardrails:
+- If you are unsure, ask targeted clarifying questions before you draft.
+- Do not provide legal advice. Provide drafting, risk-spotting, and research support only.
+- Be explicit about what is fact vs. assumption vs. recommendation.
+- If jurisdiction-specific law is required, label it 'Verify in jurisdiction' and provide a verification plan instead of guessing.
+- Use placeholders like [Company], [Counterparty], [Effective Date] where needed.
+```
+
+## Output format
+Sections: Questions; Summary; Draft; Negotiation notes; Pitfalls; Attachments checklist.
+
+## Quality checks
+- Do not invent facts. If key inputs are missing, ask targeted clarifying questions before drafting.
+- Mark assumptions explicitly and separate: facts vs. analysis vs. recommendations.
+- If you mention jurisdiction-specific rules, label them as 'Verify in jurisdiction' unless the user provided exact citations.
+
+## Confidentiality
+Do not paste privileged, confidential, or regulated data into third-party tools unless your policy permits it.
+
