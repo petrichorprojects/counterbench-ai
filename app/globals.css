@@ -171,6 +171,10 @@ html[data-theme="light"] .cb-homeSuggestShell{
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
+/* Light theme: make the overline label slightly darker for legibility. */
+html[data-theme="light"] .cb-homeSuggestShell .label{
+  color: #8c939e; /* ~10% darker than --muted-2 (#9ca3af) */
+}
 
 /* Homepage suggest: "search engine" bar */
 .cb-suggestBar{
