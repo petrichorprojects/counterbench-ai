@@ -1,0 +1,53 @@
+---
+title: "Medical Records Summary (Template)"
+description: "Summarize treatment records into diagnoses, causation notes, and damages-relevant highlights."
+when_to_use: "When you need a clean treatment narrative for demand, mediation, or expert review."
+inputs:
+  - "Record excerpts or visit summaries"
+  - "Provider list"
+  - "Injury mechanism"
+  - "Prior history (if known)"
+examples:
+  - "Summarize ER + PT progression"
+  - "Flag degenerative findings vs acute injury"
+  - "Extract work restrictions"
+tags:
+  - "Plaintiff"
+  - "Personal injury"
+  - "Damages"
+  - "Medical"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. Identify mechanism of injury + initial complaints.
+2. Build a visit-by-visit table (date, provider, key findings).
+3. Extract diagnoses, imaging results, restrictions, and prognosis.
+4. Flag causation issues and prior-history mentions.
+
+## Copy/Paste Prompt
+
+```text
+You are a plaintiff-side PI paralegal preparing a medical summary.
+
+Inputs:
+- Mechanism of injury: [PASTE]
+- Known prior history: [PASTE/UNKNOWN]
+- Records (excerpts):
+[PASTE]
+
+Output format:
+1) One-paragraph narrative (plain English)
+2) Treatment table: Date | Provider | Dx/Findings | Imaging | Restrictions | Notes
+3) Key diagnoses + support (cite record lines if provided)
+4) Causation flags (degenerative mentions, gaps in care, alternative causes)
+5) Damages-relevant highlights (work restrictions, future care, permanency)
+6) Missing records to request
+
+Be conservative: if the record is unclear, say so.
+```
+
+## Quality Checks
+- Separates facts from interpretation.
+- Flags gaps in treatment and why they matter.
+- Calls out future care recommendations.

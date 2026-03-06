@@ -1,0 +1,64 @@
+---
+title: "PI Intake Triage (Template)"
+description: "A structured way to screen a new personal injury intake and produce next steps, risks, and evidence requests."
+when_to_use: "When a new potential client calls/emails and you need to quickly decide: take it, refer it, or decline."
+inputs:
+  - "Jurisdiction"
+  - "Incident date + location"
+  - "Injury type + treatment summary"
+  - "Liability facts (who/what/how)"
+  - "Insurance info (if known)"
+  - "Prior incidents/claims (if known)"
+examples:
+  - "Triage a slip-and-fall call"
+  - "Screen an auto collision referral"
+  - "Assess time-bar + venue risk early"
+tags:
+  - "Plaintiff"
+  - "Personal injury"
+  - "Intake"
+  - "Triage"
+  - "Litigation"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. Confirm jurisdiction + incident date (SOL first).
+2. Identify liability theory (negligence, premises, product, med mal, etc.).
+3. Capture damages: diagnosis, treatment, work impact, future care.
+4. Map insurance + collect key policy details (limits, UM/UIM, med-pay).
+5. List immediate evidence to preserve (video, photos, reports, witnesses, records).
+6. Output a decision: pursue / refer / decline, with a short rationale.
+
+## Copy/Paste Prompt
+
+```text
+You are a plaintiff-side PI intake paralegal.
+
+Goal: Triage this intake and produce a case-ready next-step plan.
+
+Inputs:
+- Jurisdiction: [STATE/COUNTY]
+- Incident date/time: [DATE]
+- Location: [WHERE]
+- What happened (facts): [PASTE]
+- Injuries + treatment: [PASTE]
+- Work/wage impact: [PASTE]
+- Insurance known: [PASTE]
+
+Output format:
+1) Quick verdict (Pursue / Refer / Decline) + 3-bullet rationale
+2) Statute of limitations: likely deadline + assumptions
+3) Liability: strongest theory + weakest point
+4) Damages: current vs future, missing info list
+5) Evidence to request/preserve now (ordered)
+6) Next 7 days: checklist
+7) Risks + red flags
+
+Be explicit about what is unknown and what to ask next.
+```
+
+## Quality Checks
+- SOL computed and assumptions stated.
+- Evidence list includes time-sensitive items (video, witnesses, scene).
+- Risks are specific (comparative negligence, notice, causation).

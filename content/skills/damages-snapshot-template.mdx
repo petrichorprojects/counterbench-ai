@@ -1,0 +1,58 @@
+---
+title: "Damages Snapshot (Template)"
+description: "A repeatable structure for summarizing economic and non-economic damages with assumptions."
+when_to_use: "When building demand, mediation posture, or internal valuation notes."
+inputs:
+  - "Medical bills to date"
+  - "Lost wages (dates + rate)"
+  - "Future care estimates"
+  - "Pain/ADL impacts"
+  - "Liens (if known)"
+examples:
+  - "Compute wages for 6 weeks off work"
+  - "Draft non-economic damages narrative"
+  - "Prepare lien-aware settlement snapshot"
+tags:
+  - "Damages"
+  - "Personal injury"
+  - "Plaintiff"
+  - "Settlement"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. List medical specials + sources.
+2. Compute wage loss with explicit dates and rate.
+3. Summarize future care items and what supports them.
+4. Draft non-economic narrative tied to facts.
+5. Flag liens/subrogation and unknowns.
+
+## Output Template
+
+```text
+Damages Snapshot
+
+Economic
+- Medical bills to date: $[ ] (Source: [ ])
+- Lost wages: $[ ] (Assumptions: [ ])
+- Out-of-pocket: $[ ]
+- Future care: $[ ] (Support: [ ])
+
+Non-Economic (facts-based)
+- Pain level + duration:
+- ADL limitations:
+- Sleep/household/work impact:
+
+Liens/Subrogation
+- Known liens: [ ]
+- Unknowns to confirm: [ ]
+
+Conservative valuation notes (what drives up/down)
+- Up drivers: …
+- Down drivers: …
+```
+
+## Quality Checks
+- Every number has a source or an assumption.
+- Non-economic narrative references concrete events (missed work, PT sessions, etc.).
+- Lien risks called out.

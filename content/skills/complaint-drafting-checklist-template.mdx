@@ -1,0 +1,51 @@
+---
+title: "Complaint Drafting Checklist (Template)"
+description: "A step-by-step checklist to draft a PI complaint without missing parties, venue facts, or damages allegations."
+when_to_use: "Before drafting or reviewing a draft complaint for a personal injury matter."
+inputs:
+  - "Jurisdiction + venue"
+  - "Parties (plaintiff/defendants)"
+  - "Incident facts + date"
+  - "Injuries + damages overview"
+  - "Causes of action"
+examples:
+  - "Draft an auto negligence complaint"
+  - "Sanity-check venue and parties"
+  - "Catch missing damages categories"
+tags:
+  - "Plaintiff"
+  - "Personal injury"
+  - "Drafting"
+  - "Litigation"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. Confirm correct parties, names, and service addresses.
+2. Confirm venue and jurisdiction allegations.
+3. State facts with dates and location (no fluff).
+4. Plead each cause of action with elements in mind.
+5. Plead damages categories (economic + non-economic) and any special relief.
+6. Attach verifications/notices required by local rules (if any).
+
+## Copy/Paste Prompt
+
+```text
+Act as plaintiff-side litigation drafting support.
+
+Task: Provide a complaint drafting checklist tailored to this case and jurisdiction.
+
+Inputs:
+- Jurisdiction/venue: [ ]
+- Parties: [ ]
+- Incident facts (tight): [PASTE]
+- Causes of action: [LIST]
+- Damages summary: [PASTE]
+
+Output:
+- Checklist grouped by: Parties/Venue, Facts, Causes of action, Damages/Prayer, Attachments/Rule items
+- Include 10–15 common omissions to watch for
+- Provide a final "Ready to file?" yes/no with missing items
+
+Do not invent jurisdiction-specific rules; flag them as [VERIFY LOCAL RULE].
+```

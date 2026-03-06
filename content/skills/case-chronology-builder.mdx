@@ -1,0 +1,69 @@
+---
+title: "Case Chronology Builder (Template)"
+description: "Turns messy facts into a clean timeline with missing-fact flags and exhibit hooks."
+when_to_use: "When prepping a demand, complaint, depo outline, mediation brief, or trial theme."
+inputs:
+  - "Raw facts (emails, notes, police report summary)"
+  - "Medical treatment dates"
+  - "Key communications"
+  - "Document list (if any)"
+examples:
+  - "Build a collision timeline"
+  - "Create treatment chronology for demand"
+  - "Identify missing timeline gaps"
+tags:
+  - "Litigation"
+  - "Plaintiff"
+  - "Case management"
+  - "Damages"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. Extract dated events and normalize date formats.
+2. Group by theme: incident, treatment, communications, litigation.
+3. Mark gaps and conflicts.
+4. Add "exhibit hooks" (what doc proves each event).
+
+## Output Template
+
+```text
+Timeline (most important first)
+
+INCIDENT
+- [DATE] — [EVENT] (Proof: [DOC/WITNESS])
+
+TREATMENT
+- [DATE] — [PROVIDER] — [DX/TX] (Proof: [RECORD])
+
+IMPACT
+- [DATE] — [WORK/WAGE/ADL IMPACT] (Proof: [DOC])
+
+LITIGATION/INSURANCE
+- [DATE] — [CLAIM / DEMAND / RESPONSE] (Proof: [DOC])
+
+Gaps/Questions
+- [ ] …
+Conflicts
+- [ ] …
+```
+
+## Copy/Paste Prompt
+
+```text
+You are a litigation paralegal. Convert the following raw facts into a case chronology.
+
+Rules:
+- Use bullet points with explicit dates. If a date is unknown, write [DATE UNKNOWN].
+- Group into: Incident, Treatment, Impact, Insurance/Litigation.
+- Add "Proof:" for each line (what document or witness would support it).
+- Add a final section: Gaps/Questions + Conflicts.
+
+Raw facts:
+[PASTE]
+```
+
+## Quality Checks
+- No unlabeled assumptions.
+- Every line has Proof.
+- Gaps are actionable (what to request).

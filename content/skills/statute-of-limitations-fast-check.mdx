@@ -1,0 +1,57 @@
+---
+title: "Statute Of Limitations Fast Check (Template)"
+description: "A fast, conservative SOL/notice screening template with a clear assumptions list."
+when_to_use: "When you need a quick time-bar screen before spending time on deeper intake or research."
+inputs:
+  - "Jurisdiction"
+  - "Claim type"
+  - "Incident date"
+  - "Plaintiff DOB (if minor/incapacity issues)"
+  - "Government entity involvement (yes/no)"
+examples:
+  - "Check SOL for auto negligence in NY"
+  - "Spot a municipal notice-of-claim requirement"
+  - "Handle tolling questions for minors"
+tags:
+  - "Litigation"
+  - "Intake"
+  - "Research"
+  - "Plaintiff"
+last_updated: "2026-03-06"
+---
+## Steps
+
+1. Identify claim type and jurisdiction.
+2. List the default SOL window and common tolling flags.
+3. Check whether any pre-suit notice deadlines apply (government defendants).
+4. Produce the earliest plausible deadline (conservative).
+
+## Copy/Paste Prompt
+
+```text
+Act as litigation intake support.
+
+Task: Do a conservative statute-of-limitations + pre-suit notice screening.
+
+Inputs:
+- Jurisdiction: [STATE/COUNTRY]
+- Venue: [COUNTY/CITY if relevant]
+- Claim type: [NEGLIGENCE / MED MAL / PRODUCT / ETC]
+- Incident date: [DATE]
+- Plaintiff age/DOB: [DOB or ADULT]
+- Any government entity involved? [YES/NO + WHO]
+
+Output:
+- Default SOL window(s) for this claim type
+- Earliest likely filing deadline (conservative)
+- Any notice-of-claim or admin exhaustion deadlines to confirm
+- Tolling issues to check (minor, discovery rule, incapacity, fraud, etc.)
+- 5 follow-up questions to confirm the deadline
+
+If you are unsure, say so explicitly and list what authority you would check next.
+```
+
+## Quality Checks
+- Includes a conservative deadline (earliest plausible).
+- Separates SOL vs notice deadlines.
+- Lists the exact missing facts to confirm.
