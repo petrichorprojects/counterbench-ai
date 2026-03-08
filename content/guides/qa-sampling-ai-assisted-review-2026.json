@@ -1,0 +1,192 @@
+{
+  "slug": "qa-sampling-ai-assisted-review-2026",
+  "title": "QA Sampling for AI-Assisted Review (2026): A Defensible Approach + Tool Shortlist",
+  "description": "A simple, repeatable sampling plan for AI-assisted review: bucketed sampling, error taxonomy, stop/adjust thresholds, and logging.",
+  "year": 2026,
+  "direct_answer": "A defensible QA sampling plan is bucketed (by output type), randomized, tied to a simple per-batch rule, and logged with an error taxonomy plus stop/adjust thresholds—otherwise you can’t detect systemic failure modes or explain what you verified.",
+  "tldr": "Sampling is how you make AI-assisted review defensible: define what AI is doing, define error types that matter, sample by output bucket (responsive/non-responsive/privilege/hot) instead of only overall, and use a simple, repeatable rule (fixed number or percent per batch). Randomize the sample, review with a short QA checklist, set “stop/adjust/proceed” thresholds, and log what you checked and what changed. If it isn’t logged, it didn’t happen.",
+  "answer_intents": [
+    "How do I create a sampling plan for AI-assisted review?",
+    "Should I sample by bucket or overall?",
+    "What sample size is practical for a review workflow?",
+    "What errors should trigger escalation?",
+    "What should a QA log include?"
+  ],
+  "how_to_choose": [
+    "Pick tools/workflows that preserve batch context and allow audit logging.",
+    "Require structured outputs you can verify (cite-backs, fields, consistent schemas).",
+    "Treat privilege/confidentiality as high-risk buckets and sample accordingly.",
+    "Prefer workflows that support randomization/sampling and reviewer QA notes.",
+    "Pilot with a bounded dataset and track error patterns, not vibes."
+  ],
+  "implementation_risks": [
+    "Sampling only overall and missing high-risk bucket failures.",
+    "No error taxonomy, so “QA” becomes subjective and inconsistent.",
+    "No stop/adjust thresholds, so systemic errors repeat across batches.",
+    "No logging, so you can’t explain what was checked or what changed.",
+    "Confusing speed with safety (fast outputs without verification)."
+  ],
+  "operator_playbook": [
+    {
+      "title": "8-step sampling plan (minimum viable)",
+      "bullets": [
+        "Step 1: define the AI task in one sentence (what it does and doesn’t do).",
+        "Step 2: define error types that matter (critical/material/minor).",
+        "Step 3: sample by bucket (responsive/non-responsive/privilege/hot/low priority).",
+        "Step 4: use a repeatable rule (fixed count or percent per batch for high-risk buckets).",
+        "Step 5: randomize the sample (avoid cherry-picking).",
+        "Step 6: review with a short QA checklist (text matches, cite-backs, privilege indicators).",
+        "Step 7: apply stop/adjust/proceed thresholds and document changes.",
+        "Step 8: log everything (batch, bucket, sample size, errors, decision, changes)."
+      ]
+    }
+  ],
+  "downloads": [
+    { "label": "Sampling plan + QA log (XLSX)", "url": "/downloads/guides/ai-review-sampling-plan-template.xlsx" },
+    { "label": "QA + decision logs (XLSX)", "url": "/downloads/guides/doc-review-qa-log-template.xlsx" },
+    { "label": "One-page PDF (shareable)", "url": "/downloads/guides/one-pagers/qa-sampling-ai-assisted-review-2026.pdf" }
+  ],
+  "worked_examples": [
+    {
+      "title": "Example: bucketed sampling catches a systemic “role confusion” pattern",
+      "scenario": "A team uses AI for summaries and issue tagging across 3,200 docs. Early results feel fast, but the risk is hidden: errors cluster in the non-responsive and non-privileged buckets, where teams stop paying attention.",
+      "time_box": "30 minutes plan setup + per-batch execution",
+      "inputs": [
+        "Bucket list: responsive, non-responsive, potential privilege, hot, low priority.",
+        "Error taxonomy: critical / material / minor.",
+        "Calibration sampling rule (fixed count per high-risk bucket).",
+        "QA log template with decision (proceed/adjust/escalate) and “what changed.”"
+      ],
+      "process": [
+        "Sample each bucket separately (don’t only sample overall).",
+        "Randomize sample selection and perform a short checklist QA pass.",
+        "Log errors by type and look for repeating patterns (same failure mode across docs).",
+        "When a pattern appears, adjust inputs/rules and increase sampling for the affected bucket until stable."
+      ],
+      "outputs": [
+        "Sampling plan sheet (rules per bucket + thresholds).",
+        "QA log entries per batch with error counts and decisions.",
+        "A dated record of workflow adjustments (what changed and why)."
+      ],
+      "qa_findings": [
+        "Role confusion errors were concentrated in the non-responsive bucket during calibration.",
+        "Cite-back omissions correlated with the highest-speed batches."
+      ],
+      "adjustments_made": [
+        "Added a role map input and made cite-backs mandatory for decision-driving summaries.",
+        "Raised sampling rate for the non-responsive bucket until the role confusion pattern dropped.",
+        "Added a “no cite-back, no reliance” gate before downstream use."
+      ],
+      "key_takeaway": "Sampling isn’t about perfect stats—it’s about detecting patterns early and proving you controlled risk with a repeatable method."
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Platform-style review workflows where batching, audit trails, and reviewer QA fit naturally; ideal for disciplined sampling and logging."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "why": "Useful for structured document analysis; pair with human QA sampling to validate outputs before relying on them."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "why": "Fast doc-level insight for triage; sampling helps ensure outputs are accurate and cite-backed in high-risk buckets."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "why": "Paralegal-facing assistance for consistent notes and triage; logs and sampling keep it defensible."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "why": "Lightweight structured extraction option; sampling helps quantify where it’s strong vs where it needs tighter inputs."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "High-volume matters where sampling and audit trails must be operationalized consistently.",
+      "workflow_fit": ["batches", "audit trails", "review staging", "export workflows"],
+      "auditability": "Strong (workflow platform supports traceability).",
+      "qa_support": "Strong (supports reviewer QA and consistent staging).",
+      "privilege_controls": "Strong (still requires explicit privilege protocols).",
+      "exports_logs": "Strong (consistent exports and process documentation).",
+      "notes": "Best when you want sampling to be part of the system, not a side spreadsheet."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "best_for": "Structured analysis and extraction where you want to measure error types with sampling.",
+      "workflow_fit": ["extraction", "analysis"],
+      "auditability": "Medium (verify logging and reproducibility).",
+      "qa_support": "Medium (pair with bucketed sampling + cite-backs).",
+      "privilege_controls": "Medium (workflow-driven; enforce boundaries).",
+      "exports_logs": "Medium (confirm structured export).",
+      "notes": "Works well when sampling is used to validate output quality and tune inputs."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "best_for": "Fast triage where sampling is used to keep accuracy controlled.",
+      "workflow_fit": ["triage", "summaries"],
+      "auditability": "Low–Medium (treat outputs as drafts unless cite-backed and stored).",
+      "qa_support": "Medium (sampling is the safety net).",
+      "privilege_controls": "Low–Medium (policy + escalation rules matter).",
+      "exports_logs": "Low–Medium (verify repeatable export).",
+      "notes": "Great for speed; world-class results come from disciplined sampling and logs."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "best_for": "Standardized paralegal outputs that can be sampled and logged consistently.",
+      "workflow_fit": ["templates", "structured notes", "triage"],
+      "auditability": "Low–Medium (improves with fixed schemas and saved batch outputs).",
+      "qa_support": "Medium (easy to wrap with sampling plan + QA log).",
+      "privilege_controls": "Low–Medium (policy-driven).",
+      "exports_logs": "Medium (confirm structured export).",
+      "notes": "Good when your workflow is checklist-driven and you need repeatable outputs."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "best_for": "Small-team workflows where you want quick extraction and sampling-based QA.",
+      "workflow_fit": ["extraction", "draft notes"],
+      "auditability": "Low–Medium (depends on cite-backs + versioning).",
+      "qa_support": "Medium (sampling quantifies reliability).",
+      "privilege_controls": "Low–Medium (enforce boundaries and escalation).",
+      "exports_logs": "Low–Medium (verify repeatable export).",
+      "notes": "A strong starter if you already have a sampling discipline and a QA log."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Why sample by bucket instead of overall?",
+      "a": "Because risk isn’t evenly distributed. The bucket that looks “safe” (e.g., non-privileged) can hide the errors that hurt you most."
+    },
+    {
+      "q": "Do we need perfect statistical confidence?",
+      "a": "Not for most teams. You need a consistent method that detects systemic errors early and produces an audit story you can explain."
+    },
+    {
+      "q": "What’s a practical starting sample size?",
+      "a": "Start heavier in early calibration (fixed counts per bucket). In steady state, keep a simple per-batch rule for high-risk buckets."
+    },
+    {
+      "q": "What should trigger escalation?",
+      "a": "Any repeating critical error pattern—especially privilege/confidentiality misses—should trigger a pause, adjustment, and documentation."
+    },
+    {
+      "q": "What should a QA log include?",
+      "a": "Batch ID, bucket, sample size, reviewer, error counts by type, decision (proceed/adjust/escalate), and what changed."
+    }
+  ],
+  "citations": [
+    { "title": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework" },
+    { "title": "The Sedona Conference (eDiscovery guidance)", "url": "https://thesedonaconference.org/" },
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "lawyer-productivity-pack"],
+  "changelog": [
+    {
+      "date": "2026-03-08",
+      "changes": ["Published as an Answer Hub guide.", "Added downloadable sampling plan + QA log templates.", "Added one-page PDF one-pager.", "Added a worked example.", "Added workflow-fit comparison table."]
+    }
+  ],
+  "last_updated": "2026-03-08"
+}

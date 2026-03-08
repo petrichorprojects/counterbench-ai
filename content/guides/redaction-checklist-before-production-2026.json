@@ -1,0 +1,201 @@
+{
+  "slug": "redaction-checklist-before-production-2026",
+  "title": "Redaction Checklist Before Production (2026) + Tool Shortlist",
+  "description": "A pre-production redaction checklist designed to prevent text-layer, metadata, and attachment leaks—plus a shortlist of review tools.",
+  "year": 2026,
+  "direct_answer": "A defensible redaction workflow requires permanent redactions (not overlays), pre-defined categories/standards, file-type batching, and QA checks for text recovery, metadata leakage, and attachment misses before any production goes out the door.",
+  "tldr": "Treat redaction as a production protocol, not a last-minute tool action: define redaction categories and production standards up front, inventory and batch files by type, use tools that permanently apply redactions (not overlays), and run QA checks for text recovery, metadata leakage, and attachment misses. For large productions, sample each batch and log errors by type so systemic issues get caught early. The goal is simple: if something is redacted, it must be unrecoverable in text layers, comments, and metadata.",
+  "answer_intents": [
+    "What’s the best redaction checklist before production?",
+    "How do I QA redactions to prevent hidden text leaks?",
+    "Should we OCR before or after redaction?",
+    "What metadata should we remove before producing documents?",
+    "How do we sample-check redactions at scale?"
+  ],
+  "how_to_choose": [
+    "Choose tools and settings that permanently apply redactions and remove hidden layers/comments.",
+    "Batch by file type (PDF, image, Office, email) and run QA checks appropriate to each type.",
+    "Require an inventory and an owner + QA reviewer per batch.",
+    "Verify exports on a clean machine and log settings used.",
+    "Treat attachments as their own redaction risk; don’t let them ride along unreviewed."
+  ],
+  "implementation_risks": [
+    "Text layers that allow copy/paste recovery under redaction boxes.",
+    "Hidden metadata (comments, tracked changes, hidden sheets/tabs) leaking sensitive info.",
+    "Attachment blind spots (email reviewed, attachment not).",
+    "Inconsistent production standards across batches (OCR, naming, Bates, confidentiality).",
+    "No audit trail for tool/settings used and QA performed."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Part 0 — Define your redaction rules",
+      "bullets": [
+        "Define what you are redacting (PII/PHI/trade secrets/privilege per your matter).",
+        "Confirm production standard (searchable PDF, natives allowed, Bates, legends).",
+        "Write the “no surprises” rule: redactions must be unrecoverable in text layers, comments, and metadata."
+      ]
+    },
+    {
+      "title": "Part 1 — Inventory + batching",
+      "bullets": [
+        "Create a production inventory (doc ID, filename, file type, redaction needed Y/N).",
+        "Batch by file type and assign an owner + separate QA reviewer.",
+        "Treat attachments as their own batch when needed."
+      ]
+    },
+    {
+      "title": "Part 2 — QA checks",
+      "bullets": [
+        "Text recovery check: copy/paste around redactions; search for redacted terms; test selection under boxes.",
+        "Metadata check: remove comments/track changes/hidden sheets as required; confirm filenames don’t leak info.",
+        "Visual check: zoom and verify coverage (margins, headers/footers, footnotes).",
+        "Sampling check: sample each batch, log error types, expand sample if systemic issues appear."
+      ]
+    }
+  ],
+  "downloads": [
+    { "label": "Redaction inventory + QA checklist (XLSX)", "url": "/downloads/guides/redaction-inventory-qa-template.xlsx" },
+    { "label": "One-page PDF (shareable)", "url": "/downloads/guides/one-pagers/redaction-checklist-before-production-2026.pdf" }
+  ],
+  "worked_examples": [
+    {
+      "title": "Example: 140-file production where QA catches hidden text-layer leakage",
+      "scenario": "A production batch includes scanned PDFs and exported PDFs from Office documents. The team is under deadline and redactions must be unrecoverable. The risk is a text layer surviving under redaction boxes.",
+      "time_box": "45 minutes setup + 10% per-batch sampling",
+      "inputs": [
+        "Production inventory with owner + separate QA reviewer per batch.",
+        "Redaction categories and production standards defined in 8–12 lines.",
+        "QA checklist: text recovery, metadata, attachments, visual check, clean-machine verification."
+      ],
+      "process": [
+        "Batch by file type (PDF, image, Office) and apply the appropriate redaction workflow per type.",
+        "Run QA text recovery checks on a fixed sample from each batch.",
+        "Log error types and expand sampling if systemic issues appear.",
+        "Record tool + export settings used for each batch."
+      ],
+      "outputs": [
+        "Inventory sheet with redaction needed flags and categories per file.",
+        "QA checklist results per batch (pass/fail + notes).",
+        "Settings log (tool version + export options) tied to production date."
+      ],
+      "qa_findings": [
+        "A sampled PDF allowed copy/paste recovery for a redacted DOB due to a lingering text layer.",
+        "One attachment was missed in the first batch pass (email was reviewed, attachment wasn’t)."
+      ],
+      "adjustments_made": [
+        "Updated the PDF workflow to verify text layer behavior before export, and re-ran OCR per standard where required.",
+        "Added an explicit “attachments reviewed” gate before marking a batch complete.",
+        "Expanded sample size for PDF batches until the text-recovery failure mode stopped appearing."
+      ],
+      "key_takeaway": "Redaction is won in QA: if you can’t reliably detect text-layer recovery and metadata leakage, the workflow isn’t safe at scale."
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Useful for production workflows where audit trails and consistent review processes matter; still pair with a redaction-specific QA checklist."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "why": "Document analysis and extraction support; use as an assistant for triage, but verify redaction requirements with your production tools."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "why": "Fast document understanding and summaries; helpful for identifying likely redaction targets, but not a substitute for redaction QA."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "why": "Paralegal-facing review support; use it to standardize checklists and batch notes, then enforce QA gates."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "why": "Structured extraction and draft outputs; pair with a fixed inventory schema to reduce misses."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Production workflows where audit trails and review stages must be consistent.",
+      "workflow_fit": ["production workflow", "audit trails", "team review"],
+      "auditability": "Strong (platform workflow supports consistent production documentation).",
+      "qa_support": "Strong (supports staged review and reviewer QA patterns).",
+      "privilege_controls": "Strong (still requires a redaction-specific protocol and sign-off).",
+      "exports_logs": "Strong (better support for export consistency and traceability).",
+      "notes": "Use when redaction is tightly coupled to defensible production and review workflows."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "best_for": "Identifying likely redaction targets via structured extraction (assistive, not final).",
+      "workflow_fit": ["extraction", "triage"],
+      "auditability": "Medium (verify reproducibility and how outputs are stored).",
+      "qa_support": "Medium (pair with the inventory + QA checklist download).",
+      "privilege_controls": "Medium (policy-driven; don’t rely on it for final redaction decisions).",
+      "exports_logs": "Medium (confirm structured export).",
+      "notes": "Useful for finding what to redact; the redaction QA workflow is the real safety net."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "best_for": "Fast document understanding to spot potential sensitive strings and context.",
+      "workflow_fit": ["triage", "summaries"],
+      "auditability": "Low–Medium (treat outputs as drafts unless cite-backed).",
+      "qa_support": "Medium (pair with batch sampling and text-recovery checks).",
+      "privilege_controls": "Low–Medium (privilege/redaction safety is largely outside the tool).",
+      "exports_logs": "Low–Medium (confirm traceability).",
+      "notes": "Acceleration tool; not a substitute for burn-in redaction tooling and QA gates."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "best_for": "Standardizing redaction inventories, batch notes, and pre-production checklists.",
+      "workflow_fit": ["templates", "checklists", "batch notes"],
+      "auditability": "Low–Medium (improves with saved outputs + inventory discipline).",
+      "qa_support": "Medium (fits well with sampling and a fixed QA checklist).",
+      "privilege_controls": "Low–Medium (requires do-not-paste policy + escalation rules).",
+      "exports_logs": "Medium (confirm structured output export).",
+      "notes": "Strong for standardization; rely on dedicated redaction tools for final burn-in outputs."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "best_for": "Lightweight extraction/summaries to accelerate identification of redaction targets.",
+      "workflow_fit": ["extraction", "draft notes"],
+      "auditability": "Low–Medium (depends on cite-backs + storage/versioning).",
+      "qa_support": "Medium (use inventory + QA template; sample high-risk docs).",
+      "privilege_controls": "Low–Medium (policy-driven).",
+      "exports_logs": "Low–Medium (verify repeatability).",
+      "notes": "Use to speed up triage; redaction correctness is ensured by the checklist and QA workflow."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Are visual overlays (black boxes) a safe redaction method?",
+      "a": "Not as a default. Prefer workflows and settings that permanently apply redactions and remove hidden layers/comments per your production standard."
+    },
+    {
+      "q": "What’s the most common redaction failure?",
+      "a": "Hidden text layers, attachments, and metadata (comments, tracked changes, hidden sheets) that weren’t cleared before export."
+    },
+    {
+      "q": "Should we OCR before or after redacting?",
+      "a": "Often before, so you can search/QA effectively—follow your team’s production standard and avoid workflows that re-introduce recoverable text."
+    },
+    {
+      "q": "How do we QA redactions quickly at high volume?",
+      "a": "Batch by file type, sample each batch, and run a fixed “text recovery + metadata + visual” checklist for each sampled item."
+    },
+    {
+      "q": "What should we log?",
+      "a": "Inventory, tool/settings used, who redacted, who QA’d, sample sizes, errors found, and what was corrected."
+    }
+  ],
+  "citations": [
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" },
+    { "title": "The Sedona Conference (eDiscovery guidance)", "url": "https://thesedonaconference.org/" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "lawyer-productivity-pack"],
+  "changelog": [
+    {
+      "date": "2026-03-08",
+      "changes": ["Published as an Answer Hub guide.", "Added downloadable redaction inventory + QA checklist template.", "Added one-page PDF one-pager.", "Added a worked example.", "Added workflow-fit comparison table."]
+    }
+  ],
+  "last_updated": "2026-03-08"
+}

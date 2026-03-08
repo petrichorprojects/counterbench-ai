@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/llms.txt"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
     { url: absoluteUrl("/llms-full.txt"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
     { url: absoluteUrl("/brand-facts.json"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
+    { url: absoluteUrl("/.well-known/brand-facts.json"), lastModified: now, changeFrequency: "weekly", priority: 0.2 },
     { url: absoluteUrl("/search-index.json"), lastModified: now, changeFrequency: "daily", priority: 0.25 }
   ];
 

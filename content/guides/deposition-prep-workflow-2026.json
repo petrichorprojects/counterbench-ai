@@ -1,0 +1,193 @@
+{
+  "slug": "deposition-prep-workflow-2026",
+  "title": "Deposition Prep Workflow (2026): Themes → Exhibits → Admissions + Tool Shortlist",
+  "description": "A fast, repeatable deposition prep workflow for paralegals: themes, exhibit tables, admission-focused stems, and a short QA pass.",
+  "year": 2026,
+  "direct_answer": "Deposition prep is a repeatable pipeline: define the one-sentence objective, pick themes, attach exhibits to each theme, draft admission-focused stems tied to those exhibits, and finish with a short QA pass that surfaces missing documents and contradictions.",
+  "tldr": "Fast deposition prep is a workflow: lock a one-sentence objective, choose 3–6 themes, attach 2–5 exhibits per theme, then draft question stems designed to produce admissions with clear follow-ups. Use AI for extraction and drafting (themes, candidate exhibits, stems) but keep humans in charge of sequencing, strategy, and what counts as a clean admission. End with a short “save yourself later” set of questions (prep materials reviewed, who they spoke to, missing documents).",
+  "answer_intents": [
+    "How do I prepare a deposition outline quickly?",
+    "What are good deposition themes?",
+    "How do I build an exhibit table for a deposition?",
+    "How do I write admission-focused question stems?",
+    "What questions should I ask about deposition preparation?"
+  ],
+  "how_to_choose": [
+    "Choose tools that help you extract facts with cite-backs and organize outputs into tables.",
+    "Prefer workflows that support chronologies and exhibit candidate lists alongside summaries.",
+    "Use a fixed template so counsel can consume the output without a long explanation.",
+    "Avoid tools that produce confident outputs without referencing source text.",
+    "Pilot on a messy record and validate: do you get usable themes + exhibits + stems in under an hour?"
+  ],
+  "implementation_risks": [
+    "Theme sprawl (turning the outline into an unprioritized topic list).",
+    "Exhibits selected too late (binder built twice; contradictions missed).",
+    "Question stems that don’t tie to exhibits (hard to control evasive answers).",
+    "Over-reliance on AI summaries without source citations.",
+    "Lack of a handoff format counsel will actually use."
+  ],
+  "operator_playbook": [
+    {
+      "title": "45-minute workflow (repeatable)",
+      "bullets": [
+        "Minute 0–5: lock the objective in one sentence (what admission/timeline you need).",
+        "Minute 5–15: pick 3–6 themes (rails, not a topic list).",
+        "Minute 15–25: choose 2–5 exhibits per theme (foundation, timeline, conflict, cleanup).",
+        "Minute 25–40: draft admission-focused stems tied to exhibits (with follow-ups).",
+        "Minute 40–45: add the 5 prep questions (what reviewed, who spoke with, missing docs, contradictions, changes)."
+      ]
+    },
+    {
+      "title": "Exhibit table (handoff format)",
+      "bullets": [
+        "Fields: exhibit ID, doc title, date, what it proves (1 line), theme, key quote/snippet, where used.",
+        "Rule: if it’s a key exhibit, it gets a cite-back quote you can point to instantly.",
+        "Keep it short and scannable; the table is the product."
+      ]
+    }
+  ],
+  "downloads": [
+    { "label": "Exhibit table + outline stems (XLSX)", "url": "/downloads/guides/deposition-exhibit-table-template.xlsx" },
+    { "label": "One-page PDF (shareable)", "url": "/downloads/guides/one-pagers/deposition-prep-workflow-2026.pdf" }
+  ],
+  "worked_examples": [
+    {
+      "title": "Example: 1-hour deposition outline for a witness with messy comms",
+      "scenario": "Counsel needs an outline by end of day. The record includes emails, a policy PDF, and a timeline gap around a key event. The goal is to lock admissions tied to 3–5 exhibits per theme.",
+      "time_box": "45–60 minutes",
+      "inputs": [
+        "One-sentence objective (the admission/timeline you must lock).",
+        "A short theme list (3–6) and a rule for exhibit selection per theme.",
+        "An exhibit table template with a key quote/snippet field (cite-back)."
+      ],
+      "process": [
+        "Draft 3–6 themes; reject anything that’s just a topic list.",
+        "Attach 2–5 exhibits per theme (foundation, timeline, conflict, cleanup).",
+        "Draft admission-focused stems tied to each exhibit, with follow-ups for deny/don’t recall.",
+        "Add the 5 prep questions and export the table + stems as the handoff package."
+      ],
+      "outputs": [
+        "Exhibit table: what it proves, key snippet, and where it will be used.",
+        "Outline stems per theme with expected admissions and follow-ups.",
+        "A mini-chronology row set for timeline anchors (date → event → cite)."
+      ],
+      "qa_findings": [
+        "Initial themes were too broad until the objective was tightened to one sentence.",
+        "A “cleanup” exhibit was required to handle an ambiguity revealed by a conflict document."
+      ],
+      "adjustments_made": [
+        "Re-scoped themes to 5 and re-ordered sequencing (foundation → timeline → conflict).",
+        "Added a required “key quote/snippet” cite-back for every critical exhibit."
+      ],
+      "key_takeaway": "The output that wins is the handoff format: an exhibit table + stems tied to those exhibits, not a long narrative outline."
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "paralegal-pal-377",
+      "why": "Paralegal-oriented assistance for extracting facts and drafting structured outlines—pair with cite-backs and an exhibit table template."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "why": "Useful for structured summaries, quote banks, and extraction—treat outputs as drafts unless cite-backed."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "why": "Fast document understanding that can accelerate theme and exhibit candidate extraction; keep humans in charge of sequencing and admissions."
+    },
+    {
+      "tool_slug": "legal-eagle-808",
+      "why": "General assistant option for drafting stems and organizing notes; enforce a strict template so outputs stay usable."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Helpful when deposition prep depends on organized review collections and defensible notes; pair with the theme/exhibit workflow."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "paralegal-pal-377",
+      "best_for": "Turning messy records into structured theme/exhibit/stem drafts quickly.",
+      "workflow_fit": ["theme drafting", "exhibit candidates", "structured outline drafts"],
+      "auditability": "Low–Medium (upgrade by enforcing cite-backs and saving outputs per batch).",
+      "qa_support": "Medium (tie claims to exhibits; spot-check cite-backs).",
+      "privilege_controls": "Low–Medium (policy-driven; avoid unsafe data handling).",
+      "exports_logs": "Medium (confirm structured export into your exhibit table template).",
+      "notes": "Best when you already have an exhibit table workflow and want speed in drafting stems."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "best_for": "Building quote banks and exhibit summaries tied to themes.",
+      "workflow_fit": ["quote bank", "extraction", "summaries"],
+      "auditability": "Low–Medium (treat outputs as drafts unless cite-backed).",
+      "qa_support": "Medium (works well with “key quote/snippet” fields in the exhibit table).",
+      "privilege_controls": "Low–Medium (ensure boundaries for sensitive content).",
+      "exports_logs": "Low–Medium (verify repeatable export).",
+      "notes": "Good for extraction and drafting; counsel-facing usability comes from the exhibit table."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "best_for": "Fast document understanding to propose themes and initial exhibit candidates.",
+      "workflow_fit": ["triage", "theme candidates", "exhibit candidates"],
+      "auditability": "Low–Medium (enforce cite-backs).",
+      "qa_support": "Medium (verify exhibit candidates against source text).",
+      "privilege_controls": "Low (handle sensitive data per policy).",
+      "exports_logs": "Low–Medium (confirm structured export).",
+      "notes": "Use as an accelerator; the exhibit table is your control surface."
+    },
+    {
+      "tool_slug": "legal-eagle-808",
+      "best_for": "Drafting question stems and organizing sections once themes/exhibits are set.",
+      "workflow_fit": ["question stems", "outline drafting"],
+      "auditability": "Low–Medium (depends on cite-backs and saved outputs).",
+      "qa_support": "Medium (review stems for exhibit tie-ins and admissions).",
+      "privilege_controls": "Low–Medium (policy-driven).",
+      "exports_logs": "Low–Medium (verify reproducibility).",
+      "notes": "Strong when you provide a strict template and keep humans in charge of sequencing."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Depo prep workflows that depend on organized review collections and defensible notes.",
+      "workflow_fit": ["collections/batches", "review notes", "exportable exhibit candidates"],
+      "auditability": "Strong (platform context supports traceability).",
+      "qa_support": "Strong (supports review staging and QA patterns).",
+      "privilege_controls": "Strong (still requires written boundaries).",
+      "exports_logs": "Strong (better support for consistent exports).",
+      "notes": "Best fit when depo prep is tightly coupled to your broader review/production workflow."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What’s the right number of themes?",
+      "a": "Usually 3–6. More than that becomes a topic list instead of a usable outline."
+    },
+    {
+      "q": "How many exhibits per theme?",
+      "a": "A practical default is 2–5: one foundation doc, one or two timeline anchors, one conflict doc, optional cleanup."
+    },
+    {
+      "q": "What should AI do vs. humans?",
+      "a": "AI can draft and extract; humans decide sequencing, strategy, and which admissions actually matter."
+    },
+    {
+      "q": "What’s the fastest way to hand this off to counsel?",
+      "a": "An exhibit table (what it proves + where it’s used) plus question stems tied to each exhibit."
+    },
+    {
+      "q": "What if the record is still messy?",
+      "a": "Build a mini-chronology first (date → event → cite) and pull themes from it."
+    }
+  ],
+  "citations": [
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" },
+    { "title": "Federal Rules of Civil Procedure — Rule 30 (Cornell LII)", "url": "https://www.law.cornell.edu/rules/frcp/rule_30" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "lawyer-productivity-pack"],
+  "changelog": [
+    {
+      "date": "2026-03-08",
+      "changes": ["Published as an Answer Hub guide.", "Added downloadable exhibit table + outline stems template.", "Added one-page PDF one-pager.", "Added a worked example.", "Added workflow-fit comparison table."]
+    }
+  ],
+  "last_updated": "2026-03-08"
+}

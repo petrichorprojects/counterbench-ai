@@ -1,0 +1,225 @@
+{
+  "slug": "defensible-ai-doc-review-protocol-2026",
+  "title": "Defensible AI Document Review Protocol (2026) + Tool Shortlist",
+  "description": "A practical protocol template for AI-assisted review: batching, cite-backs, sampling QA, and audit trails.",
+  "year": 2026,
+  "direct_answer": "AI-assisted review can be defensible in 2026 if you use a written protocol, require cite-backs to the underlying text, keep batch/decision logs, and run bucketed QA sampling with humans owning privilege and responsiveness decisions.",
+  "tldr": "If you use AI in document review in 2026, make it defensible: define scope (what AI can/can’t do), require structured outputs with cite-backs to doc text, keep batch + decision logs, and run QA sampling to catch systemic errors early. Use AI for triage and extraction, not as the final decision-maker on privilege or responsiveness unless your case team explicitly authorizes it. If you can’t explain the workflow in plain English, tighten the protocol before you scale it.",
+  "answer_intents": [
+    "Is AI-assisted review defensible?",
+    "What should a document review protocol include?",
+    "How do I QA AI outputs in doc review?",
+    "How do I prevent privilege mistakes with AI?",
+    "What features matter most in AI doc review tools?"
+  ],
+  "how_to_choose": [
+    "Require auditability: collections/batches, logs, and repeatable workflows.",
+    "Demand structured outputs you can verify (cite-backs to text, fields, definitions).",
+    "Treat privilege as a first-class requirement (boundaries + escalation rules).",
+    "Pilot on a bounded dataset and measure error types with human QA sampling.",
+    "Avoid black-box “one-click” outputs without explainability or citations."
+  ],
+  "implementation_risks": [
+    "Privilege leakage from unclear boundaries or unsafe tooling choices.",
+    "Over-trusting AI classification without a sampling/QA plan.",
+    "Inconsistent calls across batches when definitions and coding guides aren’t fixed.",
+    "Missing audit logs (hard to explain what happened, when, and why).",
+    "Summaries that sound plausible but don’t cite the underlying text."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Scope + boundaries (set before you start)",
+      "bullets": [
+        "Define what AI is allowed to do (triage, extraction, draft notes) and what it is not (final privilege calls, auto-production).",
+        "Write the coding guide (responsive/non-responsive, privilege basis categories, issue tags).",
+        "Set data boundaries: approved systems, prohibited systems, and who can export.",
+        "Adopt the cite-back rule: if it can’t point to the text, it’s a draft."
+      ]
+    },
+    {
+      "title": "Workflow stages (repeatable)",
+      "bullets": [
+        "Stage A: Triage (structured summary + risk flags + escalate Y/N).",
+        "Stage B: Substantive review (humans apply the coding guide; AI assists).",
+        "Stage C: QA sampling (per-bucket sampling; log error types).",
+        "Stage D: Escalation (clear rules; record decisions and changes)."
+      ]
+    },
+    {
+      "title": "Logs (defensibility layer)",
+      "bullets": [
+        "Collection log: what was collected, where from, when, by whom.",
+        "Batch log: batch IDs, assignments, start/end dates.",
+        "Decision log: definition changes, sampling changes, approvals (dated).",
+        "QA log: sample sizes, errors found, corrections made."
+      ]
+    },
+    {
+      "title": "Production readiness (final gate)",
+      "bullets": [
+        "Confirm privilege workflow followed and logged.",
+        "Confirm sampling complete for final batches and high-risk buckets.",
+        "Verify exports (counts, naming, settings) on a clean machine.",
+        "Record final sign-off (who approved and when)."
+      ]
+    }
+  ],
+  "downloads": [
+    { "label": "Protocol template (DOCX)", "url": "/downloads/guides/doc-review-protocol-template.docx" },
+    { "label": "QA + decision logs (XLSX)", "url": "/downloads/guides/doc-review-qa-log-template.xlsx" },
+    { "label": "Sampling plan + log (XLSX)", "url": "/downloads/guides/ai-review-sampling-plan-template.xlsx" },
+    { "label": "One-page PDF (shareable)", "url": "/downloads/guides/one-pagers/defensible-ai-doc-review-protocol-2026.pdf" }
+  ],
+  "worked_examples": [
+    {
+      "title": "Example: 4,800-doc review triage under a depo deadline",
+      "scenario": "A litigation team needs a defensible first-pass triage and issue tagging before two depositions. Document set includes mixed email chains, attachments, and inconsistent naming. The goal is speed without privilege risk.",
+      "time_box": "90 minutes setup + daily 20-minute batches",
+      "inputs": [
+        "Collection split by custodian and date range (fixed naming convention).",
+        "A one-page coding guide: responsiveness definition, issue tags, privilege indicators, escalation triggers.",
+        "Cite-back rule: every decision-driving summary includes doc ID + quoted snippet + page/line (or equivalent).",
+        "Buckets: responsive / non-responsive / potential privilege / hot."
+      ],
+      "process": [
+        "Stage A triage: produce structured summaries + risk flags + proposed issue tags (humans confirm).",
+        "Stage B review: humans apply the coding guide; AI assists with extraction and consistency checks.",
+        "Stage C QA: sample each bucket (especially non-responsive and non-privileged) and log errors by type.",
+        "Escalate repeating critical patterns immediately; update definitions/prompting and record the decision."
+      ],
+      "outputs": [
+        "Batch log with owners and timestamps.",
+        "Triage table: summary (cite-backed), issue tags, privilege indicators, escalation flag.",
+        "QA log: per-bucket sample sizes, errors, and corrections.",
+        "Partner-ready 1-page brief of “what changed, what matters, what to do next.”"
+      ],
+      "qa_findings": [
+        "Early calibration found role confusion in 6% of sampled emails (in-house vs business titles).",
+        "Attachment misses showed up in the first sample pass (email summarized, attachment ignored)."
+      ],
+      "adjustments_made": [
+        "Added a role map input (names → roles) and required it in every batch.",
+        "Promoted “has attachment” to a separate triage field and enforced attachment-as-separate-item review.",
+        "Increased sampling rate for the non-privileged bucket until error patterns stabilized."
+      ],
+      "key_takeaway": "World-class review speed comes from structure: fixed definitions, cite-backs, bucketed sampling, and logs—not from trusting outputs blindly."
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Platform-style workflows for collections, batching, audit trails, and team review—pair with a written protocol and QA sampling."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "why": "Legal-first document analysis positioning; useful when you need structured extraction and consistent doc-level outputs."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "why": "Helpful for quick document understanding and summaries—enforce cite-backs and escalation rules for anything high-stakes."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "why": "Paralegal-facing assistance for fast triage and structured notes—still require human QA and privilege controls."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "why": "Lightweight option for structured summaries and extraction; best when paired with fixed templates and logs."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Teams that need collection → batch → review → production workflow in one place.",
+      "workflow_fit": ["collections/batches", "audit trails", "team review", "export workflow"],
+      "auditability": "Strong (workflow-style platform; supports repeatable review operations).",
+      "qa_support": "Strong (supports reviewer QA patterns and structured review stages).",
+      "privilege_controls": "Strong (treat privilege as first-class; still requires protocol + sampling).",
+      "exports_logs": "Strong (platform workflows make exports and review trails easier to manage).",
+      "notes": "Best fit when defensibility and operational consistency matter more than lightweight ad-hoc summaries."
+    },
+    {
+      "tool_slug": "luminance-1-545",
+      "best_for": "Structured document analysis and extraction in legal-first contexts.",
+      "workflow_fit": ["doc analysis", "extraction", "review assistance"],
+      "auditability": "Medium (verify how outputs are logged and how to reproduce results).",
+      "qa_support": "Medium (pair with bucketed sampling + cite-back requirements).",
+      "privilege_controls": "Medium (enforce boundaries and escalation; don’t outsource decisions).",
+      "exports_logs": "Medium (confirm export formats and whether settings are recorded).",
+      "notes": "Good when you need consistent extraction and summaries; your protocol is the real defensibility layer."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "best_for": "Fast triage and document understanding when you need speed.",
+      "workflow_fit": ["triage", "summaries", "initial prioritization"],
+      "auditability": "Low–Medium (treat outputs as drafts unless cite-backed and logged).",
+      "qa_support": "Medium (works well when you enforce sampling and structured templates).",
+      "privilege_controls": "Low–Medium (privilege risk is workflow-dependent; require escalation rules).",
+      "exports_logs": "Low–Medium (confirm whether outputs are exportable in a structured, auditable way).",
+      "notes": "Useful for acceleration, but only defensible when paired with strict cite-backs + QA sampling."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "best_for": "Paralegal-facing drafting of structured notes, summaries, and checklists.",
+      "workflow_fit": ["structured review notes", "templates", "triage support"],
+      "auditability": "Low–Medium (improves with fixed schemas + saved outputs per batch).",
+      "qa_support": "Medium (pair with QA logs; sample high-risk buckets).",
+      "privilege_controls": "Low–Medium (requires explicit boundaries + do-not-paste policy).",
+      "exports_logs": "Medium (ensure you can export structured outputs consistently).",
+      "notes": "Strong fit when your main need is standardized paralegal outputs—not platform-level review workflows."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "best_for": "Lightweight structured extraction and summaries for small teams.",
+      "workflow_fit": ["summaries", "extraction", "draft notes"],
+      "auditability": "Low–Medium (depends on whether outputs can be stored, versioned, and cite-backed).",
+      "qa_support": "Medium (easy to wrap with sampling and checklists).",
+      "privilege_controls": "Low–Medium (requires strong policy controls outside the tool).",
+      "exports_logs": "Low–Medium (confirm export format + traceability).",
+      "notes": "A good starter when you already have a disciplined protocol and just need speed in drafting."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is AI-assisted review defensible?",
+      "a": "It can be, if you have a written protocol, audit logs, and a sampling/QA plan—and humans retain responsibility for privilege and responsiveness decisions per your case team’s rules."
+    },
+    {
+      "q": "What’s the single most important requirement for AI summaries?",
+      "a": "Cite-backs to the underlying document text. If the output can’t point to the text it came from, treat it as a draft."
+    },
+    {
+      "q": "How do we prevent privilege mistakes with AI?",
+      "a": "Treat privilege as a first-class requirement: explicit boundaries, escalation rules, and heavier sampling in privilege-risk buckets."
+    },
+    {
+      "q": "How much sampling is enough?",
+      "a": "Enough to detect patterns early. Start heavier in calibration, then keep a consistent per-batch rule for high-risk buckets."
+    },
+    {
+      "q": "Can we use consumer AI tools for case documents?",
+      "a": "Follow firm policy and case instructions. As a default, assume consumer tools are inappropriate for sensitive or privileged material unless explicitly approved."
+    }
+  ],
+  "citations": [
+    { "title": "The Sedona Conference (eDiscovery guidance)", "url": "https://thesedonaconference.org/" },
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" },
+    { "title": "ABA Model Rules of Professional Conduct", "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/" },
+    { "title": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "lawyer-productivity-pack", "intake-and-triage"],
+  "changelog": [
+    {
+      "date": "2026-03-08",
+      "changes": [
+        "Published as an Answer Hub guide.",
+        "Added operator playbook section.",
+        "Added downloadable templates (protocol, QA logs, sampling log).",
+        "Added one-page PDF one-pager.",
+        "Added a worked example.",
+        "Added workflow-fit comparison table."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-08"
+}

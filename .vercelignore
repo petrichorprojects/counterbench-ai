@@ -1,0 +1,17 @@
+# Vercel CLI ignore file.
+#
+# This repo's .gitignore excludes `.vercel/`, but prebuilt deployments require
+# `.vercel/output/` to be uploaded. This file overrides .gitignore for Vercel.
+
+# Ignore dev/build artifacts we never want to upload.
+node_modules
+.git
+.DS_Store
+
+# Do NOT upload local Next build output — prebuilt uses `.vercel/output` instead.
+.next
+
+# Keep prebuilt output (required for `vercel --prebuilt` / `vercel deploy --prebuilt`).
+!.vercel/output/**
+!.vercel/project.json
+

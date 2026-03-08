@@ -1,0 +1,196 @@
+{
+  "slug": "ai-privilege-log-triage-2026",
+  "title": "AI Privilege Log Triage (2026): Failure Modes + Tool Shortlist",
+  "description": "How to use AI for privilege log triage without creating risk: cite-backs, chain segmentation, role maps, and QA sampling.",
+  "year": 2026,
+  "direct_answer": "Use AI for privilege log triage only when outputs are cite-backed, email chains are segmented, roles are mapped, and you QA-sample the “non-privileged” and “potential privilege” buckets before final calls.",
+  "tldr": "AI can speed up privilege log triage, but it fails in predictable ways: role confusion, forward-chain boundary mistakes, attachment misses, and confident rationales without textual support. The fix is structural: require cite-backs, use a defined privilege basis field, maintain a role map, segment email chains, and QA-sample high-risk buckets (especially “non-privileged” and “potential privilege” outputs). If the AI output can’t point to the document text that supports it, treat it as a draft—not a decision.",
+  "answer_intents": [
+    "What are common AI mistakes in privilege review?",
+    "How do I avoid privilege waiver when using AI?",
+    "How do I handle forwarded email chains for privilege?",
+    "What fields should a privilege log include?",
+    "How do I QA privilege calls efficiently?"
+  ],
+  "how_to_choose": [
+    "Require structured outputs: privilege basis, participants/roles, cite-backs, and escalation flags.",
+    "Insist on workflow controls: batching, logs, and reviewer QA sampling.",
+    "Prefer tools that make attachments and email chains reviewable as distinct units.",
+    "Avoid tools that can’t explain outputs or don’t support auditing and review notes.",
+    "Pilot using a high-risk set (email chains + attachments) and track error types."
+  ],
+  "implementation_risks": [
+    "Privilege boundary errors in forwards and mixed-purpose documents.",
+    "Attachment blind spots (summarizing the email but missing the attachment).",
+    "Role confusion (especially in-house counsel vs business roles).",
+    "Rationales that sound plausible but aren’t supported by the document text.",
+    "Inconsistent calls across reviewers without a fixed coding guide."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Privilege triage rules (minimum viable)",
+      "bullets": [
+        "Require a privilege basis field (attorney-client / work product / common interest / etc.).",
+        "Enforce cite-backs for any privilege rationale used downstream.",
+        "Maintain a role map (names → roles) and keep it updated during review.",
+        "Treat attachments as separate review items; don’t rely on email-only summaries.",
+        "Segment forwarded chains: identify where the privileged portion begins/ends."
+      ]
+    },
+    {
+      "title": "QA sampling (where misses hide)",
+      "bullets": [
+        "Sample the “non-privileged” bucket—this is where privilege misses tend to live.",
+        "Sample “potential privilege” outputs for over-inclusion patterns.",
+        "Track error types (attachments, chain boundaries, role confusion) and adjust inputs/rules.",
+        "Escalate any repeating critical pattern immediately and log the change."
+      ]
+    }
+  ],
+  "downloads": [
+    { "label": "Privilege triage + role map (XLSX)", "url": "/downloads/guides/privilege-triage-role-map-template.xlsx" },
+    { "label": "QA + decision logs (XLSX)", "url": "/downloads/guides/doc-review-qa-log-template.xlsx" },
+    { "label": "One-page PDF (shareable)", "url": "/downloads/guides/one-pagers/ai-privilege-log-triage-2026.pdf" }
+  ],
+  "worked_examples": [
+    {
+      "title": "Example: privilege triage on 900 emails with forward chains + attachments",
+      "scenario": "A matter has a fast-moving privilege log request. The set includes long forward chains, mixed-purpose emails, and attachments that often carry the real privileged content.",
+      "time_box": "60 minutes setup + per-batch QA",
+      "inputs": [
+        "Role map (names → roles) used as a required input in triage.",
+        "Privilege basis field (draft) plus cite-back snippet field.",
+        "Chain segmentation rule: mark where privileged portion begins/ends.",
+        "Attachment rule: attachments are reviewed as separate items."
+      ],
+      "process": [
+        "Run privilege triage with fixed fields: basis, cite-back, escalate flag, chain boundary notes.",
+        "Sample the “non-privileged” bucket first to catch privilege misses early.",
+        "Log error types (attachment misses, chain boundary errors, role confusion) and adjust rules.",
+        "Escalate repeating patterns and document the decision."
+      ],
+      "outputs": [
+        "Privilege triage sheet with basis + cite-backs per item.",
+        "Updated role map as new names appear.",
+        "QA log entries tied to batch IDs with error taxonomy and corrections."
+      ],
+      "qa_findings": [
+        "Two privilege misses were found in the non-privileged sample (both in attachments).",
+        "Forward-chain boundaries were inconsistent until the segmentation rule was enforced."
+      ],
+      "adjustments_made": [
+        "Raised “has attachment” to a required triage field and blocked completion without attachment review notes.",
+        "Added a default chain segmentation template line to reduce ambiguity."
+      ],
+      "key_takeaway": "Privilege safety is a workflow problem: fixed fields, role maps, chain segmentation, and sampling beat “smart” outputs every time."
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "paralegal-pal-377",
+      "why": "Paralegal-facing assistance for fast triage and structured notes; enforce cite-backs and escalation rules for privilege decisions."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Structured review workflows, batching, and audit trails—useful when privilege hygiene and defensibility are priorities."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "why": "Helps create consistent summaries and extraction outputs; pair with a privilege basis schema and QA sampling."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "why": "Fast doc-level insight for triage; require chain segmentation and attachment handling to reduce blind spots."
+    },
+    {
+      "tool_slug": "legal-eagle-808",
+      "why": "General assistant option for structured extraction and drafts; treat outputs as drafts unless cite-backed."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Privilege-sensitive matters where batching and audit trails must be consistent.",
+      "workflow_fit": ["collections/batches", "audit trails", "team QA"],
+      "auditability": "Strong (platform workflows support repeatable review operations).",
+      "qa_support": "Strong (supports reviewer QA and consistent staging).",
+      "privilege_controls": "Strong (still requires written boundaries + escalation rules).",
+      "exports_logs": "Strong (workflow makes it easier to manage exports and document what happened).",
+      "notes": "Best when you need to defend the process, not just produce summaries."
+    },
+    {
+      "tool_slug": "paralegal-pal-377",
+      "best_for": "Paralegal triage notes, chain segmentation checklists, and structured privilege rationales (drafts).",
+      "workflow_fit": ["triage", "templates", "structured notes"],
+      "auditability": "Low–Medium (improves with saved batch outputs + fixed schemas).",
+      "qa_support": "Medium (easy to wrap with sampling + QA logs).",
+      "privilege_controls": "Low–Medium (requires strict data boundaries and cite-back enforcement).",
+      "exports_logs": "Medium (confirm structured export + versioning).",
+      "notes": "Great for standardization; defensibility depends on your protocol and logs."
+    },
+    {
+      "tool_slug": "legal-doc-assistant-296",
+      "best_for": "Lightweight privilege triage drafts (basis fields + cite-backs) for small teams.",
+      "workflow_fit": ["extraction", "draft rationales", "triage summaries"],
+      "auditability": "Low–Medium (treat outputs as drafts unless cite-backed and stored).",
+      "qa_support": "Medium (works well with bucketed sampling).",
+      "privilege_controls": "Low–Medium (requires role map + chain segmentation + attachment checks).",
+      "exports_logs": "Low–Medium (verify traceability).",
+      "notes": "Use when you have a clear privilege schema and want speed, not when you need platform-grade audit trails."
+    },
+    {
+      "tool_slug": "aerial-761",
+      "best_for": "Fast first-pass doc understanding and prioritization.",
+      "workflow_fit": ["triage", "summaries"],
+      "auditability": "Low–Medium (requires strict cite-backs and log discipline).",
+      "qa_support": "Medium (sample “non-privileged” bucket to catch misses).",
+      "privilege_controls": "Low (most privilege safety lives in your workflow, not the tool).",
+      "exports_logs": "Low–Medium (confirm structured export).",
+      "notes": "Use as an accelerator, not as a privilege decision engine."
+    },
+    {
+      "tool_slug": "legal-eagle-808",
+      "best_for": "General drafting and extraction workflows where you need a structured template.",
+      "workflow_fit": ["draft notes", "extraction"],
+      "auditability": "Low–Medium (depends on how outputs are saved and versioned).",
+      "qa_support": "Medium (pair with role map + chain segmentation + QA sampling).",
+      "privilege_controls": "Low–Medium (enforce do-not-paste policy + escalation rules).",
+      "exports_logs": "Low–Medium (verify repeatable export).",
+      "notes": "Good for structured drafts, but defensibility is owned by your protocol."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is “attorney CC’d” enough to claim privilege?",
+      "a": "Usually not. Privilege turns on the purpose and content of the communication, not just who is on the thread."
+    },
+    {
+      "q": "What’s the fastest QA check for privilege triage?",
+      "a": "Require cite-backs and sample the “non-privileged” bucket for privilege misses."
+    },
+    {
+      "q": "How should we handle forwarded email chains?",
+      "a": "Segment the chain and identify where the privileged portion begins/ends; don’t assume the whole chain is privileged."
+    },
+    {
+      "q": "What’s the most common AI miss in privilege review?",
+      "a": "Attachments and mixed-purpose documents—treat both as high-risk and sample accordingly."
+    },
+    {
+      "q": "What should we log?",
+      "a": "Batch IDs, privilege basis decisions, sampling results, errors found, and any changes to rules or definitions."
+    }
+  ],
+  "citations": [
+    { "title": "The Sedona Conference (eDiscovery guidance)", "url": "https://thesedonaconference.org/" },
+    { "title": "EDRM (Electronic Discovery Reference Model)", "url": "https://edrm.net/" }
+  ],
+  "recommended_pack_slugs": ["litigation-and-discovery", "inhouse-litigation", "lawyer-productivity-pack"],
+  "changelog": [
+    {
+      "date": "2026-03-08",
+      "changes": ["Published as an Answer Hub guide.", "Added downloadable privilege triage + role map template.", "Added one-page PDF one-pager.", "Added a worked example.", "Added workflow-fit comparison table."]
+    }
+  ],
+  "last_updated": "2026-03-08"
+}

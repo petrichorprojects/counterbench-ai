@@ -7,8 +7,8 @@ const webServerMode = (process.env.E2E_WEBSERVER_MODE || "prod").toLowerCase();
 const webServerCommand =
   webServerMode === "prod"
     // Build is handled by the npm script (or a previous run); keep the webServer command as start-only.
-    ? "npx next start -p 3000"
-    : "npm run dev -- -p 3000";
+    ? "npx next start -H 127.0.0.1 -p 3000"
+    : "npm run dev -- -H 127.0.0.1 -p 3000";
 const webServerTimeout = webServerMode === "prod" ? 600_000 : 120_000;
 
 export default defineConfig({
