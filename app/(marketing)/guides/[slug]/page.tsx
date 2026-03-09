@@ -15,7 +15,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
   const url = absoluteUrl(`/guides/${guide.slug}`);
-  const ogImage = absoluteUrl(`/guides/${guide.slug}/opengraph-image`);
   return {
     title: guide.title,
     description: guide.description,
@@ -24,14 +23,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: guide.title,
       description: guide.description,
       url,
-      type: "article",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: guide.title }]
+      type: "article"
     },
     twitter: {
       card: "summary_large_image",
       title: guide.title,
-      description: guide.description,
-      images: [ogImage]
+      description: guide.description
     }
   };
 }
