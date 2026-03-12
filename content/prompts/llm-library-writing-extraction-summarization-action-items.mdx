@@ -1,0 +1,41 @@
+---
+title: "Action Items"
+description: "I will give you text content, you will find action items from it and output them in bullet point format."
+use_case: "Summaries & Extraction"
+inputs:
+  - "text"
+steps:
+  - "Fill placeholders and provide task-specific context."
+  - "Run the prompt and review for accuracy."
+  - "Edit into your workflow format."
+output_format: ""
+tags:
+  - "Open source"
+  - "LLM-Prompt-Library"
+  - "MIT"
+  - "writing"
+  - "summarization"
+  - "action items"
+last_updated: "2026-03-11"
+---
+
+## Prompt
+```text
+I will give you text content, you will find action items from it and output them in bullet point format. Identify only the action items that need the reader to take action, and exclude action items requiring action from anyone other than the reader.
+Only give me the output and nothing else.
+Now, using the concepts above, find action items from the following text. Respond in the same language variety or dialect of the following text:
+
+"""
+{{text}}
+"""
+```
+
+## Notes
+- Treat outputs as drafting support, not legal advice.
+- Verify critical facts and primary sources before use.
+
+## Source
+- Project: https://github.com/abilzerian/LLM-Prompt-Library
+- File: prompts/writing/extraction_summarization/Action Items.md
+- URL: https://github.com/abilzerian/LLM-Prompt-Library/blob/main/prompts/writing/extraction_summarization/Action Items.md
+- License: MIT

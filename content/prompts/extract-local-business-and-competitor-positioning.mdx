@@ -1,0 +1,93 @@
+---
+title: "Local SEO Competitive Intel: Extract Your Positioning vs Competitors"
+description: "Open your site + 3 competitors and extract services, cities served, selling points, and trust signals, then compare positioning."
+use_case: "Local SEO / Competitive Intelligence"
+inputs:
+  - "Your website URL"
+  - "Competitor URLs (3)"
+steps:
+  - "Extract your business facts and claims"
+  - "Extract competitor services + locations + strengths"
+  - "Compare positioning, gaps, and quick wins"
+output_format: "JSON + tables: (1) you, (2) competitors, (3) comparison + recommended actions"
+tags:
+  - "SEO"
+  - "Local SEO"
+  - "Competitive Analysis"
+  - "Law Firm Marketing"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+Open Chrome, visit my site `{{your_site_url}}` and extract my business name, address, services, cities served and key selling points, then open these competitors `{{competitor_url_1}}`, `{{competitor_url_2}}`, `{{competitor_url_3}}` and extract their services, target locations, strengths and trust signals, compare me vs them.
+
+You are a **local SEO + positioning analyst** for a professional services business (likely a law firm). No guessing.
+
+Open Chrome and analyze:
+
+- My site: `{{your_site_url}}`
+- Competitors:
+  - `{{competitor_url_1}}`
+  - `{{competitor_url_2}}`
+  - `{{competitor_url_3}}`
+
+### Rules
+
+- Use only what you can **see on-page** (and in obvious navigation like header/footer/menus). No guessing.
+- If a detail is missing, output `null` and add it to **Missing on Site**.
+- Prefer “**claimed**” facts (e.g., “Serving X”, “24/7”, “No fee unless we win”) over generic marketing language.
+
+### What to extract (my site)
+
+Return a JSON object:
+
+```json
+{
+  "business_name": "",
+  "primary_phone": "",
+  "address": "",
+  "service_area_cities": [],
+  "primary_services": [],
+  "secondary_services": [],
+  "key_selling_points": [],
+  "trust_signals": {
+    "reviews": null,
+    "ratings": null,
+    "awards_badges": [],
+    "case_results": [],
+    "associations": [],
+    "media_mentions": [],
+    "guarantees_promises": [],
+    "team_credentials": []
+  },
+  "primary_ctas": [],
+  "missing_on_site": []
+}
+```
+
+### What to extract (each competitor)
+
+For each competitor, return the same JSON structure, plus:
+
+- `notable_pages`: top 5 pages that look designed to rank (service pages, location pages, “near me” pages, FAQs, case results, reviews).
+- `conversion_assets`: chat widget, click-to-call, booking, lead form, free consult, calculators, guides, downloadable offers, etc.
+
+### Comparison output
+
+1) Table: **Services** (rows = services; columns = Me, Comp1, Comp2, Comp3; each cell = “Strong / Weak / Missing” with 1-line evidence).
+
+2) Table: **Locations/Cities** (same format).
+
+3) Table: **Trust Signals** (reviews, awards, case results, associations, guarantees, team credibility).
+
+4) “What they do better than me” (max 8 bullets; evidence-backed)
+
+5) “What I do better than them” (max 8 bullets; evidence-backed)
+
+6) “Quick wins this week” (max 10 bullets; must be concrete page-level changes or new pages to create)
+
+7) “Content map to outrank them”:
+- 5 **service pages** I should add/upgrade
+- 5 **location pages** I should add/upgrade
+- 5 **FAQ topics** that directly answer high-intent queries

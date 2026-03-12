@@ -1,0 +1,77 @@
+---
+title: "Schema Audit: List Existing + Missing/Weak, Generate HIGH Priority JSON-LD"
+description: "Open a URL, inspect page source, list schema present, evaluate LocalBusiness usefulness, then generate JSON-LD only for high-priority gaps."
+use_case: "Technical SEO / Schema"
+inputs:
+  - "Page URL"
+  - "Business details (optional)"
+steps:
+  - "Inspect source and list all schema types"
+  - "Judge LocalBusiness presence and quality"
+  - "List missing schema with priority"
+  - "Generate JSON-LD only for HIGH priority items with placeholders"
+output_format: "(1) existing schema + verdict, (2) missing/weak schema + priority, (3) JSON-LD for HIGH only"
+tags:
+  - "SEO"
+  - "Schema"
+  - "Local SEO"
+  - "Technical SEO"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+In Chrome, open `{{page_url}}`. Check page source and list all schema. Say if LocalBusiness exists and if it’s useful.
+
+Output:
+
+(1) existing schema + verdict  
+(2) missing/weak schema + priority  
+(3) for HIGH priority only: generate clean JSON-LD with placeholders  
+
+No guessing. No explanations. Be blunt.
+
+In Chrome, open:
+
+`{{page_url}}`
+
+### Task
+
+Check page source and list all Schema.org JSON-LD / Microdata / RDFa found.
+
+### Output rules (strict)
+
+- **No guessing.**
+- **No explanations.**
+- If you can’t verify something from the page source, say `unknown`.
+- Be blunt.
+
+### Output format (exact)
+
+#### (1) Existing schema + verdict
+
+For each schema block found, list:
+
+- Type(s)
+- Where found (JSON-LD vs Microdata vs RDFa)
+- High-level verdict: `useful` / `meh` / `harmful` / `broken`
+- If LocalBusiness exists: verdict on whether it’s actually helpful (complete vs thin vs wrong)
+
+#### (2) Missing / weak schema + priority
+
+List missing or weak schema types as:
+
+- `HIGH` / `MED` / `LOW` — SchemaType — 1-line reason
+
+Prioritize anything that helps local discovery and rich results (only if appropriate for the page).
+
+#### (3) For HIGH priority only: generate clean JSON-LD with placeholders
+
+Generate copy-paste JSON-LD blocks. Use placeholders like:
+
+- `{{business_name}}`, `{{street_address}}`, `{{city}}`, `{{region}}`, `{{postal_code}}`
+- `{{phone}}`, `{{url}}`, `{{logo_url}}`, `{{image_url}}`
+- `{{latitude}}`, `{{longitude}}`
+- `{{opening_hours}}`
+
+Do not fill placeholders. Do not invent reviews/ratings.

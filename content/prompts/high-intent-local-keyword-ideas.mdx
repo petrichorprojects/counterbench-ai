@@ -1,0 +1,48 @@
+---
+title: "Low-Hanging Fruit: 20 High-Intent Local Keywords (Ready-to-Buy)"
+description: "Generate high-intent local SEO keywords for a service in a city (near me, emergency, same-day, free consult, etc.)."
+use_case: "Local SEO / Keyword Research"
+inputs:
+  - "Service"
+  - "City + state"
+steps:
+  - "Generate high-intent modifiers"
+  - "Combine into local buyer keywords"
+  - "Group by intent"
+output_format: "Grouped list + optional negatives"
+tags:
+  - "SEO"
+  - "Local SEO"
+  - "Keywords"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+List 20 high-intent local keywords for a `{{service}}` in `{{city}}`, `{{state}}` that indicate a customer is ready to buy NOW.
+
+Instantly, you will have a list of "near me" and "emergency" keywords that actually convert.
+
+List **20** high-intent local keywords for:
+
+- Service: `{{service}}`
+- Location: `{{city}}`, `{{state}}`
+
+### Rules
+
+- These must indicate the searcher is ready to buy **now**.
+- Include “near me” and urgency variants, but don’t repeat trivial permutations.
+- If the service is regulated (e.g., legal/medical), avoid misleading claims.
+
+### Output format
+
+Return:
+
+1) **Emergency / Urgent intent** (at least 6)
+2) **Near-me / local intent** (at least 6)
+3) **Price / consult intent** (at least 4)
+4) **Problem-specific intent** (at least 4)
+
+Then add:
+
+- **Negative keywords to consider** (5–15) to avoid low-intent traffic for this service.

@@ -1,0 +1,53 @@
+---
+title: "Ahrefs: Competitor Top Pages → Keyword + Volume + Difficulty (Spreadsheet)"
+description: "Open Ahrefs, analyze a competitor’s top 20 pages, extract target keywords, search volume, and difficulty, then output as CSV."
+use_case: "SEO / Keyword Research"
+inputs:
+  - "Competitor domain"
+  - "Target country"
+steps:
+  - "Open Ahrefs and run Top Pages report"
+  - "Extract top 20 pages and their primary keywords"
+  - "Capture volume + difficulty and prioritize"
+output_format: "CSV table with prioritization column"
+tags:
+  - "SEO"
+  - "Ahrefs"
+  - "Keywords"
+  - "Competitive Analysis"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+Open Chrome. Go to Ahrefs. Analyze this competitor:
+
+`{{competitor_domain}}`
+
+Target country/database: `{{country}}`
+
+### Task
+
+From Ahrefs, pull the competitor’s **top 20 pages** and for each page extract:
+
+- Page URL
+- Page title (if available)
+- Primary target keyword (best available proxy)
+- Search volume
+- Keyword difficulty (KD)
+- Traffic potential (if available)
+
+### Output
+
+Return a **CSV** (as a markdown code block) with columns:
+
+`rank,page_url,page_title,primary_keyword,volume,kd,traffic_potential,intent,notes,priority`
+
+Priority rules:
+
+- Priority = `P1` if high intent + KD is reasonable for a local service site (or page is clearly converting).
+- Priority = `P2` if medium intent or higher KD.
+- Priority = `P3` if informational only or low relevance.
+
+If you can’t access Ahrefs or the data, say exactly what you can’t see and stop (no guesses).
+

@@ -1,0 +1,83 @@
+---
+title: "Google Business Profile: Competitor Post Gap Analysis + 10 Posts"
+description: "Analyze competitor GBP posts for keyword gaps, then write 10 high-impact GBP posts with local landmarks and a hard Call Now CTA."
+use_case: "Local SEO / Google Business Profile"
+inputs:
+  - "Your business name"
+  - "City + state"
+  - "Competitor GBP links (or business names)"
+  - "Phone number"
+steps:
+  - "Review competitor GBP posts and categorize topics/keywords"
+  - "Identify keyword + offer gaps"
+  - "Write 10 posts with local relevance and direct CTA"
+output_format: "Table: competitor post themes + gaps, then 10 ready-to-post GBP posts"
+tags:
+  - "SEO"
+  - "Local SEO"
+  - "GBP"
+  - "Law Firm Marketing"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+Analyze these competitor GBP posts by opening their GBP in Chrome. Identify their keyword gaps, then write 10 high-impact posts for my business in `{{city}}` that include local landmarks and a hard "Call Now" CTA.
+
+Codex does the heavy lifting while I take the #1 spot.
+
+You are optimizing my **Google Business Profile** content cadence to beat local competitors.
+
+City: `{{city}}`, `{{state}}`
+Business: `{{business_name}}`
+Call-now phone: `{{phone}}`
+
+Competitors (provide GBP links if possible; otherwise use their exact business names and find their GBP):
+- `{{competitor_gbp_1}}`
+- `{{competitor_gbp_2}}`
+- `{{competitor_gbp_3}}`
+
+### Step 1 — Open competitor GBPs and audit posts
+
+In Chrome:
+
+1) Open each competitor GBP.
+2) Review their **most recent posts** (if posts are not visible, say so and stop).
+
+For each competitor, output a table with:
+
+- Post date (if visible)
+- Post type (Offer / Update / Event / Product / Other)
+- Primary topic
+- Primary keywords/phrases used (exact phrases where possible)
+- CTA used (Call now / Learn more / Book / etc.)
+- Trust signals referenced (reviews, awards, “X years”, results, etc.)
+- Local anchors used (neighborhoods, landmarks, local terms)
+
+### Step 2 — Identify gaps
+
+Output:
+
+1) **Keyword gaps** (phrases they don’t use that a buyer would search; high intent only)
+2) **Offer gaps** (consultation offers, urgency, guarantees, financing, etc.)
+3) **Trust gaps** (proof points they aren’t leveraging that we can)
+4) **Local relevance gaps** (neighborhood/landmark anchors they ignore)
+
+### Step 3 — Write 10 high-impact GBP posts (ready to paste)
+
+Write **10** posts for `{{business_name}}` in `{{city}}` that:
+
+- Use at least **1 local landmark or neighborhood** each (rotate; don’t repeat the same one)
+- Include **one** high-intent keyword phrase per post (natural, not spammy)
+- Include a **hard CTA**: “Call now at `{{phone}}`.”
+- Avoid compliance-risky claims (no “guaranteed results”, no “best”, no unverifiable superlatives)
+
+Format each post exactly like this:
+
+1) **Post Title:** …
+2) **Post Body:** 70–130 words.
+3) **Primary Keyword:** …
+4) **Local Anchor:** …
+5) **CTA:** Call now at `{{phone}}`.
+
+Also output a 1-line **posting schedule** recommendation (e.g., 3/week) based on competitor cadence.

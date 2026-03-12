@@ -1,0 +1,78 @@
+---
+title: "Competitor Website Gap Audit (Local SEO): Missing Content + 5 Topics"
+description: "Scan competitor sites to find missing pages, weak content, and trust gaps, then propose 5 topics to cover better."
+use_case: "Local SEO / Content Strategy"
+inputs:
+  - "Competitor URLs"
+  - "Your services"
+  - "City/region"
+steps:
+  - "Audit competitor IA + on-page content"
+  - "List missing/weak elements that hurt ranking/conversion"
+  - "Recommend 5 topics to outperform them"
+output_format: "Checklist + gap table + 5 topic briefs"
+tags:
+  - "SEO"
+  - "Local SEO"
+  - "Content Strategy"
+  - "Competitive Analysis"
+last_updated: "2026-03-09"
+---
+
+## Prompt
+
+Scan these sites. What are these competitors sites missing? Find the content gaps and tell me 5 topics I should cover to be more helpful than them.
+
+If you provide more value, you win the #1 spot. Period.
+
+You are a brutal local SEO auditor. Use only what you can see on the sites. No guessing.
+
+Competitors:
+- `{{competitor_url_1}}`
+- `{{competitor_url_2}}`
+- `{{competitor_url_3}}`
+
+My service focus: `{{service}}`
+Target location: `{{city}}`, `{{state}}`
+
+### What to check (each competitor)
+
+In Chrome, quickly map their site:
+
+- Primary services offered (and whether they have dedicated service pages)
+- Locations served (and whether they have dedicated city/neighborhood pages)
+- Evidence/trust: reviews, case results, awards, associations, attorney bios, photos, media mentions
+- Conversion: click-to-call, chat, booking, lead form friction, “free consult” clarity
+- Helpful content: FAQs, guides, calculators, checklists, process pages
+
+### Output
+
+For each competitor, output:
+
+1) **What they rank for (implied)**: list 5–10 page titles/URLs that are clearly intended to rank locally.
+2) **What’s missing** (max 12 bullets): missing pages, thin content, bad internal linking, weak local specificity, weak proof, unclear offers.
+3) **Conversion weaknesses** (max 8 bullets): anything that would reduce leads.
+
+### Cross-competitor gap summary
+
+Output one table:
+
+- Column A: Gap item (e.g., “No city pages”, “No FAQ hub”, “No case results index”, “No review page”, “No attorney credentials prominence”)
+- Columns B–D: Comp1/Comp2/Comp3 = Present / Weak / Missing
+- Column E: Why it matters (1 line)
+
+### 5 topics I should cover to beat them
+
+Propose 5 topics that are:
+
+- High-intent for `{{service}}` in `{{city}}`
+- More helpful than competitors (unique angle + depth)
+- Easy to convert from (natural “call now” moment)
+
+For each topic, include:
+
+- Suggested page title
+- Target keyword (one primary + 3 supporting)
+- Outline (5–8 bullets)
+- Trust signals to embed (specific)
+- CTA placement recommendation

@@ -1,0 +1,41 @@
+---
+title: "Rewrite"
+description: "I will give you text content, you will rewrite it and output a better version of my text."
+use_case: "Editing & Revision"
+inputs:
+  - "text"
+steps:
+  - "Fill placeholders and provide task-specific context."
+  - "Run the prompt and review for accuracy."
+  - "Edit into your workflow format."
+output_format: ""
+tags:
+  - "Open source"
+  - "LLM-Prompt-Library"
+  - "MIT"
+  - "writing"
+  - "editing"
+  - "rewriting"
+last_updated: "2026-03-11"
+---
+
+## Prompt
+```text
+I will give you text content, you will rewrite it and output a better version of my text.
+Keep the meaning the same. Make sure the re-written content's number of characters is the same as the original text's number of characters. Do not alter the original structure and formatting outlined in any way. Only give me the output and nothing else.
+Now, using the concepts above, re-write the following text. Respond in the same language variety or dialect of the following text:
+
+"""
+{{text}}
+"""
+```
+
+## Notes
+- Treat outputs as drafting support, not legal advice.
+- Verify critical facts and primary sources before use.
+
+## Source
+- Project: https://github.com/abilzerian/LLM-Prompt-Library
+- File: prompts/writing/editing_revision/Rewrite.md
+- URL: https://github.com/abilzerian/LLM-Prompt-Library/blob/main/prompts/writing/editing_revision/Rewrite.md
+- License: MIT

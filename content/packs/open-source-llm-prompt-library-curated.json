@@ -1,0 +1,30 @@
+{
+  "slug": "open-source-llm-prompt-library-curated",
+  "title": "Open Source: LLM Prompt Library (Curated)",
+  "description": "Curated legal and writing prompts imported from the LLM-Prompt-Library open-source repository for research, review, summaries, and client communications.",
+  "prompt_slugs": [
+    "llm-library-legal-case-law-finder",
+    "llm-library-legal-legal-contract-reviewer",
+    "llm-library-sales-sales-email-drafter",
+    "llm-library-writing-editing-revision-preserve-technical-terminology",
+    "llm-library-writing-editing-revision-proofread",
+    "llm-library-writing-editing-revision-rewrite",
+    "llm-library-writing-educational-teach",
+    "llm-library-writing-educational-thought-stream-transcription",
+    "llm-library-writing-extraction-summarization-action-items",
+    "llm-library-writing-extraction-summarization-book-summary",
+    "llm-library-writing-extraction-summarization-comprehensive-analysis",
+    "llm-library-writing-extraction-summarization-non-fiction-analysis",
+    "llm-library-writing-extraction-summarization-notesgpt",
+    "llm-library-writing-extraction-summarization-poem-analysis",
+    "llm-library-writing-extraction-summarization-short-summary",
+    "llm-library-writing-verification-accuracy-confirmation"
+  ],
+  "audience": "legal",
+  "workflow_stage": "research",
+  "seo": {
+    "title": "Open Source: LLM Prompt Library (Curated)",
+    "description": "Curated legal and writing prompts imported from the LLM-Prompt-Library open-source repository for research, review, summaries, and client communications."
+  },
+  "last_updated": "2026-03-11"
+}

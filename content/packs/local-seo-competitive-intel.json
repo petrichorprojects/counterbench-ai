@@ -1,0 +1,20 @@
+{
+  "slug": "local-seo-competitive-intel",
+  "title": "Local SEO: Competitive Intel Pack",
+  "description": "Competitive research prompts for law firms and local service businesses: GBP, schema, gaps, and high-intent keywords.",
+  "audience": "marketing",
+  "workflow_stage": "acquisition",
+  "prompt_slugs": [
+    "extract-local-business-and-competitor-positioning",
+    "gbp-post-gap-analysis-and-post-writer",
+    "competitor-website-gap-audit-local-seo",
+    "local-schema-audit-and-jsonld-generator",
+    "high-intent-local-keyword-ideas",
+    "ahrefs-competitor-top-pages-keyword-sheet"
+  ],
+  "seo": {
+    "title": "Local SEO Competitive Intel Prompt Pack",
+    "description": "A practical prompt pack for competitor analysis, GBP content, schema audits, and ready-to-buy local keywords."
+  }
+}
+
