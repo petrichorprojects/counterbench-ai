@@ -7,6 +7,11 @@
 node_modules
 .git
 .DS_Store
+out
+test-results
+playwright-report
+coverage
+*.log
 
 # Do NOT upload local Next build output — prebuilt uses `.vercel/output` instead.
 .next
@@ -14,4 +19,3 @@ node_modules
 # Keep prebuilt output (required for `vercel --prebuilt` / `vercel deploy --prebuilt`).
 !.vercel/output/**
 !.vercel/project.json
-

@@ -15,6 +15,16 @@ function overlayDir(subdir: string): string {
 }
 
 const ResourceTypeEnum = z.enum(["program", "research", "toolkit", "policy", "community", "course", "news", "other"]);
+const ResourceSourceTypeEnum = z.enum([
+  "case-law",
+  "statutes-regulation",
+  "dockets-filings",
+  "scholarship",
+  "datasets-benchmarks",
+  "research-platform",
+  "other"
+]);
+const ResourceAccessTypeEnum = z.enum(["open", "commercial", "api", "bulk", "mixed", "unknown"]);
 
 export const ResourceSchema = z.object({
   slug: z.string().min(1),
@@ -23,7 +33,13 @@ export const ResourceSchema = z.object({
   url: z.string().url(),
   tags: z.array(z.string()).default([]),
   type: ResourceTypeEnum.default("other"),
-  last_checked: z.string().nullable().default(null)
+  last_checked: z.string().nullable().default(null),
+  jurisdiction: z.array(z.string()).default([]),
+  source_type: ResourceSourceTypeEnum.default("other"),
+  access: z.array(ResourceAccessTypeEnum).default([]),
+  coverage: z.string().default(""),
+  license_notes: z.string().default(""),
+  best_for: z.array(z.string()).default([])
 });
 
 export type Resource = z.infer<typeof ResourceSchema>;
