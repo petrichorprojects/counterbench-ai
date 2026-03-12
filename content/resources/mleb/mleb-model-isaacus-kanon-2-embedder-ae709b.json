@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-isaacus-kanon-2-embedder-ae709b",
+  "title": "Kanon 2 Embedder",
+  "description": "Embedding model evaluated on MLEB (isaacus/kanon-2-embedder).",
+  "url": "https://docs.isaacus.com/models/introduction#embedding",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Isaacus",
+    "Closed-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Average score: 0.8186 across 12 datasets. Avg evaluation time: 121.14s. Context window: 16384. Dimensions: 1792.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

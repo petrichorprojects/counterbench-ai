@@ -1,0 +1,27 @@
+{
+  "slug": "ald-ledgar-1ff8c6",
+  "title": "LEDGAR",
+  "description": "Contract clause classification dataset (common clause types from EDGAR filings).",
+  "url": "https://nlp.jhu.edu/ledgar/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "dockets filings",
+    "Open"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "open"
+  ],
+  "coverage": "Contract clause classification dataset (common clause types from EDGAR filings).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

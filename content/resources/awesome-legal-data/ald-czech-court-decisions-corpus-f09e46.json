@@ -1,0 +1,26 @@
+{
+  "slug": "ald-czech-court-decisions-corpus-f09e46",
+  "title": "Czech Court Decisions Corpus",
+  "description": "(Paper)",
+  "url": "https://lindat.mff.cuni.cz/repository/xmlui/handle/11372/LRT-3052",
+  "tags": [
+    "Awesome Legal Data",
+    "Czech",
+    "case law"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Czech"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "(Paper)",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

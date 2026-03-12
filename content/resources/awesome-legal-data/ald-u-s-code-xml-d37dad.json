@@ -1,0 +1,26 @@
+{
+  "slug": "ald-u-s-code-xml-d37dad",
+  "title": "U.S. Code (XML)",
+  "description": "Bulk downloads of the United States Code in XML.",
+  "url": "https://uscode.house.gov/download/download.shtml",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "other",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "Bulk downloads of the United States Code in XML.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

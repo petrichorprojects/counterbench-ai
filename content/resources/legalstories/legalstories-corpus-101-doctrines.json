@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories-corpus-101-doctrines",
+  "title": "LegalStories sampled corpus: 101 doctrines",
+  "description": "Sampled doctrine subset used for intermediate evaluation stages.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/data/101-doctrines/legal_doctrines_101.tsv",
+  "tags": [
+    "LegalStories",
+    "Corpus",
+    "101 doctrines"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "101 doctrine rows in TSV format for legal concept learning tasks.",
+  "license_notes": "Dataset file distributed within repository context; validate educational and commercial reuse policy before redistribution.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

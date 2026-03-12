@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-component-answer-chain",
+  "title": "LCQA component: legal answer chain",
+  "description": "Prompt + LLM chain that returns concise legal-contract answers and abstains when context is insufficient.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/blob/main/app/utils/langchain_utils.py",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "RAG component"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Answer model: gpt-3.5-turbo at temperature 0.",
+  "license_notes": "Component-level details derived from MIT-licensed source code.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

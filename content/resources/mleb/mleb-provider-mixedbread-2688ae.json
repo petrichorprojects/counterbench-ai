@@ -1,0 +1,26 @@
+{
+  "slug": "mleb-provider-mixedbread-2688ae",
+  "title": "MLEB Provider: Mixedbread",
+  "description": "Provider with one or more models evaluated in MLEB.",
+  "url": "https://www.mixedbread.com/",
+  "tags": [
+    "MLEB",
+    "Provider",
+    "Mixedbread"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Provider represented in MLEB model evaluations: Mixedbread.",
+  "license_notes": "Provider usage terms vary by model and API offering.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

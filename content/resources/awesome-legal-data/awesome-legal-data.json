@@ -1,0 +1,27 @@
+{
+  "slug": "awesome-legal-data",
+  "title": "Awesome Legal Data",
+  "description": "A curated list of legal data sources and legal NLP datasets grouped by jurisdiction. Used by Counterbench to build source maps and finder workflows.",
+  "url": "https://github.com/openlegaldata/awesome-legal-data",
+  "tags": [
+    "Awesome Legal Data",
+    "Open Legal Data",
+    "Counterbench Source Map"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Global and jurisdiction-specific index of legal data repositories, APIs, case law, legislation, and datasets.",
+  "license_notes": "Repository does not declare an explicit software/content license in metadata; use as an index and verify each downstream source.",
+  "best_for": [
+    "research",
+    "citation-check",
+    "policy-check"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "mleb-provider-isaacus-192ee5",
+  "title": "MLEB Provider: Isaacus",
+  "description": "Provider with one or more models evaluated in MLEB.",
+  "url": "https://isaacus.com/",
+  "tags": [
+    "MLEB",
+    "Provider",
+    "Isaacus"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Provider represented in MLEB model evaluations: Isaacus.",
+  "license_notes": "Provider usage terms vary by model and API offering.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-westlaw-spain-d75504",
+  "title": "Westlaw Spain",
+  "description": "Case law, legislation, commentary.",
+  "url": "https://www.thomsonreuters.es/es/soluciones-juridicas/westlaw",
+  "tags": [
+    "Awesome Legal Data",
+    "Spain",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Spain"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Case law, legislation, commentary.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

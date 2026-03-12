@@ -1,0 +1,26 @@
+{
+  "slug": "ald-multieurlex-a-multi-lingual-and-multi-label-legal-document-class-1c1e74",
+  "title": "MultiEURLEX - A multi-lingual and multi-label legal document classification dataset for zero-shot cross-lingual transfer",
+  "description": "Legal data source listed in Awesome Legal Data (Europe & European Union).",
+  "url": "https://arxiv.org/abs/2109.00904",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

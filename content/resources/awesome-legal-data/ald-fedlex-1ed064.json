@@ -1,0 +1,26 @@
+{
+  "slug": "ald-fedlex-1ed064",
+  "title": "Fedlex",
+  "description": "Official Swiss federal law portal (RDF/Linked Data available).",
+  "url": "https://www.fedlex.admin.ch/",
+  "tags": [
+    "Awesome Legal Data",
+    "Switzerland",
+    "research platform",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Switzerland"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official Swiss federal law portal (RDF/Linked Data available).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

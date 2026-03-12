@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-component-pdf-ingestion",
+  "title": "LCQA component: PDF text extraction",
+  "description": "Document ingestion layer using PyPDF2 to extract text across all uploaded PDF pages.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/blob/main/app/utils/doc_utils.py",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "RAG component"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "PDF ingestion implementation based on PdfReader with page-wise extraction. Source length: 29 lines.",
+  "license_notes": "Component-level details derived from MIT-licensed source code.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

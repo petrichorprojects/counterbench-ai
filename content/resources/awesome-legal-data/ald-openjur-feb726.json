@@ -1,0 +1,26 @@
+{
+  "slug": "ald-openjur-feb726",
+  "title": "OpenJur",
+  "description": "Community open case-law database (DE & EU decisions).",
+  "url": "https://openjur.de/",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "research platform",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Community open case-law database (DE & EU decisions).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

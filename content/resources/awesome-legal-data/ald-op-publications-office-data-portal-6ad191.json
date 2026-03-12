@@ -1,0 +1,27 @@
+{
+  "slug": "ald-op-publications-office-data-portal-6ad191",
+  "title": "OP (Publications Office) Data Portal",
+  "description": "EU Open Data incl. cellar, EuroVoc, and legal metadata via APIs.",
+  "url": "https://data.europa.eu/en",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "research platform",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "EU Open Data incl. cellar, EuroVoc, and legal metadata via APIs.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

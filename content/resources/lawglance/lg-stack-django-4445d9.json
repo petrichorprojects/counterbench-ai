@@ -1,0 +1,26 @@
+{
+  "slug": "lg-stack-django-4445d9",
+  "title": "Django",
+  "description": "Technology used in LawGlance architecture (Django).",
+  "url": "https://www.djangoproject.com/",
+  "tags": [
+    "LawGlance",
+    "Stack",
+    "Implementation"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "LawGlance implementation stack component: Django.",
+  "license_notes": "Check individual technology license and service terms before commercial deployment.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

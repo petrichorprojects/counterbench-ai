@@ -1,0 +1,28 @@
+{
+  "slug": "ald-case-law-caselaw-access-project-a85916",
+  "title": "case.law (Caselaw Access Project)",
+  "description": "~6.7M U.S. opinions (1658-2018); bulk & API.",
+  "url": "https://case.law/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "case law",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "~6.7M U.S. opinions (1658-2018); bulk & API.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

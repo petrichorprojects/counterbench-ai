@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories-question-type-limitation-77cc27",
+  "title": "LegalStories question type: rule limitation",
+  "description": "Limitation questions probe exceptions and boundary conditions for each doctrine.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/generate_question.py",
+  "tags": [
+    "LegalStories",
+    "Question type",
+    "882 prompts"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Approximate coverage across model runs: 882 non-empty question prompts.",
+  "license_notes": "Question-generation pipeline code is repository content; generated outputs may require additional review before classroom use.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

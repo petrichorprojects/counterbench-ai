@@ -1,0 +1,27 @@
+{
+  "slug": "ald-heinonline-86ce06",
+  "title": "HeinOnline",
+  "description": "Extensive law journal & historical legislative archives; treaties; session laws.",
+  "url": "https://home.heinonline.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "scholarship",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Extensive law journal & historical legislative archives; treaties; session laws.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

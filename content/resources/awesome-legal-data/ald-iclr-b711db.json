@@ -1,0 +1,27 @@
+{
+  "slug": "ald-iclr-b711db",
+  "title": "ICLR",
+  "description": "Official Law Reports and case analysis.",
+  "url": "https://www.iclr.co.uk/",
+  "tags": [
+    "Awesome Legal Data",
+    "United Kingdom",
+    "statutes regulation",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Official Law Reports and case analysis.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "lcqa-reference-langchain-for-llm-applications-video-course-08d8a1",
+  "title": "LCQA reference: Langchain for LLM Applications (video course)",
+  "description": "External educational reference cited in project README.",
+  "url": "https://learn.deeplearning.ai/langchain/lesson/1/introduction",
+  "tags": [
+    "Contract QA",
+    "Reference",
+    "RAG learning"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "open"
+  ],
+  "coverage": "Referenced source supporting contract-RAG implementation and evaluation practices: Langchain for LLM Applications (video course).",
+  "license_notes": "External content remains under its own terms and attribution requirements.",
+  "best_for": [
+    "research",
+    "benchmarking",
+    "citation-check"
+  ]
+}

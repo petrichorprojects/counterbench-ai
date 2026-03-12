@@ -1,0 +1,27 @@
+{
+  "slug": "ald-rechtspraak-uitspraken-8c7bc2",
+  "title": "Rechtspraak (Uitspraken)",
+  "description": "Official case law portal (search judgments).",
+  "url": "https://uitspraken.rechtspraak.nl/",
+  "tags": [
+    "Awesome Legal Data",
+    "Netherlands",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Netherlands"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official case law portal (search judgments).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

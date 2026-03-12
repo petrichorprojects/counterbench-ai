@@ -1,0 +1,27 @@
+{
+  "slug": "ald-india-code-a38927",
+  "title": "India Code",
+  "description": "Central repository of Central/State Acts and subordinate legislation.",
+  "url": "https://www.indiacode.nic.in/",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "statutes regulation",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Central repository of Central/State Acts and subordinate legislation.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

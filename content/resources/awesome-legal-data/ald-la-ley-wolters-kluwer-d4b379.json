@@ -1,0 +1,26 @@
+{
+  "slug": "ald-la-ley-wolters-kluwer-d4b379",
+  "title": "La Ley (Wolters Kluwer)",
+  "description": "Spanish legal research platform.",
+  "url": "https://laley.wolterskluwer.es/",
+  "tags": [
+    "Awesome Legal Data",
+    "Spain",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Spain"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Spanish legal research platform.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

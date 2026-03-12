@@ -1,0 +1,27 @@
+{
+  "slug": "ald-multieurlex-d498e2",
+  "title": "MultiEURLEX",
+  "description": "~65k EU legal acts in 23 languages annotated with EuroVoc; for multilabel classification/zero-shot.",
+  "url": "https://github.com/nlpaueb/multi_eurlex",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "~65k EU legal acts in 23 languages annotated with EuroVoc; for multilabel classification/zero-shot.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

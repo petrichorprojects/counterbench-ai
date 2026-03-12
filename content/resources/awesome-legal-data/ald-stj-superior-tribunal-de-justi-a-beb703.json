@@ -1,0 +1,26 @@
+{
+  "slug": "ald-stj-superior-tribunal-de-justi-a-beb703",
+  "title": "STJ - Superior Tribunal de Justiça",
+  "description": "Decisions search (SCON).",
+  "url": "https://scon.stj.jus.br/SCON/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "other",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "Decisions search (SCON).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

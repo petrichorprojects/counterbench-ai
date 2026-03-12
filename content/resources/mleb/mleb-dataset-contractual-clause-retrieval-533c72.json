@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-dataset-contractual-clause-retrieval-533c72",
+  "title": "Contractual Clause Retrieval",
+  "description": "Contracts dataset in MLEB (creator: Isaacus).",
+  "url": "https://huggingface.co/datasets/isaacus/contractual-clause-retrieval",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Contracts",
+    "Isaacus"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: contractual-clause-retrieval. Category: Contracts. Creator: Isaacus.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "ald-open-legal-data-de-2a35ba",
+  "title": "Open Legal Data (DE)",
+  "description": "Open platform & API for German legal documents/case law. (HF)",
+  "url": "https://openlegaldata.io/",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "case law",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Open platform & API for German legal documents/case law. (HF)",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

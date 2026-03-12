@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-setup-runbook",
+  "title": "Legal Contract Q&A Bot setup runbook",
+  "description": "Installation and launch workflow extracted from the project README.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot#usage",
+  "tags": [
+    "Contract QA",
+    "Runbook",
+    "Streamlit"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "Clone repo, install requirements, and launch with streamlit run app/main.py.",
+  "license_notes": "Usage guidance is from MIT-licensed project documentation.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

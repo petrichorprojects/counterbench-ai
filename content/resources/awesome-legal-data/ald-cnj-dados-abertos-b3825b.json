@@ -1,0 +1,26 @@
+{
+  "slug": "ald-cnj-dados-abertos-b3825b",
+  "title": "CNJ - Dados Abertos",
+  "description": "National Council of Justice open judicial data & indicators.",
+  "url": "https://www.cnj.jus.br/sistemas/dadosabertos/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "other",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "National Council of Justice open judicial data & indicators.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

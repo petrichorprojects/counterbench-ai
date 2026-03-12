@@ -1,0 +1,27 @@
+{
+  "slug": "ald-worldlii-870230",
+  "title": "WorldLII",
+  "description": "Federated gateway to free legal information worldwide (legislation, case law, treaties) across national LIIs.",
+  "url": "http://www.worldlii.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Federated gateway to free legal information worldwide (legislation, case law, treaties) across national LIIs.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

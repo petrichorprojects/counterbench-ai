@@ -1,0 +1,28 @@
+{
+  "slug": "ald-openalex-aba115",
+  "title": "OpenAlex",
+  "description": "Scholarly metadata/abstracts (including law journals) with an API; useful for legal literature mining.",
+  "url": "https://openalex.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "scholarship",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Scholarly metadata/abstracts (including law journals) with an API; useful for legal literature mining.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

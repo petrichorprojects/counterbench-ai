@@ -1,0 +1,26 @@
+{
+  "slug": "ald-neuris-neues-rechtsinformationssystem-fa251c",
+  "title": "NeuRIS (Neues Rechtsinformationssystem)",
+  "description": "Legal data source listed in Awesome Legal Data (Germany).",
+  "url": "https://digitalservice.bund.de/projekte/neues-rechtsinformationssystem",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "other",
+    "API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "other",
+  "access": [
+    "api"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

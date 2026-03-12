@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-dataset-consumer-contracts-qa-5f16e4",
+  "title": "Consumer Contracts QA",
+  "description": "Contracts dataset in MLEB (creator: Noam Kolt).",
+  "url": "https://huggingface.co/datasets/isaacus/mleb-consumer-contracts-qa",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Contracts",
+    "Noam Kolt"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: consumer-contracts-qa. Category: Contracts. Creator: Noam Kolt.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

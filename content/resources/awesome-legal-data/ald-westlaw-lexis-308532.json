@@ -1,0 +1,27 @@
+{
+  "slug": "ald-westlaw-lexis-308532",
+  "title": "Westlaw / Lexis+",
+  "description": "Comprehensive U.S. primary/secondary law & citators (KeyCite/Shepard's).",
+  "url": "https://legal.thomsonreuters.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Comprehensive U.S. primary/secondary law & citators (KeyCite/Shepard's).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

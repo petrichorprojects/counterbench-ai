@@ -1,0 +1,26 @@
+{
+  "slug": "mleb",
+  "title": "Massive Legal Embedding Benchmark (MLEB)",
+  "description": "Comprehensive legal embedding benchmark with multi-dataset evaluation for legal retrieval and reasoning performance.",
+  "url": "https://github.com/isaacus-dev/mleb",
+  "tags": [
+    "MLEB",
+    "Legal embeddings",
+    "Benchmark"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Benchmark framework, model configurations, and published results across legal datasets and task categories.",
+  "license_notes": "MIT licensed repository. Verify external dataset licenses for downstream use.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

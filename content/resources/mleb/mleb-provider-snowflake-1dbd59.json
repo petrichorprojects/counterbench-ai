@@ -1,0 +1,26 @@
+{
+  "slug": "mleb-provider-snowflake-1dbd59",
+  "title": "MLEB Provider: Snowflake",
+  "description": "Provider with one or more models evaluated in MLEB.",
+  "url": "https://www.snowflake.com/en/",
+  "tags": [
+    "MLEB",
+    "Provider",
+    "Snowflake"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Provider represented in MLEB model evaluations: Snowflake.",
+  "license_notes": "Provider usage terms vary by model and API offering.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

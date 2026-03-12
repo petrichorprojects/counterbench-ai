@@ -1,0 +1,28 @@
+{
+  "slug": "ald-legislation-gov-uk-cce9d1",
+  "title": "legislation.gov.uk",
+  "description": "Official consolidated UK legislation (Acts, SIs, devolved). API & bulk XML.",
+  "url": "https://www.legislation.gov.uk/",
+  "tags": [
+    "Awesome Legal Data",
+    "United Kingdom",
+    "statutes regulation",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Official consolidated UK legislation (Acts, SIs, devolved). API & bulk XML.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

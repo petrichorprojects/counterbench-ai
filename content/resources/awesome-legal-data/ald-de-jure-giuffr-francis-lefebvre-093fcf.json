@@ -1,0 +1,27 @@
+{
+  "slug": "ald-de-jure-giuffr-francis-lefebvre-093fcf",
+  "title": "De Jure (Giuffrè Francis Lefebvre)",
+  "description": "Case law, legislation, commentary.",
+  "url": "https://dejure.giuffre.it/",
+  "tags": [
+    "Awesome Legal Data",
+    "Italy",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Italy"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Case law, legislation, commentary.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

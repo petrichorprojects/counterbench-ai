@@ -1,0 +1,27 @@
+{
+  "slug": "ald-lecard-82fc96",
+  "title": "LeCaRD",
+  "description": "Chinese Legal Case Retrieval Dataset for precedent search benchmarks.",
+  "url": "https://github.com/PKU-ICST-LeCaRD/LeCaRD",
+  "tags": [
+    "Awesome Legal Data",
+    "China",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "China"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Chinese Legal Case Retrieval Dataset for precedent search benchmarks.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

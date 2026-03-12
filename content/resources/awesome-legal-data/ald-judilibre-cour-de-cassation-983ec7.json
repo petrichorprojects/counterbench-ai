@@ -1,0 +1,28 @@
+{
+  "slug": "ald-judilibre-cour-de-cassation-983ec7",
+  "title": "Judilibre (Cour de cassation)",
+  "description": "Open data/API for Court of Cassation decisions.",
+  "url": "https://www.courdecassation.fr/",
+  "tags": [
+    "Awesome Legal Data",
+    "France",
+    "case law",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "France"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Open data/API for Court of Cassation decisions.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

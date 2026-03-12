@@ -1,0 +1,27 @@
+{
+  "slug": "ald-casehold-ai2-cc5c5d",
+  "title": "CaseHOLD (AI2)",
+  "description": "Multiple-choice QA over U.S. holdings (legal reasoning benchmark).",
+  "url": "https://huggingface.co/datasets/allenai/casehold",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Multiple-choice QA over U.S. holdings (legal reasoning benchmark).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

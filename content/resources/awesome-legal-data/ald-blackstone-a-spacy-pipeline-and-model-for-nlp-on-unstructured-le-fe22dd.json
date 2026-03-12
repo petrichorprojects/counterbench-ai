@@ -1,0 +1,26 @@
+{
+  "slug": "ald-blackstone-a-spacy-pipeline-and-model-for-nlp-on-unstructured-le-fe22dd",
+  "title": "Blackstone - A spaCy pipeline and model for NLP on unstructured legal text.",
+  "description": "Legal data source listed in Awesome Legal Data (Tools).",
+  "url": "https://github.com/ICLRandD/Blackstone",
+  "tags": [
+    "Awesome Legal Data",
+    "Tools",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Tools"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

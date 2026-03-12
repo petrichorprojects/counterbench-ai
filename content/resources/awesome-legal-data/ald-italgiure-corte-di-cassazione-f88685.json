@@ -1,0 +1,27 @@
+{
+  "slug": "ald-italgiure-corte-di-cassazione-f88685",
+  "title": "Italgiure (Corte di Cassazione)",
+  "description": "Supreme Court case law database/portal.",
+  "url": "https://www.italgiure.giustizia.it/",
+  "tags": [
+    "Awesome Legal Data",
+    "Italy",
+    "case law",
+    "Mixed/Institutional"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Italy"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Supreme Court case law database/portal.",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

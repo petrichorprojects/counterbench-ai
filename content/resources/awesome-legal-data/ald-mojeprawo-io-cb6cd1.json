@@ -1,0 +1,25 @@
+{
+  "slug": "ald-mojeprawo-io-cb6cd1",
+  "title": "mojeprawo.io",
+  "description": "Legal data source listed in Awesome Legal Data (Poland).",
+  "url": "https://mojeprawo.io/",
+  "tags": [
+    "Awesome Legal Data",
+    "Poland",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Poland"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "ald-rettspraksis-no-da26d0",
+  "title": "rettspraksis.no",
+  "description": "Legal data source listed in Awesome Legal Data (Norway).",
+  "url": "https://rettspraksis.no/wiki/Forside",
+  "tags": [
+    "Awesome Legal Data",
+    "Norway",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Norway"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

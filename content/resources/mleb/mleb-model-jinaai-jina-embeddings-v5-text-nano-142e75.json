@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-jinaai-jina-embeddings-v5-text-nano-142e75",
+  "title": "Jina Embeddings v5 Text Nano",
+  "description": "Embedding model evaluated on MLEB (jinaai/jina-embeddings-v5-text-nano).",
+  "url": "https://huggingface.co/jinaai/jina-embeddings-v5-text-nano",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Jina",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6915 across 12 datasets. Avg evaluation time: 5.68s. Context window: 32768. Dimensions: 768.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

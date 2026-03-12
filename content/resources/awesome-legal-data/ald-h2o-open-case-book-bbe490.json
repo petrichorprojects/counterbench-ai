@@ -1,0 +1,25 @@
+{
+  "slug": "ald-h2o-open-case-book-bbe490",
+  "title": "H2O Open Case Book",
+  "description": "Legal data source listed in Awesome Legal Data (United States).",
+  "url": "https://opencasebook.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

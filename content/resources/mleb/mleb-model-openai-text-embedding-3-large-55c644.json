@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-openai-text-embedding-3-large-55c644",
+  "title": "Text Embedding 3 Large",
+  "description": "Embedding model evaluated on MLEB (openai/text-embedding-3-large).",
+  "url": "https://platform.openai.com/docs/models/text-embedding-3-large",
+  "tags": [
+    "MLEB",
+    "Model",
+    "OpenAI",
+    "Closed-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Average score: 0.7076 across 12 datasets. Avg evaluation time: 145.05s. Context window: 8192. Dimensions: 3072.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

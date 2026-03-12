@@ -1,0 +1,27 @@
+{
+  "slug": "ald-juris-794bb8",
+  "title": "juris",
+  "description": "Comprehensive German legal database (cases, laws, journals).",
+  "url": "https://www.juris.de/",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "scholarship",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Comprehensive German legal database (cases, laws, journals).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

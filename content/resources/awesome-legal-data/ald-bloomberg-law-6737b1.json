@@ -1,0 +1,27 @@
+{
+  "slug": "ald-bloomberg-law-6737b1",
+  "title": "Bloomberg Law",
+  "description": "Dockets, analytics, secondary sources.",
+  "url": "https://www.bloomberglaw.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "dockets filings",
+    "Commercial"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Dockets, analytics, secondary sources.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

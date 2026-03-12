@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories-model-llama2",
+  "title": "LegalStories (LLaMA-2) question set",
+  "description": "Model-specific story and question output over 294 doctrines.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/data/294-doctrines/llama2_story_question_294.tsv",
+  "tags": [
+    "LegalStories",
+    "Question generation",
+    "LLAMA2"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Rows: 294. Question coverage (concept / ending / limitation): 294 / 294 / 294. Avg story length: 328.1 words.",
+  "license_notes": "Generated outputs are tied to underlying model service terms and prompts; verify operational use rights.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "lg-stack-openai-api-c9b1ce",
+  "title": "OpenAI API",
+  "description": "Technology used in LawGlance architecture (OpenAI API).",
+  "url": "https://platform.openai.com/docs/overview",
+  "tags": [
+    "LawGlance",
+    "Stack",
+    "Implementation"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "LawGlance implementation stack component: OpenAI API.",
+  "license_notes": "Check individual technology license and service terms before commercial deployment.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

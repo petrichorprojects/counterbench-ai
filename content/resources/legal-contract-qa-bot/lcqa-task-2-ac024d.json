@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-task-2-ac024d",
+  "title": "LCQA roadmap task 2",
+  "description": "Implement a basic Q&A pipeline that utilizes retrieval-augmented generation (RAG) for answering contract-related queries.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot#project-structure",
+  "tags": [
+    "Contract QA",
+    "Roadmap",
+    "Task 2"
+  ],
+  "type": "program",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "Roadmap item from README task list: Implement a basic Q&A pipeline that utilizes retrieval-augmented generation (RAG) for answering contract-related queries.",
+  "license_notes": "Roadmap statements are descriptive and may evolve outside repository updates.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

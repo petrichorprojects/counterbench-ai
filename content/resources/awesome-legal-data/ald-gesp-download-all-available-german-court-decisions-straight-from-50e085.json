@@ -1,0 +1,26 @@
+{
+  "slug": "ald-gesp-download-all-available-german-court-decisions-straight-from-50e085",
+  "title": "gesp: Download all available German court decisions straight from the command line",
+  "description": "Legal data source listed in Awesome Legal Data (Germany).",
+  "url": "https://github.com/niklaswais/gesp",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "case law"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

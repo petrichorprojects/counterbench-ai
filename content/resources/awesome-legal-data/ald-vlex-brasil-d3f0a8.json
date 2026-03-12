@@ -1,0 +1,26 @@
+{
+  "slug": "ald-vlex-brasil-d3f0a8",
+  "title": "vLex Brasil",
+  "description": "Commercial platform for Brazilian law with analytics.",
+  "url": "https://br.vlex.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Commercial platform for Brazilian law with analytics.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

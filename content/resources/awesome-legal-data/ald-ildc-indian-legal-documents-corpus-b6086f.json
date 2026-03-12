@@ -1,0 +1,27 @@
+{
+  "slug": "ald-ildc-indian-legal-documents-corpus-b6086f",
+  "title": "ILDC (Indian Legal Documents Corpus)",
+  "description": "Public datasets for Indian judgment analysis/summarization (various releases).",
+  "url": "https://github.com/Legal-NLP-EkStep/ILDC",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Public datasets for Indian judgment analysis/summarization (various releases).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

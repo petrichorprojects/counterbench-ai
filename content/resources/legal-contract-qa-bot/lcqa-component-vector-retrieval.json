@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-component-vector-retrieval",
+  "title": "LCQA component: Chroma vector retrieval",
+  "description": "Embeds contract chunks and retrieves top-k context with persistent Chroma storage.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/blob/main/app/utils/vector_db_utils.py",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "RAG component"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Retriever top-k: 20. Persist path: ../data/chroma_db.",
+  "license_notes": "Component-level details derived from MIT-licensed source code.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-openai-text-embedding-ada-002-1583e2",
+  "title": "Text Embedding Ada 002",
+  "description": "Embedding model evaluated on MLEB (openai/text-embedding-ada-002).",
+  "url": "https://platform.openai.com/docs/models/text-embedding-ada-002",
+  "tags": [
+    "MLEB",
+    "Model",
+    "OpenAI",
+    "Closed-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Average score: 0.6445 across 12 datasets. Avg evaluation time: 123.45s. Context window: 8192. Dimensions: 1536.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

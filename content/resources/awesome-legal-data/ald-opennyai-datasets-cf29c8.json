@@ -1,0 +1,27 @@
+{
+  "slug": "ald-opennyai-datasets-cf29c8",
+  "title": "OpenNyAI Datasets",
+  "description": "Indian legal NLP datasets (judgment summarization, QA, translation).",
+  "url": "https://opennyai.org/datasets",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Indian legal NLP datasets (judgment summarization, QA, translation).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "slug": "ald-pileoflaw-4fdf80",
+  "title": "PileOfLaw",
+  "description": "Legal data source listed in Awesome Legal Data (Other datasets).",
+  "url": "https://github.com/Breakend/PileOfLaw",
+  "tags": [
+    "Awesome Legal Data",
+    "Other datasets",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Other datasets"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

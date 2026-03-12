@@ -1,0 +1,27 @@
+{
+  "slug": "lcqa-reference-advanced-retrieval-for-ai-with-chroma-video-course-75f343",
+  "title": "LCQA reference: Advanced Retrieval for AI with Chroma (video course)",
+  "description": "External educational reference cited in project README.",
+  "url": "https://learn.deeplearning.ai/advanced-retrieval-for-ai/lesson/1/introduction",
+  "tags": [
+    "Contract QA",
+    "Reference",
+    "RAG learning"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "open"
+  ],
+  "coverage": "Referenced source supporting contract-RAG implementation and evaluation practices: Advanced Retrieval for AI with Chroma (video course).",
+  "license_notes": "External content remains under its own terms and attribution requirements.",
+  "best_for": [
+    "research",
+    "benchmarking",
+    "citation-check"
+  ]
+}

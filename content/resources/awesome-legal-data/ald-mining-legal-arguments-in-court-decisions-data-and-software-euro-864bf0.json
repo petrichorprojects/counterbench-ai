@@ -1,0 +1,26 @@
+{
+  "slug": "ald-mining-legal-arguments-in-court-decisions-data-and-software-euro-864bf0",
+  "title": "Mining Legal Arguments in Court Decisions - Data and software (European Court of Human Rights (ECHR))",
+  "description": "Legal data source listed in Awesome Legal Data (Europe & European Union).",
+  "url": "https://github.com/trusthlt/mining-legal-arguments",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "case law"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

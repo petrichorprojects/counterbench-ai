@@ -1,0 +1,28 @@
+{
+  "slug": "mleb-dataset-bar-exam-qa-e58d35",
+  "title": "Bar Exam QA",
+  "description": "Caselaw dataset in MLEB (creator: Stanford University).",
+  "url": "https://huggingface.co/datasets/isaacus/mteb-barexam-qa",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Caselaw",
+    "Stanford University"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: bar-exam-qa. Category: Caselaw. Creator: Stanford University.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "citation-check",
+    "research"
+  ]
+}

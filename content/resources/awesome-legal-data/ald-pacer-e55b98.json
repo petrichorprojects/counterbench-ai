@@ -1,0 +1,27 @@
+{
+  "slug": "ald-pacer-e55b98",
+  "title": "PACER",
+  "description": "Federal court dockets & filings (fees apply).",
+  "url": "https://pacer.uscourts.gov/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "dockets filings",
+    "Commercial/Gov"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Federal court dockets & filings (fees apply).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

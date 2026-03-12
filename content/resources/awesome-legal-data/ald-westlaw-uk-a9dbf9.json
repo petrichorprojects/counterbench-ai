@@ -1,0 +1,27 @@
+{
+  "slug": "ald-westlaw-uk-a9dbf9",
+  "title": "Westlaw UK",
+  "description": "UK cases, legislation, journals, and analytics.",
+  "url": "https://legal.thomsonreuters.com/en/uk-and-ireland/westlaw-uk",
+  "tags": [
+    "Awesome Legal Data",
+    "United Kingdom",
+    "statutes regulation",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "UK cases, legislation, journals, and analytics.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-dof-diario-oficial-de-la-federaci-n-b2a1c1",
+  "title": "DOF (Diario Oficial de la Federación)",
+  "description": "Official Gazette of the Federation (laws/decrees, searchable).",
+  "url": "https://www.dof.gob.mx/",
+  "tags": [
+    "Awesome Legal Data",
+    "Mexico",
+    "dockets filings",
+    "Open"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Mexico"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official Gazette of the Federation (laws/decrees, searchable).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-rechtsprechung-im-internet-a3481e",
+  "title": "Rechtsprechung im Internet",
+  "description": "Official portal indexing German federal high-court decisions.",
+  "url": "https://www.rechtsprechung-im-internet.de/",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official portal indexing German federal high-court decisions.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-ecourts-services-njdg-a6b66d",
+  "title": "eCourts Services / NJDG",
+  "description": "Case status & national judicial data grid (stats/open data).",
+  "url": "https://ecourts.gov.in/",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Case status & national judicial data grid (stats/open data).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-ibm-granite-granite-embedding-english-r2-8e5778",
+  "title": "Granite Embedding English R2",
+  "description": "Embedding model evaluated on MLEB (ibm-granite/granite-embedding-english-r2).",
+  "url": "https://huggingface.co/ibm-granite/granite-embedding-english-r2",
+  "tags": [
+    "MLEB",
+    "Model",
+    "IBM",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6484 across 12 datasets. Avg evaluation time: 17.70s. Context window: 8192. Dimensions: 768.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

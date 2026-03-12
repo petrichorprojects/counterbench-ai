@@ -1,0 +1,26 @@
+{
+  "slug": "legal-contract-qa-bot",
+  "title": "Legal Contract Q&A Bot",
+  "description": "Open-source Streamlit RAG application for legal-contract question answering, combining PDF ingestion, chunking, vector retrieval, and LLM response generation.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot",
+  "tags": [
+    "Contract QA",
+    "RAG",
+    "Legal AI"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Pipeline defaults include chunk_size=1024, overlap=200, retriever_k=20, model=gpt-3.5-turbo.",
+  "license_notes": "Repository is MIT licensed. Verify external model/API terms and uploaded document handling policies before production deployment.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

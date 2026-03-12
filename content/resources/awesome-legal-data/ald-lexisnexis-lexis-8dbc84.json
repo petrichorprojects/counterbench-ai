@@ -1,0 +1,27 @@
+{
+  "slug": "ald-lexisnexis-lexis-8dbc84",
+  "title": "LexisNexis / Lexis+",
+  "description": "Global legal content (case law, statutes, Practical Guidance, news).",
+  "url": "https://www.lexisnexis.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Global legal content (case law, statutes, Practical Guidance, news).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

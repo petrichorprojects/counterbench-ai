@@ -1,0 +1,26 @@
+{
+  "slug": "ald-legalis-lex-wolters-kluwer-d4bb6a",
+  "title": "Legalis / LEX (Wolters Kluwer)",
+  "description": "Commercial Polish legal databases.",
+  "url": "https://www.wolterskluwer.com/pl-pl/solutions/lex",
+  "tags": [
+    "Awesome Legal Data",
+    "Poland",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Poland"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Commercial Polish legal databases.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

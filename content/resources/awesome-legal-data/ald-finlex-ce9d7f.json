@@ -1,0 +1,27 @@
+{
+  "slug": "ald-finlex-ce9d7f",
+  "title": "Finlex",
+  "description": "Finnish legislation, case law, government bills; machine-readable access.",
+  "url": "https://www.finlex.fi/",
+  "tags": [
+    "Awesome Legal Data",
+    "Finland",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Finland"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Finnish legislation, case law, government bills; machine-readable access.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

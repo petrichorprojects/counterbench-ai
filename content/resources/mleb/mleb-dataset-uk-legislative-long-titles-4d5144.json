@@ -1,0 +1,28 @@
+{
+  "slug": "mleb-dataset-uk-legislative-long-titles-4d5144",
+  "title": "UK Legislative Long Titles",
+  "description": "Regulation dataset in MLEB (creator: Isaacus).",
+  "url": "https://huggingface.co/datasets/isaacus/uk-legislative-long-titles",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Regulation",
+    "Isaacus"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: uk-legislative-long-titles. Category: Regulation. Creator: Isaacus.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "policy-check",
+    "research"
+  ]
+}

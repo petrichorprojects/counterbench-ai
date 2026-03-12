@@ -1,0 +1,25 @@
+{
+  "slug": "ald-australasian-legal-information-institute-859d07",
+  "title": "Australasian Legal Information Institute",
+  "description": "Legal data source listed in Awesome Legal Data (Australia).",
+  "url": "http://www.austlii.edu.au/",
+  "tags": [
+    "Awesome Legal Data",
+    "Australia",
+    "research platform"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Australia"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

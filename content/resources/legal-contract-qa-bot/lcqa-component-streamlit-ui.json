@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-component-streamlit-ui",
+  "title": "LCQA component: Streamlit interface",
+  "description": "Interactive UI for uploading contracts and querying the assistant.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/blob/main/app/main.py",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "RAG component"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Handles file upload, question input, and response rendering in Streamlit session state.",
+  "license_notes": "Component-level details derived from MIT-licensed source code.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

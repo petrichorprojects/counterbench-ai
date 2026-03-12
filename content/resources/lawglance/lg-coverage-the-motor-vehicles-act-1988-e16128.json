@@ -1,0 +1,26 @@
+{
+  "slug": "lg-coverage-the-motor-vehicles-act-1988-e16128",
+  "title": "The Motor Vehicles Act, 1988",
+  "description": "Legal corpus item listed in LawGlance current coverage.",
+  "url": "https://github.com/lawglance/lawglance#-legal-coverage",
+  "tags": [
+    "LawGlance",
+    "Coverage",
+    "India"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "The Motor Vehicles Act, 1988",
+  "license_notes": "Coverage list from LawGlance README. Validate primary legal text source and recency before operational use.",
+  "best_for": [
+    "policy-check",
+    "research"
+  ]
+}

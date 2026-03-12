@@ -1,0 +1,27 @@
+{
+  "slug": "ald-national-laws-and-regulations-database-1dcaf2",
+  "title": "National Laws & Regulations Database (国家法律法规数据库)",
+  "description": "Official centralized repository of PRC laws/regulations.",
+  "url": "https://flk.npc.gov.cn/",
+  "tags": [
+    "Awesome Legal Data",
+    "China",
+    "statutes regulation",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "China"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official centralized repository of PRC laws/regulations.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

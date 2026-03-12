@@ -1,0 +1,27 @@
+{
+  "slug": "ald-fastcase-18c07d",
+  "title": "Fastcase",
+  "description": "Case law & statutes with citator; often via bar membership.",
+  "url": "https://www.fastcase.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Case law & statutes with citator; often via bar membership.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

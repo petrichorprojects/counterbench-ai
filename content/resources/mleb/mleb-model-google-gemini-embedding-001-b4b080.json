@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-google-gemini-embedding-001-b4b080",
+  "title": "Gemini Embedding 001",
+  "description": "Embedding model evaluated on MLEB (google/gemini-embedding-001).",
+  "url": "https://developers.googleblog.com/en/gemini-embedding-available-gemini-api/",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Google",
+    "Closed-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Average score: 0.7207 across 12 datasets. Avg evaluation time: 193.23s. Context window: 8192. Dimensions: 3072.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

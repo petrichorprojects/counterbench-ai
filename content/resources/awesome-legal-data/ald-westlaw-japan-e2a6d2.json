@@ -1,0 +1,26 @@
+{
+  "slug": "ald-westlaw-japan-e2a6d2",
+  "title": "Westlaw Japan",
+  "description": "Commercial JP legal research suites.",
+  "url": "https://go.westlawjapan.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "Japan",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Japan"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Commercial JP legal research suites.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

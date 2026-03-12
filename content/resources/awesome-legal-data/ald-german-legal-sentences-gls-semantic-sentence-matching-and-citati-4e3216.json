@@ -1,0 +1,26 @@
+{
+  "slug": "ald-german-legal-sentences-gls-semantic-sentence-matching-and-citati-4e3216",
+  "title": "German Legal Sentences (GLS): Semantic sentence matching and citation recommendation",
+  "description": "Legal data source listed in Awesome Legal Data (Germany).",
+  "url": "https://huggingface.co/datasets/lavis-nlp/german_legal_sentences",
+  "tags": [
+    "Awesome Legal Data",
+    "Germany",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Germany"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-cail2018-5183cb",
+  "title": "CAIL2018",
+  "description": "Large-scale Chinese legal judgment datasets (charges, articles, term prediction).",
+  "url": "https://github.com/china-ai-law-challenge/CAIL2018",
+  "tags": [
+    "Awesome Legal Data",
+    "China",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "China"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Large-scale Chinese legal judgment datasets (charges, articles, term prediction).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

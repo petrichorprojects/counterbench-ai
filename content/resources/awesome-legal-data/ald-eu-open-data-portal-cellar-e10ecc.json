@@ -1,0 +1,27 @@
+{
+  "slug": "ald-eu-open-data-portal-cellar-e10ecc",
+  "title": "EU Open Data Portal - Cellar",
+  "description": "Linked Data repository for EU legal documents (RDF/SPARQL).",
+  "url": "https://op.europa.eu/en/web/about-us/our-data",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "research platform",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Linked Data repository for EU legal documents (RDF/SPARQL).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

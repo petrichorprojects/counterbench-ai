@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-baai-bge-m3-d790e7",
+  "title": "BGE M3",
+  "description": "Embedding model evaluated on MLEB (BAAI/bge-m3).",
+  "url": "https://huggingface.co/BAAI/bge-m3",
+  "tags": [
+    "MLEB",
+    "Model",
+    "BAAI",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6151 across 12 datasets. Avg evaluation time: 12.13s. Context window: 8192. Dimensions: 1024.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

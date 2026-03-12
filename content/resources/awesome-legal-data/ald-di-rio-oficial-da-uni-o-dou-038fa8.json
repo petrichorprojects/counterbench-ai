@@ -1,0 +1,27 @@
+{
+  "slug": "ald-di-rio-oficial-da-uni-o-dou-038fa8",
+  "title": "Diário Oficial da União (DOU)",
+  "description": "Federal Official Gazette (laws, decrees).",
+  "url": "https://www.in.gov.br/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "dockets filings",
+    "Open"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "open"
+  ],
+  "coverage": "Federal Official Gazette (laws, decrees).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "ald-e-gov-law-search-e-gov-3b7b22",
+  "title": "e-Gov Law Search (e-Gov法令検索)",
+  "description": "Official portal for Japanese laws/regulations; API (XML).",
+  "url": "https://elaws.e-gov.go.jp/",
+  "tags": [
+    "Awesome Legal Data",
+    "Japan",
+    "statutes regulation",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Japan"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Official portal for Japanese laws/regulations; API (XML).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

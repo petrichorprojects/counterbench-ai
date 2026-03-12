@@ -1,0 +1,26 @@
+{
+  "slug": "mleb-provider-jina-630357",
+  "title": "MLEB Provider: Jina",
+  "description": "Provider with one or more models evaluated in MLEB.",
+  "url": "http://jina.ai/",
+  "tags": [
+    "MLEB",
+    "Provider",
+    "Jina"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Provider represented in MLEB model evaluations: Jina.",
+  "license_notes": "Provider usage terms vary by model and API offering.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

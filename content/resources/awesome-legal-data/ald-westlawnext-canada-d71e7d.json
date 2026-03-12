@@ -1,0 +1,26 @@
+{
+  "slug": "ald-westlawnext-canada-d71e7d",
+  "title": "WestlawNext Canada",
+  "description": "Commercial Canadian legal research.",
+  "url": "https://www.thomsonreuters.ca/en/westlaw.html",
+  "tags": [
+    "Awesome Legal Data",
+    "Canada",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Canada"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Commercial Canadian legal research.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

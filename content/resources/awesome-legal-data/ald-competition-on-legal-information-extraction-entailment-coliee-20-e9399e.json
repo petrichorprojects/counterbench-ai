@@ -1,0 +1,26 @@
+{
+  "slug": "ald-competition-on-legal-information-extraction-entailment-coliee-20-e9399e",
+  "title": "Competition on Legal Information Extraction/Entailment (COLIEE 2020)",
+  "description": "Legal data source listed in Awesome Legal Data (Japan).",
+  "url": "https://sites.ualberta.ca/~rabelo/COLIEE2020/",
+  "tags": [
+    "Awesome Legal Data",
+    "Japan",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Japan"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

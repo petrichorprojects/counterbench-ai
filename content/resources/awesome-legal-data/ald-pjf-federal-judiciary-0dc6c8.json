@@ -1,0 +1,27 @@
+{
+  "slug": "ald-pjf-federal-judiciary-0dc6c8",
+  "title": "PJF (Federal Judiciary)",
+  "description": "Case law/jurisprudence and statistics portals.",
+  "url": "https://www.gob.mx/cjf",
+  "tags": [
+    "Awesome Legal Data",
+    "Mexico",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Mexico"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Case law/jurisprudence and statistics portals.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

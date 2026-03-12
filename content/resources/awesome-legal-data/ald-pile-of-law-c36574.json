@@ -1,0 +1,27 @@
+{
+  "slug": "ald-pile-of-law-c36574",
+  "title": "Pile-of-Law",
+  "description": "256GB open corpus of English legal/administrative text (opinions, regulations, contracts) for legal NLP.",
+  "url": "https://pile-of-law.github.io/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "256GB open corpus of English legal/administrative text (opinions, regulations, contracts) for legal NLP.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

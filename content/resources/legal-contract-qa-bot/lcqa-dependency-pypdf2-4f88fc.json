@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-dependency-pypdf2-4f88fc",
+  "title": "LCQA dependency: PyPDF2",
+  "description": "Core dependency used in the Legal Contract Q&A Bot stack (pypdf2==3.0.1).",
+  "url": "https://pypi.org/project/PyPDF2/",
+  "tags": [
+    "Contract QA",
+    "Dependency",
+    "PyPDF2"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "Pinned version in repository requirements: pypdf2==3.0.1.",
+  "license_notes": "Dependency licensing and terms are governed by each upstream project/provider.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "ald-eur-lex-b769d6",
+  "title": "EUR-Lex",
+  "description": "Official EU law (treaties, directives, regulations, decisions, OJ). Bulk downloads and API. HF",
+  "url": "https://eur-lex.europa.eu/",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "statutes regulation",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Official EU law (treaties, directives, regulations, decisions, OJ). Bulk downloads and API. HF",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

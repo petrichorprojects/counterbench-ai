@@ -1,0 +1,27 @@
+{
+  "slug": "lawglance",
+  "title": "LawGlance",
+  "description": "Open-source AI-powered legal assistant using RAG for accessible legal guidance, with current focus on Indian legal materials and planned global expansion.",
+  "url": "https://github.com/lawglance/lawglance",
+  "tags": [
+    "LawGlance",
+    "Open-source legal AI",
+    "RAG"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India",
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "People-centric legal AI assistant with legal corpus coverage and roadmap for multilingual and global support.",
+  "license_notes": "Apache-2.0 licensed repository. Verify legal corpus licensing and jurisdiction-specific compliance before production use.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

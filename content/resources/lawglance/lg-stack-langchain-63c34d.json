@@ -1,0 +1,26 @@
+{
+  "slug": "lg-stack-langchain-63c34d",
+  "title": "LangChain",
+  "description": "Technology used in LawGlance architecture (LangChain).",
+  "url": "https://python.langchain.com/docs/introduction/",
+  "tags": [
+    "LawGlance",
+    "Stack",
+    "Implementation"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "LawGlance implementation stack component: LangChain.",
+  "license_notes": "Check individual technology license and service terms before commercial deployment.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

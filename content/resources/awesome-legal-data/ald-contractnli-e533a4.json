@@ -1,0 +1,27 @@
+{
+  "slug": "ald-contractnli-e533a4",
+  "title": "ContractNLI",
+  "description": "Natural-language inference dataset for contracts (entailment/contradiction/neutral).",
+  "url": "https://github.com/nyu-mll/contract-nli",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Natural-language inference dataset for contracts (entailment/contradiction/neutral).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

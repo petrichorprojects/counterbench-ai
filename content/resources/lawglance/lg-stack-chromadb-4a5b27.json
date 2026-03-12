@@ -1,0 +1,26 @@
+{
+  "slug": "lg-stack-chromadb-4a5b27",
+  "title": "ChromaDB",
+  "description": "Technology used in LawGlance architecture (ChromaDB).",
+  "url": "https://www.trychroma.com/",
+  "tags": [
+    "LawGlance",
+    "Stack",
+    "Implementation"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "LawGlance implementation stack component: ChromaDB.",
+  "license_notes": "Check individual technology license and service terms before commercial deployment.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

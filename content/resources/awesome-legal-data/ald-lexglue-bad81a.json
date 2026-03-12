@@ -1,0 +1,27 @@
+{
+  "slug": "ald-lexglue-bad81a",
+  "title": "LexGLUE",
+  "description": "Benchmark suite for legal language understanding (multi-task classification across legal domains).",
+  "url": "https://github.com/coastalcph/lex_glue",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Benchmark suite for legal language understanding (multi-task classification across legal domains).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

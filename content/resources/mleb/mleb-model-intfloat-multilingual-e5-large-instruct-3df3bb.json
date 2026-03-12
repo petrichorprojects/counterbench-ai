@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-intfloat-multilingual-e5-large-instruct-3df3bb",
+  "title": "E5 Large Instruct",
+  "description": "Embedding model evaluated on MLEB (intfloat/multilingual-e5-large-instruct).",
+  "url": "https://huggingface.co/intfloat/multilingual-e5-large-instruct",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Microsoft",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.5987 across 12 datasets. Avg evaluation time: 9.82s. Context window: 512. Dimensions: 1024.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

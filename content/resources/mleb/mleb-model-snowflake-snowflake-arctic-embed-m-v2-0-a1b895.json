@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-snowflake-snowflake-arctic-embed-m-v2-0-a1b895",
+  "title": "Snowflake Arctic Embed M v2.0",
+  "description": "Embedding model evaluated on MLEB (Snowflake/snowflake-arctic-embed-m-v2.0).",
+  "url": "https://huggingface.co/Snowflake/snowflake-arctic-embed-m-v2.0",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Snowflake",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6528 across 12 datasets. Avg evaluation time: 13.80s. Context window: 8192. Dimensions: 768.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

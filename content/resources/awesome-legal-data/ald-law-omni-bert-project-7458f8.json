@@ -1,0 +1,25 @@
+{
+  "slug": "ald-law-omni-bert-project-7458f8",
+  "title": "Law-OMNI-BERT-Project",
+  "description": "Legal data source listed in Awesome Legal Data (Tools).",
+  "url": "https://github.com/Lukas-Justen/Law-OMNI-BERT-Project",
+  "tags": [
+    "Awesome Legal Data",
+    "Tools",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Tools"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

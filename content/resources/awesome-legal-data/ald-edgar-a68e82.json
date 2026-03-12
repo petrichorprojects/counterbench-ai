@@ -1,0 +1,28 @@
+{
+  "slug": "ald-edgar-a68e82",
+  "title": "EDGAR",
+  "description": "SEC corporate filings (contracts, 10-Ks), bulk + API.",
+  "url": "https://www.sec.gov/edgar",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "dockets filings",
+    "Open, API"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "SEC corporate filings (contracts, 10-Ks), bulk + API.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

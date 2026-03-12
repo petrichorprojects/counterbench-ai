@@ -1,0 +1,27 @@
+{
+  "slug": "lcqa-dependency-langchain-openai-1b92e7",
+  "title": "LCQA dependency: LangChain OpenAI",
+  "description": "Core dependency used in the Legal Contract Q&A Bot stack (langchain-openai==0.1.5).",
+  "url": "https://python.langchain.com/docs/integrations/providers/openai/",
+  "tags": [
+    "Contract QA",
+    "Dependency",
+    "LangChain OpenAI"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Pinned version in repository requirements: langchain-openai==0.1.5.",
+  "license_notes": "Dependency licensing and terms are governed by each upstream project/provider.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

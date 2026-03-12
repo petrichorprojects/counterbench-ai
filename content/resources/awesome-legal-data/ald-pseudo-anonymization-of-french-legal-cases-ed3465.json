@@ -1,0 +1,25 @@
+{
+  "slug": "ald-pseudo-anonymization-of-french-legal-cases-ed3465",
+  "title": "Pseudo-anonymization of French legal cases",
+  "description": "Legal data source listed in Awesome Legal Data (Tools).",
+  "url": "https://github.com/ELS-RD/anonymisation",
+  "tags": [
+    "Awesome Legal Data",
+    "Tools",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Tools"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

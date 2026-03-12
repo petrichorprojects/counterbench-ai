@@ -1,0 +1,28 @@
+{
+  "slug": "ald-federal-register-8d22df",
+  "title": "Federal Register",
+  "description": "Daily federal rules/notices; full API.",
+  "url": "https://www.federalregister.gov/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "statutes regulation",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "Daily federal rules/notices; full API.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-dependency-chromadb-8cb719",
+  "title": "LCQA dependency: ChromaDB",
+  "description": "Core dependency used in the Legal Contract Q&A Bot stack (chromadb==0.4.22).",
+  "url": "https://www.trychroma.com/",
+  "tags": [
+    "Contract QA",
+    "Dependency",
+    "ChromaDB"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Pinned version in repository requirements: chromadb==0.4.22.",
+  "license_notes": "Dependency licensing and terms are governed by each upstream project/provider.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

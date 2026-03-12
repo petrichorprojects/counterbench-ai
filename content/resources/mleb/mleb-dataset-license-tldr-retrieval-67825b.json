@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-dataset-license-tldr-retrieval-67825b",
+  "title": "License TL;DR Retrieval",
+  "description": "Contracts dataset in MLEB (creator: Isaacus).",
+  "url": "https://huggingface.co/datasets/isaacus/license-tldr-retrieval",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Contracts",
+    "Isaacus"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: license-tldr-retrieval. Category: Contracts. Creator: Isaacus.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

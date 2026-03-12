@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories-corpus-294-doctrines",
+  "title": "LegalStories corpus: 294 doctrines",
+  "description": "Full doctrine corpus collected from Wikipedia with definitions and word-count metadata.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/data/294-doctrines/legal_doctrines_294.tsv",
+  "tags": [
+    "LegalStories",
+    "Corpus",
+    "294 doctrines"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "294 doctrine rows in TSV format for legal concept learning tasks.",
+  "license_notes": "Dataset file distributed within repository context; validate educational and commercial reuse policy before redistribution.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

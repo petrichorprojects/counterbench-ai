@@ -1,0 +1,26 @@
+{
+  "slug": "ald-kluwer-navigator-3d307a",
+  "title": "Kluwer Navigator",
+  "description": "Dutch commercial legal research.",
+  "url": "https://www.navigator.nl/",
+  "tags": [
+    "Awesome Legal Data",
+    "Netherlands",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Netherlands"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Dutch commercial legal research.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

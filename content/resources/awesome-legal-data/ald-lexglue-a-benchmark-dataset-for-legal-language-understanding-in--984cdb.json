@@ -1,0 +1,26 @@
+{
+  "slug": "ald-lexglue-a-benchmark-dataset-for-legal-language-understanding-in--984cdb",
+  "title": "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English",
+  "description": "Legal data source listed in Awesome Legal Data (Other datasets).",
+  "url": "https://github.com/coastalcph/lex-glue",
+  "tags": [
+    "Awesome Legal Data",
+    "Other datasets",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Other datasets"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

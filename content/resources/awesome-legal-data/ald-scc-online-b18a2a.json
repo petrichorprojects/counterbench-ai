@@ -1,0 +1,26 @@
+{
+  "slug": "ald-scc-online-b18a2a",
+  "title": "SCC Online",
+  "description": "Leading commercial database (EBC): SC/HC/tribunals + commentary.",
+  "url": "https://www.scconline.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Leading commercial database (EBC): SC/HC/tribunals + commentary.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "ald-japanese-law-translation-09a915",
+  "title": "Japanese Law Translation",
+  "description": "MOJ database of unofficial English translations of key laws.",
+  "url": "https://www.japaneselawtranslation.go.jp/",
+  "tags": [
+    "Awesome Legal Data",
+    "Japan",
+    "research platform",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Japan"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "MOJ database of unofficial English translations of key laws.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

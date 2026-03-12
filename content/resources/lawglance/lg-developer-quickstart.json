@@ -1,0 +1,26 @@
+{
+  "slug": "lg-developer-quickstart",
+  "title": "LawGlance Developer Quick Start",
+  "description": "Setup flow for local development, dependencies, and running the app.",
+  "url": "https://github.com/lawglance/lawglance#-developer-quick-start-guide",
+  "tags": [
+    "LawGlance",
+    "Developer",
+    "Setup"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "Clone repo, install uv, set OPENAI_API_KEY, run streamlit app, optional Redis caching.",
+  "license_notes": "Open-source setup instructions in Apache-2.0 repository.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-indian-kanoon-d3edfa",
+  "title": "Indian Kanoon",
+  "description": "Aggregated judgments (SC/HC/tribunals) + statutes; full-text search.",
+  "url": "https://indiankanoon.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Aggregated judgments (SC/HC/tribunals) + statutes; full-text search.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

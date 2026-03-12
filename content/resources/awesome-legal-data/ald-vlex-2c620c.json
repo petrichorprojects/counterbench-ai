@@ -1,0 +1,27 @@
+{
+  "slug": "ald-vlex-2c620c",
+  "title": "vLex",
+  "description": "Global legal research platform covering 100+ jurisdictions; case law, legislation, journals, and analytics.",
+  "url": "https://www.vlex.com/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Global legal research platform covering 100+ jurisdictions; case law, legislation, journals, and analytics.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

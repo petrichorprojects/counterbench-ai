@@ -1,0 +1,27 @@
+{
+  "slug": "legalstories-expert-answer-annotations-09249c",
+  "title": "LegalStories final answer annotations",
+  "description": "Answer-key annotations for the expert 20-doctrine evaluation subset.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/analysis/expert_annotations/Final_answer_annotations.tsv",
+  "tags": [
+    "LegalStories",
+    "Answer key",
+    "Evaluation"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Rows: 20. Difficulty distribution: easy 7, medium 10, hard 3.",
+  "license_notes": "Annotation artifacts are for evaluation; verify adaptation policy before derivative educational products.",
+  "best_for": [
+    "research",
+    "benchmarking",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-supreme-court-database-scdb-82af51",
+  "title": "Supreme Court Database (SCDB)",
+  "description": "Coded metadata for every SCOTUS decision (1791-).",
+  "url": "http://scdb.wustl.edu/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Coded metadata for every SCOTUS decision (1791-).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

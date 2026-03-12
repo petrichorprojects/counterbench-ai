@@ -1,0 +1,27 @@
+{
+  "slug": "lcqa-pipeline-defaults",
+  "title": "Legal Contract Q&A pipeline defaults",
+  "description": "Extracted baseline configuration from text chunking, vector retrieval, and answer-chain modules.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/tree/main/app/utils",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "Defaults"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "chunk_size=1024; chunk_overlap=200; retriever_k=20; persist_directory=../data/chroma_db; model=gpt-3.5-turbo; temperature=0.",
+  "license_notes": "Configuration defaults should be validated for legal accuracy, data privacy, and latency constraints before production use.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

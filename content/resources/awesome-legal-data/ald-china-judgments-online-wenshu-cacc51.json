@@ -1,0 +1,27 @@
+{
+  "slug": "ald-china-judgments-online-wenshu-cacc51",
+  "title": "China Judgments Online (裁判文书网 / Wenshu)",
+  "description": "Supreme People's Court open repository of court judgments.",
+  "url": "https://wenshu.court.gov.cn/",
+  "tags": [
+    "Awesome Legal Data",
+    "China",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "China"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Supreme People's Court open repository of court judgments.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-jrc-acquis-d34235",
+  "title": "JRC-Acquis",
+  "description": "Multilingual parallel corpus of EU law (Acquis Communautaire) for MT/NLP.",
+  "url": "https://ec.europa.eu/jrc/en/language-technologies/jrc-acquis",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Multilingual parallel corpus of EU law (Acquis Communautaire) for MT/NLP.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

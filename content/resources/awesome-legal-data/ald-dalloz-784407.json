@@ -1,0 +1,27 @@
+{
+  "slug": "ald-dalloz-784407",
+  "title": "Dalloz",
+  "description": "Codes, jurisprudence, and commentary (Encyclopédie Dalloz).",
+  "url": "https://www.dalloz.fr/",
+  "tags": [
+    "Awesome Legal Data",
+    "France",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "France"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Codes, jurisprudence, and commentary (Encyclopédie Dalloz).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "ald-govinfo-ead24e",
+  "title": "GovInfo",
+  "description": "U.S. Government Publishing Office-authenticated federal documents (USC, CFR, Federal Register) + bulk data/APIs.",
+  "url": "https://www.govinfo.gov/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "statutes regulation",
+    "Open, API"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open",
+    "api"
+  ],
+  "coverage": "U.S. Government Publishing Office-authenticated federal documents (USC, CFR, Federal Register) + bulk data/APIs.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

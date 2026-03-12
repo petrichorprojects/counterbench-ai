@@ -1,0 +1,26 @@
+{
+  "slug": "ald-pluris-wolters-kluwer-05fd02",
+  "title": "Pluris (Wolters Kluwer)",
+  "description": "Comprehensive Italian legal research platform.",
+  "url": "https://pluris.wolterskluwer.it/",
+  "tags": [
+    "Awesome Legal Data",
+    "Italy",
+    "research platform",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Italy"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Comprehensive Italian legal research platform.",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research"
+  ]
+}

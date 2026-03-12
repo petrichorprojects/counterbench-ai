@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories-corpus-20-doctrines",
+  "title": "LegalStories expert set: 20 doctrines",
+  "description": "Focused doctrine subset used for deeper human and expert evaluation workflows.",
+  "url": "https://github.com/hjian42/LegalStories/blob/main/data/20-doctrines/legal_doctrines_20.tsv",
+  "tags": [
+    "LegalStories",
+    "Corpus",
+    "20 doctrines"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "20 doctrine rows in TSV format for legal concept learning tasks.",
+  "license_notes": "Dataset file distributed within repository context; validate educational and commercial reuse policy before redistribution.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-ris-1b8b25",
+  "title": "RIS",
+  "description": "Federal Legal Information System (legislation, case law).",
+  "url": "https://www.ris.bka.gv.at/",
+  "tags": [
+    "Awesome Legal Data",
+    "Austria",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Austria"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Federal Legal Information System (legislation, case law).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

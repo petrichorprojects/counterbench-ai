@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-component-text-chunking",
+  "title": "LCQA component: recursive text chunking",
+  "description": "Chunking layer built with RecursiveCharacterTextSplitter for retrieval-ready segments.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot/blob/main/app/utils/text_split_utils.py",
+  "tags": [
+    "Contract QA",
+    "Architecture",
+    "RAG component"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open"
+  ],
+  "coverage": "Chunking parameters: size 1024, overlap 200.",
+  "license_notes": "Component-level details derived from MIT-licensed source code.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

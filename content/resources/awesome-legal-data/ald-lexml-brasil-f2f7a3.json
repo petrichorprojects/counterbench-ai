@@ -1,0 +1,27 @@
+{
+  "slug": "ald-lexml-brasil-f2f7a3",
+  "title": "LexML Brasil",
+  "description": "Federated search over Brazilian legislation & legal docs; open standards.",
+  "url": "https://www.lexml.gov.br/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "statutes regulation",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Federated search over Brazilian legislation & legal docs; open standards.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

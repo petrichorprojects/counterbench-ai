@@ -1,0 +1,27 @@
+{
+  "slug": "ald-openlaw-ec2ee7",
+  "title": "OpenLaw (开放法学)",
+  "description": "Open legal case platform & analytics (coverage varies).",
+  "url": "https://openlaw.cn/",
+  "tags": [
+    "Awesome Legal Data",
+    "China",
+    "research platform",
+    "Open/Mixed"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "China"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "open",
+    "mixed"
+  ],
+  "coverage": "Open legal case platform & analytics (coverage varies).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

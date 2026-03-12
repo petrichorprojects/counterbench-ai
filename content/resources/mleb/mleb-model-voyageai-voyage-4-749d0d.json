@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-voyageai-voyage-4-749d0d",
+  "title": "Voyage 4",
+  "description": "Embedding model evaluated on MLEB (voyageai/voyage-4).",
+  "url": "https://blog.voyageai.com/2026/01/15/voyage-4/",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Voyage",
+    "Closed-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Average score: 0.7961 across 12 datasets. Avg evaluation time: 313.47s. Context window: 32000. Dimensions: 1024.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

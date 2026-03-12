@@ -1,0 +1,27 @@
+{
+  "slug": "ald-l-gifrance-49cd4b",
+  "title": "Légifrance",
+  "description": "Official French legislation (codes, laws) and selected jurisprudence.",
+  "url": "https://www.legifrance.gouv.fr/",
+  "tags": [
+    "Awesome Legal Data",
+    "France",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "France"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official French legislation (codes, laws) and selected jurisprudence.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

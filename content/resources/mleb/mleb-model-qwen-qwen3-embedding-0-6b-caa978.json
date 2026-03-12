@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-qwen-qwen3-embedding-0-6b-caa978",
+  "title": "Qwen3 Embedding 0.6B",
+  "description": "Embedding model evaluated on MLEB (Qwen/Qwen3-Embedding-0.6B).",
+  "url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Qwen",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6990 across 12 datasets. Avg evaluation time: 36.28s. Context window: 32000. Dimensions: 1024.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

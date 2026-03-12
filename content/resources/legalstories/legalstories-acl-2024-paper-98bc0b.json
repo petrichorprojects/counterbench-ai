@@ -1,0 +1,27 @@
+{
+  "slug": "legalstories-acl-2024-paper-98bc0b",
+  "title": "Leveraging LLMs for Learning Complex Legal Concepts through Storytelling (ACL 2024)",
+  "description": "Primary paper describing the LegalStories dataset construction, RCT design, and educational outcomes.",
+  "url": "https://aclanthology.org/2024.acl-long.388/",
+  "tags": [
+    "LegalStories",
+    "ACL 2024",
+    "Research paper"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "open"
+  ],
+  "coverage": "Paper details 294 doctrine dataset construction, expert-in-the-loop question design, and randomized controlled trial results with legal novices.",
+  "license_notes": "Publication rights and reuse terms are governed by ACL Anthology policies.",
+  "best_for": [
+    "research",
+    "benchmarking",
+    "citation-check"
+  ]
+}

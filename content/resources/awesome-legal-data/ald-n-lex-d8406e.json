@@ -1,0 +1,27 @@
+{
+  "slug": "ald-n-lex-d8406e",
+  "title": "N-Lex",
+  "description": "One-stop portal into each EU Member State's national legislation databases.",
+  "url": "https://n-lex.europa.eu/",
+  "tags": [
+    "Awesome Legal Data",
+    "Europe & European Union",
+    "statutes regulation",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "One-stop portal into each EU Member State's national legislation databases.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

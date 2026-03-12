@@ -1,0 +1,25 @@
+{
+  "slug": "ald-scripts-to-crawl-english-legal-corpora-7f81b3",
+  "title": "Scripts to crawl English legal corpora",
+  "description": "Legal data source listed in Awesome Legal Data (Tools).",
+  "url": "https://github.com/iliaschalkidis/LegalCrawler",
+  "tags": [
+    "Awesome Legal Data",
+    "Tools",
+    "other"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Tools"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

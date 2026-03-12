@@ -1,0 +1,26 @@
+{
+  "slug": "legalstories",
+  "title": "LegalStories",
+  "description": "ACL 2024 dataset and codebase for teaching legal doctrines through LLM-generated stories, with multi-question evaluation and expert-annotated subsets.",
+  "url": "https://github.com/hjian42/LegalStories",
+  "tags": [
+    "LegalStories",
+    "Legal education",
+    "LLM storytelling"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Core corpus includes 294 doctrines with average definition length 162.2 words (range 6-673).",
+  "license_notes": "Repository includes an Apache-2.0 license file. Verify per-model API terms and downstream educational use requirements.",
+  "best_for": [
+    "research",
+    "benchmarking"
+  ]
+}

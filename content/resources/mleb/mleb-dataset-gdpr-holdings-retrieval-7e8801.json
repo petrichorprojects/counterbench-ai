@@ -1,0 +1,28 @@
+{
+  "slug": "mleb-dataset-gdpr-holdings-retrieval-7e8801",
+  "title": "GDPR Holdings Retrieval",
+  "description": "Caselaw dataset in MLEB (creator: Isaacus).",
+  "url": "https://huggingface.co/datasets/isaacus/gdpr-holdings-retrieval",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Caselaw",
+    "Isaacus"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Europe & European Union"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: gdpr-holdings-retrieval. Category: Caselaw. Creator: Isaacus.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "citation-check",
+    "research"
+  ]
+}

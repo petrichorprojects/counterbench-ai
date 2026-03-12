@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-mixedbread-ai-mxbai-embed-large-v1-ab9851",
+  "title": "Mxbai Embed Large v1",
+  "description": "Embedding model evaluated on MLEB (mixedbread-ai/mxbai-embed-large-v1).",
+  "url": "https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Mixedbread",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6130 across 12 datasets. Avg evaluation time: 5.67s. Context window: 512. Dimensions: 1024.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

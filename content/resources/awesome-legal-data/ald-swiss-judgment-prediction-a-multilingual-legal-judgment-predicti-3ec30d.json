@@ -1,0 +1,26 @@
+{
+  "slug": "ald-swiss-judgment-prediction-a-multilingual-legal-judgment-predicti-3ec30d",
+  "title": "Swiss-Judgment-Prediction: A Multilingual Legal Judgment Prediction Benchmark",
+  "description": "Legal data source listed in Awesome Legal Data (Switzerland).",
+  "url": "https://arxiv.org/abs/2110.00806",
+  "tags": [
+    "Awesome Legal Data",
+    "Switzerland",
+    "case law"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Switzerland"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "ald-coliee-8607ca",
+  "title": "COLIEE",
+  "description": "Legal Information Extraction & Entailment shared task (JP Civil Code QA, case retrieval).",
+  "url": "https://sites.ualberta.ca/~rabelo/COLIEE2023/",
+  "tags": [
+    "Awesome Legal Data",
+    "Japan",
+    "datasets benchmarks",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Japan"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Legal Information Extraction & Entailment shared task (JP Civil Code QA, case retrieval).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

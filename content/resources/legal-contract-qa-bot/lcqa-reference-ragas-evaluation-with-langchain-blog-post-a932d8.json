@@ -1,0 +1,27 @@
+{
+  "slug": "lcqa-reference-ragas-evaluation-with-langchain-blog-post-a932d8",
+  "title": "LCQA reference: RAGAS Evaluation with Langchain (blog post)",
+  "description": "External educational reference cited in project README.",
+  "url": "https://blog.langchain.dev/evaluating-rag-pipelines-with-ragas-langsmith/",
+  "tags": [
+    "Contract QA",
+    "Reference",
+    "RAG learning"
+  ],
+  "type": "course",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "scholarship",
+  "access": [
+    "open"
+  ],
+  "coverage": "Referenced source supporting contract-RAG implementation and evaluation practices: RAGAS Evaluation with Langchain (blog post).",
+  "license_notes": "External content remains under its own terms and attribution requirements.",
+  "best_for": [
+    "research",
+    "benchmarking",
+    "citation-check"
+  ]
+}

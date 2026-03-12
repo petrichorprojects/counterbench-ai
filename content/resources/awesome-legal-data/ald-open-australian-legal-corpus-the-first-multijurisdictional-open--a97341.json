@@ -1,0 +1,26 @@
+{
+  "slug": "ald-open-australian-legal-corpus-the-first-multijurisdictional-open--a97341",
+  "title": "Open Australian Legal Corpus: The First Multijurisdictional Open Corpus of Australian Legislative and Judicial Documents",
+  "description": "Legal data source listed in Awesome Legal Data (Australia).",
+  "url": "https://huggingface.co/datasets/umarbutler/open-australian-legal-corpus",
+  "tags": [
+    "Awesome Legal Data",
+    "Australia",
+    "datasets benchmarks"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Australia"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

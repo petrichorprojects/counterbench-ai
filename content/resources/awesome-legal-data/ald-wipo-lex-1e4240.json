@@ -1,0 +1,27 @@
+{
+  "slug": "ald-wipo-lex-1e4240",
+  "title": "WIPO Lex",
+  "description": "Global database of IP laws/treaties and WIPO Lex-Judgments for selected IP case law.",
+  "url": "https://www.wipo.int/wipolex/",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Global database of IP laws/treaties and WIPO Lex-Judgments for selected IP case law.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

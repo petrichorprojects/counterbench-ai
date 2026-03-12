@@ -1,0 +1,27 @@
+{
+  "slug": "ald-supreme-court-of-india-judgments-0f0661",
+  "title": "Supreme Court of India - Judgments",
+  "description": "Official search/portal for SC judgments.",
+  "url": "https://main.sci.gov.in/judgments",
+  "tags": [
+    "Awesome Legal Data",
+    "India",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "India"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official search/portal for SC judgments.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

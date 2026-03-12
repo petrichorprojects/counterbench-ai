@@ -1,0 +1,27 @@
+{
+  "slug": "ald-entscheidsuche-b6318e",
+  "title": "Entscheidsuche",
+  "description": "Meta-search across Swiss case law sources.",
+  "url": "https://entscheidsuche.ch/",
+  "tags": [
+    "Awesome Legal Data",
+    "Switzerland",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Switzerland"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Meta-search across Swiss case law sources.",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

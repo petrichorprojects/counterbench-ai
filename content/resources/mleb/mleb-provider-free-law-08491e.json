@@ -1,0 +1,26 @@
+{
+  "slug": "mleb-provider-free-law-08491e",
+  "title": "MLEB Provider: Free Law",
+  "description": "Provider with one or more models evaluated in MLEB.",
+  "url": "https://free.law/",
+  "tags": [
+    "MLEB",
+    "Provider",
+    "Free Law"
+  ],
+  "type": "community",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "mixed"
+  ],
+  "coverage": "Provider represented in MLEB model evaluations: Free Law.",
+  "license_notes": "Provider usage terms vary by model and API offering.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

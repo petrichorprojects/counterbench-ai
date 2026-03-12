@@ -1,0 +1,27 @@
+{
+  "slug": "ald-lexis-uk-d82c6b",
+  "title": "Lexis+ UK",
+  "description": "UK case law, legislation, commentary (Halsbury's).",
+  "url": "https://www.lexisnexis.co.uk/legal/lexisplus-uk",
+  "tags": [
+    "Awesome Legal Data",
+    "United Kingdom",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "UK case law, legislation, commentary (Halsbury's).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

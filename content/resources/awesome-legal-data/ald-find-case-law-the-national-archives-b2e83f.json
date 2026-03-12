@@ -1,0 +1,27 @@
+{
+  "slug": "ald-find-case-law-the-national-archives-b2e83f",
+  "title": "Find Case Law (The National Archives)",
+  "description": "Free database of court & tribunal judgments (England & Wales).",
+  "url": "https://caselaw.nationalarchives.gov.uk/",
+  "tags": [
+    "Awesome Legal Data",
+    "United Kingdom",
+    "case law",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United Kingdom"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "open"
+  ],
+  "coverage": "Free database of court & tribunal judgments (England & Wales).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}

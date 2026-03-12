@@ -1,0 +1,26 @@
+{
+  "slug": "lcqa-task-1-d632b5",
+  "title": "LCQA roadmap task 1",
+  "description": "Research current state-of-the-art approaches in contract analysis and legal AI.",
+  "url": "https://github.com/Prbn/Legal-Contract-QA-Bot#project-structure",
+  "tags": [
+    "Contract QA",
+    "Roadmap",
+    "Task 1"
+  ],
+  "type": "program",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "Roadmap item from README task list: Research current state-of-the-art approaches in contract analysis and legal AI.",
+  "license_notes": "Roadmap statements are descriptive and may evolve outside repository updates.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

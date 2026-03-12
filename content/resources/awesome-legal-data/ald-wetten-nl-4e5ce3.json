@@ -1,0 +1,27 @@
+{
+  "slug": "ald-wetten-nl-4e5ce3",
+  "title": "wetten.nl",
+  "description": "Official consolidated Dutch legislation (XML/HTML).",
+  "url": "https://wetten.overheid.nl/",
+  "tags": [
+    "Awesome Legal Data",
+    "Netherlands",
+    "statutes regulation",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Netherlands"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Official consolidated Dutch legislation (XML/HTML).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research",
+    "policy-check"
+  ]
+}

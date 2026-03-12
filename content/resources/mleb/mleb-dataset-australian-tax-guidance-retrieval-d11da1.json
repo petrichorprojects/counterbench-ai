@@ -1,0 +1,28 @@
+{
+  "slug": "mleb-dataset-australian-tax-guidance-retrieval-d11da1",
+  "title": "Australian Tax Guidance Retrieval",
+  "description": "Regulation dataset in MLEB (creator: Isaacus).",
+  "url": "https://huggingface.co/datasets/isaacus/australian-tax-guidance-retrieval",
+  "tags": [
+    "MLEB",
+    "Dataset",
+    "Regulation",
+    "Isaacus"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Australia"
+  ],
+  "source_type": "statutes-regulation",
+  "access": [
+    "open"
+  ],
+  "coverage": "Dataset ID: australian-tax-guidance-retrieval. Category: Regulation. Creator: Isaacus.",
+  "license_notes": "Benchmark references external dataset. Verify dataset-level licensing on source page.",
+  "best_for": [
+    "benchmarking",
+    "policy-check",
+    "research"
+  ]
+}

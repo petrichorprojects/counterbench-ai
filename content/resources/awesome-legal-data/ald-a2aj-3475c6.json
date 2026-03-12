@@ -1,0 +1,25 @@
+{
+  "slug": "ald-a2aj-3475c6",
+  "title": "A2AJ",
+  "description": "Open Legal Canadian Database",
+  "url": "https://a2aj.ca/",
+  "tags": [
+    "Awesome Legal Data",
+    "Canada",
+    "research platform"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Canada"
+  ],
+  "source_type": "research-platform",
+  "access": [
+    "unknown"
+  ],
+  "coverage": "Open Legal Canadian Database",
+  "license_notes": "Verify licensing terms at the source before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "ald-oyez-eef1de",
+  "title": "Oyez",
+  "description": "SCOTUS audio, transcripts, and case summaries (education-oriented).",
+  "url": "https://www.oyez.org/",
+  "tags": [
+    "Awesome Legal Data",
+    "United States",
+    "other",
+    "Open"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "United States"
+  ],
+  "source_type": "other",
+  "access": [
+    "open"
+  ],
+  "coverage": "SCOTUS audio, transcripts, and case summaries (education-oriented).",
+  "license_notes": "Listed as open in source index; verify source-specific terms before reuse.",
+  "best_for": [
+    "research"
+  ]
+}

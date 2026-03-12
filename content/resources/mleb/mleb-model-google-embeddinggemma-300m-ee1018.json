@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-google-embeddinggemma-300m-ee1018",
+  "title": "EmbeddingGemma",
+  "description": "Embedding model evaluated on MLEB (google/embeddinggemma-300m).",
+  "url": "https://huggingface.co/google/embeddinggemma-300m",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Google",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6689 across 12 datasets. Avg evaluation time: 22.30s. Context window: 2048. Dimensions: 768.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

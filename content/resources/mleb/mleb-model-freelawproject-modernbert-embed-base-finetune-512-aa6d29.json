@@ -1,0 +1,27 @@
+{
+  "slug": "mleb-model-freelawproject-modernbert-embed-base-finetune-512-aa6d29",
+  "title": "Free Law ModernBERT Base",
+  "description": "Embedding model evaluated on MLEB (freelawproject/modernbert-embed-base_finetune_512).",
+  "url": "https://huggingface.co/freelawproject/modernbert-embed-base_finetune_512",
+  "tags": [
+    "MLEB",
+    "Model",
+    "Free Law",
+    "Open-source"
+  ],
+  "type": "toolkit",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global / Multi-jurisdictional"
+  ],
+  "source_type": "datasets-benchmarks",
+  "access": [
+    "open"
+  ],
+  "coverage": "Average score: 0.6643 across 12 datasets. Avg evaluation time: 25.43s. Context window: 8192. Dimensions: 768.",
+  "license_notes": "Model usage terms depend on provider and model license.",
+  "best_for": [
+    "benchmarking",
+    "research"
+  ]
+}

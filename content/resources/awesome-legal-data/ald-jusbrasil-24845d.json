@@ -1,0 +1,29 @@
+{
+  "slug": "ald-jusbrasil-24845d",
+  "title": "Jusbrasil",
+  "description": "Massive legal search (cases, legislation, gazettes) + community; premium features.",
+  "url": "https://www.jusbrasil.com.br/",
+  "tags": [
+    "Awesome Legal Data",
+    "Brazil",
+    "dockets filings",
+    "Open/Commercial"
+  ],
+  "type": "policy",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Brazil"
+  ],
+  "source_type": "dockets-filings",
+  "access": [
+    "open",
+    "commercial",
+    "mixed"
+  ],
+  "coverage": "Massive legal search (cases, legislation, gazettes) + community; premium features.",
+  "license_notes": "Mixed model; verify licensing and redistribution limits before operational use.",
+  "best_for": [
+    "docket-watch",
+    "research"
+  ]
+}

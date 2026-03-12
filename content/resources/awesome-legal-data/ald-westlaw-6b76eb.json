@@ -1,0 +1,27 @@
+{
+  "slug": "ald-westlaw-6b76eb",
+  "title": "Westlaw",
+  "description": "Thomson Reuters' flagship global legal research service (cases, statutes, citators, secondary sources).",
+  "url": "https://legal.thomsonreuters.com/en/westlaw",
+  "tags": [
+    "Awesome Legal Data",
+    "Global & Multi‑Jurisdictional",
+    "case law",
+    "Commercial"
+  ],
+  "type": "research",
+  "last_checked": "2026-03-10",
+  "jurisdiction": [
+    "Global & Multi‑Jurisdictional"
+  ],
+  "source_type": "case-law",
+  "access": [
+    "commercial"
+  ],
+  "coverage": "Thomson Reuters' flagship global legal research service (cases, statutes, citators, secondary sources).",
+  "license_notes": "Commercial source; check subscription and downstream use constraints.",
+  "best_for": [
+    "research",
+    "citation-check"
+  ]
+}
