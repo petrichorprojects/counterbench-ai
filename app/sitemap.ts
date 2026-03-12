@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllCollections, getAllPacks, getAllPlaybooks, getAllPrompts, getAllSkills, getAllTools } from "@/lib/content";
 import { getAllGuides } from "@/lib/guides";
+import { getAllInsights } from "@/lib/insights";
 import { absoluteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,11 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/prompts"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/skills"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/tools/compare"), lastModified: now, changeFrequency: "monthly", priority: 0.5 },
+    { url: absoluteUrl("/tools/source-finder"), lastModified: now, changeFrequency: "weekly", priority: 0.75 },
+    { url: absoluteUrl("/tools/contract-qa-planner"), lastModified: now, changeFrequency: "weekly", priority: 0.74 },
     { url: absoluteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: absoluteUrl("/insights"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: absoluteUrl("/resources"), lastModified: now, changeFrequency: "weekly", priority: 0.65 },
+    { url: absoluteUrl("/resources/open-legal-data-map"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: absoluteUrl("/resources/contract-qa-pipeline-map"), lastModified: now, changeFrequency: "weekly", priority: 0.69 },
     { url: absoluteUrl("/resources/attribution"), lastModified: now, changeFrequency: "monthly", priority: 0.2 },
     { url: absoluteUrl("/advisory"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/diagnostic"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
@@ -86,9 +91,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75
   }));
 
+  const insights = getAllInsights().map((p) => ({
+    url: absoluteUrl(`/insights/${p.slug}`),
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6
+  }));
+
   const packIndex: MetadataRoute.Sitemap = [
     { url: absoluteUrl("/prompts/packs"), lastModified: now, changeFrequency: "weekly", priority: 0.65 }
   ];
 
-  return [...base, ...discovery, ...packIndex, ...tools, ...collections, ...playbooks, ...guides, ...prompts, ...packs, ...skills];
+  return [...base, ...discovery, ...packIndex, ...tools, ...collections, ...playbooks, ...guides, ...insights, ...prompts, ...packs, ...skills];
 }

@@ -115,6 +115,35 @@ function coverBody(args: { markDataUrl: string }) {
   </div>`;
 }
 
+function thumbnailBody(args: { markDataUrl: string }) {
+  return `<div class="bg" style="justify-content: flex-start;">
+    <div style="width: 100%; height: 100%; padding: 56px 64px; display: flex; flex-direction: column; justify-content: space-between;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div class="mark" aria-hidden="true"></div>
+        <div style="display:flex; gap:10px; align-items:baseline;">
+          <div style="font-size: 18px; letter-spacing: 3px; font-weight: 950;">COUNTERBENCH</div>
+          <div style="font-size: 18px; letter-spacing: 3px; font-weight: 950; opacity: 0.85;">AI</div>
+        </div>
+        <div class="pill" style="margin-left: 10px;">The Bench Test</div>
+      </div>
+
+      <div style="max-width: 860px;">
+        <div style="font-size: 58px; line-height: 1.03; font-weight: 975; letter-spacing: -1.6px;">Bench-tested legal AI workflows.</div>
+        <div style="margin-top: 14px; font-size: 22px; line-height: 1.3; color: var(--muted);">Templates included. What to adopt, what to ignore, and implementation risks.</div>
+      </div>
+
+      <div style="display:flex; align-items:flex-end; justify-content: space-between; gap: 18px;">
+        <div style="display:flex; gap: 10px; flex-wrap: wrap;">
+          <div class="pill" style="text-transform:none; letter-spacing: 0; font-weight: 700;">Workflows</div>
+          <div class="pill" style="text-transform:none; letter-spacing: 0; font-weight: 700;">Tool shortlists</div>
+          <div class="pill" style="text-transform:none; letter-spacing: 0; font-weight: 700;">Templates</div>
+        </div>
+        <img src="${args.markDataUrl}" alt="" style="width: 96px; height: auto; opacity: 0.9;" />
+      </div>
+    </div>
+  </div>`;
+}
+
 async function main() {
   const root = process.cwd();
   const outDir = path.join(root, "out", "beehiiv");
@@ -136,6 +165,11 @@ async function main() {
   await page.setContent(htmlTemplate({ title: "Counterbench Cover", body: coverBody({ markDataUrl }) }), { waitUntil: "load" });
   await page.screenshot({ path: path.join(outDir, "counterbench-beehiiv-cover-1600x400.png") });
 
+  // Default thumbnail (for previews)
+  await page.setViewportSize({ width: 1200, height: 630 });
+  await page.setContent(htmlTemplate({ title: "Counterbench Thumbnail", body: thumbnailBody({ markDataUrl }) }), { waitUntil: "load" });
+  await page.screenshot({ path: path.join(outDir, "counterbench-beehiiv-thumbnail-1200x630.png") });
+
   await page.close();
   await browser.close();
 }
@@ -145,4 +179,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-

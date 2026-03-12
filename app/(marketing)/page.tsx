@@ -2,6 +2,17 @@ import Link from "next/link";
 import { HomeSuggest } from "@/components/HomeSuggest";
 import { HeroSection } from "@/components/HeroSection";
 
+export const metadata = {
+  title: "Counterbench.AI — The Right AI Tool for Your Legal Task",
+  description:
+    "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, 24 guides, and curated skill packs for litigation, discovery, and compliance teams.",
+  openGraph: {
+    title: "Counterbench.AI — The Right AI Tool for Your Legal Task",
+    description:
+      "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, and curated guides for legal professionals."
+  }
+};
+
 export default function HomePage() {
   return (
     <main>

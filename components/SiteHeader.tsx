@@ -69,7 +69,11 @@ export function SiteHeader() {
       { href: "/prompts/packs", label: "Prompt packs" },
       { href: "/skills", label: "Skills" },
       { href: "/insights", label: "Insights" },
-      { href: "/resources", label: "Resources" }
+      { href: "/resources", label: "Resources" },
+      { href: "/tools/source-finder", label: "Source Finder" },
+      { href: "/resources/open-legal-data-map", label: "US Data Map" },
+      { href: "/tools/contract-qa-planner", label: "Contract QA Planner" },
+      { href: "/resources/contract-qa-pipeline-map", label: "Contract QA Map" }
     ],
     []
   );

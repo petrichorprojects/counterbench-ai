@@ -39,4 +39,52 @@ test.describe("Visual capture (opt-in)", () => {
       await hero.screenshot({ path: path.join(outDir, `home-hero-${theme}.png`) });
     });
   }
+
+  test("Guides + Insights (desktop + mobile)", async ({ page }) => {
+    await page.addInitScript(setThemeInit("dark"));
+    const outDir = path.join(process.cwd(), "out", "visual");
+    ensureDir(outDir);
+
+    // Desktop
+    await page.setViewportSize({ width: 1440, height: 900 });
+
+    await page.goto("/guides");
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "guides-index-desktop.png"), fullPage: false });
+
+    await page.goto("/guides/defensible-ai-doc-review-protocol-2026");
+    await page.waitForTimeout(650);
+    await page.screenshot({ path: path.join(outDir, "guide-detail-desktop-top.png"), fullPage: false });
+    await page.evaluate(() => window.scrollTo(0, 900));
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "guide-detail-desktop-scrolled.png"), fullPage: false });
+
+    await page.goto("/insights");
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "insights-index-desktop.png"), fullPage: false });
+
+    await page.goto("/insights/defensible-ai-doc-review-protocol-2026");
+    await page.waitForTimeout(650);
+    await page.screenshot({ path: path.join(outDir, "insight-detail-desktop-top.png"), fullPage: false });
+    await page.evaluate(() => window.scrollTo(0, 900));
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "insight-detail-desktop-scrolled.png"), fullPage: false });
+
+    // Mobile
+    await page.setViewportSize({ width: 390, height: 844 });
+
+    await page.goto("/guides/defensible-ai-doc-review-protocol-2026");
+    await page.waitForTimeout(650);
+    await page.screenshot({ path: path.join(outDir, "guide-detail-mobile-top.png"), fullPage: false });
+    await page.evaluate(() => window.scrollTo(0, 980));
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "guide-detail-mobile-sticky-cta.png"), fullPage: false });
+
+    await page.goto("/insights/defensible-ai-doc-review-protocol-2026");
+    await page.waitForTimeout(650);
+    await page.screenshot({ path: path.join(outDir, "insight-detail-mobile-top.png"), fullPage: false });
+    await page.evaluate(() => window.scrollTo(0, 980));
+    await page.waitForTimeout(450);
+    await page.screenshot({ path: path.join(outDir, "insight-detail-mobile-sticky-cta.png"), fullPage: false });
+  });
 });
