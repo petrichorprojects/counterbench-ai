@@ -1,0 +1,217 @@
+{
+  "slug": "templates-first-48-hours-litigation-response-kit-2026",
+  "title": "First 48 Hours Litigation Response Template Kit (2026)",
+  "description": "Template-driven launch page for plaintiff teams that need a defensible first-48-hours intake and triage workflow with audit-ready outputs.",
+  "year": 2026,
+  "direct_answer": "Use a first-48-hours template kit when the team needs immediate structure: verified facts, risk tags, evidence requests, ownership, and a short strategy brief. The fastest legal AI workflow is the one that reduces ambiguity early. Counterbench recommends a kit with source-citation fields, reviewer sign-off, and escalation triggers so every draft can be explained if challenged.",
+  "tldr": "This page is a templates playbook hub for plaintiff-side litigation teams. The kit is intentionally operational: intake summary, risk triage matrix, early evidence hold tracker, witness risk worksheet, and seven-day action board. Every file is designed around one rule: AI can draft and normalize, but humans decide and approve. Teams that run the same structure on every matter reduce missed details, improve handoff quality, and avoid late rework before critical deadlines. The strongest template systems also include version control, role ownership, and explicit unknown fields so teams never fill gaps with assumptions. Use this page to pick your base template set, adapt by matter type, and run a controlled pilot on active cases before firmwide rollout.",
+  "answer_intents": [
+    "What should a first 48-hour litigation template include?",
+    "How do plaintiff firms standardize intake with AI safely?",
+    "What is the minimum defensible intake checklist?",
+    "How do we avoid thin AI-generated case summaries?",
+    "Which templates belong in a plaintiff litigation starter kit?",
+    "How should paralegals and attorneys split template ownership?"
+  ],
+  "how_to_choose": [
+    "Choose templates that force source references for every material fact, not narrative prose without citations.",
+    "Select file formats your team can edit quickly under deadline pressure, including checklists and short structured briefs.",
+    "Require fields for owner, reviewer, and timestamp so escalation decisions are auditable later.",
+    "Use separate variants for personal injury, employment, and mass tort workflows instead of one over-generic template.",
+    "Include explicit unknown flags so teams escalate gaps instead of inventing missing facts.",
+    "Pick templates that map directly to your existing matter management process to reduce adoption friction.",
+    "Ensure every template has one hard decision checkpoint where an attorney reviews strategy-impacting assumptions.",
+    "Run a two-week pilot and measure correction rate before expanding to other case types."
+  ],
+  "implementation_risks": [
+    "Teams can mistake well-formatted AI drafts for verified facts unless source fields are mandatory.",
+    "If ownership is unclear, templates become shared documents with no accountable reviewer.",
+    "Overly long template forms slow intake and cause users to bypass required fields.",
+    "Without versioning, different offices may run conflicting template logic on similar matters.",
+    "If unknown values are hidden, risk accumulates until the first major strategy review.",
+    "Template success can fail if partner sign-off criteria are not documented in advance."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Template setup and governance",
+      "bullets": [
+        "Create one master intake template, one risk matrix, and one action-board template with fixed field names.",
+        "Add reviewer and approval fields before launch so every draft has a traceable final decision.",
+        "Publish one active template version and archive retired versions with change reasons.",
+        "Document matter-type variants and when each variant should be selected."
+      ]
+    },
+    {
+      "title": "Daily intake execution pattern",
+      "bullets": [
+        "Capture verified facts first, then run AI-assisted normalization only after source fields are populated.",
+        "Tag urgency with consistent labels such as now, today, and this week.",
+        "Assign one owner for each missing item and one reviewer for each strategy-sensitive statement.",
+        "Export a one-page brief for attorney review before external communications."
+      ]
+    },
+    {
+      "title": "QA sampling and escalation",
+      "bullets": [
+        "Sample at least 20 percent of new matters for source integrity and field completeness checks.",
+        "Log each correction reason so template fields can be improved with real evidence.",
+        "Escalate missing deadlines, privilege uncertainty, and unsupported legal conclusions immediately.",
+        "Pause template expansion if correction rates exceed internal thresholds for two review cycles."
+      ]
+    },
+    {
+      "title": "Scale and maintenance",
+      "bullets": [
+        "Review template performance monthly using throughput, rework, and reviewer agreement metrics.",
+        "Retire template sections that no longer affect decisions to keep intake speed high.",
+        "Add training snippets directly into templates where users commonly make errors.",
+        "Treat templates as operating infrastructure, not static documents."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "spellbook",
+      "why": "Useful for structured drafting and clause-level assistance when template sections require precise legal language."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Helpful for broader legal workflow support when teams need one assistant layer across intake and early review."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "why": "Can support early issue framing if outputs are treated as hypotheses and reviewed against source evidence."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "spellbook",
+      "best_for": "Structured drafting in template-heavy workflows",
+      "workflow_fit": [
+        "Intake summaries",
+        "Template completion",
+        "Clause cleanup"
+      ],
+      "auditability": "High when source references are kept in template fields",
+      "qa_support": "Requires explicit reviewer pass",
+      "privilege_controls": "Policy-dependent; review boundaries required",
+      "exports_logs": "Template exports are easy to archive",
+      "notes": "Best used as a drafting layer, not a final legal decision tool."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Cross-stage support for legal teams",
+      "workflow_fit": [
+        "Intake",
+        "Issue spotting",
+        "Internal brief drafts"
+      ],
+      "auditability": "Moderate to high with structured prompts and retained logs",
+      "qa_support": "Strong when paired with firm QA checklists",
+      "privilege_controls": "Depends on firm policy and approved usage scope",
+      "exports_logs": "Use standardized export naming for matter records",
+      "notes": "Broad fit across workflows, but scope boundaries must be written."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "best_for": "Early outcome-oriented framing",
+      "workflow_fit": [
+        "Initial triage hypotheses",
+        "Issue ranking"
+      ],
+      "auditability": "Moderate; requires source-backed human validation",
+      "qa_support": "High reviewer involvement required",
+      "privilege_controls": "Use only within approved data boundaries",
+      "exports_logs": "Capture prompts and outputs in case notes",
+      "notes": "Useful for prioritization discussions, not deterministic predictions."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "PI intake to attorney strategy brief in one morning",
+      "scenario": "A plaintiff team receives a high-urgency personal injury intake with mixed medical records and incomplete timeline details.",
+      "time_box": "3.5 hours",
+      "inputs": [
+        "Client intake packet and call notes",
+        "Known dates, providers, and insurer details",
+        "Existing firm intake and conflict policy"
+      ],
+      "process": [
+        "Populate the intake template with verified facts and explicit unknown fields.",
+        "Use AI to normalize chronology and draft a one-page issue summary.",
+        "Run reviewer QA for source links, risk tags, and escalation flags.",
+        "Publish action board with owner assignments for missing records."
+      ],
+      "outputs": [
+        "Source-backed intake summary",
+        "Risk matrix with urgency tags",
+        "Attorney-ready strategy brief and next-step checklist"
+      ],
+      "qa_findings": [
+        "Two timeline assumptions were unsupported and corrected before partner review.",
+        "One deadline field required template clarification to prevent future ambiguity."
+      ],
+      "adjustments_made": [
+        "Added mandatory source field for all urgency tags.",
+        "Added escalation note for incomplete provider records."
+      ],
+      "key_takeaway": "Template discipline reduced rework and improved partner confidence because every critical statement had a traceable source."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How many templates should we launch with?",
+      "a": "Start with three to five templates tied to one high-volume workflow. Expansion works better after the team can measure quality and speed on real matters."
+    },
+    {
+      "q": "Should every template include AI prompts?",
+      "a": "No. Include prompts only where they reduce manual work and preserve output structure. Keep legal judgment checkpoints independent from prompt output."
+    },
+    {
+      "q": "How do we prevent template bloat?",
+      "a": "Review field usage monthly and remove sections that do not affect decisions. Every field should have a clear operational purpose."
+    },
+    {
+      "q": "Can one template set work across all plaintiff practices?",
+      "a": "Use one shared backbone plus matter-specific variants. A single generic template usually hides practice-specific risk."
+    },
+    {
+      "q": "What is the first QA metric to track?",
+      "a": "Track correction reasons during attorney review. This shows where template logic or user instructions are failing."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "intake-and-triage",
+    "litigation-and-discovery",
+    "prompt-frameworks"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published Stage 1 templates hub for first-48-hours plaintiff litigation workflows.",
+        "Added worked example and tool comparison for operator-level implementation."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

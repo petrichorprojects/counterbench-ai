@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { getAllGuides } from "@/lib/guides";
 
-export const metadata = { title: "Guides" };
+export const metadata = {
+  title: "Guides",
+  description:
+    "Answer hubs for high-intent legal AI workflows. TL;DRs, ranked shortlists, comparison tables, FAQs, and downloadable templates.",
+  openGraph: {
+    title: "Legal AI Guides | Counterbench.AI",
+    description:
+      "Answer hubs for high-intent legal AI workflows. TL;DRs, ranked shortlists, comparison tables, and downloadable templates."
+  }
+};
 
 export default function GuidesIndexPage() {
   const guides = getAllGuides();

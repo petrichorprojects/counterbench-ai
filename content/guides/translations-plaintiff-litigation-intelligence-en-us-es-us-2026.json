@@ -1,0 +1,219 @@
+{
+  "slug": "translations-plaintiff-litigation-intelligence-en-us-es-us-2026",
+  "title": "Plaintiff Litigation Intelligence in English and Spanish (2026)",
+  "description": "Translations playbook page with native-language optimization, cultural localization guidance, and hreflang implementation patterns.",
+  "year": 2026,
+  "direct_answer": "Bilingual legal AI pages should be localized, not merely translated. Keep the same page purpose across languages, adapt phrasing to native search behavior, and preserve legal clarity in both versions. For US audiences, en-US and es-US variants with reciprocal hreflang tags are a strong starting model.",
+  "tldr": "This translations page gives an operator framework for multilingual legal content that supports both users and search engines. It covers language-specific intent mapping, cultural localization, and implementation details such as hreflang reciprocity and metadata parity. The focus is practical: preserve legal precision, avoid literal translations of workflow jargon, and keep section depth comparable across variants to prevent thin-language pages. Teams should run two QA passes for every translation: linguistic quality and workflow executability. Use this page to deploy bilingual high-intent guides without creating duplicate-intent or low-value language variants. Translation pages should emphasize intent parity and execution quality across language variants. Legal content localization requires terminology control, cultural phrasing adjustments, and dual QA. Strong translated pages keep structure and value parity while adapting language naturally.",
+  "answer_intents": [
+    "How do we localize legal AI pages for Spanish-speaking audiences?",
+    "What hreflang setup is needed for en-US and es-US pages?",
+    "How do we avoid thin translated pages?",
+    "Should legal terminology be translated literally?",
+    "How can bilingual pages preserve conversion intent?",
+    "What QA process is needed before publishing translated legal content?"
+  ],
+  "how_to_choose": [
+    "Map language-specific keywords to local phrasing rather than direct literal translation.",
+    "Keep page purpose and conversion path equivalent across language variants.",
+    "Localize examples and CTA language for audience expectations.",
+    "Use controlled legal terminology glossary to reduce inconsistency.",
+    "Implement reciprocal hreflang tags and x-default fallback mapping.",
+    "Ensure metadata, headings, and section depth are language-appropriate and complete.",
+    "Run linguistic and workflow QA before indexation.",
+    "Monitor language-specific engagement and conversion behavior post-launch.",
+    "Add a translations QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone."
+  ],
+  "implementation_risks": [
+    "Literal translation can produce unnatural language and poor intent match.",
+    "Uneven section depth across languages can create thin variant pages.",
+    "Missing hreflang reciprocity can confuse search engines and users.",
+    "Inconsistent legal terminology can reduce trust and clarity.",
+    "Localized pages can cannibalize each other if intent boundaries are weak.",
+    "No language-specific QA can allow critical workflow errors into production.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Prepare bilingual content architecture",
+      "bullets": [
+        "Define canonical English page purpose and desired user action.",
+        "Map equivalent Spanish-language intent with native phrasing.",
+        "Create shared terminology sheet for legal and workflow terms.",
+        "Set parity rules for section count and informational depth."
+      ]
+    },
+    {
+      "title": "Localize content and metadata",
+      "bullets": [
+        "Translate and localize headings to match natural search behavior.",
+        "Adapt examples and CTA phrasing for language-specific expectations.",
+        "Localize title and description metadata per variant.",
+        "Preserve structured output formats across languages."
+      ]
+    },
+    {
+      "title": "Implement hreflang and indexing controls",
+      "bullets": [
+        "Add reciprocal hreflang entries for en-US and es-US variants.",
+        "Add x-default target for language selector or default variant.",
+        "Validate canonical tags do not conflict with language mappings.",
+        "Submit language URLs in segmented sitemap groups."
+      ]
+    },
+    {
+      "title": "Run bilingual quality loops",
+      "bullets": [
+        "Perform linguistic QA with native-level review.",
+        "Perform workflow QA to ensure instructions remain executable.",
+        "Track language-specific conversion and engagement metrics.",
+        "Iterate translations based on real user behavior signals."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Can assist drafting and rewriting across language variants when workflow terminology is controlled."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "why": "Useful for source-backed research and terminology checks in bilingual content workflows."
+    },
+    {
+      "tool_slug": "spellbook",
+      "why": "Supports structured legal language editing when maintaining precision across translated sections."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Multilingual draft support",
+      "workflow_fit": [
+        "Localization drafts",
+        "Terminology alignment"
+      ],
+      "auditability": "Moderate with revision tracking",
+      "qa_support": "Needs native-language human QA",
+      "privilege_controls": "Use approved content only",
+      "exports_logs": "Store version history per language",
+      "notes": "Useful drafting layer when paired with strict human review."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "best_for": "Bilingual term and source validation",
+      "workflow_fit": [
+        "Authority checks",
+        "Terminology research"
+      ],
+      "auditability": "Moderate to high with source logging",
+      "qa_support": "Strong with citation verification",
+      "privilege_controls": "Apply standard external content policy",
+      "exports_logs": "Archive source references by language variant",
+      "notes": "Helps keep localized legal terminology consistent and accurate."
+    },
+    {
+      "tool_slug": "spellbook",
+      "best_for": "Structured legal language refinement",
+      "workflow_fit": [
+        "Clause-style edits",
+        "Consistency checks"
+      ],
+      "auditability": "High when revisions are tracked",
+      "qa_support": "Attorney review required for strategy language",
+      "privilege_controls": "Policy boundaries required",
+      "exports_logs": "Save final accepted language by variant",
+      "notes": "Best used for final language quality tuning in structured sections."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "en-US and es-US guide rollout",
+      "scenario": "A plaintiff team launched bilingual high-intent content to support English and Spanish-speaking intake channels.",
+      "time_box": "3 weeks",
+      "inputs": [
+        "Canonical English guide",
+        "Spanish keyword intent research",
+        "Controlled legal terminology glossary"
+      ],
+      "process": [
+        "Localized headings and examples for es-US audience behavior.",
+        "Kept structural parity between language variants.",
+        "Implemented reciprocal hreflang and x-default mapping.",
+        "Ran native-language and workflow QA before publication."
+      ],
+      "outputs": [
+        "Bilingual guide pair with aligned intent",
+        "Validated hreflang mapping",
+        "Language-specific performance baseline"
+      ],
+      "qa_findings": [
+        "Literal translation reduced clarity in two workflow sections.",
+        "CTA phrasing required cultural adjustment for better comprehension."
+      ],
+      "adjustments_made": [
+        "Rewrote affected sections with native phrasing.",
+        "Updated terminology sheet with approved alternatives."
+      ],
+      "key_takeaway": "Localization quality improved when content purpose stayed constant but language execution was audience-native."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can we publish machine-translated legal pages without review?",
+      "a": "No. Machine translation can assist drafting, but legal and operational review is required before publication."
+    },
+    {
+      "q": "Which language pair should US plaintiff teams start with?",
+      "a": "en-US and es-US are often the highest-impact starting pair for many US legal markets."
+    },
+    {
+      "q": "What hreflang errors are most common?",
+      "a": "Missing reciprocal tags, incorrect language-region codes, and canonical conflicts are common implementation issues."
+    },
+    {
+      "q": "How do we avoid duplicate intent across language pages?",
+      "a": "Maintain one shared page purpose and differentiate language phrasing naturally without changing core user intent."
+    },
+    {
+      "q": "Should translated pages have fewer sections than English pages?",
+      "a": "No. Keep depth parity to avoid thin variants and preserve equivalent user value."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "inhouse-legal-ops",
+    "prompt-frameworks",
+    "inhouse-legal-research"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published bilingual translations hub with hreflang workflow.",
+        "Added localization QA model for legal workflow pages."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

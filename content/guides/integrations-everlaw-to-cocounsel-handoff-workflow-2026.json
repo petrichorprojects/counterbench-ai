@@ -1,0 +1,215 @@
+{
+  "slug": "integrations-everlaw-to-cocounsel-handoff-workflow-2026",
+  "title": "Everlaw to CoCounsel Handoff Workflow (2026)",
+  "description": "Integrations playbook page with setup steps, operational use cases, and QA controls for dual-tool plaintiff litigation workflows.",
+  "year": 2026,
+  "direct_answer": "Treat Everlaw-to-CoCounsel as an operational handoff workflow, not an assumption of native one-click integration. Define shared fields, assign stage owners, and validate outputs at each handoff point. The workflow works when every transfer is structured and auditable. It fails when teams move unstructured notes between tools without QA controls.",
+  "tldr": "This integration page describes how plaintiff teams can combine review-oriented and broad legal workflow tools safely. The core principle is schema-first handoff: shared field names, required source references, and fixed ownership at every stage. Setup should include dry runs, sampling checks, and rollback criteria. Use this page to implement a controlled dual-tool pattern only after one-tool baselines are stable. Teams that skip handoff governance usually add complexity without improving outcomes. Teams that standardize transfer logic can gain speed while maintaining defensibility.",
+  "answer_intents": [
+    "How do we hand off work from Everlaw to CoCounsel safely?",
+    "What setup steps are required for dual-tool legal workflows?",
+    "How should we design integration QA checks?",
+    "What are common handoff failure modes?",
+    "When is dual-tool integration worth the effort?",
+    "How do we keep integration outputs auditable?"
+  ],
+  "how_to_choose": [
+    "Adopt integration only if one-tool workflows are already stable and measured.",
+    "Use shared field naming conventions to prevent context loss at handoff.",
+    "Define explicit owner and reviewer per handoff batch.",
+    "Require source references in all transfer records.",
+    "Run dry tests before production matters are included.",
+    "Track correction causes specifically for handoff outputs.",
+    "Document blocked content types and policy boundaries.",
+    "Maintain rollback path if correction rates rise after integration."
+  ],
+  "implementation_risks": [
+    "Unstructured handoffs can increase review burden and reduce output trust.",
+    "Dual-tool workflows often fail when ownership is split informally.",
+    "Schema mismatch can silently corrupt context during transfers.",
+    "No rollback plan can lock teams into degraded workflows.",
+    "Policy violations can occur if integration boundaries are not explicit.",
+    "Pilot data can become noisy when multiple variables change at once."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Integration readiness check",
+      "bullets": [
+        "Confirm one-tool baseline metrics are stable before dual-tool pilot.",
+        "Define shared schema with required fields and validation rules.",
+        "Assign integration owner responsible for failures and fixes.",
+        "Publish approved and disallowed handoff scenarios."
+      ]
+    },
+    {
+      "title": "Setup and pilot execution",
+      "bullets": [
+        "Configure Everlaw export structures for reviewed issue packets.",
+        "Map import templates for CoCounsel workflows using identical field names.",
+        "Run a dry handoff test on one sanitized matter subset.",
+        "Track throughput and correction rate by batch."
+      ]
+    },
+    {
+      "title": "Quality control and escalation",
+      "bullets": [
+        "Validate required fields before every import operation.",
+        "Sample outputs for source integrity and role-level clarity.",
+        "Escalate recurring mismatch issues to schema owner.",
+        "Pause integration if quality gates are missed repeatedly."
+      ]
+    },
+    {
+      "title": "Scale and sustain",
+      "bullets": [
+        "Document integration learnings in one versioned playbook.",
+        "Train new operators with real error examples and corrections.",
+        "Review integration KPIs monthly with legal ops leadership.",
+        "Keep integration scope narrow unless metrics justify expansion."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Review-layer anchor for structured document operations before handoff."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Broad legal workflow layer for summaries and downstream task support."
+    },
+    {
+      "tool_slug": "pincites",
+      "why": "Useful companion for citation-focused output checks in integrated workflows."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Review packet generation",
+      "workflow_fit": [
+        "Issue-tagged exports",
+        "Review summary prep"
+      ],
+      "auditability": "High with structured export policy",
+      "qa_support": "Strong in sampling-driven workflows",
+      "privilege_controls": "Needs policy-bound export controls",
+      "exports_logs": "Export logs support handoff traceability",
+      "notes": "Effective source layer for integrated handoff pipelines."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Downstream synthesis and tasking",
+      "workflow_fit": [
+        "Issue memo drafts",
+        "Follow-up question generation"
+      ],
+      "auditability": "Moderate to high with strict template inputs",
+      "qa_support": "Requires post-import review checks",
+      "privilege_controls": "Must honor approved integration boundaries",
+      "exports_logs": "Archive outputs with linked source IDs",
+      "notes": "Provides flexible downstream utility when handoffs are clean."
+    },
+    {
+      "tool_slug": "pincites",
+      "best_for": "Citation-oriented quality checks",
+      "workflow_fit": [
+        "Reference validation",
+        "Source confidence checks"
+      ],
+      "auditability": "Moderate with consistent source mapping",
+      "qa_support": "Useful in final QA stage",
+      "privilege_controls": "Use according to approved reference handling policy",
+      "exports_logs": "Track citation check logs by matter",
+      "notes": "Helpful as QA support layer in integrated output workflows."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "Dual-tool handoff on eDiscovery subset",
+      "scenario": "A plaintiff team piloted Everlaw-to-CoCounsel handoffs on one review-intensive matter segment.",
+      "time_box": "14 days",
+      "inputs": [
+        "Reviewed document packets with issue tags",
+        "Shared schema template",
+        "Reviewer checklist for post-handoff outputs"
+      ],
+      "process": [
+        "Exported structured review packet from Everlaw.",
+        "Imported packet into CoCounsel template workflow.",
+        "Ran sampling checks on source references and issue mapping.",
+        "Logged corrections and adjusted schema definitions."
+      ],
+      "outputs": [
+        "Cleaner handoff summaries",
+        "Reduced manual context transfer",
+        "Integration policy draft for wider rollout"
+      ],
+      "qa_findings": [
+        "Schema mismatches caused early output gaps.",
+        "Correction rates improved after required-field validation was enforced."
+      ],
+      "adjustments_made": [
+        "Added pre-import schema validator checklist.",
+        "Added explicit owner for each handoff batch."
+      ],
+      "key_takeaway": "Integration gains came from disciplined handoff design, not from tool pairing alone."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is this a native product integration guide?",
+      "a": "No. It is an operational handoff model. Teams should separately verify any native integration capabilities with vendors."
+    },
+    {
+      "q": "When should we avoid dual-tool integration?",
+      "a": "Avoid it when one-tool workflows are still unstable or when your team lacks clear ownership and QA capacity."
+    },
+    {
+      "q": "What is the most common failure mode?",
+      "a": "Unstructured handoff records that lose source context and increase downstream correction work."
+    },
+    {
+      "q": "How do we keep integration auditable?",
+      "a": "Use shared schema fields, required source references, and batch-level logs with owner and reviewer metadata."
+    },
+    {
+      "q": "What should trigger rollback?",
+      "a": "Sustained correction-rate increases or repeated schema failures should trigger immediate rollback and redesign."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "litigation-and-discovery",
+    "prompt-frameworks",
+    "inhouse-legal-ops"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published integration handoff hub for Everlaw and CoCounsel workflows.",
+        "Added setup sequence, QA controls, and rollback triggers."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

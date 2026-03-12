@@ -1,0 +1,220 @@
+{
+  "slug": "examples-plaintiff-litigation-ai-workflow-examples-2026",
+  "title": "Plaintiff Litigation AI Workflow Examples (2026)",
+  "description": "Examples playbook page with real workflow patterns, why they work, and filters by stage, sensitivity, and team role.",
+  "year": 2026,
+  "direct_answer": "The best legal AI examples are the ones your team can actually run tomorrow with clear inputs, outputs, and reviewer checkpoints. Counterbench examples focus on plaintiff workflows like intake triage, document review coding, chronology building, and trial-prep packet assembly. Each example includes failure modes and QA adjustments so teams can copy what works and avoid avoidable errors.",
+  "tldr": "This examples hub turns abstract legal AI advice into concrete operational playbooks. Each example is mapped to workflow stage, sensitivity level, and role ownership, so teams can select a safe starting point. Instead of showcasing idealized outputs, examples explain why a pattern worked, where it failed, and what changes improved reliability. The page is intentionally practical: input schema, process sequence, output structure, and QA notes. Teams can use these examples to launch small pilots, train new operators, and standardize expectations across paralegals and attorneys. Start with low-risk intake examples, then move to higher-risk review and trial-prep patterns once review discipline is stable.",
+  "answer_intents": [
+    "What legal AI workflows are working for plaintiff firms?",
+    "How do we evaluate whether an AI workflow example is usable?",
+    "What should a legal AI example include besides output text?",
+    "How can paralegals use examples to speed adoption?",
+    "Which example is safest for first-time legal AI teams?",
+    "How do we scale examples across practice groups?"
+  ],
+  "how_to_choose": [
+    "Choose examples with explicit input requirements and no hidden assumptions.",
+    "Prioritize workflows that map to existing team pain points and deadlines.",
+    "Look for examples that include QA findings, not only positive outcomes.",
+    "Start with examples where failure impact is low and review capacity is available.",
+    "Require clear role ownership before testing any example at production speed.",
+    "Filter by matter sensitivity to avoid policy violations during pilots.",
+    "Use examples that produce structured outputs with source references.",
+    "Adopt examples in sequence: intake first, then review, then trial prep."
+  ],
+  "implementation_risks": [
+    "Teams can copy an example without adapting assumptions to local workflow realities.",
+    "Examples without QA notes can create false confidence in first-pass outputs.",
+    "If role ownership is vague, example replication becomes inconsistent across matters.",
+    "Using high-risk examples too early can damage stakeholder trust.",
+    "Overly broad examples can reintroduce ambiguity the workflow was meant to reduce.",
+    "Lack of version control causes example drift and uneven outcomes."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Filter and pick the first example",
+      "bullets": [
+        "Apply stage, sensitivity, and role filters before selecting an example.",
+        "Pick one workflow with clear baseline metrics already available.",
+        "Confirm policy boundaries for data handling and privilege controls.",
+        "Document expected outputs before starting the pilot."
+      ]
+    },
+    {
+      "title": "Run the example in a controlled pilot",
+      "bullets": [
+        "Use real but policy-approved matter data for meaningful testing.",
+        "Capture each process step and any manual interventions.",
+        "Track correction reasons and reviewer confidence per output.",
+        "Record where the example slowed down or failed."
+      ]
+    },
+    {
+      "title": "Analyze why it worked or failed",
+      "bullets": [
+        "Separate tool issues from prompt design and process design issues.",
+        "Compare output quality against baseline non-AI workflow results.",
+        "Quantify where time savings occurred and where risk increased.",
+        "Update the example with specific adjustments and retest."
+      ]
+    },
+    {
+      "title": "Scale examples into standard operating patterns",
+      "bullets": [
+        "Promote only examples that pass quality gates twice in a row.",
+        "Train teams using concrete before-and-after examples.",
+        "Publish a versioned example library with owner accountability.",
+        "Retire examples that no longer reflect current policy or tooling."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "caseodds-ai",
+      "why": "Useful for example-driven issue prioritization patterns when outputs are verified and treated as hypotheses."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Supports document review and collaboration examples with clearer operational structure."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "why": "Enables research-oriented examples where authority checks are central to output quality."
+    },
+    {
+      "tool_slug": "spellbook",
+      "why": "Works well in drafting examples where consistency and clause-level refinement matter."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "caseodds-ai",
+      "best_for": "Issue framing examples",
+      "workflow_fit": [
+        "Hypothesis generation",
+        "Priority ranking"
+      ],
+      "auditability": "Moderate with source-linked review",
+      "qa_support": "High reviewer oversight required",
+      "privilege_controls": "Use approved data only",
+      "exports_logs": "Store prompt/output pairs with reviewer notes",
+      "notes": "Use for framing examples, not final legal determinations."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Review operations examples",
+      "workflow_fit": [
+        "Document coding",
+        "Batch triage",
+        "Team handoff"
+      ],
+      "auditability": "High with structured process controls",
+      "qa_support": "Strong in checklist-based review environments",
+      "privilege_controls": "Policy-based access setup required",
+      "exports_logs": "Operational logs support post-example analysis",
+      "notes": "Strong fit for scalable review examples."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "best_for": "Research and brief support examples",
+      "workflow_fit": [
+        "Authority lookup",
+        "Citation context"
+      ],
+      "auditability": "Moderate with direct source checks",
+      "qa_support": "Needs strict citation verification process",
+      "privilege_controls": "Apply standard external research boundaries",
+      "exports_logs": "Archive research outputs with issue trees",
+      "notes": "Best used where source confidence is measured explicitly."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "Intake triage example with quality checkpoints",
+      "scenario": "A paralegal-led plaintiff team needed consistent intake summaries across rapidly increasing new matters.",
+      "time_box": "2 weeks",
+      "inputs": [
+        "Historical intake forms",
+        "Source-backed timeline notes",
+        "Attorney escalation criteria"
+      ],
+      "process": [
+        "Selected low-risk intake workflow as first example.",
+        "Ran template-based summaries with AI normalization.",
+        "Applied reviewer QA to source references and urgency tags.",
+        "Compared output quality against prior manual summaries."
+      ],
+      "outputs": [
+        "Standardized intake summaries",
+        "Escalation-ready risk tags",
+        "Improved attorney handoff quality"
+      ],
+      "qa_findings": [
+        "Urgency labels were inconsistent until definitions were standardized.",
+        "Missing-source statements dropped after mandatory citation fields."
+      ],
+      "adjustments_made": [
+        "Added mandatory source field and reviewer initials.",
+        "Introduced weekly calibration for intake reviewers."
+      ],
+      "key_takeaway": "Examples become scalable only when they include explicit quality controls and ownership."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Should we start with advanced trial-prep examples?",
+      "a": "Usually no. Start with lower-risk intake or review examples to build team discipline before handling higher-stakes workflows."
+    },
+    {
+      "q": "What makes an example genuinely reusable?",
+      "a": "Reusable examples have clear inputs, step sequence, output schema, QA checks, and role accountability."
+    },
+    {
+      "q": "Can examples reduce onboarding time?",
+      "a": "Yes. New team members learn faster when examples show both expected output and common failure patterns."
+    },
+    {
+      "q": "How often should example libraries be updated?",
+      "a": "Quarterly updates are a strong baseline, with faster updates when policy or tooling changes impact workflow behavior."
+    },
+    {
+      "q": "Do examples need citations?",
+      "a": "Examples should include source references for critical claims and operational assumptions to stay auditable."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "intake-and-triage",
+    "litigation-and-discovery",
+    "inhouse-legal-ops"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published examples hub with stage and sensitivity filtering guidance.",
+        "Added worked intake example and operator-level QA lessons."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

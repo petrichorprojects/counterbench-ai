@@ -1,0 +1,217 @@
+{
+  "slug": "conversions-transcript-pages-to-review-hours-2026",
+  "title": "Transcript Pages to Review Hours Converter (2026)",
+  "description": "Conversions playbook page that turns transcript volume into staffing and review-hour estimates for plaintiff-side litigation operations.",
+  "year": 2026,
+  "direct_answer": "Use a pages-to-hours conversion model when planning deposition review and trial-prep staffing. Start with a baseline pages-per-hour rate, then multiply by complexity and QA factors. This gives a realistic estimate that can be recalibrated with actual throughput. Counterbench recommends keeping assumptions explicit and adjusting weekly so teams avoid deadline compression and last-minute staffing surprises.",
+  "tldr": "This conversion page is a utility guide for legal operations planning. It provides a transparent method to estimate review effort based on transcript pages, testimony complexity, and quality control requirements. The model is intentionally simple so teams can adopt it quickly: baseline pace multiplied by complexity and QA factors, then split across reviewer roles. The real value is not numerical precision on day one. The value is consistent planning logic and faster adjustment when reality changes. Use this page together with intake and review templates to align staffing decisions, escalation timing, and partner expectations. Teams that run one conversion model across matters usually improve planning quality and reduce weekend recovery work before hearings.",
+  "answer_intents": [
+    "How many hours does transcript review usually take?",
+    "How do I convert deposition pages to staffing estimates?",
+    "What complexity factors should legal teams use?",
+    "How should QA time be included in review forecasts?",
+    "Can this model be used for expert testimony?",
+    "How do we calibrate estimates with actual pace?"
+  ],
+  "how_to_choose": [
+    "Set one baseline pages-per-hour rate based on your own historical reviewer throughput.",
+    "Use a complexity multiplier for technical testimony, poor scans, or heavy cross-reference requirements.",
+    "Always include QA factor if outputs influence strategy or filing decisions.",
+    "Split final estimate by role to avoid hiding partner or senior attorney review time.",
+    "Track estimate versus actual each week to improve calibration quality.",
+    "Use the same assumption sheet across teams to reduce planning inconsistency.",
+    "Add buffer for translation, exhibit-heavy, or multi-day deposition records.",
+    "Escalate staffing early when daily variance exceeds a defined threshold."
+  ],
+  "implementation_risks": [
+    "Teams often underestimate QA effort and over-trust first-pass productivity assumptions.",
+    "Using different formulas across teams makes workload comparison unreliable.",
+    "No complexity factor can hide that reviewer skill levels differ materially.",
+    "If assumptions are undocumented, estimates become non-defensible in planning reviews.",
+    "Overly aggressive pace targets can increase downstream correction costs.",
+    "Ignoring variance signals causes emergency staffing near key deadlines."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Set your baseline conversion model",
+      "bullets": [
+        "Calculate median pages-per-hour from at least three recent matters.",
+        "Define complexity bands with clear triggers and examples.",
+        "Add QA multiplier rules based on review depth requirements.",
+        "Document assumptions in one shared planning file."
+      ]
+    },
+    {
+      "title": "Run weekly planning cycles",
+      "bullets": [
+        "Estimate total hours by transcript set and assign role-level ownership.",
+        "Track daily output against plan and flag negative variance immediately.",
+        "Reforecast at least twice per week on active high-volume matters.",
+        "Update stakeholders with realistic completion windows."
+      ]
+    },
+    {
+      "title": "Link conversions to staffing decisions",
+      "bullets": [
+        "Translate hours into reviewer shifts and attorney sign-off windows.",
+        "Reserve QA capacity before assigning net new review work.",
+        "Use variance trends to trigger temporary staffing changes.",
+        "Keep one decision log for schedule adjustments."
+      ]
+    },
+    {
+      "title": "Continuously improve model quality",
+      "bullets": [
+        "Review estimate accuracy monthly by matter type and testimony style.",
+        "Tune multipliers where forecast error is consistently high.",
+        "Capture lessons learned in a conversion playbook appendix.",
+        "Retire assumptions that no longer match current workflow behavior."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Supports review-oriented workflows where conversion estimates must map to real document operations."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Useful for drafting summaries and operational notes once review-hour allocation is established."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "why": "Can assist with issue-prioritization discussions after core staffing projections are set."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Mapping review estimates to review operations",
+      "workflow_fit": [
+        "Review queues",
+        "Batch planning",
+        "Team coordination"
+      ],
+      "auditability": "High with consistent matter logging",
+      "qa_support": "Strong when sampling schedule is predefined",
+      "privilege_controls": "Policy-defined boundaries required",
+      "exports_logs": "Planning exports can be archived by matter",
+      "notes": "Good operational anchor for conversion-driven review plans."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Post-conversion drafting and synthesis",
+      "workflow_fit": [
+        "Summary drafts",
+        "Issue framing",
+        "Follow-up tasks"
+      ],
+      "auditability": "Moderate with explicit source references",
+      "qa_support": "Depends on reviewer checklist rigor",
+      "privilege_controls": "Must align with approved usage policy",
+      "exports_logs": "Store generated outputs with assumption notes",
+      "notes": "Best used after capacity and review windows are set."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "best_for": "Scenario framing after workload estimation",
+      "workflow_fit": [
+        "Issue ranking",
+        "Initial planning hypotheses"
+      ],
+      "auditability": "Moderate; high reviewer scrutiny needed",
+      "qa_support": "Human review required for all decision impacts",
+      "privilege_controls": "Use sanitized data where required",
+      "exports_logs": "Retain prompt and output snapshots in planning logs",
+      "notes": "Helpful as a supplement, not a staffing source of truth."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "420-page deposition set planning run",
+      "scenario": "A plaintiff team had eight business days to review a 420-page transcript set and prepare a strategy memo.",
+      "time_box": "45 minutes for forecast, 8-day execution window",
+      "inputs": [
+        "Total transcript pages and testimony type",
+        "Historical reviewer throughput data",
+        "Required QA depth and attorney sign-off rules"
+      ],
+      "process": [
+        "Applied baseline pace of 18 pages per hour.",
+        "Used complexity factor 1.3 and QA factor 1.2.",
+        "Split estimated hours across paralegal and attorney reviewers.",
+        "Reforecasted daily using actual throughput variance."
+      ],
+      "outputs": [
+        "36.4-hour total estimate",
+        "Role-level staffing schedule",
+        "Variance-trigger escalation plan"
+      ],
+      "qa_findings": [
+        "Complex testimony sections consumed more time than baseline assumptions.",
+        "Attorney review window needed earlier scheduling than initial plan."
+      ],
+      "adjustments_made": [
+        "Raised complexity factor to 1.4 for technical witness segments.",
+        "Added mid-cycle attorney review checkpoint."
+      ],
+      "key_takeaway": "Transparent conversion logic enabled fast re-planning without deadline panic."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is this converter accurate for every case type?",
+      "a": "No model is universal. It is a planning baseline that should be calibrated with your own throughput and matter complexity."
+    },
+    {
+      "q": "What baseline pages-per-hour should we use first?",
+      "a": "Start with your median historical rate and update after each matter cycle. Conservative assumptions are safer than optimistic ones."
+    },
+    {
+      "q": "Should QA time always be included?",
+      "a": "Yes for strategy-relevant outputs. Excluding QA time usually leads to hidden workload and missed expectations."
+    },
+    {
+      "q": "How often should we reforecast?",
+      "a": "At least twice weekly on active high-volume matters, and daily when variance exceeds your alert threshold."
+    },
+    {
+      "q": "Can we reuse this for exhibit-heavy reviews?",
+      "a": "Yes, but add a higher complexity factor and explicit buffer for cross-reference and verification effort."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "litigation-and-discovery",
+    "intake-and-triage",
+    "lawyer-productivity-pack"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published conversion utility page for transcript-page staffing estimation.",
+        "Added worked conversion example with calibration and variance controls."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

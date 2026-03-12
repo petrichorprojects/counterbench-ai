@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/design-system/Badge";
+import { StickyCta } from "@/components/StickyCta";
 import { NewsletterCapture } from "@/components/NewsletterCapture";
 import { getPackBySlug, getToolBySlug } from "@/lib/content";
 import { getAllGuides, getGuideBySlug } from "@/lib/guides";
@@ -179,6 +180,23 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
               All guides
             </Link>
           </div>
+
+          <details
+            className="card mt-4"
+            style={{ borderRadius: 12, padding: "1rem", maxWidth: 860 }}
+            aria-label="On-page table of contents"
+          >
+            <summary className="text-white" style={{ fontWeight: 800, cursor: "pointer" }}>
+              On this page <span className="text-muted" style={{ fontWeight: 600 }}>(jump)</span>
+            </summary>
+            <div style={{ display: "grid", gap: 10, marginTop: 12 }}>
+              {tocItems.map((t) => (
+                <a key={t.id} href={`#${t.id}`} className="text-white" style={{ fontWeight: 700, textDecoration: "none" }}>
+                  {t.label}
+                </a>
+              ))}
+            </div>
+          </details>
 
           <div className="mt-6 grid grid--2 grid--gap-2" style={{ gap: "1.25rem", alignItems: "start" }}>
             <div>
@@ -635,6 +653,18 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
+
+      {guide.downloads.length > 0 && (
+        <StickyCta
+          text={
+            <>
+              <strong>Templates included.</strong> Download the kit for this guide.
+            </>
+          }
+          ctaLabel="Download kit"
+          ctaHref="#download-kit"
+        />
+      )}
     </main>
   );
 }

@@ -1,0 +1,223 @@
+{
+  "slug": "profiles-caseodds-ai-2026",
+  "title": "CaseOdds.ai Profile for Plaintiff Teams (2026)",
+  "description": "Profiles playbook page with verified catalog facts, timeline milestones, and practical insight for evaluating CaseOdds.ai in legal workflows.",
+  "year": 2026,
+  "direct_answer": "This profile compiles verified catalog fields for CaseOdds.ai and translates them into practical evaluation guidance. The goal is not endorsement. The goal is defensible assessment. Use the profile to understand fit, risks, and pilot requirements before procurement decisions.",
+  "tldr": "Profile pages are most useful when they separate facts from interpretation. This CaseOdds.ai profile anchors on verified catalog data and then adds workflow-oriented evaluation guidance for plaintiff legal teams. It includes timeline milestones, category context, and practical pilot questions that legal ops teams should answer before deployment. The page avoids unsupported performance claims and makes uncertainty explicit where data is pending verification. Use this profile with directory and comparison pages to build a more reliable decision process. Profile pages should separate factual records from recommendations. Teams need freshness markers, timeline context, and explicit uncertainty labels. Strong profiles support procurement by clarifying what is known, what must be verified, and how to pilot responsibly. Profile pages should separate factual records from recommendations. Teams need freshness markers, timeline context, and explicit uncertainty labels. Strong profiles support procurement by clarifying what is known, what must be verified, and how to pilot responsibly.",
+  "answer_intents": [
+    "What is CaseOdds.ai and where does it fit?",
+    "What verified data is available about CaseOdds.ai?",
+    "How should plaintiff firms evaluate CaseOdds.ai?",
+    "What risks should teams review before adopting CaseOdds.ai?",
+    "How should profile pages be structured for legal AI tools?",
+    "What is the difference between profile and comparison pages?"
+  ],
+  "how_to_choose": [
+    "Start profile pages with verified facts and explicit source provenance.",
+    "Mark uncertain fields clearly instead of implying confidence.",
+    "Add timeline milestones to show data freshness and update history.",
+    "Separate factual sections from interpretive recommendations.",
+    "Include pilot questions that map to real workflow adoption decisions.",
+    "Avoid outcome claims unless they are reproducible and sourced.",
+    "Link profile pages to directory and comparison contexts.",
+    "Refresh profile data on a regular governance cadence.",
+    "Add a profiles QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone.",
+    "Add a profiles QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone."
+  ],
+  "implementation_risks": [
+    "Profiles can become marketing pages if fact and interpretation are mixed.",
+    "Outdated or unlabeled fields can undermine buyer trust quickly.",
+    "Without timeline context, users cannot judge data freshness.",
+    "Missing pilot guidance limits profile utility for real decisions.",
+    "Generic profiles can cannibalize broader comparison intent.",
+    "Unsupported claims increase legal and reputational risk.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Build profile data foundation",
+      "bullets": [
+        "Collect verified fields: name, slug, category, pricing, platform, and status.",
+        "Record last-verified date and change-log events.",
+        "Distinguish vendor-provided details from internal observations.",
+        "Flag uncertain fields with explicit pending-verification labels."
+      ]
+    },
+    {
+      "title": "Add practical evaluation context",
+      "bullets": [
+        "Map profile insights to likely workflow use-cases.",
+        "List policy and QA questions teams should resolve before adoption.",
+        "Describe where human review must remain mandatory.",
+        "Provide checklist for pilot readiness and success criteria."
+      ]
+    },
+    {
+      "title": "Maintain trust and defensibility",
+      "bullets": [
+        "Avoid unsourced performance or savings claims.",
+        "Update profile timeline whenever key fields change.",
+        "Use structured profile templates for consistency across entities.",
+        "Link to comparison pages for competitive context."
+      ]
+    },
+    {
+      "title": "Operationalize profile updates",
+      "bullets": [
+        "Set monthly review for high-traffic profiles.",
+        "Track user feedback and correction requests.",
+        "Archive prior profile versions with dated changes.",
+        "Use profile quality checks before publication."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "caseodds-ai",
+      "why": "Primary profile subject with verified catalog fields and practical adoption guidance."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Comparison reference for broader workflow coverage context."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Comparison reference for review-focused workflow context."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "caseodds-ai",
+      "best_for": "Outcome-oriented issue framing",
+      "workflow_fit": [
+        "Initial triage hypotheses",
+        "Priority discussions"
+      ],
+      "auditability": "Moderate with strict source verification",
+      "qa_support": "High reviewer oversight required",
+      "privilege_controls": "Use within approved policy boundaries",
+      "exports_logs": "Retain prompt and output logs by matter",
+      "notes": "Should be used as a support layer, not as final legal conclusion engine."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Broad workflow support",
+      "workflow_fit": [
+        "Drafting support",
+        "Issue summaries"
+      ],
+      "auditability": "Moderate to high with structured workflow design",
+      "qa_support": "Needs role-specific review checkpoints",
+      "privilege_controls": "Policy and scope controls required",
+      "exports_logs": "Archive outputs with reviewer metadata",
+      "notes": "Useful reference for profile comparisons by breadth."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Review-centric operations",
+      "workflow_fit": [
+        "Review process",
+        "Collaboration handoff"
+      ],
+      "auditability": "High with process controls",
+      "qa_support": "Strong in sampling-led review models",
+      "privilege_controls": "Needs explicit governance configuration",
+      "exports_logs": "Supports defensible process records",
+      "notes": "Useful reference for profile comparisons by depth in review workflows."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "CaseOdds.ai profile evaluation sprint",
+      "scenario": "A plaintiff legal ops lead needed a rapid but defensible evaluation of CaseOdds.ai before adding it to a shortlist.",
+      "time_box": "5 business days",
+      "inputs": [
+        "Verified catalog record",
+        "Current workflow map",
+        "Pilot acceptance criteria"
+      ],
+      "process": [
+        "Compiled verified facts and timeline milestones.",
+        "Mapped potential fit to intake and issue-framing workflows.",
+        "Defined pilot questions and policy constraints.",
+        "Compared profile insights with existing stack needs."
+      ],
+      "outputs": [
+        "Profile page with fact/interpretation split",
+        "Pilot readiness checklist",
+        "Shortlist recommendation status"
+      ],
+      "qa_findings": [
+        "Pending-description fields required clear labeling to avoid over-interpretation.",
+        "Stakeholders requested explicit reminder that profile is not endorsement."
+      ],
+      "adjustments_made": [
+        "Added verification labels and timeline block.",
+        "Added non-endorsement and usage-boundary guidance."
+      ],
+      "key_takeaway": "Profile trust improves when uncertainty is explicit and practical evaluation steps are concrete."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is this profile a recommendation to purchase?",
+      "a": "No. It is an evaluation reference built from verified data and operational guidance."
+    },
+    {
+      "q": "What does last verified date indicate?",
+      "a": "It indicates when the catalog record was most recently checked, not a guarantee of unchanged vendor behavior."
+    },
+    {
+      "q": "Why include timeline milestones?",
+      "a": "Timeline data helps users assess freshness, update cadence, and confidence in profile recency."
+    },
+    {
+      "q": "How should profile pages connect to other page types?",
+      "a": "Profiles should connect to directory discovery pages and comparison decision pages for full buyer journeys."
+    },
+    {
+      "q": "What is the main profile quality rule?",
+      "a": "Keep verified facts separate from interpretation and clearly label uncertainty."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "inhouse-legal-ops",
+    "prompt-frameworks",
+    "litigation-and-discovery"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published CaseOdds.ai profile with verified data and timeline model.",
+        "Added operational pilot guidance and profile QA standards."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

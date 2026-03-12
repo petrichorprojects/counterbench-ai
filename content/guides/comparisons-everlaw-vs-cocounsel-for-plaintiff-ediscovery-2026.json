@@ -1,0 +1,217 @@
+{
+  "slug": "comparisons-everlaw-vs-cocounsel-for-plaintiff-ediscovery-2026",
+  "title": "Everlaw vs CoCounsel for Plaintiff eDiscovery (2026)",
+  "description": "Comparison playbook page with workflow-first feature matrix, use-case recommendations, and a defensible selection verdict by team profile.",
+  "year": 2026,
+  "direct_answer": "Choose Everlaw when your immediate bottleneck is high-volume document review and reviewer coordination. Choose CoCounsel when your team needs broader cross-stage legal workflow support from intake through drafting. If both are considered, define strict handoff rules first. The best choice depends on workflow scope, QA discipline, and who owns daily execution.",
+  "tldr": "This comparison page is built for plaintiff teams deciding between a review-centric platform and a broader legal workflow assistant. It avoids generic feature battles and centers on operational outcomes: cycle time, correction rate, reviewer agreement, and defensibility of outputs. Everlaw tends to be stronger in review-oriented structure, while CoCounsel can support a wider range of legal tasks when guardrails are clear. Teams should not select by demo quality alone. Use a controlled side-by-side pilot with matched matter slices and the same reviewers. Final selection should follow documented acceptance criteria, including governance fit and rollback readiness.",
+  "answer_intents": [
+    "Is Everlaw or CoCounsel better for plaintiff eDiscovery?",
+    "How should we compare legal AI tools by workflow fit?",
+    "What metrics matter in a side-by-side legal AI pilot?",
+    "Can small teams use both tools effectively?",
+    "When should we avoid a dual-tool setup?",
+    "What is a defensible comparison methodology?"
+  ],
+  "how_to_choose": [
+    "Compare tools against one defined workflow, not a generalized multi-department checklist.",
+    "Measure reviewer agreement and correction rates before judging speed metrics.",
+    "Require clear ownership for every stage of the selected workflow.",
+    "Test handoff quality between paralegals and attorneys, not only first-pass output.",
+    "Evaluate audit trails and exportability as core selection criteria.",
+    "Use equal data slices and reviewer teams for each pilot arm.",
+    "Document constraints where tool usage is disallowed due to policy boundaries.",
+    "Select one primary system first; add secondary tools only with clear evidence."
+  ],
+  "implementation_risks": [
+    "Comparisons can overvalue feature breadth and undervalue workflow reliability.",
+    "Dual-tool launches without handoff rules often increase operational fragmentation.",
+    "Reviewer inconsistency can invalidate pilot results if calibration is missing.",
+    "If policy boundaries are undefined, teams may use tools in unintended contexts.",
+    "Failure to define rollback triggers can lock teams into weak deployments.",
+    "Noisy pilots with mixed case types make results hard to interpret."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Design a fair side-by-side pilot",
+      "bullets": [
+        "Select one workflow slice and split comparable matters between tools.",
+        "Assign the same reviewer cohort to both tool arms.",
+        "Use identical QA checklist and escalation criteria.",
+        "Track throughput, correction rate, and reviewer confidence weekly."
+      ]
+    },
+    {
+      "title": "Evaluate workflow fit, not feature volume",
+      "bullets": [
+        "Score each tool on execution reliability under real timeline pressure.",
+        "Record where outputs require frequent manual correction.",
+        "Assess handoff clarity from paralegal outputs to attorney decisions.",
+        "Capture time lost to setup, reformatting, or context transfer."
+      ]
+    },
+    {
+      "title": "Make a defensible decision",
+      "bullets": [
+        "Publish final scorecard with weighted criteria and rationale.",
+        "Define approved use-cases and blocked use-cases for the chosen tool.",
+        "Set rollout phases with measurable quality gates.",
+        "Document rollback triggers before broader deployment."
+      ]
+    },
+    {
+      "title": "Prevent cannibalization and stack confusion",
+      "bullets": [
+        "Map each selected tool to one primary workflow responsibility.",
+        "Avoid overlapping prompt libraries that duplicate effort.",
+        "Train users on decision boundaries, not only product features.",
+        "Reassess comparison outcomes quarterly with updated workflow data."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Primary comparator for review-centric plaintiff workflows."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Primary comparator for broad legal workflow support."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "why": "Useful benchmark for research-heavy contexts where neither tool may fully cover needs."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "High-volume document review operations",
+      "workflow_fit": [
+        "Review coding",
+        "Batch triage",
+        "Collaborative handoff"
+      ],
+      "auditability": "High potential with policy-aligned workflows",
+      "qa_support": "Strong with reviewer calibration and sampling",
+      "privilege_controls": "Requires explicit governance configuration",
+      "exports_logs": "Suitable for structured audit trails",
+      "notes": "Often the better anchor when review throughput is the core bottleneck."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Cross-stage workflow support",
+      "workflow_fit": [
+        "Intake support",
+        "Drafting support",
+        "Issue summaries"
+      ],
+      "auditability": "Moderate to high with standardized prompts",
+      "qa_support": "High when checklist-driven review is enforced",
+      "privilege_controls": "Needs role and data boundary definitions",
+      "exports_logs": "Capture outputs and decisions by matter",
+      "notes": "Strong broader utility if usage scope remains disciplined."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "best_for": "Research-linked workflow supplementation",
+      "workflow_fit": [
+        "Authority discovery",
+        "Research support"
+      ],
+      "auditability": "Moderate with source-linked workflows",
+      "qa_support": "Dependent on citation verification discipline",
+      "privilege_controls": "Apply policy boundaries as with any external system",
+      "exports_logs": "Archive authority outputs with matter context",
+      "notes": "Valuable companion where research depth is a deciding factor."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "Four-week side-by-side review pilot",
+      "scenario": "A plaintiff team compared Everlaw and CoCounsel on matched review tasks to choose one primary deployment path.",
+      "time_box": "4 weeks",
+      "inputs": [
+        "Matched matter slices and document sets",
+        "Common QA checklist",
+        "Reviewer cohort with calibration baseline"
+      ],
+      "process": [
+        "Ran equal-volume tasks in both tool arms.",
+        "Measured throughput, correction, and reviewer agreement.",
+        "Mapped failures to root cause categories.",
+        "Selected tool based on weighted operational criteria."
+      ],
+      "outputs": [
+        "Final comparison scorecard",
+        "Approved use-case matrix",
+        "Rollout and rollback policy"
+      ],
+      "qa_findings": [
+        "Initial variance came from reviewer inconsistency, not tool output quality.",
+        "Handoff documentation quality strongly influenced final results."
+      ],
+      "adjustments_made": [
+        "Added reviewer calibration checkpoint after week one.",
+        "Standardized output template for all pilot tasks."
+      ],
+      "key_takeaway": "A fair pilot isolates tool performance from process noise and leads to better procurement decisions."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Can we choose both tools immediately?",
+      "a": "You can, but most teams should not at first. Start with one primary workflow owner to avoid coordination overhead."
+    },
+    {
+      "q": "What is the most important comparison metric?",
+      "a": "Reviewer agreement is often the strongest quality signal because it captures clarity and repeatability under real load."
+    },
+    {
+      "q": "How long should a comparison pilot run?",
+      "a": "Four weeks is usually sufficient to measure meaningful workflow outcomes on active matter slices."
+    },
+    {
+      "q": "Should partner preference decide the tool?",
+      "a": "Partner input matters, but final decisions should still be based on measured workflow outcomes and governance fit."
+    },
+    {
+      "q": "How do we avoid keyword cannibalization across comparison pages?",
+      "a": "Target one primary comparison query per page and differentiate supporting terms by workflow context and audience intent."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "litigation-and-discovery",
+    "inhouse-legal-ops",
+    "inhouse-legal-research"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published comparison hub with side-by-side workflow matrix and verdict guidance.",
+        "Added pilot methodology and decision governance controls."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

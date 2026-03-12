@@ -1,0 +1,224 @@
+{
+  "slug": "locations-plaintiff-litigation-intelligence-in-los-angeles-2026",
+  "title": "Plaintiff Litigation Intelligence in Los Angeles (2026)",
+  "description": "Location variant page for Los Angeles with local workflow strategy, market-sensitive procurement guidance, and rollout recommendations.",
+  "year": 2026,
+  "direct_answer": "Los Angeles plaintiff teams should focus legal AI adoption on intake quality, document review consistency, and cross-team coordination under high case volume. The strongest local rollout starts with one workflow anchor, one QA standard, and clear role ownership. Scale only after quality metrics hold across active matters.",
+  "tldr": "This LA location page provides market-specific operational guidance for plaintiff legal AI adoption. It follows the same core structure as other location pages while preserving unique local context and recommendations. Teams in Los Angeles often need fast intake processing and disciplined review sequencing across varied case types. The page emphasizes practical deployment controls, role-accountable governance, and measurable outcomes. It should be used with NYC and Chicago variants to build a coherent multi-market cluster without duplicate-intent pages. Location pages should include real local operating constraints and not simply city-swapped copy. The page should help local teams decide what to launch first, what to defer, and how to measure success. Distinct local examples reduce cannibalization and increase practical value. Location pages should include real local operating constraints and not simply city-swapped copy. The page should help local teams decide what to launch first, what to defer, and how to measure success. Distinct local examples reduce cannibalization and increase practical value.",
+  "answer_intents": [
+    "What legal AI workflow setup works for LA plaintiff firms?",
+    "How should local market conditions change deployment strategy?",
+    "What KPIs should LA teams track first?",
+    "How do we avoid duplicate city pages in pSEO?",
+    "What procurement model is practical for LA teams?",
+    "How should LA pages connect to comparison content?"
+  ],
+  "how_to_choose": [
+    "Use LA-specific examples tied to plaintiff workflow realities, not generic city copy.",
+    "Prioritize intake and review workflows where local volume pressure is highest.",
+    "Align tool selection with role ownership and reviewer capacity.",
+    "Track local conversion and engagement separately from national pages.",
+    "Differentiate local value proposition from NYC and Chicago pages clearly.",
+    "Use one KPI dashboard across location pages for comparability.",
+    "Keep local recommendations practical and process-focused.",
+    "Review local page performance monthly and iterate examples.",
+    "Add a locations QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone.",
+    "Add a locations QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone."
+  ],
+  "implementation_risks": [
+    "City pages can become doorway-like if local specificity is weak.",
+    "Overlapping keyword intent can cannibalize location performance.",
+    "Local recommendations may be ignored if not tied to role workflows.",
+    "Unclear governance can reduce trust in local commercial pages.",
+    "Generic examples weaken differentiation against competitors.",
+    "No local measurement loop limits page improvement.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Build LA-specific workflow baseline",
+      "bullets": [
+        "Define one intake and one review standard for pilot matters.",
+        "Assign owners for each decision checkpoint.",
+        "Publish local KPI dashboard for weekly review.",
+        "Use local examples in training materials."
+      ]
+    },
+    {
+      "title": "Run local pilot and evaluate",
+      "bullets": [
+        "Pilot one workflow on active LA matters.",
+        "Track cycle-time and correction metrics by role.",
+        "Collect paralegal and attorney feedback weekly.",
+        "Adjust workflows before expanding tool scope."
+      ]
+    },
+    {
+      "title": "Connect local and cross-market strategy",
+      "bullets": [
+        "Keep shared taxonomy across all location pages.",
+        "Preserve market-specific examples and operational nuances.",
+        "Link local pages to curation and comparison hubs.",
+        "Avoid duplicate-intent headers and metadata."
+      ]
+    },
+    {
+      "title": "Scale sustainably",
+      "bullets": [
+        "Promote only workflows with stable quality metrics.",
+        "Document local rollout decisions for future markets.",
+        "Review local page and workflow performance monthly.",
+        "Retire underperforming local variants promptly."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Useful for local teams prioritizing review consistency and collaboration."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Broad support layer for local cross-stage workflow standardization."
+    },
+    {
+      "tool_slug": "harvey-v3-3",
+      "why": "Draft acceleration option for writing-heavy plaintiff workflows."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "LA review-intensive operations",
+      "workflow_fit": [
+        "Review management",
+        "Batch triage"
+      ],
+      "auditability": "High with process governance",
+      "qa_support": "Strong under sampling workflows",
+      "privilege_controls": "Requires policy-bound access setup",
+      "exports_logs": "Supports local KPI reporting",
+      "notes": "Good review anchor for local workflow consistency."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Cross-stage support for local teams",
+      "workflow_fit": [
+        "Intake aid",
+        "Draft support",
+        "Summary preparation"
+      ],
+      "auditability": "Moderate with structured inputs",
+      "qa_support": "Depends on review checkpoint quality",
+      "privilege_controls": "Policy constraints must remain explicit",
+      "exports_logs": "Archive outputs by matter and role",
+      "notes": "Strong utility layer when process boundaries are clear."
+    },
+    {
+      "tool_slug": "harvey-v3-3",
+      "best_for": "High-volume drafting workflows",
+      "workflow_fit": [
+        "Draft generation",
+        "Issue framing support"
+      ],
+      "auditability": "Moderate with source-linked reviews",
+      "qa_support": "Attorney oversight remains mandatory",
+      "privilege_controls": "Use under approved content boundaries",
+      "exports_logs": "Retain revision history for QA analysis",
+      "notes": "Best used for speed with controlled review discipline."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "LA intake workflow acceleration test",
+      "scenario": "A Los Angeles plaintiff team needed faster intake-to-summary output without quality degradation.",
+      "time_box": "20 days",
+      "inputs": [
+        "Current intake queue data",
+        "Paralegal correction logs",
+        "Attorney review timing constraints"
+      ],
+      "process": [
+        "Applied structured intake template and role ownership.",
+        "Mapped one review and one drafting support tool to process stages.",
+        "Measured output quality weekly.",
+        "Adjusted escalation logic based on recurring issues."
+      ],
+      "outputs": [
+        "Improved intake cycle consistency",
+        "Lower clarification loops",
+        "Local rollout documentation"
+      ],
+      "qa_findings": [
+        "Role confusion decreased after ownership fields became mandatory.",
+        "Early quality variance improved after calibration sessions."
+      ],
+      "adjustments_made": [
+        "Added weekly reviewer calibration.",
+        "Standardized urgency taxonomy and source field requirements."
+      ],
+      "key_takeaway": "Local workflow gains came from process structure before broader tool expansion."
+    }
+  ],
+  "faq": [
+    {
+      "q": "How is the LA page different from NYC?",
+      "a": "It keeps shared taxonomy but uses LA-specific operational recommendations and examples to preserve distinct user value."
+    },
+    {
+      "q": "Should local pages target the same primary keyword?",
+      "a": "No. Each location page should use a unique primary query to avoid cannibalization."
+    },
+    {
+      "q": "What first metric should LA teams monitor?",
+      "a": "Track intake-to-summary cycle time and reviewer correction trends."
+    },
+    {
+      "q": "Can local pages be scaled quickly?",
+      "a": "Yes, if each page includes real local value and passes quality thresholds before publication."
+    },
+    {
+      "q": "Is this page legal advice?",
+      "a": "No. It is operational and technology guidance for legal workflow planning."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "inhouse-litigation",
+    "intake-and-triage",
+    "litigation-and-discovery"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published Los Angeles location variant with distinct local guidance.",
+        "Added local pilot example and workflow KPI recommendations."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

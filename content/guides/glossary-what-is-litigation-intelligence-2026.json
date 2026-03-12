@@ -1,0 +1,219 @@
+{
+  "slug": "glossary-what-is-litigation-intelligence-2026",
+  "title": "What Is Litigation Intelligence? Glossary Guide (2026)",
+  "description": "Glossary playbook page with beginner explanation, technical depth, and related term mapping for plaintiff-side legal AI operations.",
+  "year": 2026,
+  "direct_answer": "Litigation intelligence is a decision-support discipline that combines case data, workflow signals, and reviewer controls to help legal teams act earlier and more defensibly. It is not just analytics and not just AI drafting. In practice, it means structured inputs, traceable outputs, and clear ownership of decisions.",
+  "tldr": "This glossary page defines litigation intelligence in plain language and then adds technical depth for operators. Beginners need a practical definition that connects to daily work. Advanced teams need a model that includes entities, events, sources, confidence, and action loops. The page also maps related terms so teams can avoid confusion across legal analytics, case triage, and trial readiness. Use this glossary as a shared language baseline across legal ops, paralegals, and attorneys. Shared terminology improves training quality, reduces process ambiguity, and supports better SEO intent matching across your content cluster. Glossary pages should create shared language that improves operational consistency. A useful definition must be clear enough for new team members and precise enough for technical implementation. Linking terms to workflow examples helps reduce ambiguity across teams.",
+  "answer_intents": [
+    "What does litigation intelligence mean in legal operations?",
+    "How is litigation intelligence different from legal analytics?",
+    "What data model supports litigation intelligence workflows?",
+    "Why does this term matter for plaintiff firms?",
+    "How should teams operationalize litigation intelligence?",
+    "What terms are closely related and often confused?"
+  ],
+  "how_to_choose": [
+    "Use beginner definitions that connect directly to real legal workflows.",
+    "Add technical sections only after core terminology is clear.",
+    "Tie definitions to operational examples and measurable outcomes.",
+    "Map related terms to avoid overlapping content intent.",
+    "Keep claims evidence-based and avoid predictive certainty language.",
+    "Define what litigation intelligence is not to reduce misuse.",
+    "Ensure glossary entries link to practical templates and examples.",
+    "Review terminology quarterly as tooling and workflows evolve.",
+    "Add a glossary QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone."
+  ],
+  "implementation_risks": [
+    "Glossary pages can become thin if definitions are too generic.",
+    "Overly technical language can alienate practitioner audiences.",
+    "Term confusion can cause keyword cannibalization across clusters.",
+    "If definitions lack workflow examples, user trust declines quickly.",
+    "Unsourced claims can weaken authority and answer-engine visibility.",
+    "Static definitions can drift from evolving operational practices.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Define for two audiences",
+      "bullets": [
+        "Write one beginner section focused on practical relevance.",
+        "Write one technical section focused on data and process structure.",
+        "Add explicit boundaries: what the term includes and excludes.",
+        "Use one worked example to anchor understanding."
+      ]
+    },
+    {
+      "title": "Connect terms to workflows",
+      "bullets": [
+        "Link definitions to intake, review, research, and trial-prep workflows.",
+        "Show where the term affects decisions and quality controls.",
+        "Add references to templates and example pages for implementation.",
+        "Use consistent terminology across all linked pages."
+      ]
+    },
+    {
+      "title": "Prevent cannibalization",
+      "bullets": [
+        "Assign one primary intent per term page.",
+        "Differentiate nearby terms with clear scope boundaries.",
+        "Use internal links to clarify hierarchy between related terms.",
+        "Monitor search performance for overlap and adjust as needed."
+      ]
+    },
+    {
+      "title": "Maintain glossary quality",
+      "bullets": [
+        "Refresh definitions quarterly with workflow and policy changes.",
+        "Retain citation anchors for all substantive claims.",
+        "Log terminology updates in a changelog for transparency.",
+        "Train content contributors on glossary standards."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "vlex-698",
+      "why": "Research-oriented context can support authority-backed definition updates and related term validation."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Useful for drafting and refining glossary explanations across beginner and technical audiences."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Operationally relevant where terminology ties directly to review workflows and evidence structures."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "vlex-698",
+      "best_for": "Authority support and research context",
+      "workflow_fit": [
+        "Term validation",
+        "Source mapping"
+      ],
+      "auditability": "Moderate to high with source documentation",
+      "qa_support": "Strong when citation checks are standardized",
+      "privilege_controls": "Apply external research governance",
+      "exports_logs": "Archive source list with term updates",
+      "notes": "Supports technical depth and source-backed glossary updates."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "Drafting clear multi-audience definitions",
+      "workflow_fit": [
+        "Beginner explanation",
+        "Technical rewrite"
+      ],
+      "auditability": "Moderate with structured drafting templates",
+      "qa_support": "Needs legal ops editorial review",
+      "privilege_controls": "Use approved content only",
+      "exports_logs": "Keep revision history for definition changes",
+      "notes": "Useful drafting layer when definitions require iterative refinement."
+    },
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Workflow-grounded term examples",
+      "workflow_fit": [
+        "Review process references",
+        "Evidence model examples"
+      ],
+      "auditability": "High in process-linked contexts",
+      "qa_support": "Strong where checklist standards exist",
+      "privilege_controls": "Maintain policy controls for examples",
+      "exports_logs": "Capture process examples as references",
+      "notes": "Brings practical operations context to glossary content."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "Glossary update for new legal ops team",
+      "scenario": "A growing plaintiff firm needed shared terminology across paralegals, attorneys, and operations leadership.",
+      "time_box": "10 days",
+      "inputs": [
+        "Existing inconsistent terminology list",
+        "Workflow documentation for intake and review",
+        "SEO keyword mapping for glossary terms"
+      ],
+      "process": [
+        "Defined beginner and technical meaning for each core term.",
+        "Linked terms to concrete workflow examples.",
+        "Added related-term hierarchy to reduce overlap.",
+        "Published glossary with quarterly refresh cadence."
+      ],
+      "outputs": [
+        "Shared terminology baseline",
+        "Reduced onboarding ambiguity",
+        "Clearer SEO intent map for cluster pages"
+      ],
+      "qa_findings": [
+        "Most confusion came from using analytics and intelligence interchangeably.",
+        "Definitions improved after adding examples with source requirements."
+      ],
+      "adjustments_made": [
+        "Added explicit differences between related terms.",
+        "Added glossary-to-workflow internal linking standard."
+      ],
+      "key_takeaway": "Glossary quality improved when definitions were tied to operating behavior, not abstract language."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Is litigation intelligence the same as legal analytics?",
+      "a": "No. Analytics is one component. Litigation intelligence includes workflow execution, ownership, and QA governance."
+    },
+    {
+      "q": "Why does a glossary page matter for SEO clusters?",
+      "a": "It establishes clear intent boundaries and supports internal linking across related high-intent pages."
+    },
+    {
+      "q": "Should glossary pages include technical detail?",
+      "a": "Yes, but only after a beginner-friendly explanation. Both audiences should get value from one page."
+    },
+    {
+      "q": "How often should glossary terms be updated?",
+      "a": "Quarterly is a practical baseline, with updates triggered by major workflow or policy changes."
+    },
+    {
+      "q": "Can this glossary replace legal advice?",
+      "a": "No. It is educational operational guidance and terminology standardization content."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "inhouse-legal-ops",
+    "inhouse-legal-research",
+    "prompt-frameworks"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published litigation intelligence glossary hub with dual-depth explanation.",
+        "Added related-term mapping and workflow-grounded examples."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}

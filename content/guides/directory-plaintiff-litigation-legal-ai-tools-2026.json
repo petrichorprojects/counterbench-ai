@@ -1,0 +1,223 @@
+{
+  "slug": "directory-plaintiff-litigation-legal-ai-tools-2026",
+  "title": "Plaintiff Litigation Legal AI Tools Directory (2026)",
+  "description": "Directory playbook page with filtering metadata, listing attributes, and categorization tags for plaintiff-focused legal AI evaluation.",
+  "year": 2026,
+  "direct_answer": "A high-value legal AI directory should help users narrow options quickly by workflow fit, risk profile, and implementation effort. It should not be a random list of vendor names. Counterbench’s directory model prioritizes filtering metadata, listing transparency, and operational attributes that support real procurement decisions.",
+  "tldr": "This directory page is designed as a decision engine for plaintiff legal teams. It defines what directory fields matter, how to categorize listings by workflow stage, and how to use filtering to reduce evaluation noise. The page emphasizes listing transparency, including verification status and practical fit notes. It also explains how to avoid common directory failures such as thin descriptions, stale records, and unclear tags. Use this hub alongside curation and comparison pages: directory for discovery, curation for prioritization, comparison for final selection. Directory pages should optimize for decision speed, not listing volume. Every field should help users narrow options meaningfully. Strong directories expose verification status, workflow fit, and practical caveats so buyers can make faster, safer shortlist decisions.",
+  "answer_intents": [
+    "How should a legal AI directory be structured for plaintiff teams?",
+    "What filters matter most in a legal AI tools directory?",
+    "How do we keep directory listings useful and current?",
+    "What listing attributes reduce procurement risk?",
+    "How can directory pages avoid thin SEO content?",
+    "How should directory pages link to comparison pages?"
+  ],
+  "how_to_choose": [
+    "Include workflow-stage filters so users can navigate by operational need.",
+    "Show verification and last-updated fields to improve trust in listings.",
+    "Use consistent category tags tied to real legal workflows.",
+    "Add practical fit notes instead of only vendor marketing claims.",
+    "Group tools by use-case to reduce decision fatigue.",
+    "Connect directory entries to comparison and profile pages.",
+    "Track click-through and shortlist actions to improve listing quality.",
+    "Audit stale records monthly and archive low-confidence entries.",
+    "Add a directory QA checkpoint to weekly publishing reviews so quality issues are found before indexation.",
+    "Document revision rationale in changelogs to maintain trust and operational continuity as pages evolve.",
+    "Use user-behavior and conversion data to prioritize improvements instead of publishing velocity alone."
+  ],
+  "implementation_risks": [
+    "Directories become low-value when descriptions are generic or outdated.",
+    "Inconsistent tagging breaks filter reliability and user trust.",
+    "Missing verification indicators can mislead buyers.",
+    "Too many low-signal fields increase cognitive load without adding value.",
+    "No internal linking strategy creates orphaned listing pages.",
+    "Weak governance leads to duplicate or overlapping listings.",
+    "If this page is not refreshed with current workflow evidence, it can lose trust and performance over time."
+  ],
+  "operator_playbook": [
+    {
+      "title": "Define directory schema",
+      "bullets": [
+        "Set required listing attributes: category, platform, pricing, verification, and last-updated date.",
+        "Define workflow-stage tags aligned to intake, review, research, and trial prep.",
+        "Add practical fit note field for operator guidance.",
+        "Require consistent slug and naming conventions."
+      ]
+    },
+    {
+      "title": "Implement filtering and categorization",
+      "bullets": [
+        "Prioritize filters by user decision sequence, not internal data convenience.",
+        "Limit visible filters to high-signal criteria to reduce friction.",
+        "Use tag governance rules to keep categories consistent.",
+        "Test filter combinations for relevance and edge cases."
+      ]
+    },
+    {
+      "title": "Connect directory to conversion paths",
+      "bullets": [
+        "Link listings to profile and comparison pages for deeper evaluation.",
+        "Add shortlist actions and pilot planning links where appropriate.",
+        "Track listing-to-comparison click paths as quality signals.",
+        "Use related page modules to maintain crawl depth."
+      ]
+    },
+    {
+      "title": "Sustain directory quality",
+      "bullets": [
+        "Run monthly freshness checks and label uncertain data explicitly.",
+        "Archive duplicates and near-duplicate entries promptly.",
+        "Publish change logs for major listing updates.",
+        "Review filter performance and user behavior quarterly."
+      ]
+    }
+  ],
+  "ranked_tools": [
+    {
+      "tool_slug": "everlaw-464",
+      "why": "Representative listing for review-oriented legal workflow filtering."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "why": "Representative listing for broad legal workflow support categorization."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "why": "Representative listing for outcome-oriented analysis and triage support categories."
+    },
+    {
+      "tool_slug": "vlex-698",
+      "why": "Representative listing for research-focused workflow categories."
+    }
+  ],
+  "workflow_tool_comparison": [
+    {
+      "tool_slug": "everlaw-464",
+      "best_for": "Review-oriented category examples",
+      "workflow_fit": [
+        "Review filters",
+        "Operational shortlist"
+      ],
+      "auditability": "High with verification metadata",
+      "qa_support": "Good when listing notes are standardized",
+      "privilege_controls": "Tag by policy-fit confidence",
+      "exports_logs": "Directory metadata supports audits",
+      "notes": "Strong benchmark listing for review-focused segments."
+    },
+    {
+      "tool_slug": "cocounsel-by-thomson-reuters-138",
+      "best_for": "General workflow support category",
+      "workflow_fit": [
+        "Broad-support shortlist",
+        "Cross-stage filtering"
+      ],
+      "auditability": "Moderate with clear listing criteria",
+      "qa_support": "Use category-specific quality notes",
+      "privilege_controls": "Surface policy assumptions explicitly",
+      "exports_logs": "Track listing changes over time",
+      "notes": "Useful category anchor for broad-support buyer intent."
+    },
+    {
+      "tool_slug": "caseodds-ai",
+      "best_for": "Analysis-oriented niche category",
+      "workflow_fit": [
+        "Issue framing",
+        "Early triage support"
+      ],
+      "auditability": "Moderate; emphasize verification needs",
+      "qa_support": "Include cautionary fit notes",
+      "privilege_controls": "Mark high-sensitivity usage boundaries",
+      "exports_logs": "Log category changes with rationale",
+      "notes": "Good example of why nuanced listing notes matter."
+    }
+  ],
+  "downloads": [],
+  "worked_examples": [
+    {
+      "title": "Directory redesign for faster shortlist creation",
+      "scenario": "A legal ops team rebuilt a broad tool list into a workflow-filtered directory to reduce evaluation time.",
+      "time_box": "4 weeks",
+      "inputs": [
+        "Existing tool inventory",
+        "User search behavior and click logs",
+        "Workflow-stage taxonomy"
+      ],
+      "process": [
+        "Defined required listing fields and tags.",
+        "Applied workflow and risk filters to all entries.",
+        "Connected directory entries to profile and comparison pages.",
+        "Measured shortlist completion behavior before and after launch."
+      ],
+      "outputs": [
+        "Higher-quality tool shortlists",
+        "Lower navigation friction",
+        "Clearer path from discovery to comparison"
+      ],
+      "qa_findings": [
+        "Users ignored low-signal filters and relied on workflow tags.",
+        "Listings marked pending verification required stronger visual labels."
+      ],
+      "adjustments_made": [
+        "Removed low-value filters from primary UI.",
+        "Added verification badge and refresh schedule indicators."
+      ],
+      "key_takeaway": "Directory value increases when metadata reflects how legal teams actually decide."
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the most important directory field?",
+      "a": "Workflow fit is usually the highest-signal field because it maps directly to buyer intent and implementation needs."
+    },
+    {
+      "q": "How many categories should we support?",
+      "a": "Use enough categories to differentiate workflows, but avoid excessive granularity that confuses filtering."
+    },
+    {
+      "q": "Should unverified listings be hidden?",
+      "a": "Not always. They can remain visible if clearly labeled and excluded from top recommendations until verified."
+    },
+    {
+      "q": "How does a directory page support SEO clusters?",
+      "a": "It captures broad discovery intent and funnels users into curation, comparison, and profile pages."
+    },
+    {
+      "q": "How often should listing metadata be refreshed?",
+      "a": "Monthly for high-traffic listings and quarterly for long-tail entries is a practical baseline."
+    }
+  ],
+  "citations": [
+    {
+      "title": "ABA Model Rules of Professional Conduct",
+      "url": "https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/"
+    },
+    {
+      "title": "NIST AI Risk Management Framework (AI RMF 1.0)",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "title": "EDRM: Electronic Discovery Reference Model",
+      "url": "https://edrm.net/"
+    },
+    {
+      "title": "Sedona Conference publications and commentaries",
+      "url": "https://thesedonaconference.org/"
+    }
+  ],
+  "recommended_pack_slugs": [
+    "litigation-and-discovery",
+    "inhouse-legal-ops",
+    "prompt-frameworks"
+  ],
+  "changelog": [
+    {
+      "date": "2026-03-09",
+      "changes": [
+        "Published directory hub with filtering and metadata standards.",
+        "Added listing governance framework and worked example."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-09"
+}
