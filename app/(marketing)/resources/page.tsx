@@ -116,6 +116,124 @@ export default function ResourcesPage() {
               </div>
             </Link>
           </div>
+
+          <div className="grid grid--3 mt-4" style={{ gap: "1rem" }}>
+            <Link
+              href="/resources/lawglance-blueprint-map"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #22d3ee 22%, #020617 78%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Infographic</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                Lawglance Blueprint Map
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                End-to-end architecture and operational blueprint for legal search and QA workflows.
+              </div>
+            </Link>
+
+            <Link
+              href="/resources/mleb-benchmark-map"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #f43f5e 20%, #020617 80%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Infographic</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                MLEB Benchmark Map
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Visual guide to legal benchmark datasets, evaluation dimensions, and deployment fit.
+              </div>
+            </Link>
+
+            <Link
+              href="/resources/legalstories-learning-map"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #8b5cf6 20%, #020617 80%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Infographic</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                LegalStories Learning Map
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Training-data and curriculum map for legal reasoning workflows and evaluation.
+              </div>
+            </Link>
+          </div>
+
+          <div className="grid grid--3 mt-4" style={{ gap: "1rem" }}>
+            <Link
+              href="/tools/lawglance-planner"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #14b8a6 22%, #020617 78%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Free tool</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                Lawglance Planner
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Build practical implementation steps from legal data architecture constraints.
+              </div>
+            </Link>
+
+            <Link
+              href="/tools/legalstories-lesson-builder"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #f59e0b 20%, #020617 80%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Free tool</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                LegalStories Lesson Builder
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Generate drill plans and lesson structures from legal narratives and doctrine sets.
+              </div>
+            </Link>
+
+            <Link
+              href="/tools/mleb-shortlist"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #ef4444 20%, #020617 80%) 0%, color-mix(in srgb, #020617 88%, #0f172a 12%) 100%)"
+              }}
+            >
+              <div className="label">Free tool</div>
+              <div className="text-white" style={{ fontSize: "1.1rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                MLEB Shortlist
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Produce shortlist recommendations from benchmark constraints and use-case priorities.
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 

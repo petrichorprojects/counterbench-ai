@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { rankLegalDataSources, sourceTypeLabel, type FinderTask, type SourceFinderFilters } from "@/lib/legal-data-core";
 import { NewsletterCapture } from "@/components/NewsletterCapture";

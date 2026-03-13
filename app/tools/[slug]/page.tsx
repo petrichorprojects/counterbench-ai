@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Badge } from "@/design-system/Badge";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsletterCapture } from "@/components/NewsletterCapture";
 import { ToolActions } from "@/components/ToolActions";
 import { getAllTools, getToolBySlug } from "@/lib/content";
@@ -45,6 +46,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
     <main>
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tools", href: "/tools" }, { label: tool.name }]} />
           <div className="label">Tool</div>
           <h1 className="max-w-900">{tool.name}</h1>
           <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>

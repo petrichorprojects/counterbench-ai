@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { getAllPacks, getPackBySlug, getPromptBySlug } from "@/lib/content";
 
 export function generateStaticParams() {
@@ -19,6 +20,7 @@ export default async function PromptPackPage({ params }: { params: Promise<{ slu
     <main>
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Prompt packs", href: "/prompts/packs" }, { label: pack.title }]} />
           <div className="label">Prompt pack</div>
           <h1 className="max-w-900">{pack.title}</h1>
           <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>

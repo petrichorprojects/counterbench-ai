@@ -1,8 +1,5 @@
-import NewsletterPage from "../newsletter/page";
-
-export const metadata = { title: "The Counterbench" };
+import { redirect } from "next/navigation";
 
 export default function TheCounterbenchPage() {
-  return <NewsletterPage />;
+  redirect("/newsletter");
 }
-

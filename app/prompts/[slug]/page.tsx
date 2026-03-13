@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { LegalPadButton } from "@/components/LegalPadButton";
 import { VoteButtons } from "@/components/VoteButtons";
 import { MDX } from "@/components/mdx/MDX";
@@ -18,6 +19,7 @@ export default async function PromptDetailPage({ params }: { params: Promise<{ s
     <main>
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Prompts", href: "/prompts" }, { label: fm.title }]} />
           <div className="label">Prompt</div>
           <h1 className="max-w-900">{fm.title}</h1>
           <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>

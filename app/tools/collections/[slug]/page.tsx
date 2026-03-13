@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { ToolCard } from "@/components/ToolCard";
 import { getAllCollections, getCollectionBySlug, getToolBySlug } from "@/lib/content";
 
@@ -19,6 +20,7 @@ export default async function ToolsCollectionPage({ params }: { params: Promise<
     <main>
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Collections", href: "/tools/collections" }, { label: collection.title }]} />
           <div className="label">Collection</div>
           <h1 className="max-w-900">{collection.title}</h1>
           <p className="max-w-800 mt-4" style={{ fontSize: "1.125rem" }}>

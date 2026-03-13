@@ -158,6 +158,10 @@ export function SiteHeader() {
             Newsletter
           </Link>
 
+          <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/search") ? "is-active" : ""}`} href="/search">
+            Search
+          </Link>
+
           <ThemeToggle />
         </div>
       </div>

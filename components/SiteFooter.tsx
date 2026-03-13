@@ -32,6 +32,12 @@ export function SiteFooter() {
             <Link className="footer__link" href="/skills">
               Skills
             </Link>
+            <Link className="footer__link" href="/guides">
+              Guides
+            </Link>
+            <Link className="footer__link" href="/playbooks">
+              Playbooks
+            </Link>
             <Link className="footer__link" href="/tools/compare">
               Compare
             </Link>

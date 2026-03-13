@@ -15,7 +15,8 @@ const nextConfig = {
       { source: "/pages/insights.html", destination: "/insights", permanent: true },
       { source: "/pages/contact.html", destination: "/contact", permanent: true },
       { source: "/pages/about.html", destination: "/about", permanent: true },
-      { source: "/pages/newsletter.html", destination: "/newsletter", permanent: true }
+      { source: "/pages/newsletter.html", destination: "/newsletter", permanent: true },
+      { source: "/the-counterbench", destination: "/newsletter", permanent: true }
     ];
   },
   async headers() {
