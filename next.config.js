@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   reactStrictMode: true,
   poweredByHeader: false,
   // This repo is checked out inside another workspace; avoid Next.js selecting the wrong tracing root.
