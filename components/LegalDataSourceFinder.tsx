@@ -71,6 +71,10 @@ export function LegalDataSourceFinder(props: {
   const [task, setTask] = useState<FinderTask | "">("");
   const [query, setQuery] = useState("");
   const [onlyApi, setOnlyApi] = useState(false);
+  const [exportEmail, setExportEmail] = useState("");
+  const [exportUnlocked, setExportUnlocked] = useState(false);
+  const [showExportGate, setShowExportGate] = useState(false);
+  const [pendingExport, setPendingExport] = useState<"csv" | "json" | null>(null);
 
   const filters = useMemo<SourceFinderFilters>(
     () => ({ jurisdiction, sourceType, task, query, onlyApi }),
@@ -81,6 +85,27 @@ export function LegalDataSourceFinder(props: {
   const top = ranked.slice(0, 24);
 
   const canExport = ranked.length > 0;
+
+  function handleExportClick(format: "csv" | "json") {
+    if (exportUnlocked) {
+      format === "csv" ? exportCsv() : exportJson();
+      return;
+    }
+    setPendingExport(format);
+    setShowExportGate(true);
+  }
+
+  function handleExportGateSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!exportEmail.trim()) return;
+    setExportUnlocked(true);
+    setShowExportGate(false);
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "source_finder_lead", email_source: "source-finder-export" });
+    if (pendingExport === "csv") exportCsv();
+    else if (pendingExport === "json") exportJson();
+    setPendingExport(null);
+  }
 
   function exportJson() {
     if (!canExport) return;
@@ -244,10 +269,10 @@ export function LegalDataSourceFinder(props: {
           </div>
 
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <button className="btn btn--secondary btn--sm" disabled={!canExport} onClick={exportCsv}>
+            <button className="btn btn--secondary btn--sm" disabled={!canExport} onClick={() => handleExportClick("csv")}>
               Export CSV
             </button>
-            <button className="btn btn--secondary btn--sm" disabled={!canExport} onClick={exportJson}>
+            <button className="btn btn--secondary btn--sm" disabled={!canExport} onClick={() => handleExportClick("json")}>
               Export JSON
             </button>
             <button className="btn btn--primary btn--sm" onClick={() => document.getElementById("source-finder-newsletter")?.scrollIntoView({ behavior: "smooth" })}>
@@ -255,6 +280,31 @@ export function LegalDataSourceFinder(props: {
             </button>
           </div>
         </div>
+
+        {showExportGate && !exportUnlocked && (
+          <form onSubmit={handleExportGateSubmit} style={{ marginTop: 14, padding: "14px 16px", borderRadius: 12, background: "color-mix(in srgb, var(--bg2) 90%, #0ea5e9 10%)", border: "1px solid var(--border)" }}>
+            <div className="text-white" style={{ fontWeight: 700, fontSize: "0.95rem", marginBottom: 6 }}>
+              Enter your email to export your source pack
+            </div>
+            <div className="text-muted" style={{ fontSize: "0.82rem", marginBottom: 10, lineHeight: 1.45 }}>
+              Free download — we'll also send you weekly source updates. Unsubscribe anytime.
+            </div>
+            <div style={{ display: "flex", gap: 8, maxWidth: 420 }}>
+              <input
+                type="email"
+                required
+                value={exportEmail}
+                onChange={(e) => setExportEmail(e.target.value)}
+                placeholder="you@firm.com"
+                autoComplete="email"
+                style={{ flex: 1, padding: "10px 14px", borderRadius: 999, border: "1px solid var(--border)", background: "var(--bg2)", color: "var(--fg)" }}
+              />
+              <button className="btn btn--primary btn--sm" type="submit">
+                Export
+              </button>
+            </div>
+          </form>
+        )}
 
         {top.length === 0 ? (
           <div className="text-muted" style={{ marginTop: 14 }}>

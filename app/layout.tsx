@@ -5,6 +5,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { PreviewBanner } from "@/components/PreviewBanner";
 import { siteUrl } from "@/lib/seo";
 
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
 export const metadata: Metadata = {
   title: {
     default: "Counterbench.AI",
@@ -27,9 +29,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
   } catch (e) {}
 })();`;
+  const gtmScript = GTM_ID
+    ? `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`
+    : null;
   return (
     <html lang="en">
       <head>
+        {gtmScript && <script dangerouslySetInnerHTML={{ __html: gtmScript }} />}
         {/* Keep legacy stylesheet classes for migrated marketing pages */}
         <link rel="stylesheet" href={`/css/style.css?v=${cssVersion}`} />
         {/* Prefer PNG icons (simple + reliable on Vercel). Browsers may still probe /favicon.ico. */}
@@ -39,6 +45,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body>
+        {GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        )}
         <SiteHeader />
         <PreviewBanner />
         {children}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { StickyCta } from "@/components/StickyCta";
+import { TrackedAdvisoryForm } from "@/components/TrackedAdvisoryForm";
 
 export const metadata = {
   title: "Strategic Advisory | Counterbench Advisory",
@@ -68,10 +69,10 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
             implementation sequencing, built for outcomes, not demos.
           </p>
           <div className="flex flex--gap-3 mt-5 flex--resp-col anim-hero anim-hero--4">
-            <a className="btn btn--primary btn--arrow" href="#briefing" data-location="advisory-hero">
+            <a className="btn btn--primary btn--arrow" href="#briefing" data-track="Request Private Briefing" data-location="advisory-hero">
               Request Private Briefing
             </a>
-            <Link className="btn btn--secondary" href="/diagnostic" data-location="advisory-hero">
+            <Link className="btn btn--secondary" href="/diagnostic" data-track="See the Diagnostic" data-location="advisory-hero">
               See the Diagnostic
             </Link>
           </div>
@@ -303,7 +304,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
                 For smaller firms beginning their AI journey. Strategic clarity and a prioritized roadmap without full
                 implementation support.
               </p>
-              <a className="btn btn--secondary btn--full" href="#briefing">
+              <a className="btn btn--secondary btn--full" href="#briefing" data-track="Get Started" data-location="pricing-orientation">
                 Get Started
               </a>
               <div className="pricing-divider" />
@@ -331,7 +332,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
                 The core engagement. Diagnostic, architecture design, implementation sequencing, and ongoing strategic
                 support.
               </p>
-              <a className="btn btn--primary btn--full btn--arrow" href="#briefing">
+              <a className="btn btn--primary btn--full btn--arrow" href="#briefing" data-track="Request Briefing" data-location="pricing-full-advisory">
                 Request Briefing
               </a>
               <div className="pricing-divider" />
@@ -354,7 +355,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
               <p className="pricing-desc">
                 For multi-location or high-volume firms that need embedded, ongoing partnership, not a consulting cycle.
               </p>
-              <a className="btn btn--secondary btn--full" href="#briefing">
+              <a className="btn btn--secondary btn--full" href="#briefing" data-track="Inquire" data-location="pricing-strategic-partner">
                 Inquire
               </a>
               <div className="pricing-divider" />
@@ -615,7 +616,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
               </p>
               <p className="max-w-600">Limited to a small number of new engagements per quarter.</p>
               <div className="mt-5">
-                <a className="btn btn--primary btn--arrow" href="#briefing">
+                <a className="btn btn--primary btn--arrow" href="#briefing" data-track="Request Private Briefing" data-location="advisory-next-step">
                   Request Private Briefing
                 </a>
               </div>
@@ -649,7 +650,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
 
           <div className="mt-5 card" style={{ borderRadius: 12, padding: "1.75rem", maxWidth: 860 }}>
             {action ? (
-              <form method="post" action={action}>
+              <TrackedAdvisoryForm action={action}>
                 <input type="hidden" name="type" value="advisory" />
                 <input type="hidden" name="source" value={from ? `advisory:${from}` : "advisory:site"} />
                 {playbookUrl && <input type="hidden" name="playbook_url" value={playbookUrl} />}
@@ -711,7 +712,7 @@ export default async function AdvisoryPage({ searchParams }: { searchParams?: Pr
                 <p className="mt-3 text-muted" style={{ fontSize: "0.875rem" }}>
                   Don’t include confidential details.
                 </p>
-              </form>
+              </TrackedAdvisoryForm>
             ) : (
               <p className="text-muted" style={{ fontSize: "0.875rem" }}>
                 Advisory form action not configured yet.

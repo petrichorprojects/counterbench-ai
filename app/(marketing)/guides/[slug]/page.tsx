@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Badge } from "@/design-system/Badge";
 import { StickyCta } from "@/components/StickyCta";
 import { NewsletterCapture } from "@/components/NewsletterCapture";
+import { TrackedDownloadLink } from "@/components/TrackedDownloadLink";
 import { getPackBySlug, getToolBySlug } from "@/lib/content";
 import { getAllGuides, getGuideBySlug } from "@/lib/guides";
 import { absoluteUrl } from "@/lib/seo";
@@ -224,9 +225,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
               </div>
               <div className="mt-4 flex flex--gap-2" style={{ flexWrap: "wrap" }}>
                 {guide.downloads.map((d) => (
-                  <a key={d.url} className="btn btn--secondary btn--sm" href={d.url}>
-                    {d.label}
-                  </a>
+                  <TrackedDownloadLink key={d.url} href={d.url} label={d.label} guideSlug={guide.slug} />
                 ))}
               </div>
             </div>
@@ -622,7 +621,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
           ))}
             </div>
 
-            <aside style={{ position: "sticky", top: 110, alignSelf: "start" }}>
+            <aside className="guide-sidebar" style={{ position: "sticky", top: 110, alignSelf: "start" }}>
               {guide.downloads.length > 0 && (
                 <div className="card" style={{ borderRadius: 12, padding: "1.25rem" }}>
                   <div className="label">Download kit</div>
@@ -631,9 +630,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
                   </div>
                   <div className="mt-4 flex flex--gap-2" style={{ flexWrap: "wrap" }}>
                     {guide.downloads.map((d) => (
-                      <a key={d.url} className="btn btn--secondary btn--sm" href={d.url}>
-                        {d.label}
-                      </a>
+                      <TrackedDownloadLink key={d.url} href={d.url} label={d.label} guideSlug={guide.slug} />
                     ))}
                   </div>
                 </div>

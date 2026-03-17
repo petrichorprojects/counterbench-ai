@@ -62,6 +62,8 @@ export function NewsletterCapture({ source }: { source: string }) {
 
             setStatus("ok");
             setMessage("Subscribed. Check your inbox if confirmation is required.");
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: "newsletter_subscribe", email_source: source });
             form.reset();
             return;
           }
@@ -87,6 +89,8 @@ export function NewsletterCapture({ source }: { source: string }) {
 
             setStatus("ok");
             setMessage("Subscribed. Check your inbox if confirmation is required.");
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: "newsletter_subscribe", email_source: source });
             form.reset();
             return;
           }

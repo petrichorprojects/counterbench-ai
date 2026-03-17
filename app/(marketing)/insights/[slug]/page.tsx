@@ -114,7 +114,7 @@ export default async function InsightDetailPage({ params }: { params: Promise<{ 
               <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
             </div>
 
-            <aside style={{ position: "sticky", top: 110, alignSelf: "start" }}>
+            <aside className="guide-sidebar" style={{ position: "sticky", top: 110, alignSelf: "start" }}>
               {post.frontmatter.guideUrl && (
                 <div className="card" style={{ borderRadius: 12, padding: "1.25rem" }}>
                   <div className="label">Download kit</div>

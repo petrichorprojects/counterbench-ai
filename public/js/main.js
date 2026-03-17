@@ -132,6 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- TRACK BRIEFING FORM SUBMISSION ---
+  const briefingForm = document.querySelector('#briefing form');
+  if (briefingForm) {
+    briefingForm.addEventListener('submit', () => {
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'briefing_request',
+          form_source: briefingForm.querySelector('input[name="source"]')?.value || 'advisory'
+        });
+      }
+    });
+  }
+
   // --- TRACK CTA CLICKS ---
   document.querySelectorAll('[data-track]').forEach(el => {
     el.addEventListener('click', () => {

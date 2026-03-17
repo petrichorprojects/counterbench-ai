@@ -223,6 +223,17 @@ export function TriageWizard() {
             href={`/playbooks/${toPlaybookSlug()}?matter=${encodeURIComponent(matter)}&stage=${encodeURIComponent(stage)}&sens=${encodeURIComponent(
               sens
             )}&budget=${encodeURIComponent(budget)}&platform=${encodeURIComponent(platform)}&from=triage`}
+            onClick={() => {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: "diagnostic_start",
+                diagnostic_matter: matter,
+                diagnostic_stage: stage,
+                diagnostic_sensitivity: sens,
+                diagnostic_budget: budget,
+                diagnostic_platform: platform,
+              });
+            }}
           >
             Generate playbook
           </a>
