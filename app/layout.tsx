@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { PreviewBanner } from "@/components/PreviewBanner";
 import { siteUrl } from "@/lib/seo";
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-K8KVFZKG";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-RSECPPZQ56";
 
 export const metadata: Metadata = {
