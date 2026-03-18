@@ -9,6 +9,17 @@ const nextConfig = {
     // Build should not fail on lint/tooling patching issues during preview/QA.
     ignoreDuringBuilds: true
   },
+  experimental: {
+    outputFileTracingExcludes: {
+      "*": [
+        "./data/**",
+        "./public/labs/**",
+        "./public/downloads/**",
+        "./public/search-index.json",
+        "./.next/cache/**"
+      ]
+    }
+  },
   async redirects() {
     return [
       { source: "/pages/advisory.html", destination: "/advisory", permanent: true },
