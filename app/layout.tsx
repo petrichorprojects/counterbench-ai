@@ -6,6 +6,7 @@ import { PreviewBanner } from "@/components/PreviewBanner";
 import { siteUrl } from "@/lib/seo";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-RSECPPZQ56";
 
 export const metadata: Metadata = {
   title: {
@@ -36,6 +37,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {gtmScript && <script dangerouslySetInnerHTML={{ __html: gtmScript }} />}
+        {/* GA4 direct tag — runs independently of GTM */}
+        {GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
+          </>
+        )}
         {/* Keep legacy stylesheet classes for migrated marketing pages */}
         <link rel="stylesheet" href={`/css/style.css?v=${cssVersion}`} />
         {/* Prefer PNG icons (simple + reliable on Vercel). Browsers may still probe /favicon.ico. */}
