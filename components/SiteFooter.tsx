@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterCapture } from "@/components/NewsletterCapture";
 
 export function SiteFooter() {
   return (
@@ -62,12 +63,10 @@ export function SiteFooter() {
           </div>
           <div>
             <div className="footer__heading">Newsletter</div>
-            <p style={{ fontSize: "0.8125rem", color: "var(--muted)" }}>
+            <p style={{ fontSize: "0.8125rem", color: "var(--muted)", marginBottom: "0.75rem" }}>
               Weekly roundup of tool changes, prompt packs, and workflow templates.
             </p>
-            <Link className="btn btn--secondary btn--sm" href="/newsletter">
-              Subscribe
-            </Link>
+            <NewsletterCapture source="footer" />
           </div>
         </div>
         <div className="footer__bottom">

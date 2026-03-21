@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { HomeSuggest } from "@/components/HomeSuggest";
 import { HeroSection } from "@/components/HeroSection";
+import { NewsletterCapture } from "@/components/NewsletterCapture";
 
 export const metadata = {
   title: "Counterbench.AI — The Right AI Tool for Your Legal Task",
@@ -71,6 +72,21 @@ export default function HomePage() {
       </section>
 
       <HeroSection />
+
+      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <div className="label" style={{ display: "inline-block" }}>Stay current</div>
+          <h2 className="max-w-700" style={{ marginLeft: "auto", marginRight: "auto" }}>
+            New tools, changed tools, and prompt packs — weekly.
+          </h2>
+          <p className="max-w-600 mt-3" style={{ marginLeft: "auto", marginRight: "auto", fontSize: "1.0625rem" }}>
+            One email per week. No fluff. Unsubscribe anytime.
+          </p>
+          <div className="mt-4" style={{ maxWidth: 480, marginLeft: "auto", marginRight: "auto" }}>
+            <NewsletterCapture source="homepage" />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
