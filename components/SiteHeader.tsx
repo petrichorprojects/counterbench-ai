@@ -146,6 +146,10 @@ export function SiteHeader() {
             )}
           </div>
 
+          <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/workshops") ? "is-active" : ""}`} href="/workshops">
+            Workshops
+          </Link>
+
           <Link className={`btn btn--secondary btn--sm ${isActive(pathname, "/advisory") ? "is-active" : ""}`} href="/advisory">
             AI Advisory
           </Link>
