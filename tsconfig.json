@@ -35,6 +35,9 @@
       "@/design-system/*": [
         "design-system/*"
       ],
+      "@/data/*": [
+        "data/*"
+      ],
       "@/lib/*": [
         "lib/*"
       ]
