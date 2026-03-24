@@ -6,11 +6,11 @@ import { NewsletterCapture } from "@/components/NewsletterCapture";
 export const metadata = {
   title: "Counterbench.AI — The Right AI Tool for Your Legal Task",
   description:
-    "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, 24 guides, and curated skill packs for litigation, discovery, and compliance teams.",
+    "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, 24 guides, and curated skill packs for US litigation, discovery, and compliance teams.",
   openGraph: {
     title: "Counterbench.AI — The Right AI Tool for Your Legal Task",
     description:
-      "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, and curated guides for legal professionals."
+      "Match legal tasks to verified AI tools in seconds. 275+ tools, 780 prompts, and curated guides for US legal professionals."
   }
 };
 

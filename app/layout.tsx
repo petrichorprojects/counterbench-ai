@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: "Counterbench.AI",
     template: "%s | Counterbench.AI"
   },
-  description: "A curated directory of legal AI tools, prompts, and skills for legal professionals.",
+  description: "A curated directory of legal AI tools, prompts, and skills for US legal professionals.",
   // Use SITE_URL if set; otherwise fall back to Vercel preview URL (VERCEL_URL) to avoid incorrect canonicals.
   metadataBase: new URL(siteUrl())
 };

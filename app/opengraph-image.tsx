@@ -76,7 +76,7 @@ export default function OpenGraphImage() {
               maxWidth: 900
             }}
           >
-            A curated directory of AI tools, prompts, and skills for legal
+            A curated directory of AI tools, prompts, and skills for US legal
             professionals.
           </div>
         </div>

@@ -5,7 +5,7 @@
   "year": 2026,
   "tldr": "In privacy and compliance, the objective is defensible process. In 2026, AI is most useful for drafting, gap-checking, and evidence organization, not for making final calls. Choose tools that produce checklists, track decisions, and help you maintain a clear audit trail. If a tool can’t show inputs, outputs, and change history, it’s hard to defend later.",
   "answer_intents": [
-    "What are the best AI tools for GDPR and compliance?",
+    "What are the best AI tools for US privacy and compliance?",
     "How can I use AI to draft a privacy policy safely?",
     "How do I run a lightweight compliance audit with AI?",
     "What are the biggest risks in AI compliance workflows?"
@@ -23,12 +23,10 @@
     "Treating AI outputs as determinations instead of drafts and checklists."
   ],
   "ranked_tools": [
-    { "tool_slug": "dataist-ai-gdpr-paralegal", "why": "Good starting point for GDPR-oriented drafting and analysis tasks where structured checklists matter." },
     { "tool_slug": "sinaptic-ai", "why": "Privacy-first assistant positioning to prevent accidental disclosure and support data protection workflows." },
     { "tool_slug": "easyaudit-596", "why": "Helpful for audit-style workflows where you need consistent evidence requests and gap tracking." },
     { "tool_slug": "frontegg", "why": "Useful when compliance overlaps with identity/security requirements (SSO, access control, and governance posture)." },
-    { "tool_slug": "pascal-1-428", "why": "A compliance assistant style tool for mapping rules to practical actions and controls." },
-    { "tool_slug": "dsg-expert-in-schweiz", "why": "Jurisdiction-specific compliance guidance style workflows (validate applicability and scope before use)." }
+    { "tool_slug": "pascal-1-428", "why": "A compliance assistant style tool for mapping rules to practical actions and controls." }
   ],
   "faq": [
     {
@@ -54,7 +52,7 @@
   ],
   "citations": [
     { "title": "NIST AI Risk Management Framework (AI RMF 1.0)", "url": "https://www.nist.gov/itl/ai-risk-management-framework" },
-    { "title": "EDPB (European Data Protection Board)", "url": "https://edpb.europa.eu/" },
+    { "title": "FTC Privacy and Data Security", "url": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security" },
     { "title": "IAPP (privacy research and guidance)", "url": "https://iapp.org/" },
     { "title": "MIT Law, AI & the Future of Justice", "url": "https://law.mit.edu/ai" },
     { "title": "Advanced prompt engineering for lawyers (best practices)", "url": "https://aiforlawyers.substack.com/p/advanced-prompt-engineering-a-guide" }

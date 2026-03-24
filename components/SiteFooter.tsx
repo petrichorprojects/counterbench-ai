@@ -16,7 +16,7 @@ export function SiteFooter() {
             </div>
             <div className="footer__sub">A directory for legal AI</div>
             <p style={{ fontSize: "0.8125rem", color: "var(--muted)", marginTop: "1rem", maxWidth: 360 }}>
-              Curated tools, prompts, and skills for paralegals, solo attorneys, and legal research teams.
+              Curated tools, prompts, and skills for US paralegals, solo attorneys, and legal research teams.
             </p>
           </div>
           <div>
