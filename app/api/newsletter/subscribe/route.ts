@@ -1,5 +1,55 @@
 import { NextResponse } from "next/server";
 
+// ---------------------------------------------------------------------------
+// In-memory rate limiter: 3 POSTs per IP per hour.
+// Entries auto-expire so the map doesn't grow unbounded.
+// ---------------------------------------------------------------------------
+const RATE_LIMIT_MAX = 3;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+const ipHits = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (ipHits.get(ip) ?? []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+
+  if (timestamps.length >= RATE_LIMIT_MAX) {
+    ipHits.set(ip, timestamps);
+    return true;
+  }
+
+  timestamps.push(now);
+  ipHits.set(ip, timestamps);
+  return false;
+}
+
+// Periodic cleanup every 10 minutes to prevent unbounded growth.
+setInterval(() => {
+  const now = Date.now();
+  for (const [ip, timestamps] of ipHits) {
+    const valid = timestamps.filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+    if (valid.length === 0) {
+      ipHits.delete(ip);
+    } else {
+      ipHits.set(ip, valid);
+    }
+  }
+}, 10 * 60 * 1000).unref();
+
+function getClientIp(req: Request): string {
+  // Vercel sets x-forwarded-for; fall back to x-real-ip.
+  const forwarded = req.headers.get("x-forwarded-for");
+  if (forwarded) {
+    const first = forwarded.split(",")[0];
+    return first ? first.trim() : "unknown";
+  }
+  return req.headers.get("x-real-ip") ?? "unknown";
+}
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
 function isValidEmail(email: string): boolean {
   if (!email) return false;
   const e = email.trim();
@@ -59,6 +109,15 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
+  // --- Rate limit check (before parsing body) ---
+  const clientIp = getClientIp(req);
+  if (isRateLimited(clientIp)) {
+    return NextResponse.json(
+      { ok: false, message: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   const { email, source, hp } = await readBody(req);
 
   // Honeypot: pretend success for bots.
