@@ -32,29 +32,25 @@ interface TierSpec {
   earlyBirdPriceInCents: number;
 }
 
+/**
+ * Must match lib/stripe/workshop-products.ts exactly.
+ * 2 tiers: Standard ($297 / $197 early bird), Premium ($497 / $397 early bird).
+ */
 const TIERS: TierSpec[] = [
   {
     key: "standard",
     name: "CounterbenchAI Workshop — Standard",
     description: "Full-day workshop access with materials and certificate",
-    priceInCents: 59700,
-    earlyBirdPriceInCents: 49700,
+    priceInCents: 29700,
+    earlyBirdPriceInCents: 19700,
   },
   {
     key: "premium",
     name: "CounterbenchAI Workshop — Premium",
     description:
       "Workshop access plus 1-on-1 follow-up, priority Q&A, and bonus resources",
-    priceInCents: 89700,
-    earlyBirdPriceInCents: 79700,
-  },
-  {
-    key: "firm",
-    name: "CounterbenchAI Workshop — Firm Package",
-    description:
-      "Team workshop access (up to 5), implementation plan, and consulting session",
-    priceInCents: 249700,
-    earlyBirdPriceInCents: 239700,
+    priceInCents: 49700,
+    earlyBirdPriceInCents: 39700,
   },
 ];
 
@@ -87,7 +83,7 @@ async function setupTier(spec: TierSpec) {
     console.log(`  Created product: ${product.id}`);
   }
 
-  // Find existing prices
+  // Find existing prices for this product
   const existingPrices = await stripe.prices.list({
     product: product.id,
     active: true,
@@ -145,16 +141,8 @@ async function setupTier(spec: TierSpec) {
 }
 
 async function main() {
-  // Verify we're in test mode
-  if (!STRIPE_SECRET_KEY!.startsWith("sk_test_")) {
-    console.error(
-      "WARNING: This does not look like a test-mode key. Aborting."
-    );
-    console.error("  Use sk_test_... to create products in test mode.");
-    process.exit(1);
-  }
-
-  console.log("Setting up Stripe workshop products (TEST MODE)...\n");
+  const isLive = STRIPE_SECRET_KEY!.startsWith("sk_live_");
+  console.log(`Setting up Stripe workshop products (${isLive ? "LIVE" : "TEST"} MODE)...\n`);
 
   const results = [];
   for (const tier of TIERS) {

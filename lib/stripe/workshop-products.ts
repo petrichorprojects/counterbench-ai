@@ -30,9 +30,9 @@ export const WORKSHOP_TIERS: WorkshopTier[] = [
   {
     key: "standard",
     name: "Standard",
-    productId: "", // TODO: populate after Stripe setup
-    priceId: "", // TODO: populate after Stripe setup
-    earlyBirdPriceId: "", // TODO: populate after Stripe setup
+    productId: "prod_UDPcAxtRQ2EkcI",
+    priceId: "price_1TEyn22KjfdZWqhLzcaG93B4",
+    earlyBirdPriceId: "price_1TEyn22KjfdZWqhLLfABrax4",
     priceInCents: 29700,
     earlyBirdPriceInCents: 19700,
     earlyBirdCap: 10,
@@ -48,9 +48,9 @@ export const WORKSHOP_TIERS: WorkshopTier[] = [
   {
     key: "premium",
     name: "Premium",
-    productId: "", // TODO: populate after Stripe setup
-    priceId: "", // TODO: populate after Stripe setup
-    earlyBirdPriceId: "", // TODO: populate after Stripe setup
+    productId: "prod_UDPcoXyk7vGfXd",
+    priceId: "price_1TEyn32KjfdZWqhLswCYFryB",
+    earlyBirdPriceId: "price_1TEyn32KjfdZWqhL0n4G2TMR",
     priceInCents: 49700,
     earlyBirdPriceInCents: 39700,
     earlyBirdCap: 10,
