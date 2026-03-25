@@ -69,7 +69,7 @@ Text on screen: *"AI won't replace paralegals."*
 Visual: Calm, confident paralegal working at a desk. Steady shot.
 
 **[Scene 2 — 0:07-0:13]**
-Text on screen: *"But paralegals who use AI will replace those who don't."*
+Text on screen: *"But paralegals who use AI will replace those who Don't."*
 Visual: Quick cut — same desk, but now the paralegal is working alongside an AI tool, moving faster, reviewing more docs.
 
 **[Scene 3 — 0:13-0:20]**
@@ -123,7 +123,7 @@ Text on screen: *"You still don't know how to use it for your actual job."*
 Visual: Paralegal staring at a blank ChatGPT prompt, cursor blinking. Nothing useful happening.
 
 **[Scene 3 — 0:13-0:20]**
-Text on screen: *"YouTube can't teach you what a 3-hour workshop with real legal workflows can."*
+Text on screen: *"YouTube can't teach you what a 6-hour workshop with real legal workflows can."*
 Visual: Cut to workshop — instructor walking through a live demo on a projected screen, paralegals following along on their laptops.
 
 **[Scene 4 — 0:20-0:30]**
@@ -147,7 +147,7 @@ Body: You need to learn AI for YOUR workflows — discovery, depo summaries, con
 
 **Slide 3 (Solution)**
 Headline: CounterbenchAI Workshops
-Body: 3 hours. Hands-on. Built for paralegals by people who understand legal work. You'll use real tools on real tasks.
+Body: 6 hours. Hands-on. Built for paralegals by people who understand legal work. You'll use real tools on real tasks.
 
 **Slide 4 (Outcome)**
 Headline: Leave with skills, not bookmarks.

@@ -629,3 +629,236 @@ html[data-theme="light"] .cb-metricsStrip{
   .cb-primaryBtn{ font-size: 18px; }
   .cb-metricsStrip__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ============================================
+   WORKSHOP PAGE STYLES
+   ============================================ */
+
+/* City selector tabs */
+.ws-city-tabs {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  width: fit-content;
+}
+.ws-city-tab {
+  padding: 10px 24px;
+  font-family: var(--sans-display);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.ws-city-tab:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+.ws-city-tab:hover {
+  background: var(--hover-bg);
+  color: var(--fg);
+}
+.ws-city-tab--active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--fg);
+}
+html[data-theme="light"] .ws-city-tab--active {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Event details row */
+.ws-event-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 720px) {
+  .ws-event-details {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .ws-event-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Early bird banner */
+.ws-earlybird {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--amber);
+  background: rgba(234, 179, 8, 0.08);
+  font-size: 0.9375rem;
+  color: var(--fg);
+}
+html[data-theme="light"] .ws-earlybird {
+  background: rgba(234, 179, 8, 0.10);
+}
+.ws-earlybird__badge {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--amber);
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+/* Pricing grid */
+.ws-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .ws-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+}
+
+.ws-pricing-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 16px;
+  position: relative;
+}
+.ws-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  background: var(--teal);
+  color: var(--bg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.ws-pricing-header {
+  margin-bottom: 1rem;
+}
+
+.ws-pricing-price {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.ws-pricing-earlybird {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.ws-pricing-amount {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1;
+}
+.ws-pricing-original {
+  font-size: 1.125rem;
+  color: var(--muted-2);
+  text-decoration: line-through;
+}
+
+.ws-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.ws-pricing-features li {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  padding-left: 1.5rem;
+  position: relative;
+}
+.ws-pricing-features li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-weight: 600;
+}
+
+/* Testimonials */
+.ws-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 900px) {
+  .ws-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ */
+.ws-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 720px;
+}
+.ws-faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.ws-faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+.ws-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem 0;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--sans-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  gap: 1rem;
+}
+.ws-faq-question:hover {
+  color: var(--teal-light);
+}
+.ws-faq-chevron {
+  font-size: 1.25rem;
+  color: var(--muted);
+  transition: transform var(--dur-fast) var(--ease-out);
+  flex-shrink: 0;
+}
+.ws-faq-chevron--open {
+  transform: rotate(45deg);
+}
+.ws-faq-answer {
+  padding: 0 0 1.25rem 0;
+}
+.ws-faq-answer p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--muted);
+}

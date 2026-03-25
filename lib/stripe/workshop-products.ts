@@ -1,8 +1,7 @@
 /**
  * Workshop ticket product & price configuration.
  *
- * Prices are one-time (not subscriptions).
- * Early-bird discount: $100 off for the first 10 registrants per tier.
+ * Online-first: 2 tiers (Standard + Premium). Firm Package available for in-person events later.
  *
  * After running `scripts/stripe-setup-workshop.ts`, replace the placeholder
  * `priceId` / `earlyBirdPriceId` values with the real Stripe price IDs it outputs.
@@ -34,14 +33,16 @@ export const WORKSHOP_TIERS: WorkshopTier[] = [
     productId: "", // TODO: populate after Stripe setup
     priceId: "", // TODO: populate after Stripe setup
     earlyBirdPriceId: "", // TODO: populate after Stripe setup
-    priceInCents: 59700,
-    earlyBirdPriceInCents: 49700,
+    priceInCents: 29700,
+    earlyBirdPriceInCents: 19700,
     earlyBirdCap: 10,
     description: "Full workshop access",
     features: [
-      "Full-day workshop access",
-      "Workshop materials & templates",
+      "Full-day live workshop (6 hours)",
+      "Digital workshop materials",
+      "Prompt template library",
       "Certificate of completion",
+      "Workshop recording access (30 days)",
     ],
   },
   {
@@ -50,33 +51,16 @@ export const WORKSHOP_TIERS: WorkshopTier[] = [
     productId: "", // TODO: populate after Stripe setup
     priceId: "", // TODO: populate after Stripe setup
     earlyBirdPriceId: "", // TODO: populate after Stripe setup
-    priceInCents: 89700,
-    earlyBirdPriceInCents: 79700,
+    priceInCents: 49700,
+    earlyBirdPriceInCents: 39700,
     earlyBirdCap: 10,
-    description: "Workshop + extras",
+    description: "Workshop + 1-on-1 follow-up",
     features: [
       "Everything in Standard",
-      "1-on-1 follow-up session",
-      "Priority Q&A access",
+      "1-on-1 follow-up session (30 min)",
+      "Priority Q&A access during workshop",
+      "Recording access (90 days)",
       "Bonus resource pack",
-    ],
-  },
-  {
-    key: "firm",
-    name: "Firm Package",
-    productId: "", // TODO: populate after Stripe setup
-    priceId: "", // TODO: populate after Stripe setup
-    earlyBirdPriceId: "", // TODO: populate after Stripe setup
-    priceInCents: 249700,
-    earlyBirdPriceInCents: 239700,
-    earlyBirdCap: 10,
-    description: "Team access for your firm",
-    features: [
-      "Everything in Premium",
-      "Up to 5 team members",
-      "Firm-specific implementation plan",
-      "Dedicated support channel",
-      "Post-workshop consulting session",
     ],
   },
 ];

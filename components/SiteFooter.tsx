@@ -48,6 +48,9 @@ export function SiteFooter() {
             <Link className="footer__link" href="/about">
               About
             </Link>
+            <Link className="footer__link" href="/workshop">
+              Workshops
+            </Link>
             <Link className="footer__link" href="/insights">
               Insights
             </Link>
@@ -70,7 +73,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer__bottom">
-          <div className="footer__copy">© {new Date().getFullYear()} Counterbench.AI</div>
+          <div className="footer__copy">&copy; {new Date().getFullYear()} Counterbench.AI</div>
           <div className="footer__legal">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>

@@ -242,7 +242,7 @@ export function LegalDataSourceFinder(props: {
               id="finder-query"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="e.g. federal register, contracts, tribunal"
+              placeholder="e.g. federal register, contracts, court filings"
               style={{ width: "100%", padding: "12px 14px", borderRadius: 999, border: "1px solid var(--border)", background: "var(--input-bg)", color: "var(--fg)" }}
             />
           </div>
