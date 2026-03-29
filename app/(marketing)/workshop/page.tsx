@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { WORKSHOP_TIERS, formatPrice } from "@/lib/stripe/workshop-products";
 import { WORKSHOP_CITIES } from "@/lib/stripe/workshop-cities";
+import { WorkshopRegistrationForm } from "@/components/WorkshopRegistrationForm";
 
 const event = WORKSHOP_CITIES.online;
 
@@ -141,8 +142,22 @@ export default function WorkshopPage() {
         </div>
       </section>
 
+      {/* Interest capture — for visitors not ready to buy */}
+      <section className="section section--alt section--border-t section--border-b" id="interest">
+        <div className="container" style={{ maxWidth: 640 }}>
+          <div className="label">Stay in the loop</div>
+          <h2 className="max-w-600">Not ready to register yet?</h2>
+          <p className="max-w-600 mt-3">
+            Drop your info and we'll notify you when new dates are confirmed. No spam — one email when seats open.
+          </p>
+          <div className="mt-5">
+            <WorkshopRegistrationForm action="/api/newsletter/subscribe" />
+          </div>
+        </div>
+      </section>
+
       {/* Curriculum overview */}
-      <section className="section section--alt section--border-t section--border-b" id="curriculum">
+      <section className="section section--border-t section--border-b" id="curriculum">
         <div className="container">
           <div className="label">Curriculum</div>
           <h2 className="max-w-700">5 modules. 6 hours. Everything your team needs.</h2>
