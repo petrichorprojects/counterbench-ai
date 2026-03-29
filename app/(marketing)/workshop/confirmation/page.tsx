@@ -7,7 +7,7 @@ import { WORKSHOP_CITIES, type CityKey } from "@/lib/stripe/workshop-cities";
 
 function ConfirmationContent() {
   const searchParams = useSearchParams();
-  const sessionId = searchParams.get("session_id");
+  const sessionId = searchParams?.get("session_id");
 
   // We don't have server-side session retrieval yet, so show a generic
   // confirmation. When Stripe webhooks are wired, this can fetch session
