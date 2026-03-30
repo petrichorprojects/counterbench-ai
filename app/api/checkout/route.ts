@@ -71,10 +71,10 @@ export async function POST(req: Request) {
           type: "dropdown",
           dropdown: {
             options: [
-              { label: "1-5 attorneys", value: "1-5" },
-              { label: "6-15 attorneys", value: "6-15" },
-              { label: "16-50 attorneys", value: "16-50" },
-              { label: "50+ attorneys", value: "50+" },
+              { label: "1-5 attorneys", value: "small" },
+              { label: "6-15 attorneys", value: "midsize" },
+              { label: "16-50 attorneys", value: "large" },
+              { label: "50+ attorneys", value: "enterprise" },
             ],
           },
         },
@@ -86,7 +86,7 @@ export async function POST(req: Request) {
             options: [
               { label: "Paralegal", value: "paralegal" },
               { label: "Associate", value: "associate" },
-              { label: "Office Manager", value: "office_manager" },
+              { label: "Office Manager", value: "officemanager" },
               { label: "Partner", value: "partner" },
               { label: "Other", value: "other" },
             ],
@@ -100,7 +100,7 @@ export async function POST(req: Request) {
     const msg = err instanceof Error ? err.message : String(err);
     console.error("[checkout] Stripe session creation failed:", err);
     return NextResponse.json(
-      { error: "Failed to create checkout session", detail: msg },
+      { error: "Failed to create checkout session" },
       { status: 500 }
     );
   }
