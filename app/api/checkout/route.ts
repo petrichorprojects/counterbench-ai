@@ -26,10 +26,10 @@ export async function POST(req: Request) {
     );
   }
 
-  // Validate city — default to boston if missing
+  // Validate city — default to "online" (the only current event type)
   const cityKey = (body.city && body.city in WORKSHOP_CITIES)
     ? (body.city as CityKey)
-    : "boston";
+    : "online";
   const cityInfo = WORKSHOP_CITIES[cityKey];
 
   const priceId = body.earlyBird ? tier.earlyBirdPriceId : tier.priceId;
@@ -59,8 +59,6 @@ export async function POST(req: Request) {
         workshop_city_name: cityInfo.name,
         price_variant: body.earlyBird ? "early_bird" : "full",
       },
-      // Collect registrant details via Stripe Checkout custom fields
-      // See: https://docs.stripe.com/payments/checkout/customization/custom-fields
       custom_fields: [
         {
           key: "firm_name",
@@ -105,9 +103,10 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ url: session.url });
   } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
     console.error("[checkout] Stripe session creation failed:", err);
     return NextResponse.json(
-      { error: "Failed to create checkout session" },
+      { error: "Failed to create checkout session", detail: msg },
       { status: 500 }
     );
   }
