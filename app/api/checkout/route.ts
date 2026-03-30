@@ -92,12 +92,6 @@ export async function POST(req: Request) {
             ],
           },
         },
-        {
-          key: "ai_challenge",
-          label: { type: "custom", custom: "Biggest AI Challenge (optional)" },
-          type: "text",
-          optional: true,
-        },
       ],
     });
 
