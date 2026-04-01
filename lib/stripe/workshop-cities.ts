@@ -3,7 +3,7 @@
  * Online-first model — in-person events added later as premium upsell.
  */
 
-export type CityKey = "online";
+export type CityKey = "online" | "boston";
 
 export interface WorkshopEvent {
   key: CityKey;
@@ -20,5 +20,12 @@ export const WORKSHOP_CITIES: Record<CityKey, WorkshopEvent> = {
     date: "Saturday, April 25, 2026",
     venue: "Zoom — link sent after registration",
     capacity: 25,
+  },
+  boston: {
+    key: "boston",
+    name: "Boston, MA",
+    date: "Date TBD — April 2026",
+    venue: "Venue TBD — Boston, MA",
+    capacity: 20,
   },
 };
