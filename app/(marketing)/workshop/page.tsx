@@ -260,6 +260,37 @@ export default function WorkshopPage() {
         </div>
       </section>
 
+      {/* Instructor bio */}
+      <section className="section section--border-b" id="instructor">
+        <div className="container">
+          <div className="label">Your Instructor</div>
+          <h2 className="max-w-700">Who&rsquo;s running this.</h2>
+
+          <div className="ws-instructor mt-6">
+            <div className="ws-instructor-avatar" aria-hidden="true">PR</div>
+            <div className="ws-instructor-body">
+              <div className="text-white" style={{ fontSize: "1.125rem", fontWeight: 700, marginBottom: "0.25rem" }}>
+                Philipp Rimmler
+              </div>
+              <div style={{ fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1.25rem" }}>
+                Founder, CounterbenchAI
+              </div>
+              <p style={{ marginBottom: "0.875rem" }}>
+                Philipp has spent years helping legal teams cut through operational drag — first as a strategy
+                consultant, then as the builder behind CounterbenchAI. He designed the workshop curriculum
+                around the actual workflows paralegals and legal ops teams deal with every day, not vendor
+                demos or theoretical use cases.
+              </p>
+              <p style={{ marginBottom: 0 }}>
+                He teaches this workshop because the gap between &ldquo;AI is coming for legal&rdquo; and
+                &ldquo;here&rsquo;s exactly how to use it in your intake queue on Monday&rdquo; is where most
+                training fails. This workshop exists to close that gap.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Who it's for */}
       <section className="section section--border-b">
         <div className="container">
