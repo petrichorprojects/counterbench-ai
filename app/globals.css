@@ -862,3 +862,35 @@ html[data-theme="light"] .ws-earlybird {
   line-height: 1.7;
   color: var(--muted);
 }
+.ws-instructor {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 720px;
+}
+@media (max-width: 600px) {
+  .ws-instructor {
+    grid-template-columns: 1fr;
+  }
+}
+.ws-instructor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(170, 185, 209, 0.12);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+}
+.ws-instructor-body p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
