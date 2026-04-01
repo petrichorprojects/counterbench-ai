@@ -5,20 +5,21 @@ const nextConfig = {
   poweredByHeader: false,
   // This repo is checked out inside another workspace; avoid Next.js selecting the wrong tracing root.
   outputFileTracingRoot: __dirname,
+  turbopack: {
+    root: __dirname,
+  },
   eslint: {
     // Build should not fail on lint/tooling patching issues during preview/QA.
     ignoreDuringBuilds: true
   },
-  experimental: {
-    outputFileTracingExcludes: {
-      "*": [
-        "./data/**",
-        "./public/labs/**",
-        "./public/downloads/**",
-        "./public/search-index.json",
-        "./.next/cache/**"
-      ]
-    }
+  outputFileTracingExcludes: {
+    "*": [
+      "./data/**",
+      "./public/labs/**",
+      "./public/downloads/**",
+      "./public/search-index.json",
+      "./.next/cache/**"
+    ]
   },
   async redirects() {
     return [

@@ -101,6 +101,8 @@ export function NewsletterCapture({ source }: { source: string }) {
             setMessage("Newsletter signup is temporarily unavailable.");
             return;
           }
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: "newsletter_subscribe", email_source: source });
           form.submit();
         } catch {
           setStatus("error");

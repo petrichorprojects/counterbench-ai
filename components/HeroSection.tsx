@@ -8,21 +8,21 @@ export function HeroSection() {
       <div className="container">
         <div className="cb-piHero__grid">
           <div className="cb-piHero__left">
-            <div className="cb-eyebrow">FOR PLAINTIFF ATTORNEYS</div>
+            <div className="cb-eyebrow">FOR LEGAL PROFESSIONALS</div>
             <h2 id="cb-piHero-title" className="cb-piHero__title">
-              Find the defense strategy
+              The AI toolkit built
               <br />
-              before they <span className="cb-nowrap">file it.</span>
+              for <span className="cb-nowrap">legal work.</span>
             </h2>
             <p className="cb-piHero__body">
-              Counterbench reveals how insurers, defense firms, and expert witnesses behave in real litigation.
+              Curated AI tools, ready-to-use prompts, workflow skills, and playbooks — vetted for legal professionals who need to work faster without guessing which tools actually work.
             </p>
 
             <div className="cb-piHero__ctaRow">
-              <PrimaryButton href="/search">Search Litigation Intelligence →</PrimaryButton>
+              <PrimaryButton href="/search">Explore Legal AI Tools →</PrimaryButton>
             </div>
             <p className="cb-piHero__trust" aria-label="Trust statement">
-              Built for litigation workflows. Evidence-first results. Fast enough to use between calls.
+              Every tool reviewed. Every prompt tested. Built by legal professionals, for legal professionals.
             </p>
           </div>
 
@@ -30,24 +30,24 @@ export function HeroSection() {
             <FeatureGrid
               features={[
                 {
-                  title: "INSURER INTELLIGENCE",
-                  description: "Track how specific insurance carriers defend injury claims.",
-                  meta: "Signals: recurring defenses, settlement posture, delay patterns."
+                  title: "AI TOOL DIRECTORY",
+                  description: "Find the right legal AI tool for your workflow.",
+                  meta: "Covers: document review, research, drafting, discovery, billing."
                 },
                 {
-                  title: "EXPERT HISTORY",
-                  description: "Review expert witness testimony across prior cases.",
-                  meta: "Signals: prior themes, impeachment flags, credibility notes."
+                  title: "PROMPT LIBRARY",
+                  description: "Ready-to-use prompts built for legal tasks.",
+                  meta: "For: contract analysis, case research, deposition prep, motions."
                 },
                 {
-                  title: "DEFENSE PATTERNS",
-                  description: "See which arguments defense firms rely on most.",
-                  meta: "Signals: motion language, causation angles, damages attacks."
+                  title: "WORKFLOW SKILLS",
+                  description: "Step-by-step AI workflows for common legal tasks.",
+                  meta: "Skills: intake, discovery management, brief drafting, timekeeping."
                 },
                 {
-                  title: "CASE RESEARCH",
-                  description: "Search litigation records in seconds.",
-                  meta: "Find: similar fact patterns, motions, experts, outcomes."
+                  title: "PLAYBOOKS & GUIDES",
+                  description: "Practical guides to adopting AI in your practice.",
+                  meta: "Topics: getting started, ethical use, client communication, ROI."
                 }
               ]}
             />
@@ -57,10 +57,10 @@ export function HeroSection() {
 
       <MetricsStrip
         metrics={[
-          { value: "48,000+", label: "litigation records indexed" },
-          { value: "1,200", label: "defense firms tracked" },
-          { value: "17,000", label: "expert witnesses analyzed" },
-          { value: "200ms", label: "average search speed" }
+          { value: "275+", label: "legal AI tools reviewed" },
+          { value: "800+", label: "ready-to-use prompts" },
+          { value: "30+", label: "workflow skills" },
+          { value: "10+", label: "practice playbooks" }
         ]}
       />
     </section>
