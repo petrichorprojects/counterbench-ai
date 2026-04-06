@@ -2,12 +2,21 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { WORKSHOP_CITIES, type CityKey } from "@/lib/stripe/workshop-cities";
 
 function ConfirmationContent() {
   const searchParams = useSearchParams();
   const sessionId = searchParams?.get("session_id");
+
+  // Fire Meta Purchase event once per confirmed session
+  useEffect(() => {
+    if (!sessionId) return;
+    if (typeof window === "undefined") return;
+    const fbq = (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq;
+    if (typeof fbq !== "function") return;
+    fbq("track", "Purchase", { currency: "USD", value: 197 });
+  }, [sessionId]);
 
   // We don't have server-side session retrieval yet, so show a generic
   // confirmation. When Stripe webhooks are wired, this can fetch session
