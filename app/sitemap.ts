@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/resources/open-legal-data-map"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: absoluteUrl("/resources/contract-qa-pipeline-map"), lastModified: now, changeFrequency: "weekly", priority: 0.69 },
     { url: absoluteUrl("/resources/attribution"), lastModified: now, changeFrequency: "monthly", priority: 0.2 },
+    { url: absoluteUrl("/paralegals"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: absoluteUrl("/advisory"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/diagnostic"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/newsletter"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },

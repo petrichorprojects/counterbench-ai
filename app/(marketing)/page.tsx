@@ -74,6 +74,27 @@ export default function HomePage() {
       <HeroSection />
 
       <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="container">
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "2rem", flexWrap: "wrap" }}>
+            <div style={{ maxWidth: 600 }}>
+              <div className="label" style={{ display: "inline-block" }}>For PI firms</div>
+              <h2 className="mt-2" style={{ fontSize: "1.75rem", lineHeight: 1.2 }}>
+                Need a team to run the tools?
+              </h2>
+              <p className="mt-3" style={{ fontSize: "1.0625rem", color: "var(--text-muted)" }}>
+                Dedicated paralegal pods handle your intake, records, med chronologies, and client communication — with AI already built into how they work. Live in 2-3 weeks. No hiring. No turnover.
+              </p>
+            </div>
+            <div style={{ flexShrink: 0 }}>
+              <Link className="btn btn--primary btn--arrow" href="/paralegals">
+                See paralegal teams
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <div className="label" style={{ display: "inline-block" }}>Stay current</div>
           <h2 className="max-w-700" style={{ marginLeft: "auto", marginRight: "auto" }}>
