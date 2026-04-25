@@ -68,7 +68,7 @@ export async function POST(req: Request) {
       : `No transcript in payload. View recording: ${recordingUrl}`;
 
     await resend.emails.send({
-      from: process.env.RESEND_FROM || "noreply@verdictops.com",
+      from: process.env.RESEND_FROM || "noreply@counterbench.ai",
       to: "rimmler44@gmail.com",
       subject: `ScreenApp Transcript: ${title}`,
       text: [
