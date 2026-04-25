@@ -1,56 +1,63 @@
-# Analytics & Tracking Setup — Status
+# CounterbenchAI — Tasks (updated 2026-04-25)
 
-Updated: 2026-03-19
+## Deadline
+- **May 5, 2026**: Billing deadline for active clients
 
-## DONE (in code)
+---
 
-- [x] **GTM container** — `GTM-K8KVFZKG` snippet in `app/layout.tsx` (head + noscript fallback)
-- [x] **GA4 direct tag** — `G-RSECPPZQ56` gtag.js in `app/layout.tsx`, fires independently of GTM
-- [x] **Meta Pixel base snippet** — `components/AnalyticsPixels.tsx` → `<MetaPixel />` in layout. Reads `NEXT_PUBLIC_META_PIXEL_ID` env var. Renders nothing when unset.
-- [x] **LinkedIn Insight Tag base snippet** — `components/AnalyticsPixels.tsx` → `<LinkedInInsightTag />` in layout. Reads `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` env var. Renders nothing when unset.
-- [x] **TrackedCTA component** — `components/TrackedCTA.tsx` pushes `cta_click` to dataLayer. Replaced all 6 dead `data-track` elements on `/advisory` page. Fixes the FAIL from conversion-audit.md.
-- [x] **Newsletter generic provider fix** — Added `dataLayer.push` before `form.submit()` in generic provider path (`NewsletterCapture.tsx`). Closes the tracking gap from conversion-audit.md.
-- [x] **next.config.js compat** — Moved `outputFileTracingExcludes` out of `experimental` (deprecated in Next 16), added `turbopack.root` for workspace inference.
-- [x] **Build passes** — `tsc --noEmit` clean, `next build` clean.
+## Pending (needs Philipp)
+- [ ] Add Twilio env vars to Vercel production (required for Remote Receptionist call flow)
+- [ ] Set up HIPAA BAAs with vendors (Twilio, Resend, Neon minimum)
+- [ ] Fix Calendly booking link
+- [ ] Set `NEXT_PUBLIC_META_PIXEL_ID` env var on Vercel (Meta Business Manager → Events Manager)
+- [ ] Set `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` env var on Vercel (LinkedIn Campaign Manager → Insight Tag)
+- [ ] Configure GTM container (GA4 Event tags, Google Ads Conversion tag, Meta Pixel events) — see GTM checklist in this file below
 
-## dataLayer events ready for GTM triggers
+---
 
-| Event                  | Component                    | Parameters                                      |
-|------------------------|------------------------------|-------------------------------------------------|
-| `cta_click`            | `TrackedCTA.tsx`             | `cta_text`, `cta_location`, `page`              |
-| `newsletter_subscribe` | `NewsletterCapture.tsx`      | `email_source`                                  |
-| `guide_download`       | `TrackedDownloadLink.tsx`    | `guide_slug`, `file_label`, `file_url`          |
-| `strategy_call_book`   | `TrackedAdvisoryForm.tsx`    | `booking_source`                                |
-| `source_finder_lead`   | `LegalDataSourceFinder.tsx`  | `email_source`                                  |
+## Ready to execute (Green)
+- [ ] Run drizzle-kit push to create DB tables in production (schema is in `lib/db/schema.ts`)
+- [ ] End-to-end test: full call flow (Vapi webhook → DB → email alert via `app/api/receptionist/call-complete/route.ts`)
+- [ ] Ungate Remote Receptionist page (page exists at `app/(marketing)/paralegals/page.tsx` — confirm it is linked from nav and sitemap)
+- [ ] Verify verdictops.com 301 -> counterbench.ai/paralegals is live (configured at the verdictops.com host/DNS level — NOT in next.config.js, which has no verdictops redirect; confirm via browser or curl)
+- [ ] Fix hardcoded `noreply@verdictops.com` fallback in two API routes (post-merger cleanup):
+  - `app/api/screenapp-webhook/route.ts` line 71
+  - `app/api/receptionist/call-complete/route.ts` line 59
+  - Replace fallback with `noreply@counterbench.ai`
+- [ ] GTM Preview mode — verify all dataLayer tags fire on counterbench.ai
+- [ ] Meta Pixel Helper — verify fbq events
+- [ ] GA4 DebugView — confirm events arrive
 
-## NEEDS MANUAL GTM UI CONFIGURATION
+---
 
-### 1. Set env vars on Vercel
-- [ ] `NEXT_PUBLIC_META_PIXEL_ID` — Get from Meta Business Manager → Events Manager → Pixel ID
-- [ ] `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` — Get from LinkedIn Campaign Manager → Account Assets → Insight Tag
+## GTM Manual Config Checklist (UI work, needs access)
+- [ ] GA4 Configuration tag — Measurement ID: `G-RSECPPZQ56`, Trigger: All Pages
+- [ ] GA4 Event tags — one per event: `cta_click`, `newsletter_subscribe`, `guide_download`, `strategy_call_book`, `source_finder_lead`
+- [ ] Google Ads Conversion tag — requires Conversion ID + Label from Google Ads account; trigger on `strategy_call_book`
+- [ ] Meta Pixel custom events — `Lead` on `strategy_call_book`, `CompleteRegistration` on `newsletter_subscribe`
+- [ ] LinkedIn Insight Tag conversion event — `strategy_call_book`
 
-### 2. GTM container (petrichorgrowth account)
-- [ ] **GA4 Configuration tag** — Tag type: GA4 Configuration. Measurement ID: `G-RSECPPZQ56`. Trigger: All Pages. (This lets GTM manage GA4 config; the direct gtag in layout is a fallback.)
-- [ ] **GA4 Event tags** — One per dataLayer event above. Tag type: GA4 Event. Use Custom Event triggers matching the event names.
-- [ ] **Google Ads Conversion tag** — Tag type: Google Ads Conversion Tracking. Requires a Conversion ID + Label from Google Ads account. Trigger: `strategy_call_book` custom event (highest intent).
-- [ ] **Meta Pixel tags** — Can manage entirely via base snippet + GTM Custom HTML for custom events, OR use Meta's GTM template. Key events to fire: `Lead` on `strategy_call_book`, `CompleteRegistration` on `newsletter_subscribe`.
-- [ ] **LinkedIn Insight Tag** — Already loads via base snippet. In GTM, add conversion events: `strategy_call_book` → LinkedIn conversion pixel.
+---
 
-### 3. Testing
-- [ ] Use GTM Preview mode to verify all tags fire on counterbench.ai
-- [ ] Meta Pixel Helper extension to verify fbq events
-- [ ] LinkedIn Insight Tag Helper to verify
-- [ ] GA4 DebugView (Realtime) to confirm events arrive
+## Working Memory
 
-## Hero Messaging Fix (2026-03-19)
+### App structure
+- Next.js 15, React 19, App Router at `app/`
+- Route groups: `app/(marketing)/` for public pages
+- Key pages: `/paralegals`, `/advisory`, `/workshop`, `/diagnostic`, `/insights`
+- API routes: `app/api/receptionist/`, `app/api/checkout/`, `app/api/screenapp-webhook/`
+- DB: Drizzle ORM + Neon Postgres (`lib/db/schema.ts`)
+- Email: Resend
 
-- [x] **Replaced misleading HeroSection** — Removed fake "48,000+ litigation records indexed", "1,200 defense firms tracked", "17,000 expert witnesses analyzed", "200ms average search speed" metrics. Replaced with real numbers: 275+ legal AI tools, 800+ prompts, 30+ workflow skills, 10+ playbooks.
-- [x] **Rewrote hero copy** — Changed from "litigation intelligence" positioning (which the product doesn't deliver) to accurate "curated legal AI toolkit" positioning. Updated eyebrow, headline, body, CTA, trust line, and all four feature cards.
-- [x] **Build passes** — `next build` clean, no type errors.
-- **Note**: `scripts/seed-pseo-stage1-guides.ts` still references "litigation intelligence" in SEO seed data — separate concern, left untouched since those are pSEO keyword targets, not product claims.
+### Redirect config
+- `next.config.js` handles legacy `/pages/*.html` -> clean URL redirects only
+- NO verdictops.com redirect in the CB codebase — that 301 must be configured at the verdictops.com hosting/DNS layer (Vercel project for verdictops.com)
+- `vercel.json` only sets security headers; no redirects defined there either
 
-## Decisions
+### Post-merger cleanup outstanding
+- Two API routes still have `noreply@verdictops.com` as fallback sender (see Green tasks above)
+- Ensure `RESEND_FROM` env var is set to `noreply@counterbench.ai` on Vercel to avoid fallback triggering
 
-- Kept GA4 direct tag AND GTM-managed GA4 as dual setup — direct tag is a safety net if GTM is blocked by ad blockers. Duplicates are deduplicated by GA4 measurement ID.
-- Meta Pixel and LinkedIn snippets are in code (not GTM-only) for the same ad-blocker resilience reason. GTM can layer custom events on top.
-- TrackedCTA uses `next/link` for internal paths (prefetch + client nav) and plain `<a>` for anchors/external. No behavior change for users.
+### Build status
+- Last confirmed clean build: 2026-03-19 (per todo.md history — `tsc --noEmit` clean, `next build` clean)
+- Scripts: `npm run typecheck` (tsc --noEmit), `npm run build` (next build)

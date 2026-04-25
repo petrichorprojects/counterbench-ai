@@ -56,7 +56,7 @@ export async function POST(req: Request) {
       : "";
 
     await resend.emails.send({
-      from: process.env.RESEND_FROM || "noreply@verdictops.com",
+      from: process.env.RESEND_FROM || "noreply@counterbench.ai",
       to: firm.attorneyEmail,
       subject: `New intake call — ${firm.name} | ${callerNumber || "unknown caller"}`,
       text: [
