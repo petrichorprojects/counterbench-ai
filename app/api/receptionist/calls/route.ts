@@ -3,6 +3,10 @@ import { db } from "@/lib/db";
 import { receptionistCallsTable } from "@/lib/db/schema";
 import { desc } from "drizzle-orm";
 
+// Force dynamic — DB-backed route, must not be evaluated at build time.
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 export async function GET() {
   try {
     const calls = await db
