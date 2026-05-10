@@ -4,7 +4,11 @@ import { db } from "@/lib/db";
 import { receptionistFirmsTable, receptionistCallsTable } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Force dynamic — prevents build-time evaluation of this module.
+// Without this, missing RESEND_API_KEY at build breaks `next build`
+// during page-data collection.
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   // Acknowledge immediately — Vapi expects fast response
@@ -54,6 +58,13 @@ export async function POST(req: Request) {
     const structuredSection = structuredData
       ? `\n\nStructured intake data:\n${structuredData}`
       : "";
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error({ event: "receptionist_no_resend_key", callId });
+      return response;
+    }
+    const resend = new Resend(apiKey);
 
     await resend.emails.send({
       from: process.env.RESEND_FROM || "noreply@counterbench.ai",

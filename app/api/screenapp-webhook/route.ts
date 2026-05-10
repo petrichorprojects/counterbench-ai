@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Force dynamic rendering — prevents Next.js from evaluating this module
+// during build-time page-data collection (which fails without env vars).
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   // Acknowledge immediately
@@ -66,6 +69,16 @@ export async function POST(req: Request) {
     const transcriptSection = transcript
       ? `Transcript:\n${transcript}`
       : `No transcript in payload. View recording: ${recordingUrl}`;
+
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error({
+        event: "screenapp_webhook_no_resend_key",
+        recordingId,
+      });
+      return response;
+    }
+    const resend = new Resend(apiKey);
 
     await resend.emails.send({
       from: process.env.RESEND_FROM || "noreply@counterbench.ai",
