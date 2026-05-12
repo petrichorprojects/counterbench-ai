@@ -1,6 +1,28 @@
 import { pgTable, varchar, text, timestamp, numeric } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 
+export const contactSubmissionsTable = pgTable("contact_submissions", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  firmName: text("firm_name"),
+  firmSize: text("firm_size"),
+  helpArea: text("help_area"),
+  message: text("message"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const complianceTemplatesTable = pgTable("compliance_templates", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  state: varchar("state").notNull(),
+  ruleType: text("rule_type").notNull(),
+  constraintText: text("constraint_text").notNull(),
+  exampleCompliant: text("example_compliant"),
+  exampleNonCompliant: text("example_non_compliant"),
+  sourceCitation: text("source_citation"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
 export const receptionistFirmsTable = pgTable("receptionist_firms", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   name: text("name").notNull(),
