@@ -35,7 +35,7 @@ const tiers = [
     name: "Scale",
     bestFor: "4-10 attorney firms with high-volume caseloads",
     price: "$6,500",
-    priceNote: "Custom pricing starting at",
+    priceNote: "Starting at",
     capacity: "120-160+ hours/month",
     features: [
       "Everything in Core",
@@ -111,7 +111,7 @@ export default function ParalegalsPage() {
           <div className="mt-4" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.25rem" }}>
             <div className="grid grid--4 grid--gap-2" style={{ maxWidth: 900 }}>
               {[
-                "Trusted by firms handling 50+ active cases",
+                "Built for intake-heavy PI workflows",
                 "US-hosted, SOC 2-certified",
                 "Live in 2-3 weeks",
                 "Cancel anytime",
@@ -149,25 +149,6 @@ export default function ParalegalsPage() {
               <div key={s.title} style={{ borderLeft: "2px solid var(--accent)", paddingLeft: "1.25rem" }}>
                 <div style={{ fontWeight: 600, fontSize: "1rem" }}>{s.title}</div>
                 <p className="mt-2" style={{ fontSize: "0.9375rem", color: "var(--text-muted)" }}>{s.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
-        <div className="container">
-          <div className="grid grid--4 grid--gap-2">
-            {[
-              { label: "Avg response time", value: "4.2 hrs" },
-              { label: "Coverage", value: "24/5" },
-              { label: "Weekly QA accuracy", value: "98.2%" },
-              { label: "Active pods deployed", value: "40+" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div style={{ fontSize: "2.5rem", fontWeight: 800, letterSpacing: "-0.03em", lineHeight: 1 }}>{s.value}</div>
-                <div className="mt-2" style={{ fontSize: "0.8125rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600 }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -251,6 +232,22 @@ export default function ParalegalsPage() {
                 <p className="mt-2" style={{ fontSize: "0.9375rem", color: "var(--text-muted)", lineHeight: 1.65 }}>{faq.a}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools */}
+      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+        <div className="container">
+          <div className="label" style={{ display: "inline-block" }}>Why Counterbench</div>
+          <h2 className="mt-2" style={{ maxWidth: 640 }}>The team comes with the tools.</h2>
+          <p className="max-w-700 mt-3" style={{ fontSize: "1.0625rem", color: "var(--text-muted)", lineHeight: 1.65 }}>
+            Most firms are forced to choose between software they have to operate and staffing they have to manage. Counterbench gives you the operating layer: trained paralegal pods using AI workflows for intake, records, summaries, and demand support.
+          </p>
+          <div className="mt-4">
+            <Link className="btn btn--secondary btn--arrow" href="/tools">
+              Explore the legal AI tool directory
+            </Link>
           </div>
         </div>
       </section>
