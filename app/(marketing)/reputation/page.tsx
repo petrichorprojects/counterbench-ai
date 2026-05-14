@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Google Review Responses for Law Firms | VerdictOps",
+  title: "Google Review Responses for Law Firms | CounterbenchAI",
   description:
     "Bar-compliant Google review responses written and posted within 24 hours. $175/month. No contract. Built for law firms in the Boston metro.",
   alternates: { canonical: "https://counterbench.ai/reputation" },
   openGraph: {
-    title: "Google Review Responses for Law Firms | VerdictOps",
+    title: "Google Review Responses for Law Firms | CounterbenchAI",
     description:
       "Bar-compliant review responses for law firms. Written in your voice, posted within 24 hours. $175/month. No contract.",
     type: "website",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 const steps = [
   {
     number: "01",
-    title: "Send us the review",
-    body: "Forward any review you want addressed. We handle the rest.",
+    title: "We monitor your reviews",
+    body: "We check your Google profile every week. New review lands — we flag it and draft a response immediately.",
   },
   {
     number: "02",
@@ -43,16 +43,33 @@ export default function ReputationPage() {
             Your reviews are public.<br />Your silence is too.
           </h1>
           <p className="max-w-700 mt-3" style={{ fontSize: "1.1875rem", lineHeight: 1.6 }}>
-            VerdictOps writes bar-compliant Google review responses for law firms — posted within 24 hours, $175/month.
+            CounterbenchAI writes bar-compliant Google review responses for law firms — we monitor your profile weekly, draft responses in your voice, and post within 24 hours.
           </p>
           <div className="mt-4" style={{ borderTop: "1px solid var(--border)", paddingTop: "1.25rem" }}>
             <div className="grid grid--3 grid--gap-2" style={{ maxWidth: 720 }}>
-              {["$175/month", "Posted within 24 hours", "No contract"].map((point) => (
+              {["$175/month", "Posted within 24 hours", "No contract", "Active weekly monitoring"].map((point) => (
                 <div key={point} style={{ fontSize: "0.875rem", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}>
                   <span style={{ color: "var(--green)", flexShrink: 0 }}>✓</span>
                   <span>{point}</span>
                 </div>
               ))}
+            </div>
+            <div className="mt-4">
+              <a
+                href="mailto:phil@counterbench.ai"
+                style={{
+                  display: "inline-block",
+                  background: "var(--fg)",
+                  color: "var(--bg)",
+                  padding: "0.75rem 1.5rem",
+                  borderRadius: 8,
+                  fontWeight: 600,
+                  fontSize: "0.9375rem",
+                  textDecoration: "none",
+                }}
+              >
+                Get started →
+              </a>
             </div>
           </div>
         </div>
@@ -131,7 +148,7 @@ export default function ReputationPage() {
             .
           </p>
           <p className="mt-3" style={{ fontSize: "0.9375rem", color: "var(--muted)" }}>
-            — Philipp Rimmler, VerdictOps
+            — Phil Rimmler, CounterbenchAI
           </p>
         </div>
       </section>
