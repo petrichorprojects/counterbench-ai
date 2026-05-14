@@ -123,10 +123,10 @@ export default function ReputationPage() {
           <p style={{ fontSize: "1.0625rem", lineHeight: 1.65 }}>
             Reply to the email you received — or write directly to{" "}
             <a
-              href="mailto:philipp@verdictops.com"
+              href="mailto:phil@counterbench.ai"
               style={{ color: "inherit", textDecoration: "underline" }}
             >
-              philipp@verdictops.com
+              phil@counterbench.ai
             </a>
             .
           </p>
