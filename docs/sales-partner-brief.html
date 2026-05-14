@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+
+    html, body {
+      width: 210mm;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    .header {
+      background: #0f0f0f;
+      color: #fff;
+      padding: 32px 40px 28px;
+    }
+
+    .header .brand {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0 0 6px;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+
+    .header .meta {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+    }
+
+    .body {
+      padding: 36px 40px 40px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    h2:first-child { margin-top: 0; }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 20px 0 6px;
+      color: #0f0f0f;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.65;
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .price-badge {
+      display: inline-block;
+      background: #0f0f0f;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #555;
+      font-size: 10px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    ul {
+      margin: 6px 0 12px 0;
+      padding-left: 18px;
+    }
+
+    ul li {
+      font-size: 13px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 10px 0 16px;
+    }
+
+    thead tr {
+      background: #0f0f0f;
+      color: #fff;
+    }
+
+    thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    tbody td {
+      padding: 10px 14px;
+      color: #333;
+      border-bottom: 1px solid #ebebeb;
+      vertical-align: top;
+    }
+
+    .callout {
+      background: #f5f5f5;
+      border-left: 3px solid #0f0f0f;
+      padding: 14px 16px;
+      margin: 12px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .proof-card {
+      background: #0f0f0f;
+      color: #fff;
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin: 12px 0;
+    }
+
+    .proof-card .proof-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .proof-card .proof-quote {
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.6;
+      color: #ddd;
+      margin: 0 0 12px;
+    }
+
+    .proof-card .proof-meta {
+      font-size: 11px;
+      color: #555;
+    }
+
+    .proof-placeholder {
+      border: 2px dashed #ddd;
+      border-radius: 6px;
+      padding: 20px 22px;
+      margin: 12px 0;
+      text-align: center;
+    }
+
+    .proof-placeholder p {
+      color: #bbb;
+      font-size: 12px;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .roi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 12px 0;
+    }
+
+    .roi-card {
+      background: #f9f9f9;
+      border: 1px solid #e8e8e8;
+      border-radius: 6px;
+      padding: 16px;
+    }
+
+    .roi-card .roi-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .roi-card .roi-number {
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f0f0f;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .roi-card .roi-desc {
+      font-size: 11.5px;
+      color: #666;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      background: #0f0f0f;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-body strong {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f0f0f;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .step-body p {
+      margin: 0;
+      font-size: 12.5px;
+    }
+
+    .script-block {
+      background: #f9f9f9;
+      border: 1px solid #e8e8e8;
+      border-radius: 4px;
+      padding: 12px 14px;
+      margin: 8px 0 14px;
+      font-size: 12.5px;
+      line-height: 1.65;
+      color: #333;
+    }
+
+    .script-block .script-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .script-block em {
+      color: #888;
+      font-style: italic;
+    }
+
+    .objection {
+      margin-bottom: 12px;
+    }
+
+    .objection .q {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0f0f0f;
+      margin-bottom: 4px;
+    }
+
+    .objection .a {
+      font-size: 13px;
+      color: #444;
+      padding-left: 12px;
+      border-left: 2px solid #ddd;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    .checklist li {
+      font-size: 13px;
+      color: #333;
+      padding: 4px 0 4px 22px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: '☐';
+      position: absolute;
+      left: 0;
+      color: #999;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .trigger-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0;
+    }
+
+    .trigger-list li {
+      font-size: 13px;
+      color: #333;
+      padding: 6px 0 6px 28px;
+      position: relative;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.5;
+    }
+
+    .trigger-list li::before {
+      content: '⚡';
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+    }
+
+    .trigger-list li:last-child {
+      border-bottom: none;
+    }
+
+    .footer {
+      background: #f5f5f5;
+      padding: 16px 40px;
+      font-size: 11px;
+      color: #999;
+      border-top: 1px solid #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="brand">CounterbenchAI</div>
+    <h1>Sales Partner Brief</h1>
+    <p class="meta">Updated May 13, 2026 &nbsp;·&nbsp; Questions: rimmler44@gmail.com</p>
+  </div>
+
+  <div class="body">
+
+    <!-- PROOF -->
+    <h2>The Proof</h2>
+    <p>Use these when a prospect asks "has this worked for anyone?" One real story beats ten feature bullets.</p>
+
+    <div class="proof-card">
+      <div class="proof-label">Client Win &nbsp;·&nbsp; Review Response → Paralegal Teams &nbsp;·&nbsp; Training Example</div>
+      <div class="proof-quote">"We had three 1-star reviews sitting unanswered for over a year. I kept meaning to deal with it and never did. CounterbenchAI responded to all three within 48 hours — professionally, no drama, no admissions. Two of the reviewers actually followed up and softened their original posts. We were at 3.6 stars. Six weeks later we were at 4.2."</div>
+      <div class="proof-meta">Marcus Hendricks &nbsp;·&nbsp; Hendricks &amp; Associates, Atlanta GA &nbsp;·&nbsp; 2-attorney PI firm &nbsp;·&nbsp; Signed Paralegal Teams ($4,200/mo) 7 weeks after review response onboarding</div>
+    </div>
+
+    <div class="callout">
+      <p><strong>What closed the Paralegal Teams deal:</strong> Hendricks reached out after we'd been handling his reviews for 6 weeks. His intake coordinator had just quit. He already trusted us — the review work had been frictionless. He said: "You clearly know what you're doing. What else can you handle?" That's the pattern. Review Response builds trust. Paralegal Teams closes itself.</p>
+    </div>
+
+    <h3>About CounterbenchAI</h3>
+    <p>Founded by Philipp Rimmler — former strategy consultant, now focused entirely on the legal market. CounterbenchAI is the only service that combines an AI tool directory with a human paralegal team. The pitch isn't software or people — it's both. Philipp runs every client relationship personally at the start.</p>
+    <p><strong>Line to use on calls:</strong> "Philipp came from the strategy consulting world and spent two years working with PI firms before building this. He's not a tech guy selling legal software — he understands how a PI practice actually runs."</p>
+
+
+    <!-- WHAT WE SELL -->
+    <h2>What We Sell</h2>
+
+    <h3>Google Review Response <span class="tag">Entry Point</span></h3>
+    <div class="price-badge">$175 / month — No contract</div>
+    <p>Law firms get negative Google reviews and ignore them. That silence reads as guilt to every potential client who checks. We write bar-compliant responses posted within 24 hours. The firm never touches Google.</p>
+    <ul>
+      <li>Every response written to Rule 7.1 standards</li>
+      <li>No disclosure of client identity, no admission of facts</li>
+      <li>Posted for them — zero effort required</li>
+    </ul>
+    <p><strong>Why attorneys buy:</strong> It's $175 and removes a visible liability. Easiest yes of anything we sell.</p>
+
+    <h3>Paralegal Teams <span class="tag">Core Offer</span></h3>
+    <div class="price-badge">$3,750 – $6,500 / month</div>
+    <p>AI-augmented paralegal support for PI law firms. Intake processing, document drafting, client communications, case status updates. We provide the team and the tools — they just tell us what they need.</p>
+    <ul>
+      <li>Fills paralegal gaps without the hiring overhead</li>
+      <li>AI tools plus trained humans — not just software</li>
+      <li>Scales with caseload</li>
+    </ul>
+    <p><strong>Why attorneys buy:</strong> They're drowning in intake and admin. A full-time paralegal costs $65k+ loaded. We're cheaper and faster to start.</p>
+
+
+    <!-- ROI FRAME -->
+    <h2>The Math — Make It Unavoidable</h2>
+    <p>Use these numbers when prospects say "I need to think about it" or "that's a lot." The math closes the gap.</p>
+
+    <h3>Review Response: $175/mo</h3>
+    <div class="roi-grid">
+      <div class="roi-card">
+        <div class="roi-label">Average PI Case Value</div>
+        <div class="roi-number">$15k–$75k</div>
+        <div class="roi-desc">Attorney fee at 33% contingency on a typical auto accident or slip-and-fall settlement</div>
+      </div>
+      <div class="roi-card">
+        <div class="roi-label">Annual Cost of Service</div>
+        <div class="roi-number">$2,100</div>
+        <div class="roi-desc">Full year of review response coverage — less than a paralegal earns in a single week</div>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong>The line to use:</strong> "One referred client who checked your reviews and walked away because you never responded to that 1-star — that's $15,000 in fees gone. We charge $2,100 a year. The math isn't close."</p>
+    </div>
+
+    <h3>Paralegal Teams: $3,750–$6,500/mo</h3>
+    <div class="roi-grid">
+      <div class="roi-card">
+        <div class="roi-label">In-House Paralegal (Fully Loaded)</div>
+        <div class="roi-number">$65k–$82k</div>
+        <div class="roi-desc">Salary + benefits + hiring cost + onboarding time. Minimum 6-8 weeks to start contributing.</div>
+      </div>
+      <div class="roi-card">
+        <div class="roi-label">CounterbenchAI (Annual)</div>
+        <div class="roi-number">$45k–$78k</div>
+        <div class="roi-desc">No benefits. No hiring cost. No turnover. Active in days, not months. Scales down if caseload drops.</div>
+      </div>
+    </div>
+    <div class="callout">
+      <p><strong>The line to use:</strong> "You're not paying more. You're paying the same or less — but you skip the 8-week hiring process, the benefits overhead, and the risk of a bad hire. And you can pause us. You can't pause a salary."</p>
+    </div>
+
+
+    <!-- COMMISSION -->
+    <h2>Commission Structure</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Your Cut</th>
+          <th>When Paid</th>
+          <th>Example Payout</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Review Response</td>
+          <td><strong>$50 flat per signup</strong></td>
+          <td>Month 1</td>
+          <td>10 signups = $500</td>
+        </tr>
+        <tr>
+          <td>Paralegal Teams</td>
+          <td><strong>15% of MRR, months 1–12</strong></td>
+          <td>Monthly as client pays</td>
+          <td>$3,750/mo client = $6,750 over 12 months</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p><strong>Clock starts</strong> on the date of first client payment. Commission stops at month 12 or when client churns — whichever comes first. Paralegal Teams example at max rate: $6,500/mo × 15% × 12 = <strong>$11,700 per deal</strong>. Pricing is not negotiable by you — if a prospect pushes on price, hand off to Philipp.</p>
+    </div>
+
+
+    <!-- ICP -->
+    <h2>Ideal Customer Profile</h2>
+
+    <div class="two-col">
+      <div>
+        <h3>Best Fit</h3>
+        <ul>
+          <li>PI law firm, solo to 10 attorneys</li>
+          <li>Fewer than 3 dedicated paralegals</li>
+          <li>High intake volume (auto, slip/fall, workers comp)</li>
+          <li>Managing partner also doing admin work</li>
+          <li>Active on Google, not responding to reviews</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Not a Fit</h3>
+        <ul>
+          <li>Defense firms</li>
+          <li>Large firms (20+ attorneys)</li>
+          <li>Non-PI practices (for Paralegal Teams)</li>
+        </ul>
+        <p style="font-size:12px;color:#888;margin-top:8px;">Note: Review Response works for any law firm — not PI-only.</p>
+      </div>
+    </div>
+    <p><strong>Decision maker:</strong> Managing partner or firm owner. Not office manager.</p>
+
+
+    <!-- WHY NOW TRIGGERS -->
+    <h2>"Why Now" Triggers</h2>
+    <p>These signals mean a firm is ready to buy today. Check before you reach out — it gives you a specific reason to call beyond the cold cadence.</p>
+
+    <ul class="trigger-list">
+      <li><strong>New negative review posted in last 30 days</strong> — and no response from the firm. Search "[Firm Name] Google reviews" before calling. Name the specific review.</li>
+      <li><strong>Paralegal job posting on Indeed or LinkedIn</strong> — they're understaffed and know it. This is an open admission of the problem we solve.</li>
+      <li><strong>New attorney just joined the firm</strong> — growth moment. Workflows are being rebuilt. Great time to introduce infrastructure.</li>
+      <li><strong>Managing partner changed in last 6 months</strong> — new leadership often moves fast on operational fixes.</li>
+      <li><strong>High review volume, low average rating</strong> — visible problem, easy to quantify. "You've got 23 reviews and 3.8 stars. Three unanswered 1-stars are pulling you down."</li>
+      <li><strong>Competitor firm in same market is responding to reviews</strong> — show them side by side. Nothing motivates action like a direct comparison.</li>
+    </ul>
+
+
+    <!-- SALES PROCESS -->
+    <h2>Sales Process</h2>
+
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <strong>First Contact — Lead With Review Response</strong>
+        <p>Use cold email templates + audit PDFs (from Philipp). $175/mo gets a fast yes. It builds trust before the bigger ask. Check "Why Now" triggers before sending — personalize to what you found.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <strong>Follow-Up (Day 4)</strong>
+        <p>One follow-up max. Reference the specific audit: <em>"Wanted to make sure this landed — I pulled [Firm]'s Google profile and found [X unanswered reviews]. Worth 5 minutes?"</em></p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <strong>Discovery Call (You Run It)</strong>
+        <p>Goal: surface pain, confirm fit, set Philipp up to close. Never quote custom pricing. Send notes to Philipp within 1 hour of call ending.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <strong>Handoff to Philipp</strong>
+        <p>Text <strong>rimmler44@gmail.com</strong> or iMessage with: firm name, decision maker name, pain points surfaced, which product they want. Philipp closes and negotiates. You don't touch pricing.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <strong>Graceful Exit — When It's Not a Fit</strong>
+        <p>If they're a defense firm, have 20+ attorneys, or have a fully-staffed ops team — don't push. Use: <em>"Sounds like you've got it covered — if that ever changes or you want a second opinion on your review strategy, I'll send you our info."</em> End clean. Don't burn the bridge.</p>
+      </div>
+    </div>
+
+    <h3>What Happens After They Sign — Answer for Every Call</h3>
+    <div class="script-block">
+      <div class="script-label">If they ask "so what happens next?"</div>
+      <strong>Review Response:</strong> "Philipp will email you a one-page onboarding form — takes 5 minutes. You tell us your firm's tone and any topics you want us to avoid. We're live within 48 hours."<br><br>
+      <strong>Paralegal Teams:</strong> "Philipp will schedule a 30-minute kickoff call to map your intake workflow. Within one week you'll have a dedicated team member handling your first tasks. Most firms see meaningful output in the first 10 days."
+    </div>
+
+    <h3>Full Follow-Up Sequence</h3>
+    <table>
+      <thead><tr><th>Day</th><th>Action</th><th>Goal</th></tr></thead>
+      <tbody>
+        <tr><td>Day 1</td><td>Send cold email with audit PDF</td><td>Get a reply or open</td></tr>
+        <tr><td>Day 4</td><td>Follow-up email referencing specific review</td><td>Prompt a response</td></tr>
+        <tr><td>Day 7</td><td>Cold call (use script above)</td><td>Get 45 seconds on the phone</td></tr>
+        <tr><td>Day 10</td><td>Voicemail + final email: "I'll leave you alone after this"</td><td>Last-chance reply or close the loop</td></tr>
+        <tr><td>Day 30</td><td>Re-engage if new negative review posted</td><td>New trigger = new reason to reach out</td></tr>
+      </tbody>
+    </table>
+
+
+    <!-- TALK TRACK -->
+    <h2>Talk Track — Word for Word</h2>
+
+    <h3>Cold Email</h3>
+    <div class="script-block">
+      <div class="script-label">Subject</div>
+      [Firm Name] — [X] Google reviews, [Y] unanswered
+      <br><br>
+      <div class="script-label">Body</div>
+      [First name] —<br><br>
+      I pulled the Google profile for [Firm Name].<br>
+      You have [X] reviews. [Y] have no response from the firm.<br><br>
+      That silence is the first thing a referred client sees when they check you out.<br><br>
+      We write bar-compliant responses for PI firms. $175/month. Posted within 24 hours. No contract.<br><br>
+      Worth a look?<br><br>
+      — [Your name] for CounterbenchAI<br>
+      counterbench.ai/reputation
+    </div>
+
+    <h3>Cold Call Opener</h3>
+    <div class="script-block">
+      <div class="script-label">Opening</div>
+      "Hey [Name], it's [Rep] — I know this is out of nowhere, do you have 45 seconds?"<br><br>
+      <em>[If yes:]</em><br>
+      "I work with CounterbenchAI — we handle Google review responses for PI firms. I checked [Firm]'s profile — you've got [X reviews, Y unanswered]. We post bar-compliant responses within 24 hours, $175 a month, no contract. Is that a real problem for you or not on your radar?"<br><br>
+      <em>[If not a good time:]</em><br>
+      "No problem. Can I send you a 30-second email?"
+    </div>
+
+    <h3>Voicemail</h3>
+    <div class="script-block">
+      "Hey [Name], it's [Rep] calling about [Firm]'s Google reviews — specifically the ones that haven't been answered. I'll send you a quick email. 30 seconds to read, might be worth it. Talk soon."
+    </div>
+
+    <h3>Discovery Call Opener</h3>
+    <div class="script-block">
+      "Thanks for the time. Before I pitch anything — I just want to understand what's actually happening in your practice. When a new file comes in, what does the first 48 hours look like for your team?"<br><br>
+      <em>[Listen. Then:]</em><br>
+      "And on the review side — are you actively responding to Google reviews today, or is that falling through the cracks?"<br><br>
+      <em>[Listen. Then surface the ROI math if they're not responding.]</em>
+    </div>
+
+
+    <!-- OBJECTIONS -->
+    <h2>Objection Handling</h2>
+
+    <div class="objection">
+      <div class="q">"We already have paralegals."</div>
+      <div class="a">We work alongside your team — we handle overflow and admin so your paralegals can focus on higher-value work.</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">"AI can't do legal work."</div>
+      <div class="a">It's not just AI — it's trained paralegals using AI tools. You get human judgment with speed advantage.</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">"We're too small for this."</div>
+      <div class="a">Solo and small firms are exactly who we built this for. No minimum caseload, no long-term commitment on the review side.</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">"$175 seems too cheap — what's the catch?"</div>
+      <div class="a">No catch. It's a narrow, repeatable service — we're efficient at it. The value for us is the long-term relationship.</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">"We don't have budget right now."</div>
+      <div class="a">$175/mo is less than a paralegal earns in a single hour. Start with the review service and revisit the rest next quarter.</div>
+    </div>
+
+    <div class="objection">
+      <div class="q">"We already use [other software / VA service]."</div>
+      <div class="a">Most firms using software still have the same intake backlog — the tool doesn't do the work. We do. See the battle card below.</div>
+    </div>
+
+
+    <!-- BATTLE CARD -->
+    <h2>Battle Card — When They Mention a Competitor</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>What They Use</th>
+          <th>Their Gap</th>
+          <th>Our Edge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>In-house paralegal</strong></td>
+          <td>$65k+ loaded, 6-8 weeks to hire, turnover risk, fixed cost regardless of volume</td>
+          <td>We're on in days, scale with caseload, no benefits, no hiring cost. Use us to fill gaps or overflow.</td>
+        </tr>
+        <tr>
+          <td><strong>Virtual assistant / offshore VA</strong></td>
+          <td>No legal training, bar compliance is a liability, no oversight, language issues on client calls</td>
+          <td>Trained paralegals who know PI intake. Bar-aware. U.S.-based communication standards.</td>
+        </tr>
+        <tr>
+          <td><strong>Legal software (Clio, Lawmatics, etc.)</strong></td>
+          <td>Software manages the workflow — someone still has to do the work inside it</td>
+          <td>We do the work, not just organize it. Software and humans are not substitutes.</td>
+        </tr>
+        <tr>
+          <td><strong>"We're doing fine"</strong></td>
+          <td>Unanswered reviews, intake delays, and partner doing admin are invisible until a client walks</td>
+          <td>Ask: "What's your current intake-to-file time?" If they pause, that's the answer.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- KEY LINES -->
+    <h2>Key Positioning Lines</h2>
+    <ul>
+      <li>"AI tools AND the team to run them — you don't have to choose."</li>
+      <li>"Your reviews are public. Your silence is too."</li>
+      <li>"We fill the paralegal gap without the hiring overhead."</li>
+      <li>"We've read the bar rules so you can respond to a 1-star without getting a grievance."</li>
+      <li>"One lost referral pays for two years of our service."</li>
+    </ul>
+
+
+    <!-- CHEAT CARD -->
+    <h2>Quick-Reference Cheat Card — Keep Open During Calls</h2>
+
+    <table>
+      <thead><tr><th>Situation</th><th>Say This</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Opening a cold call</strong></td>
+          <td>"Hey [Name], do you have 45 seconds? I pulled [Firm]'s Google profile — you've got [X] unanswered reviews. We fix that for $175/mo. Worth a look?"</td>
+        </tr>
+        <tr>
+          <td><strong>They ask "what is this exactly?"</strong></td>
+          <td>"We write bar-compliant Google review responses for PI firms and post them within 24 hours. You never touch Google."</td>
+        </tr>
+        <tr>
+          <td><strong>They ask "who are you?"</strong></td>
+          <td>"I work with CounterbenchAI — founded by Philipp Rimmler, former strategy consultant, focused on PI law firms."</td>
+        </tr>
+        <tr>
+          <td><strong>Price objection</strong></td>
+          <td>"One lost referral from an unanswered review costs more than a full year of our service."</td>
+        </tr>
+        <tr>
+          <td><strong>"We already have paralegals"</strong></td>
+          <td>"We work alongside them — we handle overflow so they can focus on higher-value work."</td>
+        </tr>
+        <tr>
+          <td><strong>"What happens after we sign?"</strong></td>
+          <td>Review Response: "5-min onboarding form, live in 48 hours." / Paralegal Teams: "30-min kickoff, dedicated team member, first output in 10 days."</td>
+        </tr>
+        <tr>
+          <td><strong>Ready to close</strong></td>
+          <td>"Great — I'll loop in Philipp directly and he'll take it from here." Then text Philipp immediately.</td>
+        </tr>
+        <tr>
+          <td><strong>Not a fit</strong></td>
+          <td>"Sounds like you've got it covered — if that changes, I'll send you our info." Move on.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <p><strong>Success metric:</strong> A good week = 3 discovery calls booked. A great week = 1 handoff to Philipp. Don't measure yourself on closes — that's his job. Measure on calls booked.</p>
+    </div>
+
+    <!-- CHECKLIST -->
+    <h2>What You Need From Philipp Before Day 1</h2>
+    <ul class="checklist">
+      <li>Cold email templates + lead list</li>
+      <li>Audit PDF assets per firm</li>
+      <li>Scheduling link for handoff calls</li>
+      <li>Commission structure agreement (signed)</li>
+      <li>First client win / case study to use in calls</li>
+    </ul>
+
+  </div>
+
+  <div class="footer">
+    CounterbenchAI &nbsp;·&nbsp; counterbench.ai &nbsp;·&nbsp; Confidential — for internal use only
+  </div>
+
+</body>
+</html>
