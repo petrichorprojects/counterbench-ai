@@ -38,12 +38,16 @@ export default function ReputationPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
+      <section
+        className="section"
+        style={{ paddingTop: "7.5rem", paddingBottom: "4rem" }}
+        aria-labelledby="hero-heading"
+      >
         <div className="container">
           <div className="label" style={{ display: "inline-block" }}>
             Google Review Management for PI Firms
           </div>
-          <h1 className="max-w-900 mt-2">
+          <h1 id="hero-heading" className="max-w-900 mt-2">
             You saw the gap.<br />We close it.
           </h1>
           <p className="max-w-700 mt-3" style={{ fontSize: "1.1875rem", lineHeight: 1.6 }}>
@@ -63,35 +67,23 @@ export default function ReputationPage() {
                 (point) => (
                   <div
                     key={point}
-                    style={{ fontSize: "0.875rem", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}
+                    style={{ fontSize: "0.9375rem", display: "flex", gap: "0.5rem", alignItems: "flex-start" }}
                   >
-                    <span style={{ color: "var(--green)", flexShrink: 0 }}>✓</span>
+                    <span style={{ color: "var(--teal)", flexShrink: 0 }}>✓</span>
                     <span>{point}</span>
                   </div>
                 )
               )}
             </div>
             <div className="mt-4" style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "flex-start" }}>
-              <a
-                href={CALENDLY_URL}
-                style={{
-                  display: "inline-block",
-                  background: "var(--fg)",
-                  color: "var(--bg)",
-                  padding: "0.75rem 1.5rem",
-                  borderRadius: 8,
-                  fontWeight: 600,
-                  fontSize: "0.9375rem",
-                  textDecoration: "none",
-                }}
-              >
+              <a href={CALENDLY_URL} className="cb-primaryBtn">
                 Book a 15-minute call →
               </a>
               <span style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
                 Not ready to call?{" "}
                 <a
                   href="mailto:phil@counterbench.ai"
-                  style={{ color: "inherit", textDecoration: "underline" }}
+                  style={{ color: "var(--teal)" }}
                 >
                   Reply to the email you received.
                 </a>
@@ -102,9 +94,15 @@ export default function ReputationPage() {
       </section>
 
       {/* Origin Story */}
-      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+      <section
+        className="section"
+        style={{ borderTop: "1px solid var(--border)" }}
+        aria-labelledby="origin-heading"
+      >
         <div className="container">
-          <div className="label" style={{ display: "inline-block" }}>Why this exists</div>
+          <div id="origin-heading" className="label" style={{ display: "inline-block" }}>
+            Why this exists
+          </div>
           <div style={{ maxWidth: 680, marginTop: "1.5rem" }}>
             <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, marginBottom: "1rem" }}>
               I grew up watching two plaintiff&apos;s attorneys build their practices in Buffalo.
@@ -129,9 +127,15 @@ export default function ReputationPage() {
       </section>
 
       {/* What you're getting */}
-      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+      <section
+        className="section"
+        style={{ borderTop: "1px solid var(--border)" }}
+        aria-labelledby="service-heading"
+      >
         <div className="container">
-          <div className="label" style={{ display: "inline-block" }}>What you&apos;re getting</div>
+          <div id="service-heading" className="label" style={{ display: "inline-block" }}>
+            What you&apos;re getting
+          </div>
           <h2 className="mt-2" style={{ maxWidth: 480 }}>
             Three steps. You&apos;re involved in none of them.
           </h2>
@@ -169,7 +173,11 @@ export default function ReputationPage() {
       </section>
 
       {/* Bar Compliance */}
-      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+      <section
+        className="section"
+        style={{ borderTop: "1px solid var(--border)" }}
+        aria-labelledby="compliance-heading"
+      >
         <div className="container">
           <div
             style={{
@@ -180,7 +188,11 @@ export default function ReputationPage() {
               maxWidth: 720,
             }}
           >
-            <div className="label" style={{ display: "inline-block", marginBottom: "1rem" }}>
+            <div
+              id="compliance-heading"
+              className="label"
+              style={{ display: "inline-block", marginBottom: "1rem" }}
+            >
               Bar compliance
             </div>
             <p style={{ fontSize: "1.0625rem", lineHeight: 1.7, marginBottom: "1rem" }}>
@@ -198,48 +210,46 @@ export default function ReputationPage() {
       </section>
 
       {/* Pricing + CTA */}
-      <section className="section" style={{ borderTop: "1px solid var(--border)" }}>
+      <section
+        className="section"
+        style={{ borderTop: "1px solid var(--border)" }}
+        aria-labelledby="pricing-heading"
+      >
         <div className="container" style={{ maxWidth: 720 }}>
           <div
+            id="pricing-heading"
             style={{
-              fontSize: "2rem",
-              fontWeight: 800,
+              fontFamily: "var(--serif)",
+              fontSize: "2.5rem",
+              fontWeight: 700,
               letterSpacing: "-0.03em",
+              lineHeight: 1,
               marginBottom: "0.5rem",
             }}
           >
             $175
-            <span style={{ fontSize: "1rem", fontWeight: 400, color: "var(--muted)" }}>
+            <span style={{ fontSize: "1rem", fontWeight: 400, color: "var(--muted)", fontFamily: "inherit" }}>
               /month
             </span>
           </div>
           <div style={{ fontSize: "0.9375rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
             No contract. Cancel anytime.
           </div>
-          <p style={{ fontSize: "1.0625rem", lineHeight: 1.65, marginBottom: "1.5rem" }}>
+          <p style={{ fontSize: "1.0625rem", lineHeight: 1.65, marginBottom: "0.75rem" }}>
             Most firms are live within a week. The call is 15 minutes.
           </p>
+          <p style={{ fontSize: "0.875rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+            Serving PI firms in MA, NY, CT, and PA.
+          </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "flex-start" }}>
-            <a
-              href={CALENDLY_URL}
-              style={{
-                display: "inline-block",
-                background: "var(--fg)",
-                color: "var(--bg)",
-                padding: "0.75rem 1.5rem",
-                borderRadius: 8,
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                textDecoration: "none",
-              }}
-            >
+            <a href={CALENDLY_URL} className="cb-primaryBtn">
               Book a 15-minute call →
             </a>
             <span style={{ fontSize: "0.875rem", color: "var(--muted)" }}>
               Or{" "}
               <a
                 href="mailto:phil@counterbench.ai"
-                style={{ color: "inherit", textDecoration: "underline" }}
+                style={{ color: "var(--teal)" }}
               >
                 reply to the email you received
               </a>
