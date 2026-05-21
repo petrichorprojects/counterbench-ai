@@ -91,7 +91,26 @@ function guideJsonLd(params: {
         }
       : null;
 
-  return faqPage ? [itemList, faqPage] : [itemList];
+  const organization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Counterbench.AI",
+    url: "https://counterbench.ai",
+    description: "Legal AI tooling directory and managed paralegal services for US personal injury law firms.",
+    knowsAbout: [
+      "Personal injury law",
+      "Plaintiff litigation",
+      "Legal AI tooling",
+      "Paralegal operations",
+      "Medical record review",
+      "Demand letter drafting"
+    ],
+    sameAs: [
+      "https://counterbench.ai/.well-known/brand-facts.json"
+    ]
+  };
+
+  return faqPage ? [itemList, faqPage, organization] : [itemList, organization];
 }
 
 export default async function GuideDetailPage({ params }: { params: Promise<{ slug: string }> }) {
