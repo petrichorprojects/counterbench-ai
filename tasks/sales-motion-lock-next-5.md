@@ -158,7 +158,7 @@ Target conversion: 100 signals → 30 contacted → 10 engaged → 5 calls → 3
 ## First actions (this week)
 
 - [ ] Create `tasks/pipeline.csv` with 10 firms from PI_FIRMS.xlsx + their paralegal job postings
-- [ ] Confirm Calendly link working (use VerdictOps fix from commit 2827e99)
+- [ ] Confirm Calendly link working on counterbench.ai/paralegals
 - [ ] Email all current clients re: referral offer (1 month free for annual referral)
 - [ ] Send first batch of 20 day-0 emails Tuesday 2026-05-26
 - [ ] Schedule Monday pipeline review block 9-10:30am
@@ -168,7 +168,8 @@ Target conversion: 100 signals → 30 contacted → 10 engaged → 5 calls → 3
 
 - Strategic Self-Audit: `~/Downloads/Strategic-Self-Audit-Phil-Rimmler-May2026.docx`
 - Kill criteria: `~/Downloads/Projects/_ops/03-kill-criteria.md`
-- EBT pipeline (pitchable asset): VerdictOps `tasks/remote-receptionist-v1-scope.md` + EBT outline generator
+- Remote Receptionist launch: `tasks/remote-receptionist-launch-checklist.md` (pitchable asset)
+- EBT outline pipeline: pitchable asset, built, not yet productized
 - Existing cold email batch: `tasks/cold-email-batch-1/`
 - Reddit playbook: `tasks/reddit-outbound-playbook.md`
 - ICP brand model: `tasks/brand-narrative-enemy-model.md`
