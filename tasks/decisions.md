@@ -1,5 +1,20 @@
 # Decisions Log
 
+## 2026-05-21: Sales motion locked + Remote Receptionist admin endpoints landed
+
+**Decision**: Lock CB paralegal-teams sales motion (ICP, offer, channel mix, cadence) until 2026-08-01 review. No edits to motion mid-quarter — only data updates. Ship `/api/admin/receptionist/firms` CRUD behind `x-admin-key` so firms can be seeded without raw SQL.
+
+**Rationale**: Strategic Self-Audit (May 2026) named CounterbenchAI top portfolio priority and flagged "no repeatable sales motion" as bottleneck. VerdictOps brand sunset (2026-04-22) — verdictops.com 301s to counterbench.ai/paralegals; all receptionist work is CB-only now. Admin endpoint replaces the raw-SQL seeding step in `docs/vapi-setup.md` so launch is repeatable per firm.
+
+**Implication**:
+- Branch `feat/sales-motion-lock` ready for PR (4 commits: sales motion lock, admin CRUD, NextJS 15 async params fix)
+- Phil's 90-min sitting captured in `tasks/remote-receptionist-launch-checklist.md` and `scripts/receptionist-launch.fish`
+- Kill criteria tripwire D added: Receptionist V1 not E2E-tested by 2026-06-15
+- VerdictOps Express/EJS receptionist endpoint is dead code (live URL 301-redirects); no longer maintained
+- ADMIN_API_KEY for prod was generated 2026-05-21 and stored in `.env.local.scratch` (gitignored via `*.scratch`)
+
+---
+
 ## 2026-03-29: Stripe checkout custom_fields use semantic value names
 
 **Decision**: Stripe dropdown `value` fields must be alphanumeric-only. Used semantic names: `small`/`midsize`/`large`/`enterprise` for firm_size, `officemanager` for office manager role.
