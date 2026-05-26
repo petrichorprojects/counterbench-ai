@@ -79,6 +79,10 @@ export async function POST(req: Request) {
         callbackTime: parsed.data.callbackTime ?? "30 minutes",
       })
       .returning();
+    if (!created) {
+      console.error({ event: "admin_firm_create_no_row" });
+      return NextResponse.json({ error: "Insert returned no row" }, { status: 500 });
+    }
     console.info({
       event: "admin_firm_created",
       firmId: created.id,

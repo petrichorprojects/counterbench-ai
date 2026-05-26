@@ -38,10 +38,12 @@ const updateFirmSchema = z
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const authErr = checkAuth(req);
   if (authErr) return authErr;
+
+  const { id } = await params;
 
   let body: unknown;
   try {
@@ -62,38 +64,40 @@ export async function PATCH(
     const [updated] = await db
       .update(receptionistFirmsTable)
       .set(parsed.data)
-      .where(eq(receptionistFirmsTable.id, params.id))
+      .where(eq(receptionistFirmsTable.id, id))
       .returning();
     if (!updated) {
       return NextResponse.json({ error: "Firm not found" }, { status: 404 });
     }
-    console.info({ event: "admin_firm_updated", firmId: params.id });
+    console.info({ event: "admin_firm_updated", firmId: id });
     return NextResponse.json({ firm: updated });
   } catch (err) {
-    console.error({ event: "admin_firm_update_failed", err, firmId: params.id });
+    console.error({ event: "admin_firm_update_failed", err, firmId: id });
     return NextResponse.json({ error: "Failed to update firm" }, { status: 500 });
   }
 }
 
 export async function DELETE(
   req: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const authErr = checkAuth(req);
   if (authErr) return authErr;
 
+  const { id } = await params;
+
   try {
     const [deleted] = await db
       .delete(receptionistFirmsTable)
-      .where(eq(receptionistFirmsTable.id, params.id))
+      .where(eq(receptionistFirmsTable.id, id))
       .returning();
     if (!deleted) {
       return NextResponse.json({ error: "Firm not found" }, { status: 404 });
     }
-    console.info({ event: "admin_firm_deleted", firmId: params.id });
-    return NextResponse.json({ deleted: true, id: params.id });
+    console.info({ event: "admin_firm_deleted", firmId: id });
+    return NextResponse.json({ deleted: true, id });
   } catch (err) {
-    console.error({ event: "admin_firm_delete_failed", err, firmId: params.id });
+    console.error({ event: "admin_firm_delete_failed", err, firmId: id });
     return NextResponse.json({ error: "Failed to delete firm" }, { status: 500 });
   }
 }

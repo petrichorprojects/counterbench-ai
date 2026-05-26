@@ -7,7 +7,9 @@ out/
 
 # env
 .env
+.env.local
 .env.*.local
+*.scratch
 
 # logs
 npm-debug.log*
