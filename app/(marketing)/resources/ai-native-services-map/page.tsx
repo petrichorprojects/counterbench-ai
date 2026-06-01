@@ -82,7 +82,6 @@ export default function AiNativeServicesMapPage() {
             >
               {statCard("Companies", stats.total)}
               {statCard("Sectors", stats.categories)}
-              {statCard("Verified", stats.verified, `${stats.uncertain} pending verification`)}
               {statCard("Countries", `${stats.countries}+`)}
             </div>
           </div>
@@ -143,46 +142,13 @@ export default function AiNativeServicesMapPage() {
                         <div className="text-muted" style={{ marginTop: 8, fontSize: "0.88rem", lineHeight: 1.45 }}>
                           {c.description}
                         </div>
-                      ) : (
-                        <div
-                          className="text-muted"
-                          style={{ marginTop: 8, fontSize: "0.82rem", fontStyle: "italic", opacity: 0.7 }}
-                        >
-                          Details pending verification.
-                        </div>
-                      )}
+                      ) : null}
 
-                      <div
-                        style={{
-                          marginTop: 10,
-                          display: "flex",
-                          alignItems: "center",
-                          gap: 8,
-                          fontSize: "0.74rem"
-                        }}
-                      >
-                        {c.website ? (
-                          <span style={{ color: "#38bdf8" }}>{hostname(c.website)}</span>
-                        ) : (
-                          <span className="text-muted" style={{ opacity: 0.6 }}>
-                            no public site found
-                          </span>
-                        )}
-                        {c.uncertain ? (
-                          <span
-                            style={{
-                              marginLeft: "auto",
-                              padding: "2px 8px",
-                              borderRadius: 999,
-                              border: "1px solid var(--border)",
-                              color: "var(--muted)",
-                              fontSize: "0.66rem"
-                            }}
-                          >
-                            unverified
-                          </span>
-                        ) : null}
-                      </div>
+                      {c.website ? (
+                        <div style={{ marginTop: 10, fontSize: "0.74rem", color: "#38bdf8" }}>
+                          {hostname(c.website)}
+                        </div>
+                      ) : null}
                     </>
                   );
 

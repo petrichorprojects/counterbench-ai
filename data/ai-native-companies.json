@@ -3,14 +3,11 @@
     "title": "AI-Native Services Companies",
     "source": "Kadan Capital — AI Native Services Market Map (v1.3)",
     "compiled": "2026-06-01",
-    "note": "End-to-end AI service companies (not SaaS tools). Entries flagged uncertain could not be confidently verified; descriptions left null rather than guessed."
+    "note": "End-to-end AI service companies (not SaaS tools). Only entries with a verified public website and confirmed AI-native service model are included."
   },
   "companies": [
-    { "name": "Alchemize", "category": "Logistics & Procurement", "website": null, "description": "AI-native customs brokerage automating import workflows for speed and compliance", "focus": "Customs clearance, supply chain compliance", "hq": null, "uncertain": true },
     { "name": "Cartage AI", "category": "Logistics & Procurement", "website": "https://www.cartage.ai/", "description": "AI freight automation platform for load creation, booking, and shipment tracking", "focus": "Freight operations for manufacturers and distributors", "hq": "United States", "uncertain": false },
     { "name": "Lio", "category": "Logistics & Procurement", "website": "https://lio.ai", "description": "Multi-agent AI procurement workforce for enterprises", "focus": "Procurement automation, vendor research, negotiation", "hq": "United States", "uncertain": false },
-    { "name": "Magentic", "category": "Logistics & Procurement", "website": "https://www.magentic.com/", "description": "AI co-pilot for procurement and supply chain teams delivering cost savings", "focus": "Industrial procurement, supply chain savings", "hq": null, "uncertain": true },
-    { "name": "Saudara", "category": "Logistics & Procurement", "website": "https://saudara.ai/", "description": "AI trust layer for global sourcing, connecting brands with verified manufacturers", "focus": "Factory sourcing and verification", "hq": null, "uncertain": true },
     { "name": "Ten8 AI", "category": "Logistics & Procurement", "website": "https://ten8.ai", "description": "Voice-AI infrastructure for AI coworkers in logistics and freight", "focus": "Freight operations, rate negotiation", "hq": "United States", "uncertain": false },
 
     { "name": "Alaro", "category": "Legal", "website": "https://www.alaro.ai/", "description": "AI-native law firm delivering legal work for investment funds and corporates", "focus": "Corporate and investment law", "hq": "United Kingdom", "uncertain": false },
@@ -30,7 +27,6 @@
     { "name": "Keith", "category": "Legal", "website": "https://keith.com/", "description": "AI-first law firm targeting conveyancing with heavy workflow automation", "focus": "Residential conveyancing", "hq": "United Kingdom", "uncertain": false },
     { "name": "Lawhive", "category": "Legal", "website": "https://www.lawhive.co.uk/", "description": "AI-powered law firm automating routine legal work for individuals and small businesses", "focus": "Consumer legal, family law, property", "hq": "United Kingdom", "uncertain": false },
     { "name": "LegalOS", "category": "Legal", "website": "https://www.legalos.ai/", "description": "AI-native immigration law firm automating US visa petitions", "focus": "US immigration, visa automation", "hq": "United States", "uncertain": false },
-    { "name": "Manifest", "category": "Legal", "website": null, "description": "AI-native law firm platform providing tech, back-office, and branding to affiliated practice networks (raised $60M)", "focus": "AI-native law firm operations", "hq": "United States", "uncertain": false },
     { "name": "Moritz", "category": "Legal", "website": "https://www.moritz.law/", "description": "Global AI-native law firm handling commercial and corporate work with same-day turnaround", "focus": "Commercial, corporate, employment law", "hq": "Global", "uncertain": false },
     { "name": "Norm", "category": "Legal", "website": "https://www.norm.ai/", "description": "Legal engineering platform pairing lawyers with AI agents (Norm Law)", "focus": "Compliance AI, financial services law", "hq": "United States", "uncertain": false },
     { "name": "Shepherd", "category": "Legal", "website": "https://yourshepherd.ai/", "description": "Hybrid law firm combining AI automation with dedicated attorneys for startups", "focus": "Startup legal, contracts", "hq": "United States", "uncertain": false },
@@ -60,23 +56,11 @@
     { "name": "Skalar", "category": "Tax & Accounting", "website": "https://www.skalarai.com/", "description": "German tech-first firm for automated tax advisory and compliance for SMEs", "focus": "Tax automation for EU SMEs", "hq": "Germany", "uncertain": false },
 
     { "name": "Corgi", "category": "Insurance", "website": "https://www.corgi.ai/", "description": "AI-powered insurance brokerage for SMEs with automated quoting and policy management", "focus": "Small business insurance brokerage", "hq": "United States", "uncertain": false },
-    { "name": "Elysian", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Fernstone", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Harper", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Hedge", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Panta", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
     { "name": "Reserv", "category": "Insurance", "website": "https://www.reserv.com/", "description": "AI-native third-party administrator (TPA) for insurance claims handling", "focus": "Claims TPA", "hq": "United States", "uncertain": false },
-    { "name": "Strala", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Third Space", "category": "Insurance", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "WithCoverage", "category": "Insurance", "website": "https://www.withcoverage.com/", "description": "AI-powered commercial insurance brokerage for small to mid-size businesses", "focus": "Commercial insurance brokerage", "hq": "United States", "uncertain": true },
 
-    { "name": "AIOS", "category": "Healthcare", "website": "https://aios.ai/", "description": "AI clinical documentation platform automating scribe notes and EHR integration", "focus": "Clinical documentation", "hq": "United States", "uncertain": true },
     { "name": "Anterior", "category": "Healthcare", "website": "https://anterior.ai/", "description": "AI platform automating prior authorizations and clinical reviews for health plans", "focus": "Prior authorization, utilization management", "hq": "United States", "uncertain": false },
     { "name": "Formation Bio", "category": "Healthcare", "website": "https://www.formation.bio/", "description": "AI-native pharma company accelerating drug development", "focus": "Drug development, biotech", "hq": "United States", "uncertain": false },
     { "name": "Lindus Health", "category": "Healthcare", "website": "https://www.lindushealth.com/", "description": "AI-powered CRO running clinical trials end-to-end", "focus": "Clinical trials, patient recruitment", "hq": "United Kingdom", "uncertain": false },
-    { "name": "Panacea", "category": "Healthcare", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Scale Medicine", "category": "Healthcare", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
-    { "name": "Understood Care", "category": "Healthcare", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
 
     { "name": "Borderless AI", "category": "HR", "website": "https://borderless.ai/", "description": "AI-powered global hiring and employer-of-record platform automating cross-border employment", "focus": "Global HR, EOR, compliance", "hq": "Canada", "uncertain": false },
     { "name": "Contrario", "category": "HR", "website": "https://www.contrario.ai/", "description": "AI recruiting platform combining expert recruiters with vertical AI agents for sourcing and closing", "focus": "Recruitment, talent acquisition", "hq": "United States", "uncertain": false },
@@ -84,20 +68,16 @@
     { "name": "Jack & Jill", "category": "HR", "website": "https://www.jackandjill.ai/", "description": "Conversational AI with dual agents (candidate-side and employer-side) automating recruitment", "focus": "Recruitment, hiring", "hq": "United Kingdom", "uncertain": false },
     { "name": "Mercor", "category": "HR", "website": "https://mercor.com/", "description": "AI talent marketplace matching contractors and experts to AI/technical work", "focus": "AI talent marketplace", "hq": "United States", "uncertain": false },
     { "name": "Moonhub", "category": "HR", "website": "https://www.moonhub.ai/", "description": "AI-powered talent discovery and recruiting platform", "focus": "Global talent discovery", "hq": "United States", "uncertain": false },
-    { "name": "Prism", "category": "HR", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
 
-    { "name": "Callback", "category": "BPO", "website": null, "description": "AI-native BPO automating back-office operations with process blueprints and human-in-the-loop execution", "focus": "Business process outsourcing", "hq": "United States", "uncertain": false },
     { "name": "ClaimSorted", "category": "BPO", "website": "https://claimsorted.com/", "description": "AI-first TPA automating insurance claims processing", "focus": "Claims administration", "hq": "United Kingdom", "uncertain": false },
     { "name": "Crescendo", "category": "BPO", "website": "https://www.crescendo.ai/", "description": "Outcome-based AI customer service combining generative AI with human agents", "focus": "Customer service / contact center", "hq": "United States", "uncertain": false },
     { "name": "Honey Health", "category": "BPO", "website": "https://www.honeyhealth.ai/", "description": "Healthcare back-office automation using AI agents for prior auth, charting, and fax processing", "focus": "Healthcare back-office", "hq": "United States", "uncertain": false },
     { "name": "Humoniq", "category": "BPO", "website": "https://humoniq.ai/", "description": "AI-native BPO for travel and transport combining voice agents with human agents", "focus": "Travel/transport support", "hq": "United States", "uncertain": false },
-    { "name": "Level3", "category": "BPO", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
     { "name": "Neoflo", "category": "BPO", "website": "https://neoflo.ai/", "description": "AI-first back-office BPO for finance, procurement, and catalog management", "focus": "Finance/procurement ops", "hq": "Singapore", "uncertain": false },
     { "name": "Smith AI", "category": "BPO", "website": "https://smith.ai/", "description": "Hybrid AI and live-agent platform for answering service, intake, and lead qualification", "focus": "Answering service, client intake", "hq": "United States", "uncertain": false },
 
     { "name": "Cedar", "category": "Architecture & Real Estate", "website": "https://www.cedar.build/", "description": "AI-native architecture firm completing feasibility studies in days instead of months", "focus": "Generative building design, feasibility, yield optimization", "hq": "United States", "uncertain": false },
     { "name": "Cove", "category": "Architecture & Real Estate", "website": "https://cove.inc/", "description": "AI-powered full-service architecture studio and commercial property operations platform", "focus": "Building design, commercial property ops", "hq": "United States", "uncertain": false },
-    { "name": "Sebas", "category": "Architecture & Real Estate", "website": null, "description": null, "focus": null, "hq": null, "uncertain": true },
 
     { "name": "Hadrian", "category": "Industrials", "website": "https://www.hadrian.co/", "description": "AI-native precision manufacturing for aerospace and defense components", "focus": "Precision manufacturing, aerospace/defense", "hq": "United States", "uncertain": false },
     { "name": "Unlimited Industries", "category": "Industrials", "website": "https://www.unlimitedindustries.com/", "description": "AI-driven infrastructure and construction platform cutting design timelines from months to weeks", "focus": "Industrial projects: mining, energy, data centers, manufacturing", "hq": "United States", "uncertain": false },
