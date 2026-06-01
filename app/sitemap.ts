@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/insights"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: absoluteUrl("/resources"), lastModified: now, changeFrequency: "weekly", priority: 0.65 },
     { url: absoluteUrl("/resources/open-legal-data-map"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
+    { url: absoluteUrl("/resources/ai-native-services-map"), lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: absoluteUrl("/resources/contract-qa-pipeline-map"), lastModified: now, changeFrequency: "weekly", priority: 0.69 },
     { url: absoluteUrl("/resources/attribution"), lastModified: now, changeFrequency: "monthly", priority: 0.2 },
     { url: absoluteUrl("/paralegals"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
