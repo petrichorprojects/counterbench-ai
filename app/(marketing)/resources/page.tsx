@@ -75,6 +75,25 @@ export default function ResourcesPage() {
                 Coverage map of US legal data sources for research, citations, and policy checks.
               </div>
             </Link>
+
+            <Link
+              href="/resources/ai-native-services-map"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #0ea5e9 22%, #020617 78%) 0%, color-mix(in srgb, #020617 86%, #0f172a 14%) 100%)"
+              }}
+            >
+              <div className="label">Market Map</div>
+              <div className="text-white" style={{ fontSize: "1.2rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                AI-Native Services Companies 2026
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Directory of end-to-end AI service firms across legal, finance, insurance, healthcare, and more.
+              </div>
+            </Link>
           </div>
 
           <div className="grid grid--2 mt-4" style={{ gap: "1rem" }}>
