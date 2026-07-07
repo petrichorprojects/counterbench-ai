@@ -7,7 +7,27 @@ import { desc } from "drizzle-orm";
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
-export async function GET() {
+// Call records contain transcripts and caller numbers (PII) — admin key
+// required, same guard as app/api/admin/receptionist/ routes.
+function checkAuth(req: Request): NextResponse | null {
+  const expected = process.env.ADMIN_API_KEY;
+  if (!expected) {
+    return NextResponse.json(
+      { error: "Admin API not configured (ADMIN_API_KEY missing)" },
+      { status: 503 }
+    );
+  }
+  const provided = req.headers.get("x-admin-key");
+  if (provided !== expected) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+  return null;
+}
+
+export async function GET(req: Request) {
+  const authErr = checkAuth(req);
+  if (authErr) return authErr;
+
   try {
     const calls = await db
       .select()
