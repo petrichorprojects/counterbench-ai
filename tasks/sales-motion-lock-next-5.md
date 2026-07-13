@@ -168,7 +168,7 @@ Target conversion: 100 signals → 30 contacted → 10 engaged → 5 calls → 3
 
 - Strategic Self-Audit: `~/Downloads/Strategic-Self-Audit-Phil-Rimmler-May2026.docx`
 - Kill criteria: `~/Downloads/Projects/_ops/03-kill-criteria.md`
-- Remote Receptionist launch: `tasks/remote-receptionist-launch-checklist.md` (pitchable asset)
+- Remote Receptionist: **PARKED 2026-05-27** — cross-sell attach only, no outbound pitch; infra live, Vapi signup skipped to control cost + focus. Activate on paying-client request (`docs/vapi-setup.md`, ~15 min). Do NOT pitch as standalone until 5 paralegal clients closed.
 - EBT outline pipeline: pitchable asset, built, not yet productized
 - Existing cold email batch: `tasks/cold-email-batch-1/`
 - Reddit playbook: `tasks/reddit-outbound-playbook.md`

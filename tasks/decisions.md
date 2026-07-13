@@ -1,5 +1,22 @@
 # Decisions Log
 
+## 2026-05-27: Park Remote Receptionist as cross-sell (skip Vapi signup)
+
+**Decision**: Park Remote Receptionist V1 as a cross-sell trigger, not a lead offer. Do NOT sign up for Vapi. Do NOT run the launch script. Infra (webhook, admin CRUD, Neon tables, Vercel env) stays live and ready to activate in 15 min when a paying paralegal client requests after-hours coverage.
+
+**Rationale**: Cost discipline + focus. Vapi run cost is trivial (~$0.16/min all-in) but sales-cycle attention isn't. Self-Audit named the paralegal-teams sales motion the highest-leverage priority; standing up a second product before proving the first has escape velocity is textbook portfolio dilution. Every hour on Vapi tuning is an hour not sending day-0 emails.
+
+**Implication**:
+- Vapi signup: skipped
+- Vercel env vars stay set (ADMIN_API_KEY, DATABASE_URL, RESEND_API_KEY)
+- Neon tables `receptionist_firms` + `receptionist_calls` stay live (empty aside from prior seed row)
+- `.env.local.scratch` deleted (ADMIN_API_KEY still safely in Vercel)
+- Receptionist listed under "Reference" in sales motion lock, NOT primary offer
+- Kill-criteria Tripwire D reframed: "Not sold as attach to first paralegal client by 2026-09-01"
+- Activation path when triggered: sign up Vapi → buy number → assistant per `docs/vapi-setup.md` → curl seed via admin endpoint → E2E call (~15 min end-to-end)
+
+---
+
 ## 2026-05-21: Sales motion locked + Remote Receptionist admin endpoints landed
 
 **Decision**: Lock CB paralegal-teams sales motion (ICP, offer, channel mix, cadence) until 2026-08-01 review. No edits to motion mid-quarter — only data updates. Ship `/api/admin/receptionist/firms` CRUD behind `x-admin-key` so firms can be seeded without raw SQL.
