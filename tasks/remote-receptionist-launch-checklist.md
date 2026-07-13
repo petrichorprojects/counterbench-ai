@@ -1,7 +1,12 @@
 # Remote Receptionist — Launch Checklist (CounterbenchAI)
 
-Last updated: 2026-05-21
-Branch: `feat/sales-motion-lock`
+> **PARKED 2026-05-27** — cross-sell attach only, no outbound pitch. Vapi signup skipped
+> to control per-minute cost + Phil focus. Infra live (webhook, admin CRUD, Neon tables,
+> Vercel env vars). Activate ONLY when a paying paralegal-team client requests after-hours
+> coverage. Full activation path below still valid — expect ~15 min end-to-end.
+
+Last updated: 2026-05-27
+Original branch: `feat/sales-motion-lock` (merged in PR #15)
 Domain: counterbench.ai
 
 ## Status snapshot
