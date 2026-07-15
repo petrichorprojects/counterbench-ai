@@ -188,5 +188,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Subscription failed. Try again in a moment." }, { status: 502 });
   }
 
+  // Fire-and-forget lead forward to n8n (Slack notifier). Never blocks, never throws.
+  try {
+    if (process.env.N8N_LEAD_WEBHOOK_URL) {
+      fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ business: "CounterbenchAI", cta: "Newsletter", email: email.trim() })
+      }).catch(() => {});
+    }
+  } catch {}
+
   return NextResponse.json({ ok: true });
 }
