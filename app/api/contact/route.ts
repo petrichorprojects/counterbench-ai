@@ -85,6 +85,30 @@ function str(v: unknown): string {
   return typeof v === "string" ? v : "";
 }
 
+/**
+ * Forward the lead to n8n (which posts it to Slack).
+ *
+ * This MUST be awaited. On serverless the runtime is frozen as soon as the
+ * handler returns, so a fire-and-forget fetch is silently dropped and the
+ * lead never arrives. Bounded by a timeout and never throws, so a slow or
+ * down n8n cannot fail the visitor's submission.
+ */
+async function forwardToN8n(payload: Record<string, unknown>): Promise<void> {
+  const url = process.env.N8N_LEAD_WEBHOOK_URL;
+  if (!url) return;
+
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(3000)
+    });
+  } catch (err) {
+    console.error({ event: "contact_n8n_forward_failed", err });
+  }
+}
+
 async function readBody(req: Request): Promise<ContactBody> {
   const ct = req.headers.get("content-type") || "";
 
@@ -156,23 +180,15 @@ export async function POST(req: Request) {
   // Notify Slack via n8n BEFORE sending mail. A contact request is a lead —
   // it must surface even if Resend is unconfigured or erroring, which is the
   // failure mode that would otherwise lose it silently.
-  try {
-    if (process.env.N8N_LEAD_WEBHOOK_URL) {
-      fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          business: "CounterbenchAI",
-          cta: `Contact — ${topic}`,
-          name,
-          email,
-          message,
-          ...(firm ? { firm } : {}),
-          ...(source ? { source } : {})
-        })
-      }).catch(() => {});
-    }
-  } catch {}
+  await forwardToN8n({
+    business: "CounterbenchAI",
+    cta: `Contact — ${topic}`,
+    name,
+    email,
+    message,
+    ...(firm ? { firm } : {}),
+    ...(source ? { source } : {})
+  });
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
