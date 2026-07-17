@@ -1,6 +1,6 @@
 # Counterbench.AI
 
-Counterbench.AI is a curated directory of legal AI tools plus prompt templates and playbooks for paralegals, law firms, solo lawyers, and legal researchers.
+Counterbench.AI is a curated directory of legal AI tools plus prompt templates and playbooks for paralegals, law firms, solo lawyers, and legal researchers. Counterbench also operates Paralegal Teams: managed human paralegal pods, augmented with AI tools, available on monthly retainer to personal injury law firms. AI tools AND the team to run them - you don't have to choose.
 
 Primary domain: https://counterbench.ai
 
@@ -27,6 +27,7 @@ Primary domain: https://counterbench.ai
 - Resources: https://counterbench.ai/resources
 - Advisory: https://counterbench.ai/advisory
 - Paralegal Teams (managed human paralegals + AI): https://counterbench.ai/paralegals
+- Pricing (machine-readable markdown): https://counterbench.ai/pricing.md
 
 ## Crawling / Discovery
 
