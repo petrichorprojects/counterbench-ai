@@ -103,6 +103,29 @@ function getConfigStatus() {
   };
 }
 
+/**
+ * Forward the lead to n8n (which posts it to Slack).
+ *
+ * This MUST be awaited. On serverless the runtime is frozen as soon as the
+ * handler returns, so a fire-and-forget fetch is silently dropped and the
+ * lead never arrives. Bounded by a timeout and never throws, so a slow or
+ * down n8n cannot fail the user's request.
+ */
+async function forwardToN8n(payload: Record<string, unknown>): Promise<void> {
+  const url = process.env.N8N_LEAD_WEBHOOK_URL;
+  if (!url) return;
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(3000)
+    });
+  } catch (err) {
+    console.error({ event: "n8n_forward_failed", err });
+  }
+}
+
 export async function GET() {
   // Safe status endpoint (no secrets) to debug env wiring without creating a subscription.
   return NextResponse.json({ ok: true, ...getConfigStatus() });
@@ -188,16 +211,10 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, message: "Subscription failed. Try again in a moment." }, { status: 502 });
   }
 
-  // Fire-and-forget lead forward to n8n (Slack notifier). Never blocks, never throws.
-  try {
-    if (process.env.N8N_LEAD_WEBHOOK_URL) {
-      fetch(process.env.N8N_LEAD_WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ business: "CounterbenchAI", cta: "Newsletter", email: email.trim() })
-      }).catch(() => {});
-    }
-  } catch {}
+  // Lead forward to n8n (Slack notifier). Awaited: the response below ends the
+  // invocation, which on serverless freezes the runtime and drops any in-flight
+  // un-awaited fetch. Bounded by a timeout and never throws.
+  await forwardToN8n({ business: "CounterbenchAI", cta: "Newsletter", email: email.trim() });
 
   return NextResponse.json({ ok: true });
 }
