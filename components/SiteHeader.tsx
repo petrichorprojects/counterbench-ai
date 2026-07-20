@@ -65,6 +65,7 @@ export function SiteHeader() {
       { href: "/tools/compare", label: "Compare" },
       { href: "/playbooks", label: "Playbooks" },
       { href: "/guides", label: "Guides" },
+      { href: "/how-to-evaluate-legal-ai", label: "Evaluation Framework" },
       { href: "/prompts", label: "Prompts" },
       { href: "/prompts/packs", label: "Prompt packs" },
       { href: "/skills", label: "Skills" },

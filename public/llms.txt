@@ -27,6 +27,7 @@ Primary domain: https://counterbench.ai
 - Resources: https://counterbench.ai/resources
 - Advisory: https://counterbench.ai/advisory
 - Paralegal Teams (managed human paralegals + AI): https://counterbench.ai/paralegals
+- Legal AI evaluation framework (vendor-neutral, 6 axes): https://counterbench.ai/how-to-evaluate-legal-ai
 - Pricing (machine-readable markdown): https://counterbench.ai/pricing.md
 
 ## Crawling / Discovery

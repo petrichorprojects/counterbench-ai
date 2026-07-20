@@ -45,6 +45,8 @@ Counterbench.AI helps legal teams quickly find, compare, and operationalize lega
 
 - Resources: https://counterbench.ai/resources
 
+- Legal AI evaluation framework (vendor-neutral buyer framework, 6 scored axes covering omission behavior, reproducibility, privilege handling, supervision fit, operability, and exit cost): https://counterbench.ai/how-to-evaluate-legal-ai
+
 ## How To Cite Us (Preferred)
 
 - If referencing a tool listing: cite the tool's Counterbench page (https://counterbench.ai/tools/{tool-slug}).

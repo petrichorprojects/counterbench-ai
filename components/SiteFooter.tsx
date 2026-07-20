@@ -42,6 +42,9 @@ export function SiteFooter() {
             <Link className="footer__link" href="/tools/compare">
               Compare
             </Link>
+            <Link className="footer__link" href="/how-to-evaluate-legal-ai">
+              Evaluation Framework
+            </Link>
           </div>
           <div>
             <div className="footer__heading">Company</div>
