@@ -35,6 +35,89 @@ export function toolMetadata(tool: Tool): Metadata {
   };
 }
 
+// Sitewide Organization schema — AEO fix (tasks/AEO-AUDIT-TODO.md, Fix 2).
+// Reuses only facts already public elsewhere in the codebase (site metadata,
+// public contact address). Does not introduce new claims.
+export function organizationJsonLd() {
+  const url = siteUrl();
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Counterbench.AI",
+    legalName: "Counterbench.AI",
+    url,
+    logo: `${url}/favicon-32.png`,
+    description:
+      "A curated directory of legal AI tools, prompts, and skills for US legal professionals, paired with dedicated paralegal teams for personal injury law firms.",
+    areaServed: "US",
+    knowsAbout: [
+      "Personal injury law",
+      "Legal AI tools",
+      "Paralegal services",
+      "Legal document review",
+      "Law firm operations"
+    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "phil@counterbench.ai",
+      contactType: "sales"
+    }
+  };
+}
+
+// Generic FAQPage schema — AEO fix. Pass the same { q, a } list already
+// rendered on the page so structured data and visible copy never drift.
+export function faqPageJsonLd(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a
+      }
+    }))
+  };
+}
+
+// Service schema for a priced offering (e.g. a Paralegal Teams tier).
+// priceString should be the exact string already shown to users (e.g. "$3,750").
+export function serviceJsonLd(params: {
+  name: string;
+  description: string;
+  priceString: string;
+  url: string;
+}) {
+  const price = params.priceString.replace(/[^0-9.]/g, "");
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: params.name,
+    name: `Counterbench.AI Paralegal Teams — ${params.name}`,
+    description: params.description,
+    provider: { "@type": "Organization", name: "Counterbench.AI", url: siteUrl() },
+    areaServed: "US",
+    url: params.url,
+    ...(price
+      ? {
+          offers: {
+            "@type": "Offer",
+            price,
+            priceCurrency: "USD",
+            priceSpecification: {
+              "@type": "UnitPriceSpecification",
+              price,
+              priceCurrency: "USD",
+              unitText: "MONTH"
+            }
+          }
+        }
+      : {})
+  };
+}
+
 export function toolJsonLd(tool: Tool) {
   const canonical = absoluteUrl(`/tools/${tool.slug}`);
   const offers =
