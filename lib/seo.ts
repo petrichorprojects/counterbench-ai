@@ -44,9 +44,15 @@ export function organizationJsonLd() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Counterbench.AI",
-    legalName: "Counterbench.AI",
+    // legalName intentionally omitted. In schema.org it means the registered
+    // legal name of this specific entity, which is a corporate fact, not a
+    // brand string. Setting it to the brand name asserts something unverified.
+    // Add it only once the registered entity name is confirmed.
+    alternateName: ["CounterbenchAI", "Counterbench"],
     url,
-    logo: `${url}/favicon-32.png`,
+    // Organization logo guidance wants at least 112px on the shortest side.
+    // favicon-32.png is 32px and gets ignored.
+    logo: `${url}/apple-touch-icon.png`,
     description:
       "A curated directory of legal AI tools, prompts, and skills for US legal professionals, paired with dedicated paralegal teams for personal injury law firms.",
     areaServed: "US",
