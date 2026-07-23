@@ -12,7 +12,7 @@
 
 Clients don't file grievances because they lost. They file because they couldn't reach anyone for 5 months and concluded nothing was happening.
 
-Poor communication is one of the most common categories of bar grievance, and it's the one that has nothing to do with legal skill. A firm can handle a file well and still generate the complaint, because the client is grading a process they can't see.
+The ABA lists neglect and lack of communication as the two most common disciplinary complaints filed against lawyers, and Model Rule 1.4 sits among the rules that produce the most discipline. Neither of those is a legal-skill problem. A firm can handle a file well and still generate the complaint, because the client is grading a process they can't see.
 
 That's the actual problem. The client has no visibility into your file. Records take 6 weeks, liens take months, and from the outside all of it looks identical to nothing.
 
@@ -59,7 +59,7 @@ We run the contact schedule for PI firms as standing work, which is why it survi
 
 **The attorney-only line is the ethical boundary the post has to draw.** Without it, this reads as a firm handing client communication to non-lawyers, which invites the worst possible comment thread.
 
-**Verification status.** The grievance claim was softened from "the most common category" to "one of the most common categories" because I could not confirm the superlative against a primary state-bar disciplinary report in-session. It is widely reported by bar associations at that strength. If Phil wants the harder superlative back, source it from his jurisdiction's annual disciplinary report first. The cadences are constructed and need PWB calibration.
+**Verification status. RESOLVED 2026-07-22.** The grievance claim is now sourced directly to the ABA, which lists neglect and lack of communication as the two most common disciplinary complaints and names Model Rule 1.4 among the rules producing the most discipline. That's stronger than the softened "one of the most common" placeholder and stronger than the original unsourced superlative, because it's attributable and it cites the rule number an attorney recognizes. The cadences remain constructed and need PWB calibration.
 
 ## Voice check
 
@@ -71,4 +71,8 @@ We run the contact schedule for PI firms as standing work, which is why it survi
 - [x] Named risk (bar complaint, grievance defense)
 - [x] Direct DM CTA
 - [x] Paragraph length varies
-- [x] Superlative softened to defensible strength pending a primary source
+- [x] Grievance claim sourced to the ABA, no bare superlative
+
+## Sources
+
+- Neglect and lack of communication are the two most common disciplinary complaints filed against lawyers; Model Rule 1.4 Communications is among the rules leading to the most discipline. ([American Bar Association](https://www.americanbar.org/news/abanews/publications/youraba/2022/0307/protect-yourself-from-complaints/))

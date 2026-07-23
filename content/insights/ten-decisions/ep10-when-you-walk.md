@@ -36,6 +36,8 @@ Two moments matter, and they're different decisions.
 >
 > **The hard floor, non-negotiable:** the client's interest governs the withdrawal itself. This rule decides whether the firm recommends parting ways. It never overrides the duty to protect the client through the exit: their file, their statute, their ability to find new counsel in time. You can decide to walk. You cannot walk badly.
 >
+> Worth knowing why that floor is written this hard. The ABA lists Model Rule 1.16(d), declining or terminating representation, among the rules that produce the most discipline. Walking is not the risky part. Walking without protecting the client on the way out is.
+>
 > **Exception:** a case below the economic floor that the firm takes deliberately, for a reason it names in the file: an existing client, a precedent, a matter of principle. Deliberate and documented is fine. Defaulting into it because nobody looked is the failure.
 
 That's decision 10 of 10.
@@ -58,7 +60,9 @@ Message me and I'll send the full set.
 
 **The withdrawal-ethics floor is mandatory and load-bearing.** This post recommends dropping clients. Without the explicit "you can decide to walk, you cannot walk badly" boundary, it reads as advice to abandon people, which is both wrong and a bar problem. That paragraph is not optional.
 
-**Verification status.** Entirely constructed, and this is the most ethics-sensitive episode because it touches withdrawal duties directly. PWB should confirm the withdrawal framing respects their jurisdiction's rules on permissive withdrawal and client protection, and should set the actual economic floor in condition 1.
+**Verification status.** The 3 conditions and the economic floor are constructed; PWB sets the actual floor in condition 1 and confirms the framing respects their jurisdiction's permissive-withdrawal rules.
+
+The ethics floor is now sourced. The ABA lists Model Rule 1.16(d) among the rules producing the most discipline, which is why the "you cannot walk badly" paragraph carries a citation rather than an assertion. That single addition is what makes this episode defensible in front of attorneys, since it's the one post in the series recommending they drop clients.
 
 ## Voice check
 
@@ -71,3 +75,8 @@ Message me and I'll send the full set.
 - [x] Direct DM CTA, no comment-bait
 - [x] Paragraph length varies
 - [x] Series frame closed, lead-magnet handoff present
+- [x] Ethics floor cites a rule number, not an assertion
+
+## Sources
+
+- Model Rule 1.16(d), declining or terminating representation, is among the rules leading to the most attorney discipline. ([American Bar Association](https://www.americanbar.org/news/abanews/publications/youraba/2022/0307/protect-yourself-from-complaints/))

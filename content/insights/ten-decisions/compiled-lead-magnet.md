@@ -156,7 +156,7 @@ Attorney-only: any offer, recommendation, change in value, bad development, or l
 
 **Exception:** a client who asks for less contact gets it in writing, and still receives the attorney contacts.
 
-*Why it matters: poor communication is one of the most common categories of bar grievance, and it's independent of legal skill. Silence during a slow phase gets filled with the worst available explanation.*
+*Why it matters: the ABA lists neglect and lack of communication as the two most common disciplinary complaints against lawyers, and Model Rule 1.4 among the rules producing the most discipline. Silence during a slow phase gets filled with the worst available explanation.*
 
 ---
 
@@ -169,7 +169,7 @@ Decline or withdraw when 2 of 3 are true:
 
 At intake, all 3 are cheap to check. Mid-case, the moment 2 are true, the withdrawal analysis starts immediately, because clean withdrawal has a shrinking window.
 
-The hard floor: the client's interest governs the withdrawal itself. You can decide to walk. You cannot walk badly.
+The hard floor: the client's interest governs the withdrawal itself. You can decide to walk. You cannot walk badly. The ABA lists Model Rule 1.16(d), declining or terminating representation, among the rules producing the most discipline.
 
 **Exception:** a below-floor case taken deliberately for a named reason (existing client, precedent, principle). Deliberate and documented is fine. Defaulting into it because nobody looked is the failure.
 
