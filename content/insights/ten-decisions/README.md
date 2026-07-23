@@ -1,7 +1,7 @@
 # The Ten Decisions
 
 **Franchise spec. CounterbenchAI LinkedIn series.**
-Created 2026-07-22. Franchise name green-lit by Phil 2026-07-22. Status: Ep00 and Ep01 ship-ready, Ep02-10 drafted and awaiting PWB clearance.
+Created 2026-07-22. Franchise name green-lit by Phil 2026-07-22. Status: Ep00 and Ep01 ship-ready, Ep02-10 drafted and awaiting PWB clearance, compiled lead magnet drafted.
 
 ---
 
@@ -36,6 +36,7 @@ Same work, three uses. That's the multiplier.
 | 08 | What moves a file to litigation | Drafted. Needs PWB clearance |
 | 09 | What the client hears at each stage, and from whom | Drafted. Needs PWB clearance |
 | 10 | When you walk | Drafted. Needs PWB clearance |
+| PDF | Compiled lead magnet, one page per decision | Drafted. Gated on all 10 clearances |
 
 ## PWB clearance protocol
 
