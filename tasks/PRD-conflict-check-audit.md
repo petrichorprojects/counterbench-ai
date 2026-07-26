@@ -1,7 +1,7 @@
 # PRD — Conflict Check Blind Spot Audit
 
-**Status:** v1 BUILT — in review, not yet live. PR [#27](https://github.com/petrichorprojects/counterbench-ai/pull/27) (branch `feat/conflict-check-audit-clean` → `main`). Verify gate green off `origin/main`; awaiting merge + Vercel deploy to counterbench.ai. See Build log below.
-**Date:** 2026-07-24 · **Built:** 2026-07-26
+**Status:** ✅ LIVE — https://counterbench.ai/tools/conflict-check-audit (2026-07-26). PR [#27](https://github.com/petrichorprojects/counterbench-ai/pull/27) merged (squash `70e90db`), Vercel prod deploy SUCCESS, live URL verified. Metric #1 met. See Build log below.
+**Date:** 2026-07-24 · **Built + shipped:** 2026-07-26
 **Owner:** Phil Rimmler
 **Supersedes:** `PRD-new-tools-aeo-seo.md` item #4
 **Companion:** `SPEC-conflict-check-audit.md` (build detail)
@@ -30,8 +30,16 @@ Deltas from the plan, carried as open items into review:
 - **Rule citations need a lawyer's eyeball** before merge — standard Model Rules
   with a last-verified date + state-variance caveat, but state rules govern.
 
-Remaining before Metric #1 counts as met: **merge PR #27 + Vercel deploy + verify
-the live URL.** Built ≠ live.
+**2026-07-26 (same day) — LIVE.** PR #27 squash-merged (`70e90db`), Vercel prod
+deploy SUCCESS, live URL verified: HTTP 200, hero + snippet, `SoftwareApplication`
++ `FAQPage` JSON-LD, SSR baseline (rules/tiers/failure modes), sitemap + llms.txt
+entries all serving on counterbench.ai. Metric #1 met, 13 days ahead of breaker.
+
+Still open post-launch (do not block, but the live tool is affected):
+- **Benchmark rows are dataLayer-only** — Metric #6 (n=200) cannot accumulate;
+  the live tool persists nothing until a server sink exists.
+- **Rule citations shipped without a lawyer's review** — standard Model Rules +
+  last-verified date + state-variance caveat, but now public. Worth a pass.
 
 ---
 
@@ -248,7 +256,7 @@ or explicit re-bet. No silent extensions.
 
 | # | Hypothesis | Metric | Threshold | Breaker |
 |---|---|---|---|---|
-| 1 | It ships at all | v1 live on counterbench.ai | deployed + verify gate green | **2026-08-08** — ⏳ verify gate green + PR #27 open (2026-07-26); merge + deploy still pending |
+| 1 | It ships at all | v1 live on counterbench.ai | deployed + verify gate green | **2026-08-08** — ✅ MET 2026-07-26: PR #27 merged, prod deploy green, live URL verified (13 days early) |
 | 2 | Firms finish it | completion rate (start → result) | ≥60% | 2026-09-05 |
 | 3 | It reaches firms | completions | ≥50 | **2026-09-05** |
 | 4 | It qualifies | result → `/paralegals` click, tier Reactive/Undocumented | ≥15% | 2026-09-05 |
