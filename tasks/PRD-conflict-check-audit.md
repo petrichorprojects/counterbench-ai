@@ -35,9 +35,15 @@ deploy SUCCESS, live URL verified: HTTP 200, hero + snippet, `SoftwareApplicatio
 + `FAQPage` JSON-LD, SSR baseline (rules/tiers/failure modes), sitemap + llms.txt
 entries all serving on counterbench.ai. Metric #1 met, 13 days ahead of breaker.
 
-Still open post-launch (do not block, but the live tool is affected):
-- **Benchmark rows are dataLayer-only** — Metric #6 (n=200) cannot accumulate;
-  the live tool persists nothing until a server sink exists.
+**2026-07-26 — benchmark sink LIVE (PR #28, merge `4ba7c2f`).** The dataLayer-only
+delta above is resolved: `conflict_audit_benchmarks` table created in Neon prod,
+`/api/conflict-audit-benchmark` deployed and verified end-to-end in production
+(live POST → `persisted:true`). Metric #6 can now accumulate. See §6.
+`drizzle-kit push` stalled on this repo's neon-HTTP driver, so the additive
+`CREATE TABLE` was applied directly (structurally identical); noted so the
+migration history is a known quantity.
+
+Still open post-launch (do not block):
 - **Rule citations shipped without a lawyer's review** — standard Model Rules +
   last-verified date + state-variance caveat, but now public. Worth a pass.
 
@@ -216,9 +222,12 @@ returns the single-point-of-failure finding — the same argument as the
 
 ## 6. The benchmark — a separate, gated bet
 
-Every completion writes an anonymous row (firm size, state, practice area, eight
-answers). At **n=200**, that dataset becomes *The State of Conflict Checking in
-Small Law Firms*.
+**Sink status: ✅ LIVE 2026-07-26 (PR [#28](https://github.com/petrichorprojects/counterbench-ai/pull/28), merge `4ba7c2f`).** `conflict_audit_benchmarks` table created in Neon prod; end-to-end verified in production (live POST → `persisted:true`, row landed, test row removed). Dataset at 0 rows and now accumulating from live traffic. The dataLayer-only stopgap is retired.
+
+Each user who opts into the post-result benchmark writes one anonymous row —
+**score, tier, and the three firmographics they share (firm size, state,
+practice area)**. No PII, no IP, and not the eight raw answers. At **n=200**,
+that dataset becomes *The State of Conflict Checking in Small Law Firms*.
 
 Why it matters more than the tool: counterbench.ai is DR 10 with **0 organic
 keywords**. The bottleneck is link acquisition, not page quality. The model is
@@ -261,7 +270,7 @@ or explicit re-bet. No silent extensions.
 | 3 | It reaches firms | completions | ≥50 | **2026-09-05** |
 | 4 | It qualifies | result → `/paralegals` click, tier Reactive/Undocumented | ≥15% | 2026-09-05 |
 | 5 | It ranks | top-10 US for any cluster term | 1 keyword | 2026-10-24 |
-| 6 | Benchmark viable | completions | ≥200 | 2026-12-01 → report bet |
+| 6 | Benchmark viable | rows persisted | ≥200 | 2026-12-01 → report bet — ✅ sink LIVE 2026-07-26 (PR #28), now accumulating; 0 rows at launch |
 
 Instrument via `lib/analytics.ts`: completion rate, per-question drop-off, tier
 distribution, CTA click by tier. Without this, a bad tool and bad distribution
