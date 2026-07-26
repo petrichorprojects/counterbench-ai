@@ -77,8 +77,7 @@ export function ConflictCheckAudit() {
   }
 
   function saveBenchmark() {
-    // v1: no backend. Record the anonymous row into the dataLayer only; a real
-    // sink can consume the event later without changing this component.
+    // Analytics (GTM) — unchanged, "unspecified" for empty firmographics.
     pushEvent({
       event: "conflict_audit_benchmark",
       tool_slug: TOOL_SLUG,
@@ -88,6 +87,25 @@ export function ConflictCheckAudit() {
       state: benchmark.state || "unspecified",
       practice_area: benchmark.practice || "unspecified",
     });
+
+    // Persist the anonymous row server-side. Fire-and-forget: the benchmark is
+    // optional, so a failed/slow POST must never block the "thanks" state or
+    // surface an error. Empty firmographics are omitted (server stores null).
+    void fetch("/api/conflict-audit-benchmark", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        score: result.score,
+        tier: result.tier.key,
+        firm_size: benchmark.size || undefined,
+        state: benchmark.state || undefined,
+        practice_area: benchmark.practice || undefined,
+      }),
+    }).catch(() => {
+      /* optional telemetry; ignore network errors */
+    });
+
     setBenchmarkSent(true);
   }
 
