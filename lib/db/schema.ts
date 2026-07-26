@@ -1,4 +1,4 @@
-import { pgTable, varchar, text, timestamp, numeric } from "drizzle-orm/pg-core";
+import { pgTable, varchar, text, timestamp, numeric, integer } from "drizzle-orm/pg-core";
 import { sql } from "drizzle-orm";
 
 export const contactSubmissionsTable = pgTable("contact_submissions", {
@@ -42,5 +42,19 @@ export const receptionistCallsTable = pgTable("receptionist_calls", {
   transcript: text("transcript"),
   structuredData: text("structured_data"),
   duration: numeric("duration"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+// Anonymous benchmark rows from the Conflict Check Blind Spot Audit
+// (/tools/conflict-check-audit). Deliberately carries NO PII: no name, no firm
+// name, no email, no IP. Only the score, tier, and the three firmographics the
+// user opts to share, so we can publish "firms like yours" benchmarks.
+export const conflictAuditBenchmarksTable = pgTable("conflict_audit_benchmarks", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  score: integer("score").notNull(), // 0–24
+  tier: text("tier").notNull(), // documented | person_dependent | reactive | undocumented
+  firmSize: text("firm_size"), // solo | 2-5 | 6-10 | 11-25 | 25+ | null
+  state: varchar("state", { length: 2 }), // US 2-letter, or null
+  practiceArea: text("practice_area"), // free text, clamped server-side, or null
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
