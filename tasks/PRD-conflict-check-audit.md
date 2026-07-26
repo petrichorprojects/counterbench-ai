@@ -1,11 +1,37 @@
 # PRD — Conflict Check Blind Spot Audit
 
-**Status:** proposal, awaiting Phil's bet
-**Date:** 2026-07-24
+**Status:** v1 BUILT — in review, not yet live. PR [#27](https://github.com/petrichorprojects/counterbench-ai/pull/27) (branch `feat/conflict-check-audit-clean` → `main`). Verify gate green off `origin/main`; awaiting merge + Vercel deploy to counterbench.ai. See Build log below.
+**Date:** 2026-07-24 · **Built:** 2026-07-26
 **Owner:** Phil Rimmler
 **Supersedes:** `PRD-new-tools-aeo-seo.md` item #4
 **Companion:** `SPEC-conflict-check-audit.md` (build detail)
 **Governed by:** `_ops/EXECUTION.md` (betting table — every active bet carries a DoD gate and a breaker date; past breaker with gate unmet → Graveyard, no silent extensions)
+
+---
+
+## Build log
+
+**2026-07-26 — v1 built, in review (PR #27), 2 days ahead of the 2026-08-08 ship breaker.**
+
+Route `/tools/conflict-check-audit`, 7 files. Verify gate green off a clean
+`origin/main` checkout: typecheck 0 · lint 0 · vitest 22/22 · build passes (route
+prerenders static) · SSR baseline confirmed (all questions, rule citations, tiers,
+`SoftwareApplication` + `FAQPage` JSON-LD in static HTML) · full browser flow driven.
+
+Built per this PRD's v1 scope (§4). Deferred as planned: email gate,
+two-respondent mode, state pages, benchmark report.
+
+Deltas from the plan, carried as open items into review:
+- **Benchmark row is dataLayer-only** — no server sink yet. Metric #6 (n=200)
+  cannot begin accumulating until a sink exists. Wire before real traffic.
+- **`lib/analytics.ts` was uncommitted on another branch**, so the two analytics
+  calls are inlined in the component (identical `tool_view` / `tool_click_cta`
+  event shapes). No behaviour change; fold back into the shared module later.
+- **Rule citations need a lawyer's eyeball** before merge — standard Model Rules
+  with a last-verified date + state-variance caveat, but state rules govern.
+
+Remaining before Metric #1 counts as met: **merge PR #27 + Vercel deploy + verify
+the live URL.** Built ≠ live.
 
 ---
 
@@ -222,7 +248,7 @@ or explicit re-bet. No silent extensions.
 
 | # | Hypothesis | Metric | Threshold | Breaker |
 |---|---|---|---|---|
-| 1 | It ships at all | v1 live on counterbench.ai | deployed + verify gate green | **2026-08-08** |
+| 1 | It ships at all | v1 live on counterbench.ai | deployed + verify gate green | **2026-08-08** — ⏳ verify gate green + PR #27 open (2026-07-26); merge + deploy still pending |
 | 2 | Firms finish it | completion rate (start → result) | ≥60% | 2026-09-05 |
 | 3 | It reaches firms | completions | ≥50 | **2026-09-05** |
 | 4 | It qualifies | result → `/paralegals` click, tier Reactive/Undocumented | ≥15% | 2026-09-05 |
