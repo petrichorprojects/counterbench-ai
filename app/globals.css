@@ -894,3 +894,124 @@ html[data-theme="light"] .ws-earlybird {
   line-height: 1.7;
   color: var(--muted);
 }
+
+/* ---------------------------------------------------------------------------
+   Conflict Check Blind Spot Audit (/tools/conflict-check-audit)
+   Layout only; colours inherit from the design tokens above.
+--------------------------------------------------------------------------- */
+.cca {
+  margin-top: 2rem;
+}
+.cca-questions,
+.cca-findings {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: cca;
+}
+.cca-q-title {
+  margin: 0.5rem 0 1rem;
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+.cca-rule,
+.cca-effort {
+  color: var(--muted);
+  font-weight: 400;
+}
+.cca-options {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cca-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--input-bg);
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
+}
+.cca-option:hover {
+  background: var(--hover-bg);
+}
+.cca-option:has(input:checked) {
+  border-color: var(--teal);
+  background: var(--hover-bg);
+}
+.cca-option:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+.cca-option input {
+  margin-top: 0.15rem;
+  flex: 0 0 auto;
+}
+.cca-actions,
+.cca-result-actions,
+.cca-benchmark-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.cca-progress {
+  font-size: 0.9rem;
+}
+.cca-score {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  line-height: 1;
+  margin: 0.25rem 0;
+}
+.cca-tier {
+  margin: 0.25rem 0 0.5rem;
+}
+.cca-scenario {
+  margin: 0.5rem 0;
+}
+.cca-fix {
+  margin: 0.5rem 0 0;
+}
+.cca-benchmark-fields {
+  align-items: flex-end;
+}
+.cca-benchmark-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.cca-benchmark-fields select,
+.cca-benchmark-fields input {
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--input-bg);
+  color: var(--fg);
+  min-width: 8rem;
+}
+.cca-disclaimer {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+@media print {
+  .cca-form,
+  .cca-cta,
+  .cca-benchmark,
+  .cca-result-actions,
+  header,
+  nav,
+  footer {
+    display: none !important;
+  }
+}
