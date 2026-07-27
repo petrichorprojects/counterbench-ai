@@ -90,8 +90,7 @@ export function SiteHeader() {
               <span className="nav__mark nav__mark--mono" />
               <span className="nav__mark nav__mark--accent" />
             </span>
-            <span className="nav__word">COUNTERBENCH</span>
-            <span className="nav__ai">AI</span>
+            <span className="nav__word">counterbench<span className="nav__ai">.ai</span></span>
           </span>
         </Link>
 

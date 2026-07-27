@@ -3,7 +3,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { PreviewBanner } from "@/components/PreviewBanner";
-import { siteUrl } from "@/lib/seo";
+import { siteUrl, organizationJsonLd } from "@/lib/seo";
 import { MetaPixel, LinkedInInsightTag } from "@/components/AnalyticsPixels";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || "GTM-K8KVFZKG";
@@ -47,11 +47,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
         {/* Keep legacy stylesheet classes for migrated marketing pages */}
         <link rel="stylesheet" href={`/css/style.css?v=${cssVersion}`} />
-        {/* Prefer PNG icons (simple + reliable on Vercel). Browsers may still probe /favicon.ico. */}
+        {/* SVG icon first (modern browsers), PNG fallbacks. Browsers may still probe /favicon.ico. */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        {/* Sitewide Organization schema — AEO fix, tasks/AEO-AUDIT-TODO.md */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+        />
         <MetaPixel />
         <LinkedInInsightTag />
       </head>

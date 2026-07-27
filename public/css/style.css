@@ -336,11 +336,11 @@ p:last-child { margin-bottom: 0; }
 }
 .nav__logo {
   font-family: var(--sans-display);
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 800;
   color: var(--white);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-transform: none;
   text-decoration: none;
 }
 .nav__logoInner{ display: inline-flex; align-items: center; gap: 10px; }
@@ -352,32 +352,24 @@ p:last-child { margin-bottom: 0; }
   inset: 0;
 }
 .nav__mark--mono{
-  background-color: currentColor;
-  /* Use the PNG as a mask so it inherits light/dark ink automatically via currentColor */
-  -webkit-mask-image: url('/logos/counterbench-mark-mono.png');
-  mask-image: url('/logos/counterbench-mark-mono.png');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  /* dark theme (default): steel + crimson Counterframe */
+  background: url('/logos/counterbench-mark-dark.svg') center / contain no-repeat;
 }
 .nav__mark--accent{
-  background: url('/logos/counterbench-mark-accent.svg') center / contain no-repeat;
+  /* light theme: navy + crimson Counterframe */
+  background: url('/logos/counterbench-mark.svg') center / contain no-repeat;
   display: none;
 }
 html[data-theme="light"] .nav__mark--mono{ display: none; }
 html[data-theme="light"] .nav__mark--accent{ display: block; }
 .nav__word{ line-height: 1; }
 .nav__logo .nav__ai {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  letter-spacing: 0;
-  color: var(--muted);
-  margin-left: 0;
+  font: inherit;
+  color: #e06a80; /* Counter Crimson (dark tint) */
+  letter-spacing: -0.02em;
   text-transform: none;
 }
+html[data-theme="light"] .nav__logo .nav__ai { color: #a12e46; }
 .nav__links { display: flex; align-items: center; gap: 0.85rem; }
 .nav__link {
   font-size: 0.8125rem;
@@ -500,23 +492,17 @@ select.input { appearance: none; background-image: url("data:image/svg+xml,%3Csv
   inset: 0;
 }
 .footer__mark--mono{
-  background-color: var(--white);
-  -webkit-mask-image: url('/logos/counterbench-mark-mono.png');
-  mask-image: url('/logos/counterbench-mark-mono.png');
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  background: url('/logos/counterbench-mark-dark.svg') center / contain no-repeat;
 }
 .footer__mark--accent{
-  background: url('/logos/counterbench-mark-accent.svg') center / contain no-repeat;
+  background: url('/logos/counterbench-mark.svg') center / contain no-repeat;
   display: none;
 }
 html[data-theme="light"] .footer__mark--mono{ display: none; }
 html[data-theme="light"] .footer__mark--accent{ display: block; }
-.footer__brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; color: var(--white); }
+.footer__brand { font-family: var(--sans-display); font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; color: var(--white); }
+.footer__brand .footer__ai { color: #e06a80; }
+html[data-theme="light"] .footer__brand .footer__ai { color: #a12e46; }
 .footer__sub { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
 .footer__heading { font-size: 0.625rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; font-family: var(--sans); }
 .footer__link { display: block; font-size: 0.875rem; color: var(--muted-2); margin-bottom: 0.5rem; transition: color 0.2s; text-decoration: none; }
