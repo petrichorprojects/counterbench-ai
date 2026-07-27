@@ -97,7 +97,7 @@ US bars will land somewhere similar with a lag. The firms that will be fine are 
 ```
 
 **First comment:** source citation (see blocking check on deep-linking) + newsletter.
-**Flags:** factual verification is blocking. No CTA in body — correct for an authority post.
+**Flags:** Fact-check DONE (2026-07-26) — UKJT legal statement, Sir Geoffrey Vos, "barred from practising" verified; body already corrected. No CTA in body — correct for an authority post.
 
 ---
 
@@ -158,8 +158,7 @@ A firm that can answer those three can move fast on AI. A firm that can't is run
 Adopt the tools. Write the policy first.
 ```
 
-**Flags:** HIPAA claim is blocking (see checks). This is also the closest post to
-naming a vendor by implication — the directory's neutrality depends on not doing that.
+**Flags:** HIPAA claim VERIFIED + reworded (2026-07-26) — "enterprise plans not HIPAA-covered by default" is accurate; body already carries the softened wording. Still watch: this is the closest post to naming a vendor by implication — keep it neutral.
 
 ---
 
