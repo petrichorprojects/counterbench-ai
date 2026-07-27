@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { TrackedParalegalCTA } from "@/components/TrackedParalegalCTA";
+import { faqPageJsonLd, serviceJsonLd } from "@/lib/seo";
 
 export const metadata = {
   title: "Paralegal Teams for PI Firms | Counterbench.AI",
@@ -101,9 +103,9 @@ export default function ParalegalsPage() {
             Dedicated paralegal pods handle your intake, records, med chronologies, and client communication — with AI already built into how they work. No hiring. No training. No turnover.
           </p>
           <div className="mt-4" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center" }}>
-            <Link className="btn btn--primary btn--arrow" href="/contact">
+            <TrackedParalegalCTA className="btn btn--primary btn--arrow" href="/contact">
               Book a discovery call
-            </Link>
+            </TrackedParalegalCTA>
             <a className="btn btn--secondary" href="#pricing">
               See pricing
             </a>
@@ -194,9 +196,9 @@ export default function ParalegalsPage() {
                   Replaces: {tier.replaces}
                 </div>
                 <div className="mt-3">
-                  <Link className="btn btn--primary btn--arrow" href="/contact">
+                  <TrackedParalegalCTA className="btn btn--primary btn--arrow" href="/contact">
                     Get started
-                  </Link>
+                  </TrackedParalegalCTA>
                 </div>
               </div>
             ))}
@@ -263,9 +265,9 @@ export default function ParalegalsPage() {
             Book a 30-minute discovery call. We map your workflow, propose the right pod structure, and give you pricing and a launch timeline.
           </p>
           <div className="mt-4" style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link className="btn btn--primary btn--arrow" href="/contact">
+            <TrackedParalegalCTA className="btn btn--primary btn--arrow" href="/contact">
               Book a discovery call
-            </Link>
+            </TrackedParalegalCTA>
             <a className="btn btn--secondary" href="#pricing">
               See pricing
             </a>
@@ -279,6 +281,29 @@ export default function ParalegalsPage() {
           </div>
         </div>
       </section>
+
+      {/* AEO structured data — tasks/AEO-AUDIT-TODO.md Fix 2 & 3. Reuses the
+          exact faqs/tiers copy already rendered above; no new claims. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd(faqs)) }}
+      />
+      {tiers.map((tier) => (
+        <script
+          key={`service-jsonld-${tier.name}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              serviceJsonLd({
+                name: tier.name,
+                description: `${tier.bestFor}. ${tier.capacity}.`,
+                priceString: tier.price,
+                url: "https://counterbench.ai/paralegals#pricing"
+              })
+            )
+          }}
+        />
+      ))}
     </main>
   );
 }

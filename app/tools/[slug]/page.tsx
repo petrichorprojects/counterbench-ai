@@ -4,6 +4,8 @@ import { Badge } from "@/design-system/Badge";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsletterCapture } from "@/components/NewsletterCapture";
 import { ToolActions } from "@/components/ToolActions";
+import { ToolViewTracker } from "@/components/ToolViewTracker";
+import { TrackedToolVisitLink } from "@/components/TrackedToolVisitLink";
 import { getAllTools, getToolBySlug } from "@/lib/content";
 import { toolJsonLd, toolMetadata } from "@/lib/seo";
 
@@ -44,6 +46,8 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
 
   return (
     <main>
+      {/* Fires tool_view event on client mount — zero visual output */}
+      <ToolViewTracker slug={tool.slug} />
       <section className="section" style={{ paddingTop: 120, paddingBottom: "4rem" }}>
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Tools", href: "/tools" }, { label: tool.name }]} />
@@ -65,9 +69,15 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ slu
           </div>
 
           <div className="mt-5 flex flex--gap-2 flex--resp-col">
-            <a className="btn btn--primary btn--arrow" href={tool.affiliate_url ?? tool.url} target="_blank" rel="noreferrer">
+            <TrackedToolVisitLink
+              slug={tool.slug}
+              href={tool.affiliate_url ?? tool.url}
+              className="btn btn--primary btn--arrow"
+              target="_blank"
+              rel="noreferrer"
+            >
               Visit tool
-            </a>
+            </TrackedToolVisitLink>
             {tool.affiliate_url && (
               <a className="btn btn--secondary btn--sm" href={tool.url} target="_blank" rel="noreferrer">
                 Non-affiliate link

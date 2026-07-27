@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Badge } from "@/design-system/Badge";
 import type { Tool } from "@/lib/schemas";
 import { CompareQuickAdd } from "@/components/compare/CompareQuickAdd";
+import { TrackedToolVisitLink } from "@/components/TrackedToolVisitLink";
 
 export function ToolCard({ tool }: { tool: Tool }) {
   const verified = Boolean(tool.verified);
@@ -38,9 +39,15 @@ export function ToolCard({ tool }: { tool: Tool }) {
         <Link className="btn btn--secondary btn--sm" href={`/tools/${tool.slug}`}>
           Details
         </Link>
-        <a className="btn btn--ghost btn--sm" href={tool.affiliate_url ?? tool.url} target="_blank" rel="noreferrer">
+        <TrackedToolVisitLink
+          slug={tool.slug}
+          href={tool.affiliate_url ?? tool.url}
+          className="btn btn--ghost btn--sm"
+          target="_blank"
+          rel="noreferrer"
+        >
           Visit tool
-        </a>
+        </TrackedToolVisitLink>
         <CompareQuickAdd slug={tool.slug} />
       </div>
     </div>
