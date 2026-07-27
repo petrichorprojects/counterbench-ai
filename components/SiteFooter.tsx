@@ -12,7 +12,7 @@ export function SiteFooter() {
                 <span className="footer__mark footer__mark--mono" />
                 <span className="footer__mark footer__mark--accent" />
               </span>
-              <div className="footer__brand">COUNTERBENCH</div>
+              <div className="footer__brand">counterbench<span className="footer__ai">.ai</span></div>
             </div>
             <div className="footer__sub">A directory for legal AI</div>
             <p style={{ fontSize: "0.8125rem", color: "var(--muted)", marginTop: "1rem", maxWidth: 360 }}>

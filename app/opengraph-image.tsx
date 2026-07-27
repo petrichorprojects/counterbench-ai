@@ -16,33 +16,21 @@ export default function OpenGraphImage() {
           justifyContent: "space-between",
           padding: 64,
           background:
-            "radial-gradient(1200px 600px at 15% 15%, rgba(99,102,241,0.28), rgba(0,0,0,0) 60%), linear-gradient(135deg, #070B14 0%, #0B1220 45%, #0A1326 100%)",
+            "radial-gradient(1100px 560px at 12% 12%, rgba(90,116,160,0.30), rgba(0,0,0,0) 62%), linear-gradient(135deg, #0B1220 0%, #141d30 50%, #1b2740 100%)",
           color: "#F8FAFC"
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div
-            style={{
-              width: 18,
-              height: 18,
-              borderRadius: 5,
-              background:
-                "linear-gradient(180deg, #A78BFA 0%, #6366F1 60%, #22D3EE 100%)"
-            }}
-          />
-          <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
-            <div style={{ fontSize: 26, letterSpacing: 3, fontWeight: 800 }}>
-              COUNTERBENCH
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <svg width="42" height="42" viewBox="0 0 96 96">
+            <path d="M30 69V30H60" fill="none" stroke="#aab9d1" strokeWidth={13} strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M66 27V66H36" fill="none" stroke="#e06a80" strokeWidth={13} strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <div style={{ display: "flex", alignItems: "baseline" }}>
+            <div style={{ fontSize: 30, letterSpacing: -1, fontWeight: 800 }}>
+              counterbench
             </div>
-            <div
-              style={{
-                fontSize: 26,
-                letterSpacing: 3,
-                fontWeight: 800,
-                opacity: 0.85
-              }}
-            >
-              AI
+            <div style={{ fontSize: 30, letterSpacing: -1, fontWeight: 800, color: "#e06a80" }}>
+              .ai
             </div>
           </div>
         </div>

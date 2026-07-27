@@ -22,22 +22,18 @@ export default async function TwitterImage({ params }: { params: Promise<{ slug:
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 64,
-          background: "radial-gradient(1200px 600px at 15% 15%, rgba(99,102,241,0.28), rgba(0,0,0,0) 60%), linear-gradient(135deg, #070B14 0%, #0B1220 45%, #0A1326 100%)",
+          background: "radial-gradient(1200px 600px at 15% 15%, rgba(90,116,160,0.24), rgba(0,0,0,0) 60%), linear-gradient(135deg, #070B14 0%, #0B1220 45%, #0A1326 100%)",
           color: "#F8FAFC"
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div
-            style={{
-              width: 14,
-              height: 14,
-              borderRadius: 4,
-              background: "linear-gradient(180deg, #A78BFA 0%, #6366F1 60%, #22D3EE 100%)"
-            }}
-          />
-          <div style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
-            <div style={{ fontSize: 22, letterSpacing: 3, fontWeight: 800 }}>COUNTERBENCH</div>
-            <div style={{ fontSize: 22, letterSpacing: 3, fontWeight: 800, opacity: 0.85 }}>AI</div>
+          <svg width="30" height="30" viewBox="0 0 96 96">
+            <path d="M30 69V30H60" fill="none" stroke="#aab9d1" strokeWidth={13} strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M66 27V66H36" fill="none" stroke="#e06a80" strokeWidth={13} strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          <div style={{ display: "flex", alignItems: "baseline" }}>
+            <div style={{ fontSize: 24, letterSpacing: -1, fontWeight: 800 }}>counterbench</div>
+            <div style={{ fontSize: 24, letterSpacing: -1, fontWeight: 800, color: "#e06a80" }}>.ai</div>
           </div>
         </div>
 
