@@ -1,6 +1,6 @@
 # Ready to post
 
-**Status: STAGED. Not published.** Phil publishes. Both pieces below are fully cleared and need no further review.
+**Status: STAGED. Not published.** Phil publishes. Ep00 below is fully cleared and needs no further review. The Manual Check Audit post is held pending its tool (see section 2).
 
 Publishing is a hard boundary for me, so this file exists to make it a copy-paste rather than a re-read.
 
@@ -59,58 +59,13 @@ If you'd rather have all 10 as one document than wait 10 weeks, message me and I
 
 ---
 
-## 2. The Manual Check Audit launch post
+## 2. The Manual Check Audit launch post — HELD
 
-**Where:** LinkedIn, Phil personal. Petrichor voice, founder audience.
-**When:** Its own cadence. Do not interleave with the CounterbenchAI series. Different brand, different buyer.
-**Cleared:** content-gate Pass 1 clean, scorecard attached in source file.
-**Source file:** `Petrichor/content/manual-check-audit/linkedin-post.md`
+**Not staged here.** Phil chose to hold this post until the tool is live or within days of live, because its CTA promises the tool. Publishing it now would start a delivery clock the tool can't honor.
 
-⚠️ **The CTA promises a tool that doesn't exist yet.** The post says "message me and I'll send it the day it ships." That's honest as written, but it starts a clock. Either accept DMs now and deliver later, or hold this post until the tool is closer. Your call.
+The post is written, voice-cleared, and parked at `Petrichor/content/manual-check-audit/linkedin-post.md`. It ships as the last gate before measurement, per `tool-spec.md` section 12. Nothing to do with it until the tool clears build step 3.
 
-### Copy
-
-McKinsey found that 40% of marketing professionals spend at least a quarter of their workweek building manual reports. 10 hours, gone, before anyone decides anything.
-
-A performance manager posted last week that checking campaigns across Google, Meta, LinkedIn, Indeed and Microsoft is making him lose his mind. What he actually wanted was permission to stop looking.
-
-Checking is threshold monitoring with a human attached.
-
-Is spend pacing. Is CPA over the line. Is that ad still running for a role that closed Friday. Did anything break overnight.
-
-Every one of those has a number attached. A thing with a number attached is a rule. You're running the rule manually because it was never written down as a rule.
-
-You don't need to run ads to recognize this.
-
-Stripe dashboard. Inbox. Pipeline. Error logs. Analytics. Churn. A dozen opens a week to confirm the absence of a problem, by the person whose judgment is the most expensive input the company has.
-
-The actual work is deciding what the message says, which line to kill, where the money moves next. Maybe a fifth of the time. It gets whatever attention survives the checking.
-
-Here's the test. It takes 15 minutes and it's uncomfortable.
-
-Write down every recurring check this week. 3 columns:
-
-→ What you open
-→ Minutes it takes
-→ What would make you act
-
-Now read column 3. That column is the entire audit.
-
-**If you wrote a number, it's a rule.** A machine owns it today. The alert fires when the number is crossed, and you stop opening the tab.
-
-**If you wrote a name or a category, it's a filter.** About an hour of setup.
-
-**If you wrote "it depends" or a full sentence, that's your job.** That's judgment. That's the fifth of your time that produces everything.
-
-I don't have a number for how much of column 3 has a threshold in it. That's the point of running it on your own week instead of trusting mine.
-
-I'll predict this much. You'll be surprised how often you wrote a number, and how few of those numbers you've ever configured an alert for.
-
-The reason this doesn't get done isn't difficulty. Opening a dashboard produces the sensation of being on top of things, and that sensation is what most people are actually buying with those hours.
-
-I'm building this as a free tool. The Manual Check Audit. You enter your checks, it returns hours burned per month, which ones are rules a machine can own today, and a one-page automation spec you can hand to anyone.
-
-Message me and I'll send it the day it ships.
+This is a different brand and buyer from the CounterbenchAI series anyway, so it never belonged in this table's cadence.
 
 ---
 
