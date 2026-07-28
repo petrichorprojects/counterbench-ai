@@ -1,0 +1,128 @@
+{
+  "name": "CB Content Engine · Weekly Drafts",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "cronExpression", "expression": "0 21 * * 0" }
+          ]
+        }
+      },
+      "id": "1",
+      "name": "Schedule: Sun 5pm ET",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-1200, 0],
+      "notes": "Sun 21:00 UTC = Sun 17:00 ET (DST: drifts 16:00 in winter, acceptable)."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/databases/f0f71f5c-342d-40df-ae57-4bc666b023cf/query",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "Bearer ={{$env.NOTION_API_KEY}}" },
+            { "name": "Notion-Version", "value": "2022-06-28" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"filter\": {\n    \"and\": [\n      { \"property\": \"haiku_score\", \"number\": { \"greater_than_or_equal_to\": 3.0 } },\n      { \"property\": \"Posted At\", \"date\": { \"on_or_after\": \"={{ new Date(Date.now() - 7*86400*1000).toISOString() }}\" } },\n      { \"property\": \"Triage\", \"select\": { \"does_not_equal\": \"Trash\" } }\n    ]\n  },\n  \"sorts\": [{ \"property\": \"haiku_score\", \"direction\": \"descending\" }],\n  \"page_size\": 50\n}",
+        "options": { "timeout": 30000 }
+      },
+      "id": "2",
+      "name": "Notion: Query Intel Radar",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-960, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Topic Selector — port of topic-selector.js, runs in n8n Code node.\n// Reads Notion query response, dedups vs published log (static workflow data),\n// picks top N, maps each to format.\n\nconst SCORE_MIN = 3.0;\nconst N_PICKS = 2;\n\nconst staticData = $getWorkflowStaticData('global');\nstaticData.publishedIds = staticData.publishedIds || []; // persisted across runs in n8n\nconst usedIds = new Set(staticData.publishedIds);\n\nconst input = $input.first().json;\nconst results = input.results || [];\n\nfunction pickFormat(item) {\n  const blob = (item.title + ' ' + item.why).toLowerCase();\n  if (/\\b(framework|steps|checklist|playbook|process|how to)\\b/.test(blob)) return 'carousel';\n  if (/\\b(\\d+%|percent|vs\\.?|comparison|benchmark|study|survey)\\b/.test(blob)) return 'infographic';\n  return 'text-post';\n}\n\nfunction isoWeek(d) {\n  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));\n  const dayNum = t.getUTCDay() || 7;\n  t.setUTCDate(t.getUTCDate() + 4 - dayNum);\n  const yearStart = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));\n  const wk = Math.ceil(((t - yearStart) / 86400000 + 1) / 7);\n  return t.getUTCFullYear() + '-W' + String(wk).padStart(2, '0');\n}\n\nconst items = results.map(p => ({\n  source_id: p.id,\n  title: p.properties.Title?.title?.[0]?.plain_text?.trim() || '(untitled)',\n  url: p.properties.URL?.url || '',\n  score: p.properties.haiku_score?.number ?? 0,\n  why: p.properties.why?.rich_text?.[0]?.plain_text?.trim() || '',\n  permalink: p.properties['Slack Permalink']?.url || '',\n  domain: p.properties.domain?.select?.name || ''\n}));\n\nconst fresh = items.filter(i => !usedIds.has(i.source_id) && i.score >= SCORE_MIN);\nconst picks = fresh.slice(0, N_PICKS).map(i => ({ ...i, format: pickFormat(i), week: isoWeek(new Date()) }));\n\nif (picks.length === 0) {\n  // Skip the run, emit nothing → Slack send-on-empty handled downstream.\n  return [{ json: { skip: true, queried: items.length, used: usedIds.size, fresh: 0 } }];\n}\n\nreturn picks.map(p => ({ json: p }));"
+      },
+      "id": "3",
+      "name": "Code: Select Topics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-720, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Build the format-specific generation prompt + system prompt.\n// Brand voice block is embedded here (keep in sync with content/engine/brand-voice.md).\n\nconst BRAND_VOICE = `You are drafting a LinkedIn post for CounterbenchAI.\n\nAUDIENCE: PI attorneys, solo to 10-attorney firms. Skeptical by profession. Care about case outcomes, response time, data security. Do NOT care about tech stack.\n\nCOUNTER-NARRATIVE (must surface naturally in body, never collapse): \"AI tools AND the team to run them. You don't have to choose.\" Free tool directory at top of funnel + $3,750-$6,500/mo Paralegal Teams retainer at the bottom.\n\nVOICE: direct, data-forward, formal but not stiff. Short paragraphs. Lead with outcome, not technology. Reference specifics (case types, time/cost savings).\n\nHARD BANS:\n- No em-dashes. Hyphens only.\n- No buzzwords: AI-powered, cutting-edge, intelligent, revolutionary, seamless, leverage, game-changer.\n- No first line starting with \"I\".\n- No hashtags, no semicolons, no comment-bait CTAs.\n- No invented case names, no fabricated stats.\n- No claims beyond what the source signal supports.\n\nFORMAT-SPECIFIC RULES BELOW.`;\n\nconst FORMATS = {\n  'text-post': `\\n\\nFORMAT: TEXT POST\\n- 900-1300 characters.\\n- Hook = standalone first line that works before the \"see more\" cut.\\n- 1-3 line paragraphs with blank line between.\\n- Story arc: setup -> stakes/insight -> takeaway.\\n- End with ONE question OR ONE CTA, not both.\\n- No URLs in body (link goes in first comment).\\n- Output ONLY the post body. No preamble, no labels.`,\n  'carousel': `\\n\\nFORMAT: LINKEDIN CAROUSEL (5-8 slides)\\n- Slide 1: pain hook (the problem the attorney feels).\\n- Slides 2-N-1: framework / steps / data points. One idea per slide. Max 2 sentences each.\\n- Final slide: the counter-narrative + single CTA.\\n- Output as JSON: { \"slides\": [{ \"n\": 1, \"headline\": \"...\", \"body\": \"...\" }, ...] }`,\n  'infographic': `\\n\\nFORMAT: INFOGRAPHIC CONCEPT\\n- Pick ONE stat or comparison from the source that makes understaffing pain visceral.\\n- Output as JSON: { \"chart_type\": \"bar|comparison|stat-callout\", \"headline\": \"...\", \"data_points\": [...], \"caption\": \"...\", \"caveat\": \"required: what the source does NOT establish, so design step does not over-claim\" }`\n};\n\nconst item = $input.first().json;\nif (item.skip) return [{ json: item }];\n\nconst userPrompt = `SOURCE SIGNAL\\n- Title: ${item.title}\\n- URL: ${item.url}\\n- Domain: ${item.domain}\\n- Haiku score: ${item.score}\\n- Why it scored: ${item.why}\\n- Slack permalink: ${item.permalink}\\n\\nWrite the ${item.format} per the format rules above. Source-discipline: do NOT invent specifics beyond what the signal supports. If the signal is thin, write to the general pattern and avoid named cases or fabricated stats.`;\n\nreturn [{\n  json: {\n    ...item,\n    system_prompt: BRAND_VOICE + FORMATS[item.format],\n    user_prompt: userPrompt\n  }\n}];"
+      },
+      "id": "4",
+      "name": "Code: Build Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-480, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{$env.ANTHROPIC_API_KEY}}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-sonnet-4-6\",\n  \"max_tokens\": 2048,\n  \"system\": {{ JSON.stringify($json.system_prompt) }},\n  \"messages\": [\n    { \"role\": \"user\", \"content\": {{ JSON.stringify($json.user_prompt) }} }\n  ]\n}",
+        "options": { "timeout": 60000 }
+      },
+      "id": "5",
+      "name": "Anthropic: Generate Draft",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-240, 0],
+      "notes": "Sonnet for quality (voice matters here, not speed). If cost matters later, swap to claude-haiku-4-5-20251001."
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract Claude response, attach to item context for Slack post.\nconst prior = $('Code: Build Prompt').first().json;\nconst resp = $input.first().json;\nconst draftText = resp.content?.[0]?.text || '(generation failed)';\nreturn [{\n  json: {\n    ...prior,\n    draft: draftText,\n    generated_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "6",
+      "name": "Code: Extract Draft",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "select": "channel",
+        "channelId": { "__rl": true, "mode": "id", "value": "C0BA0U9Q25N" },
+        "text": "=:bookmark_tabs: *CB Content Draft · {{$json.format}} · {{$json.week}}*\n\n*Source:* {{$json.title}} (score {{$json.score}})\n*Signal:* {{$json.why}}\n*Intel Radar link:* {{$json.permalink}}\n\n```\n{{$json.draft}}\n```\n\n*Source ID:* `{{$json.source_id}}` · React :white_check_mark: to approve · :pencil2: to edit · :x: to kill",
+        "otherOptions": {}
+      },
+      "id": "7",
+      "name": "Slack: Post Draft to Review",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.2,
+      "position": [240, 0],
+      "notes": "Channel must exist. Create #cb-content-review before activating."
+    }
+  ],
+  "connections": {
+    "Schedule: Sun 5pm ET": { "main": [[{ "node": "Notion: Query Intel Radar", "type": "main", "index": 0 }]] },
+    "Notion: Query Intel Radar": { "main": [[{ "node": "Code: Select Topics", "type": "main", "index": 0 }]] },
+    "Code: Select Topics": { "main": [[{ "node": "Code: Build Prompt", "type": "main", "index": 0 }]] },
+    "Code: Build Prompt": { "main": [[{ "node": "Anthropic: Generate Draft", "type": "main", "index": 0 }]] },
+    "Anthropic: Generate Draft": { "main": [[{ "node": "Code: Extract Draft", "type": "main", "index": 0 }]] },
+    "Code: Extract Draft": { "main": [[{ "node": "Slack: Post Draft to Review", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "meta": {
+    "description": "CounterbenchAI Content Engine — weekly autonomous LinkedIn draft generation from Intel Radar signals. Draft-only, posted to #cb-content-review for Phil's manual approve+publish.",
+    "owner": "phil",
+    "phase": "pilot",
+    "drafts_per_run": 2,
+    "cron": "Sun 21:00 UTC (~5pm ET)",
+    "dependencies": ["NOTION_API_KEY env", "ANTHROPIC_API_KEY env", "Slack channel #cb-content-review", "Intel Radar Notion DB f0f71f5c-342d-40df-ae57-4bc666b023cf"]
+  }
+}

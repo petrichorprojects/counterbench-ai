@@ -1,0 +1,13 @@
+{
+  "_comment": "Tracks Intel Radar source items already turned into content. Topic selector dedups against this so nothing regenerates. Append an entry on Phil's approve+publish action.",
+  "_schema": {
+    "source_id": "Intel Radar Notion page ID or Reddit post ID",
+    "source_title": "original signal title",
+    "format": "text-post | carousel | infographic",
+    "asset_path": "content/drafts/YYYY-WW/<file>",
+    "status": "drafted | approved | published | killed",
+    "published_date": "ISO date when Phil posted, null if not yet",
+    "permalink": "LinkedIn post URL once live, null if not yet"
+  },
+  "published": []
+}
