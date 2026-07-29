@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# .githooks/pre-commit — block direct commits to protected branches, for EVERY
+# git client (Codex, other agents, humans), not just Claude.
+#
+# This is the git-level companion to Claude's pretool-branch-safety.py. That hook
+# only fires for Claude's Bash tool; Codex and any other agent shell straight to
+# `git commit` and never see it. A repo pre-commit hook binds them all, because
+# git runs it regardless of who invoked the commit.
+#
+# Activated via core.hooksPath -> .githooks (see scripts/setup-hooks.sh). That
+# config is LOCAL and not carried by clone, so a fresh checkout must run the
+# setup script once. The hook file itself is tracked, so it is always present to
+# activate.
+#
+# Scope: blocks main/master only. mettle's trunk is a feature branch, so this is
+# a correct no-op there. Fail-open on any error; never wedge a commit on a bug.
+# Bypass: GIT_SAFETY_BYPASS=1 git commit ...
+
+set +e
+[ "${GIT_SAFETY_BYPASS:-}" = "1" ] && exit 0
+
+branch="$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" || exit 0
+case "$branch" in
+  main|master)
+    echo "[git pre-commit] BLOCKED: direct commit to '$branch'." >&2
+    echo "  Work on a feature branch and open a PR (repo policy: never commit to $branch)." >&2
+    echo "  Override for a deliberate case: GIT_SAFETY_BYPASS=1 git commit ..." >&2
+    exit 1
+    ;;
+esac
+exit 0
