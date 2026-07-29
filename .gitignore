@@ -32,3 +32,7 @@ public/search-index.json
 
 # local tooling
 .claude/
+
+# Per-session isolation runtime state (PRD-concurrent-session-isolation)
+.worktrees/
+.orchestra/session-registry.json
