@@ -46,7 +46,7 @@ Ep01 established the pattern. A practicing PI attorney at PWB reviewed the rule 
 
 **Standing rule: constructed and cleared is publishable. Constructed and uncleared is not.**
 
-Send Ep02-10 to PWB as one batch. Each file carries its rule in a single blockquote, so the review is 9 blockquotes rather than 9 posts. Record the clearance date in the file's status line and in the table above when it comes back.
+PWB is Phil's family firm, so clearance is an informal conversation, not a formal email or engagement. Walk Ep02-10 past a PI attorney there as one batch. Each file carries its rule in a single blockquote, so the review is 9 blockquotes, not 9 posts. Record the clearance date in the file's status line and in the table above once each rule gets the nod. No email is needed; `compiled-lead-magnet.md` is the one-page-per-rule review surface to hand over.
 
 ## Publishing cadence
 
