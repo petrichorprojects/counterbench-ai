@@ -58,26 +58,32 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
 }
 
-async function readBody(req: Request): Promise<{ email: string; source: string; hp: string }> {
+async function readBody(req: Request): Promise<{ email: string; source: string; hp: string; meta: Record<string, unknown> | null }> {
   const ct = req.headers.get("content-type") || "";
   if (ct.includes("application/json")) {
-    const j = (await req.json().catch(() => ({}))) as { email?: unknown; source?: unknown; hp?: unknown };
+    const j = (await req.json().catch(() => ({}))) as { email?: unknown; source?: unknown; hp?: unknown; meta?: unknown };
     return {
       email: typeof j.email === "string" ? j.email : "",
       source: typeof j.source === "string" ? j.source : "",
-      hp: typeof j.hp === "string" ? j.hp : ""
+      hp: typeof j.hp === "string" ? j.hp : "",
+      // Optional structured context (e.g. a calculator tool's numeric inputs
+      // and computed result) forwarded to the lead notifier alongside the
+      // email. Never required; existing JSON callers that omit it are
+      // unaffected.
+      meta: j.meta && typeof j.meta === "object" && !Array.isArray(j.meta) ? (j.meta as Record<string, unknown>) : null
     };
   }
 
   const fd = await req.formData().catch(() => null);
-  if (!fd) return { email: "", source: "", hp: "" };
+  if (!fd) return { email: "", source: "", hp: "", meta: null };
   const email = fd.get("email");
   const source = fd.get("source");
   const hp = fd.get("company"); // honeypot
   return {
     email: typeof email === "string" ? email : "",
     source: typeof source === "string" ? source : "",
-    hp: typeof hp === "string" ? hp : ""
+    hp: typeof hp === "string" ? hp : "",
+    meta: null
   };
 }
 
@@ -141,7 +147,7 @@ export async function POST(req: Request) {
     );
   }
 
-  const { email, source, hp } = await readBody(req);
+  const { email, source, hp, meta } = await readBody(req);
 
   // Honeypot: pretend success for bots.
   if (hp && hp.trim()) {
@@ -214,7 +220,12 @@ export async function POST(req: Request) {
   // Lead forward to n8n (Slack notifier). Awaited: the response below ends the
   // invocation, which on serverless freezes the runtime and drops any in-flight
   // un-awaited fetch. Bounded by a timeout and never throws.
-  await forwardToN8n({ business: "CounterbenchAI", cta: "Newsletter", email: email.trim() });
+  await forwardToN8n({
+    business: "CounterbenchAI",
+    cta: source ? `Newsletter - ${source}` : "Newsletter",
+    email: email.trim(),
+    ...(meta ? { meta } : {})
+  });
 
   return NextResponse.json({ ok: true });
 }
