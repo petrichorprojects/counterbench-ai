@@ -22,6 +22,7 @@ Primary domain: https://counterbench.ai
 - Collections: https://counterbench.ai/tools/collections
 - Compare: https://counterbench.ai/tools/compare
 - Conflict Check Blind Spot Audit (free, 8 questions, answers "what is a law firm conflict check" and scores how reliably a firm's process catches conflicts): https://counterbench.ai/tools/conflict-check-audit
+- Paralegal Capacity Calculator (free, enter attorney/paralegal/case counts, scores whether a firm's paralegal function is over capacity): https://counterbench.ai/tools/paralegal-capacity-calculator
 - Prompts library: https://counterbench.ai/prompts
 - Prompt packs: https://counterbench.ai/prompts/packs
 - Playbooks: https://counterbench.ai/playbooks
