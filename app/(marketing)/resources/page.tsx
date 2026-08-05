@@ -37,7 +37,26 @@ export default function ResourcesPage() {
             This view is intentionally filtered to US-focused legal resources and US-ready implementation patterns.
           </p>
 
-          <div className="grid grid--2 mt-5" style={{ gap: "1rem" }}>
+          <div className="grid grid--3 mt-5" style={{ gap: "1rem" }}>
+            <Link
+              href="/tools/law-firm-stack-cost-calculator"
+              className="card"
+              style={{
+                textDecoration: "none",
+                borderRadius: 16,
+                background:
+                  "linear-gradient(145deg, color-mix(in srgb, #14b8a6 24%, #020617 76%) 0%, color-mix(in srgb, #020617 86%, #0f172a 14%) 100%)"
+              }}
+            >
+              <div className="label">Free tool</div>
+              <div className="text-white" style={{ fontSize: "1.2rem", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                Law firm tech stack cost calculator
+              </div>
+              <div className="text-muted" style={{ marginTop: 8 }}>
+                Calculate the true cost of licenses, maintenance, attorney time, and disruptions.
+              </div>
+            </Link>
+
             <Link
               href="/tools/source-finder"
               className="card"
