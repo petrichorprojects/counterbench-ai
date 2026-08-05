@@ -75,7 +75,8 @@ export function SiteHeader() {
       { href: "/resources/open-legal-data-map", label: "US Data Map" },
       { href: "/tools/contract-qa-planner", label: "Contract QA Planner" },
       { href: "/resources/contract-qa-pipeline-map", label: "Contract QA Map" },
-      { href: "/tools/paralegal-capacity-calculator", label: "Paralegal Capacity Calculator" }
+      { href: "/tools/paralegal-capacity-calculator", label: "Paralegal Capacity Calculator" },
+      { href: "/tools/intake-leak-calculator", label: "Intake Leak Calculator" }
     ],
     []
   );
