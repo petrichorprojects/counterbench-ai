@@ -1015,3 +1015,309 @@ html[data-theme="light"] .ws-earlybird {
     display: none !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Law firm tech stack cost calculator
+   (/tools/law-firm-stack-cost-calculator)
+--------------------------------------------------------------------------- */
+.scc {
+  margin-top: 2rem;
+}
+.scc-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.scc-proof-row span {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  background: var(--input-bg);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.scc-form {
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+.scc-form h2,
+.scc-email h3,
+.scc-cta h3 {
+  margin: 0.45rem 0 0.5rem;
+}
+.scc-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+.scc-fields > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--fg);
+  font-weight: 600;
+}
+.scc-fields small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+.scc-fields input,
+.scc-fields select,
+.scc-email input[type="email"] {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--input-bg);
+  color: var(--fg);
+  padding: 0.8rem 0.9rem;
+  font: inherit;
+}
+.scc-fields input::placeholder,
+.scc-email input::placeholder {
+  color: var(--muted-2);
+}
+.scc-input-affix,
+.scc-input-suffix {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--input-bg);
+  color: var(--muted);
+  padding: 0 0.8rem;
+  font-weight: 400;
+}
+.scc-input-affix input,
+.scc-input-suffix input {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding-inline: 0;
+  outline-offset: 6px;
+}
+.scc-input-suffix span:last-child {
+  flex: 0 0 auto;
+  font-size: 0.82rem;
+}
+.scc-form-actions,
+.scc-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+.scc-result {
+  scroll-margin-top: 6rem;
+  margin-top: 2rem;
+}
+.scc-result-hero {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(45, 212, 191, 0.13), transparent 42%),
+    var(--bg2);
+}
+.scc-total-label {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+}
+.scc-total {
+  margin: 0.25rem 0 0;
+  font-family: var(--serif);
+  font-size: clamp(2.75rem, 8vw, 5.25rem);
+  line-height: 0.95;
+  color: var(--fg);
+  letter-spacing: -0.045em;
+}
+.scc-verdict {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  max-width: 760px;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.scc-verdict h2,
+.scc-verdict p {
+  margin: 0;
+}
+.scc-verdict p {
+  margin-top: 0.4rem;
+}
+.scc-verdict-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-top: 0.55rem;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  background: var(--muted);
+  box-shadow: 0 0 0 5px rgba(148, 163, 184, 0.12);
+}
+.scc-verdict-dot--keep {
+  background: #22c55e;
+}
+.scc-verdict-dot--simplify {
+  background: #f59e0b;
+}
+.scc-verdict-dot--hand-off {
+  background: #38bdf8;
+}
+.scc-verdict-dot--replace-weak-link {
+  background: #f97316;
+}
+.scc-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+.scc-metrics .card {
+  padding: 1.2rem;
+}
+.scc-metrics strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--fg);
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+.scc-metrics p {
+  margin: 0.5rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+.scc-cost-list,
+.scc-formula {
+  margin: 1rem 0 0;
+}
+.scc-cost-list > div,
+.scc-formula > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.scc-cost-list > div:last-child,
+.scc-formula > div:last-child {
+  border-bottom: 0;
+}
+.scc-cost-list dd,
+.scc-formula dd {
+  margin: 0;
+  text-align: right;
+  color: var(--fg);
+  font-weight: 600;
+}
+.scc-formula dt {
+  color: var(--muted);
+}
+.scc-actions {
+  margin: 1rem 0 0;
+  padding-left: 1.35rem;
+}
+.scc-actions li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.35rem;
+}
+.scc-email,
+.scc-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr);
+  gap: 2rem;
+  align-items: center;
+}
+.scc-email form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+  position: relative;
+}
+.scc-consent {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+.scc-consent a {
+  color: inherit;
+  text-decoration: underline;
+}
+.scc-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+.scc-cta .btn {
+  justify-self: end;
+}
+.scc-message {
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+}
+.scc-email > .scc-message {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.scc-message--error {
+  color: #fca5a5;
+}
+.scc-message--success {
+  color: #86efac;
+}
+.scc-disclaimer {
+  max-width: 780px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  .scc-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .scc-email,
+  .scc-cta {
+    grid-template-columns: 1fr;
+  }
+  .scc-cta .btn {
+    justify-self: start;
+  }
+}
+@media (max-width: 640px) {
+  .scc-fields,
+  .scc-metrics {
+    grid-template-columns: 1fr;
+  }
+  .scc-email form {
+    grid-template-columns: 1fr;
+  }
+  .scc-consent {
+    grid-column: auto;
+  }
+  .scc-cost-list > div,
+  .scc-formula > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .scc-cost-list dd,
+  .scc-formula dd {
+    text-align: left;
+  }
+}
+@media print {
+  .scc-form,
+  .scc-email,
+  .scc-cta,
+  .scc-result-actions,
+  .scc-proof-row {
+    display: none !important;
+  }
+  .scc-result {
+    margin-top: 0 !important;
+  }
+}
