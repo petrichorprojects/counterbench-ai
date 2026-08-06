@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteUrl("/tools/source-finder"), lastModified: now, changeFrequency: "weekly", priority: 0.75 },
     { url: absoluteUrl("/tools/contract-qa-planner"), lastModified: now, changeFrequency: "weekly", priority: 0.74 },
     { url: absoluteUrl("/tools/conflict-check-audit"), lastModified: now, changeFrequency: "weekly", priority: 0.75 },
+    { url: absoluteUrl("/tools/intake-leak-calculator"), lastModified: now, changeFrequency: "weekly", priority: 0.76 },
     { url: absoluteUrl("/guides"), lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: absoluteUrl("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: absoluteUrl("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.7 },
